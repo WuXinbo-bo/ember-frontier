@@ -1,0 +1,12 @@
+{
+  "id": "ember-frontier",
+  "name": "余烬边界",
+  "schemaVersion": "3.0.0",
+  "assetLibraries": [
+    "@forgeax/engine/content"
+  ],
+  "roots": {
+    "engine": "0c5bf4c1-bbd0-58e6-8ac9-1347fd716b81",
+    "frontend": "62f18971-a9ff-584c-aa55-f695fefadba6"
+  }
+}

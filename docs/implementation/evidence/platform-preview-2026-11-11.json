@@ -1,0 +1,115 @@
+{
+  "at": "2026-11-11",
+  "jobId": "0b478f73-de21-4163-9ee4-baedd085f123",
+  "sessionId": "74889279-11f8-4b7d-9efb-de26a4e1b994",
+  "port": 55950,
+  "state": "passed",
+  "checks": [
+    {
+      "id": "iframeLoaded",
+      "tier": "required",
+      "state": "passed"
+    },
+    {
+      "id": "multiplayerBackend",
+      "tier": "required",
+      "state": "passed",
+      "message": "Multiplayer backend ready"
+    },
+    {
+      "id": "providerReady",
+      "tier": "required",
+      "state": "passed"
+    },
+    {
+      "id": "sdkInitialized",
+      "tier": "required",
+      "state": "passed"
+    },
+    {
+      "id": "noRuntimeErrors",
+      "tier": "required",
+      "state": "passed",
+      "message": "No runtime error observed within 1000ms"
+    },
+    {
+      "id": "singlePageMode",
+      "tier": "required",
+      "state": "passed",
+      "message": "Passed after 1000ms without an error"
+    },
+    {
+      "id": "landingPageValid",
+      "tier": "optional",
+      "state": "failed",
+      "message": "landing.html does not exist"
+    },
+    {
+      "id": "roomListPollInterval",
+      "tier": "optional",
+      "state": "passed",
+      "message": "Passed after 15000ms without an error"
+    },
+    {
+      "id": "gameLoadingCalled",
+      "tier": "optional",
+      "state": "passed"
+    },
+    {
+      "id": "lifecycleRegistered",
+      "tier": "optional",
+      "state": "passed"
+    },
+    {
+      "id": "studioLogObserved",
+      "tier": "optional",
+      "state": "passed"
+    },
+    {
+      "id": "multiplayerDeclared",
+      "tier": "required",
+      "state": "passed"
+    },
+    {
+      "id": "pauseAcknowledged",
+      "tier": "optional",
+      "state": "passed",
+      "message": "Pause ACK reported paused=true"
+    },
+    {
+      "id": "gameLoadedCalled",
+      "tier": "optional",
+      "state": "passed"
+    },
+    {
+      "id": "responsiveLayoutConfirmed",
+      "tier": "optional",
+      "state": "passed",
+      "message": "Responsive viewport behavior confirmed by user"
+    },
+    {
+      "id": "resumeAcknowledged",
+      "tier": "optional",
+      "state": "passed",
+      "message": "Resume ACK reported paused=false"
+    }
+  ],
+  "layers": {
+    "platform_handshake": "passed",
+    "page_runtime": "passed",
+    "playable": "passed",
+    "multiplayer_evidence": "unverified"
+  },
+  "multiplayer": {
+    "backend": "passed",
+    "seatSmoke": "passed",
+    "matchSmoke": "passed",
+    "maxPlayers": 4,
+    "observed": {
+      "roomsCalls": 0,
+      "maxSeated": 0,
+      "matchStarted": false
+    }
+  },
+  "scope": "Official platform adaptation validation. Readiness/smoke is not four real browser gameplay acceptance. Mobile landing intentionally deferred with final assets."
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "local_project_id": "e0746bb3-f09f-42df-a557-b508aa18d84c",
+  "game_id": null,
+  "template": null,
+  "build": {
+    "package_manager": "pnpm@12.15.0",
+    "script": "build",
+    "output_dir": "dist",
+    "entry": "index.html"
+  },
+  "resource": "https://zaohua.qq.com/mcp-servers/vag-web/mcp",
+  "support_pc": true,
+  "support_mobile": true,
+  "multiplayer": {
+    "enabled": true,
+    "max_players": 4,
+    "package_dir": "game/server",
+    "build_script": "build:server",
+    "output_dir": "game/server/dist/index.js"
+  },
+  "recommended_capabilities": [
+    "storage",
+    "game.multiplayer"
+  ]
+}

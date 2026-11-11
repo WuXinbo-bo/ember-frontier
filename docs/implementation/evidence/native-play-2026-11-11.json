@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "1.0.0",
+  "passed": true,
+  "backend": "hardware",
+  "timings": {
+    "openMs": 12652,
+    "readyMs": 5089,
+    "scriptMs": 9433,
+    "verifyMs": 1744,
+    "totalMs": 29202
+  },
+  "steps": [
+    {
+      "name": "menu",
+      "ok": true,
+      "ms": 768
+    },
+    {
+      "name": "open local world",
+      "ok": true,
+      "ms": 1043
+    },
+    {
+      "name": "keyboard movement and inventory",
+      "ok": true,
+      "ms": 1495
+    },
+    {
+      "name": "real salvage interaction",
+      "ok": true,
+      "ms": 884
+    },
+    {
+      "name": "reload recovers committed state",
+      "ok": true,
+      "ms": 5243
+    }
+  ],
+  "viewports": [
+    "1280x720",
+    "1280x600",
+    "390x844"
+  ],
+  "layout": [],
+  "returned": {
+    "movement": {
+      "before": {
+        "x": 262272,
+        "y": 262272
+      },
+      "after": {
+        "x": 262688,
+        "y": 262272
+      }
+    },
+    "verified": [
+      "native scene",
+      "mode selection",
+      "33-skill profile",
+      "initial population",
+      "keyboard movement",
+      "backpack",
+      "physical salvage transferred once",
+      "reload identity and committed position"
+    ]
+  },
+  "execution": "healthy",
+  "errors": {
+    "console": [],
+    "page": [],
+    "inputWarnings": 0
+  },
+  "scope": "Native owner browser; keyboard movement, physical salvage, inventory, committed-state reload. Mobile viewport screenshot only, not phone hardware or complete touch gameplay.",
+  "screenshots": [
+    {
+      "name": "01-mode-selection",
+      "digest": "sha256:1c72ac388763d4af6de047e2eeb6be5cf82f5f45c8aee2dcf4d0abb04bdc7541"
+    },
+    {
+      "name": "02-native-world",
+      "digest": "sha256:ae8bd68f7fb6ca1d8fe0b80e628c755e03c54ea49d9830a3aad593687180d089"
+    },
+    {
+      "name": "03-backpack-and-input",
+      "digest": "sha256:f1c588507c7aa354b596473310534b5c884467edebdf5a8c0a112614e6238f13"
+    },
+    {
+      "name": "04-real-item-transfer",
+      "digest": "sha256:6e7146c56dd535d29ce8c2865a1919ae4febdf23c0ecd7074220acc077c31e29"
+    },
+    {
+      "name": "05-recovered-world",
+      "digest": "sha256:c9260eef3c5482c93bdb943d9bdf05c1122581d34398373ec2071913cf356cb7"
+    },
+    {
+      "name": "final",
+      "digest": "sha256:70f786f6ac8b3a6f8ab84b17e3528274fdb70847d23670d4cbe32fe4db018115"
+    },
+    {
+      "name": "viewport 1280x600",
+      "digest": "sha256:5533b656c72294afd477a5d45327b0623734cd0b1e0a47087b2066901681ab45"
+    },
+    {
+      "name": "viewport 390x844",
+      "digest": "sha256:e166ef33ae85473ddd25e9b20ecba8b968395eca041ffb24beaf59b50e743d46"
+    }
+  ]
+}

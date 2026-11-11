@@ -1,0 +1,16 @@
+.DS_Store
+.tooling/
+node_modules/
+**/node_modules/
+**/dist/
+**/serverdist/
+**/.forgeax/
+**/.game-builder/state/
+**/.game-builder/artifacts/
+**/.game-builder/reference/
+**/coverage/
+**/test-results/
+.env
+.env.*
+!.env.example
+*.log

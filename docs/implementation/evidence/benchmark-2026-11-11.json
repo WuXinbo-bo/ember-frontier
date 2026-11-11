@@ -1,0 +1,72 @@
+{
+  "at": "2026-11-11T13:29:55.570Z",
+  "scope": "Population ledger/placement at 30 and 100 completed days, zero deaths. 20 representative reducer ticks only: NOT a 100-day gameplay or phone/FPS benchmark.",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "darwin",
+    "arch": "arm64",
+    "release": "25.5.0",
+    "cpu": "Apple M5 Pro",
+    "logicalCores": 15,
+    "totalMemory": 25769803776
+  },
+  "initialMs": 20.600624999999994,
+  "populationSnapshots": [
+    {
+      "day": 30,
+      "npc": 3099,
+      "infected": 310000,
+      "cohorts": 336,
+      "auditMs": 129.00975000000005,
+      "jsonBytes": 8005402,
+      "heapUsed": 90425384
+    },
+    {
+      "day": 100,
+      "npc": 10099,
+      "infected": 1010000,
+      "cohorts": 1106,
+      "auditMs": 506.03320799999983,
+      "jsonBytes": 26146954,
+      "heapUsed": 234462288
+    }
+  ],
+  "placementMs": {
+    "n": 100,
+    "p50": 36.11195799999996,
+    "p95": 52.48133400000006,
+    "max": 56.16579199999978
+  },
+  "simulationTickMs": {
+    "n": 20,
+    "p50": 76.12929199999962,
+    "p95": 417.30766700000004,
+    "max": 417.30766700000004
+  },
+  "projectionMs": {
+    "n": 20,
+    "p50": 28.999416999999994,
+    "p95": 37.338957999999366,
+    "max": 37.338957999999366
+  },
+  "acoustics": {
+    "radius": 12,
+    "receiverCount": 88,
+    "referenceCount": 88,
+    "equal": true,
+    "soundMs": 489.4460419999996
+  },
+  "replication": {
+    "samples": 20,
+    "fullBytes": 3771044,
+    "deltaBytes": 131044,
+    "reduction": 0.9652499413955393
+  },
+  "peakProcess": {
+    "rss": 952025088,
+    "heapTotal": 632537088,
+    "heapUsed": 492116064,
+    "external": 6466379,
+    "arrayBuffers": 2375075
+  }
+}

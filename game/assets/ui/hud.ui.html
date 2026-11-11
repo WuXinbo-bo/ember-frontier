@@ -1,0 +1,130 @@
+<div class="shell">
+  <section class="menu panel" data-screen="menu">
+    <p class="eyebrow">末日生存 · 天工引擎</p>
+    <h1>余烬边界</h1>
+    <p class="intro">
+      没有现成的营地，也没有第二条生命。<br />从一根木棒开始，为明天留下火种。
+    </p>
+    <div class="rules">
+      <span>33 项技能从零成长</span><span>世界每日持续增加人口</span
+      ><span>永久死亡 · 原物品遗留</span>
+    </div>
+    <label for="saved-world">已有世界</label
+    ><select id="saved-world" aria-label="已有世界">
+      <option value="">新世界（使用下方种子）</option></select
+    ><label for="seed">世界种子 · 同一种子继续已有存档</label
+    ><input
+      id="seed"
+      maxlength="80"
+      value="ember-first-light"
+      aria-label="世界种子"
+    />
+    <label for="biome">地貌</label
+    ><select id="biome" aria-label="地貌">
+      <option value="inland">内陆河谷</option>
+      <option value="coast">海岸</option>
+      <option value="dunes">荒漠</option>
+    </select>
+    <button class="primary" data-ui-action="single">进入单人世界</button
+    ><button data-ui-action="import">导入单人存档副本</button
+    ><button data-ui-action="online">多人协作 · 最多四人</button>
+    <p class="fine">
+      单人事务存档保存在当前浏览器。联机当前为会话存档。<br />键盘 Enter
+      进入单人，WASD 移动，E 搜索，空格攻击。
+    </p>
+  </section>
+  <section class="lobby panel" data-screen="lobby" hidden>
+    <p class="eyebrow">四个永久角色席位</p>
+    <h2>幸存者联络站</h2>
+    <p>本轮联机为会话世界，房间服务关闭后无法保证恢复。</p>
+    <div class="actions">
+      <button data-ui-action="create-room">创建房间</button
+      ><button data-ui-action="refresh-rooms">刷新列表</button
+      ><button data-ui-action="menu">返回</button>
+    </div>
+    <div id="rooms" class="listing"></div>
+    <div id="occupied" hidden>
+      <p id="occupied-text"></p>
+      <button data-ui-action="restore-room">重连原席位</button
+      ><button data-ui-action="leave-occupied">放弃连接并返回大厅</button>
+    </div>
+  </section>
+  <section class="lobby panel" data-screen="waiting" hidden>
+    <p class="eyebrow">共同进入，同一世界</p>
+    <h2>等待幸存者</h2>
+    <p id="room-id"></p>
+    <div id="seats" class="listing"></div>
+    <button class="primary" data-ui-action="start-room">
+      开始行动（至少两人）</button
+    ><button data-ui-action="leave-room">离开房间</button>
+  </section>
+  <section class="game" data-screen="game" hidden>
+    <header class="topbar panel">
+      <div><strong>余烬边界</strong><span id="world-clock">第 1 日</span></div>
+      <div id="population"></div>
+      <button data-ui-action="pause">暂停</button
+      ><button data-ui-action="menu">存档并离开</button>
+    </header>
+    <aside class="vitals panel">
+      <div class="stat">
+        <span>生命</span><strong id="hp"></strong>
+        <div class="health-track">
+          <span id="hp-meter" class="health-fill"></span>
+        </div>
+      </div>
+      <div class="stat">
+        <span>食物 / 水分</span><strong id="needs"></strong>
+      </div>
+      <div class="stat"><span>疲劳</span><strong id="fatigue"></strong></div>
+      <div id="save-state" class="fine"></div>
+    </aside>
+    <aside class="journal panel">
+      <p class="eyebrow">行动记录</p>
+      <div id="journal"></div>
+    </aside>
+    <div class="toolbar panel">
+      <button data-ui-action="tab-inventory">背包 / 搜索</button
+      ><button data-ui-action="tab-craft">制作</button
+      ><button data-ui-action="tab-build">建造</button
+      ><button data-ui-action="tab-research">研究</button
+      ><button data-ui-action="tab-companions">伙伴</button
+      ><button data-ui-action="tab-skills">人物</button
+      ><button data-ui-action="tab-tasks">任务</button
+      ><button data-ui-action="tab-vehicles">载具</button
+      ><button data-ui-action="export">导出存档</button>
+    </div>
+    <aside class="detail panel" id="detail" hidden>
+      <div class="detail-heading">
+        <h2 id="detail-title">背包</h2>
+        <button data-ui-action="close-detail" aria-label="关闭面板">
+          关闭
+        </button>
+      </div>
+      <div id="detail-content"></div>
+    </aside>
+    <div class="touch-controls">
+      <div class="dpad">
+        <button data-move="0,-1" aria-label="向上">↑</button>
+        <div>
+          <button data-move="-1,0" aria-label="向左">←</button
+          ><button data-move="0,1" aria-label="向下">↓</button
+          ><button data-move="1,0" aria-label="向右">→</button>
+        </div>
+      </div>
+      <div class="touch-actions">
+        <button data-ui-action="interact">搜索 E</button
+        ><button data-ui-action="attack">攻击</button
+        ><button data-ui-action="rest">休息</button>
+      </div>
+    </div>
+    <p class="controls-hint">
+      WASD 移动　Shift 潜行　E 搜索　空格攻击　B 背包　Esc 关闭
+    </p>
+  </section>
+  <div class="status panel" id="status" role="status" hidden></div>
+  <div class="blocking panel" id="blocking" hidden>
+    <h2 id="blocking-title">正在准备世界</h2>
+    <p id="blocking-detail">正在验证并恢复已提交的状态。</p>
+    <button id="retry" data-ui-action="retry" hidden>重试保存</button>
+  </div>
+</div>

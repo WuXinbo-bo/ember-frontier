@@ -1,0 +1,60 @@
+{
+  "name": "@ember-frontier/game",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@12.15.0",
+  "scripts": {
+    "dev": "forgeax dev start",
+    "build": "forgeax project build",
+    "package": "forgeax project package",
+    "serve": "forgeax project preview",
+    "preview": "forgeax project preview",
+    "doctor": "forgeax project check",
+    "test": "forgeax project test",
+    "typecheck": "pnpm exec tsc --noEmit",
+    "build:server": "pnpm --dir game/server run build",
+    "check": "pnpm typecheck && pnpm test && pnpm exec forgeax project check --json && pnpm build:server",
+    "test:play": "forgeax project play scripts/playthrough.mjs --timeout-ms 180000 --require-ui true --viewports 1280x720,1280x600,390x844 --json",
+    "test:benchmark": "tsx scripts/benchmark.ts"
+  },
+  "forgeax": {
+    "metrics": {
+      "bundle-size": {
+        "enabled": false,
+        "reason": "模板构建由 SDK 验证器负责"
+      },
+      "fps": {
+        "enabled": false,
+        "reason": "模板没有独立基准工作负载"
+      },
+      "bench": {
+        "enabled": false,
+        "reason": "模板基线由 Engine 应用负责"
+      },
+      "gate": {
+        "enabled": false,
+        "reason": "浏览器验收由 SDK 验证器负责"
+      },
+      "spike-report": {
+        "enabled": false,
+        "reason": "模板不是 spike 应用"
+      }
+    }
+  },
+  "dependencies": {
+    "@forgeax/engine": "0.4.19",
+    "@vibegame/state-sync-runtime": "file:./packages/state-sync-runtime",
+    "zaohua-platform-sdk": "file:./vendor/zaohua-platform-sdk"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@webgpu/types": "0.1.71",
+    "esbuild": "0.28.2",
+    "prettier": "3.6.2",
+    "tsx": "4.23.1",
+    "typescript": "6.0.3",
+    "vitest": "4.1.12"
+  }
+}

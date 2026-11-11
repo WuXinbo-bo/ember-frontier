@@ -1,0 +1,23 @@
+export const ASSETS: { box: string; materials: Record<string, string> } = {
+  box: "43a9a992-0f45-5c9a-9677-11a111aff71b",
+  materials: {
+    grass: "0ad72473-ea0b-5e8d-8c84-1df5ccbb817d",
+    grass2: "f5a6e06a-8726-5d02-b0f1-cc7a1622e0ad",
+    sand: "9ed38bfb-f347-5498-a0c6-b495102a02bf",
+    stone: "d8c74129-32ee-5b12-8d37-413bfe6797e1",
+    road: "9a051a11-882e-5c18-8560-b0de534fcabe",
+    water: "512dd5ef-9e7d-5d0a-b745-0a697b4065a5",
+    player: "5ecbae67-7538-5a6d-82ab-d8d2edd060ff",
+    npc: "8e78f3fa-79f3-54fc-b9ba-5905cc41c506",
+    infected: "84cb60b3-a286-5460-b492-cb73e913553d",
+    animal: "40277014-dd38-50f8-ba4f-11216cdbad30",
+    dead: "4ea8ee4d-c84c-5d67-8eaf-b0356a3b5d90",
+    wood: "f4da2e0a-f52c-5546-bf44-85ac62c68110",
+    steel: "6aaf1018-f827-59b8-8722-72d6c7550b20",
+    cloth: "790639a7-22a1-5edc-89cc-993ed9014e4a",
+    roof: "4161344d-be35-59ff-9940-077f12dd3e74",
+    fire: "ea6a5ad2-99f7-5659-807b-127486c13b74",
+    crate: "5dd725bc-0006-5352-ada8-0128a31e62e6",
+    dark: "16a272c3-83c6-555c-b882-40ae352ea63d",
+  },
+};
