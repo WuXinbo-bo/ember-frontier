@@ -1,0 +1,205 @@
+{
+  "schema": "r34-regional-ecology-materials-v1",
+  "source_manifest": "references/r34-region-production-v1/crop-manifest.json",
+  "source_manifest_sha256": "e25d436856ea54d76a653ca1532c2b7c91d4b2381753f90ececb07339d47fbe3",
+  "contract_sha256": "fbc6e4ca99a659db998c39e7aedf3be2b890c24f0c6547c4565ba009354f2e55",
+  "assets": [
+    {
+      "id": "potato_seedling",
+      "resource": "res://data/presentation/regional-ecology-v1/potato_seedling.png",
+      "file": "references/r34-region-production-v1/cutouts/potato_seedling.png",
+      "sha256": "81dfe021ba6e66ae4aa87cec67d632a2953613ac1c321c538c9b205beca1a010",
+      "alpha": true,
+      "tiling": false,
+      "full_canvas_m": [
+        0.64,
+        0.64
+      ],
+      "visible_size_m": [
+        0.2,
+        0.16
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        176,
+        352,
+        336,
+        480
+      ],
+      "state": "seedling",
+      "species": "potato"
+    },
+    {
+      "id": "potato_growing",
+      "resource": "res://data/presentation/regional-ecology-v1/potato_growing.png",
+      "file": "references/r34-region-production-v1/cutouts/potato_growing.png",
+      "sha256": "2bd6de956ae39813be9a15d2f7e03673fb882e832b3cc557fe9102910542c01f",
+      "alpha": true,
+      "tiling": false,
+      "full_canvas_m": [
+        0.64,
+        0.64
+      ],
+      "visible_size_m": [
+        0.4,
+        0.3
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        96,
+        240,
+        416,
+        480
+      ],
+      "state": "growing",
+      "species": "potato"
+    },
+    {
+      "id": "potato_mature",
+      "resource": "res://data/presentation/regional-ecology-v1/potato_mature.png",
+      "file": "references/r34-region-production-v1/cutouts/potato_mature.png",
+      "sha256": "caaec5cae223d5ce798a2380f3452f49e033d7356b48ce498bdb725a280b9d5b",
+      "alpha": true,
+      "tiling": false,
+      "full_canvas_m": [
+        0.64,
+        0.64
+      ],
+      "visible_size_m": [
+        0.5,
+        0.45
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        56,
+        120,
+        456,
+        480
+      ],
+      "state": "mature",
+      "species": "potato"
+    },
+    {
+      "id": "bean_seedling",
+      "resource": "res://data/presentation/regional-ecology-v1/bean_seedling.png",
+      "file": "references/r34-region-production-v1/cutouts/bean_seedling.png",
+      "sha256": "554b9f2a87f91d801ce009f34e328d38e9f181303ef54ed6f13469647b335656",
+      "alpha": true,
+      "tiling": false,
+      "full_canvas_m": [
+        0.64,
+        0.96
+      ],
+      "visible_size_m": [
+        0.18,
+        0.2
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        184,
+        373,
+        328,
+        480
+      ],
+      "state": "seedling",
+      "species": "bean"
+    },
+    {
+      "id": "bean_growing",
+      "resource": "res://data/presentation/regional-ecology-v1/bean_growing.png",
+      "file": "references/r34-region-production-v1/cutouts/bean_growing.png",
+      "sha256": "df51b976ac62c37beb18159ea1b774df45b4d9e7ac66df072a2c3c2d4a728dc0",
+      "alpha": true,
+      "tiling": false,
+      "full_canvas_m": [
+        0.64,
+        0.96
+      ],
+      "visible_size_m": [
+        0.38,
+        0.52
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        104,
+        203,
+        408,
+        480
+      ],
+      "state": "growing",
+      "species": "bean"
+    },
+    {
+      "id": "bean_mature",
+      "resource": "res://data/presentation/regional-ecology-v1/bean_mature.png",
+      "file": "references/r34-region-production-v1/cutouts/bean_mature.png",
+      "sha256": "9db95fa69951adec11fe4517f7af8a97c87d0589c1037205d1151b50c0bab032",
+      "alpha": true,
+      "tiling": false,
+      "full_canvas_m": [
+        0.64,
+        0.96
+      ],
+      "visible_size_m": [
+        0.5,
+        0.8
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        56,
+        53,
+        456,
+        480
+      ],
+      "state": "mature",
+      "species": "bean"
+    },
+    {
+      "id": "rice_seedling",
+      "resource": "res://data/presentation/regional-ecology-v1/rice_seedling.png",
+      "file": "references/r34-region-production-v1/cutouts/rice_seedling.png",
+      "sha256": "746164b95a3a1624f9c54607768b14d032c95a7ec0f817a1c6ca81b2e9f6ff62",
+      "alpha": true,
+      "tiling": false,
+      "full_canvas_m": [
+        0.4,
+        0.4
+      ],
+      "visible_size_m": [
+        0.28,
+        0.26
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        77,
+        147,
+        435,
+        480
+      ],
+      "state": "seedling",
+      "species": "rice"
+    }
+  ],
+  "stage": "exact source images staged and metric contract checked; runtime bind tests pending; no renderer/PCK/VA"
+}

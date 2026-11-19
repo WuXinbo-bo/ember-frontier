@@ -1,0 +1,26 @@
+extends "res://tests/gameplay/factory_long_output_recovery.gd"
+## Continue the actual successful recovery, not a fresh world or body fixture.
+func run()->void:
+	var args:=OS.get_cmdline_user_args();output_dir=args[0];source_path=args[1];source_sha=FileAccess.get_sha256(source_path);probe_mode="followup"
+	DirAccess.make_dir_recursive_absolute(output_dir)
+	var decoded:Dictionary=Store.decode(FileAccess.get_file_as_string(source_path));check("exact recovered22 input decodes",decoded.get("ok",false))
+	if not decoded.get("ok",false):return finish()
+	var host:=Native.new();var built:Dictionary=host._assemble(decoded.capture);host.free()
+	check("recovered input mounts all canonical facts unchanged",built.get("ok",false) and persisted_restore_equal(decoded.capture,built.runtime.facts(),built.world))
+	if not built.get("ok",false):return finish()
+	live_runtime=built.runtime;sim_origin=live_runtime.clock();initial_total=total_timber(live_runtime);initial_paid=live_runtime.world.extension("r34:production").settlements.size()
+	snapshot("actual recovered input before following cycle")
+	var mixed:bool=mixed_cycle()
+	check("revised driver retains actual cargo cancel consent retarget and two deliveries",mixed and coverage.mixed_deliveries==2 and coverage.cargo_retargets==1 and coverage.consent_withdrawals==2,rule_blocks)
+	if not mixed:return finish()
+	check("mixed original boards only move without manufacture",total_timber(live_runtime)==initial_total)
+	var produced:bool=production_cycle()
+	check("next paid finite harvest and two real batches finish within original600 bound",produced and coverage.harvests==1 and coverage.new_machine_batches==2 and production_cycles==1,rule_blocks)
+	if not produced:return finish()
+	check("next cycle adds only eight actual paid boards",total_timber(live_runtime)==initial_total+8)
+	check("next original order includes22 total batches with no remainingWIP",live_runtime.world.extension("r34:production").orders[0].completed==22 and live_runtime.world.extension("r34:production").orders[0].remaining==0)
+	snapshot("normal mixed and paid production after recovery")
+	var restored:Dictionary=cold_restore(live_runtime,"following-mixed-and-production")
+	check("following cycle all authority and unique Runtime debt cold restore",restored.get("ok",false))
+	check("following cycle preserves actual HP consent finite materials",invariant_failures.is_empty(),invariant_failures)
+	finish()

@@ -1,0 +1,1407 @@
+{
+  "schema": "afterglow-ui-architecture-thumbnails-v1",
+  "source_art_manifest_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/manifest.json",
+  "source_art_manifest_sha256": "98fee1e34797a0cf7c56b35f8371f91294f19634d3d3328da36af5e7a9b55202",
+  "source_identity": {
+    "render-manifest.json": {
+      "path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/render-manifest.json",
+      "sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da"
+    },
+    "qualification.json": {
+      "path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/qualification.json",
+      "sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac"
+    },
+    "sources-before.json": {
+      "path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/sources-before.json",
+      "sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b"
+    },
+    "sources-after.json": {
+      "path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/sources-after.json",
+      "sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b"
+    }
+  },
+  "frozen_key_source_sha256": {
+    "scripts/buildings/architecture_detail_mesh.gd": "91e658c5771a825394139de3d5ccf96fd031720717740fbe3c96890c85df3d4b",
+    "scripts/buildings/architecture_kit.gd": "b1dab4b986ccab68993dabc6e2490a77bf7f133b74cca5c16cb33157148e0c3a",
+    "scripts/modules/module_civic_geometry.gd": "91d7f8d96760e805042d6283384f842268884b831667da971981e34c40bd6c18",
+    "scripts/modules/module_geometry.gd": "aecbfa5a2d78fae43869337d1916aee70763ac7e7573fa9287b42e176108ccf3",
+    "scripts/modules/module_industrial_geometry.gd": "e7b6cefff08cb180b77ca125a1493bb61434462dadd7ca48882f1d3fe08747fa",
+    "scripts/modules/module_residential_geometry.gd": "52ad656df9c00eba455dc60715a1c6846b5786882503c7c9ff77588163abd53d",
+    "scripts/presentation/factory_materials.gd": "46d3d4799a48761131b8d5dd10c41b5868302de3e544e099c99b3a2e9555e83f",
+    "data/buildings/textures/architecture-v1/gray_clay_pan_roof_albedo_2m.png": "6693d448e20eb4224146f240795c8dc150f97aae83b0398a3ad7cc23bbe02337",
+    "data/modules/catalog_v1.json": "69a40ce7d239189fe30ab0b09fc41e7ef920d476f3f92c26d4873a6e0d8a2fa9"
+  },
+  "entries": [
+    {
+      "definition_id": "r34.module.home_small_porch_v1",
+      "geometry_version": "r34.module.home_small_porch_v1.geometry-v1",
+      "label": "深廊小宅",
+      "family": "home",
+      "tier": "small",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_home_small_porch_v1-q1-cutout.png",
+      "source_image_sha256": "617145b73704b1d204cd48d0cf41d4ee6a81700d7f21c73be625c70108518f7f",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 12.0,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/home_small_porch_v1.png",
+      "sha256": "a79289b610da9ab5a887402fa73f08e8ae5622ac8cb7147c64a0e52c24569ffa",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        116,
+        137,
+        695,
+        646
+      ],
+      "resized_pixels": [
+        224,
+        197
+      ],
+      "canvas_offset_xy": [
+        16,
+        29
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        29,
+        16,
+        30
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/home_small_porch_v1.png"
+    },
+    {
+      "definition_id": "r34.module.home_small_annex_v1",
+      "geometry_version": "r34.module.home_small_annex_v1.geometry-v1",
+      "label": "侧厢小宅",
+      "family": "home",
+      "tier": "small",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_home_small_annex_v1-q1-cutout.png",
+      "source_image_sha256": "e8ca0ebdc8a63db4230b429c3df740b4d506d6e2c136a55df0530da7f850845f",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 13.199999809265137,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/home_small_annex_v1.png",
+      "sha256": "4aaebfe2458150a909dbc2c1e50b74a434a5f7c847031fcf6a82bdd92bb89af6",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        144,
+        136,
+        684,
+        639
+      ],
+      "resized_pixels": [
+        224,
+        209
+      ],
+      "canvas_offset_xy": [
+        16,
+        23
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        23,
+        16,
+        24
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/home_small_annex_v1.png"
+    },
+    {
+      "definition_id": "r34.module.home_small_court_v1",
+      "geometry_version": "r34.module.home_small_court_v1.geometry-v1",
+      "label": "灶院小宅",
+      "family": "home",
+      "tier": "small",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_home_small_court_v1-q1-cutout.png",
+      "source_image_sha256": "ec83ae69bc6adc48c4d74c1961e756309cc1eb9476874d6473a70d06558e85b6",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 14.850000381469727,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/home_small_court_v1.png",
+      "sha256": "d3174eb30b809478df076a7493ea25e4e5341a3f64851cc3b0acf02f3e763288",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        110,
+        137,
+        687,
+        632
+      ],
+      "resized_pixels": [
+        224,
+        192
+      ],
+      "canvas_offset_xy": [
+        16,
+        32
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        32,
+        16,
+        32
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/home_small_court_v1.png"
+    },
+    {
+      "definition_id": "r34.module.home_medium_long_v1",
+      "geometry_version": "r34.module.home_medium_long_v1.geometry-v1",
+      "label": "连廊长宅",
+      "family": "home",
+      "tier": "medium",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_home_medium_long_v1-q1-cutout.png",
+      "source_image_sha256": "b697be7954a136c498d3975dd0055f8f4444905d49cba162363e879f41ea609b",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 18.149999618530273,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/home_medium_long_v1.png",
+      "sha256": "a9d960c747316cb85091136786d7e960db41cd0d966d12aebc2833978fa0b5ee",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        137,
+        166,
+        658,
+        609
+      ],
+      "resized_pixels": [
+        224,
+        190
+      ],
+      "canvas_offset_xy": [
+        16,
+        33
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        33,
+        16,
+        33
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/home_medium_long_v1.png"
+    },
+    {
+      "definition_id": "r34.module.home_medium_corner_v1",
+      "geometry_version": "r34.module.home_medium_corner_v1.geometry-v1",
+      "label": "折角合宅",
+      "family": "home",
+      "tier": "medium",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_home_medium_corner_v1-q1-cutout.png",
+      "source_image_sha256": "0421c9ec2c74392519b7ce3d27231b47b304fd5d49525fd324b182aec4b18d8a",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 18.149999618530273,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/home_medium_corner_v1.png",
+      "sha256": "cbe9f2a11b048e6afe46a734432aa3abe11bef9f0ef6111c06f7c0afa4b3f719",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        105,
+        192,
+        691,
+        630
+      ],
+      "resized_pixels": [
+        224,
+        167
+      ],
+      "canvas_offset_xy": [
+        16,
+        44
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        44,
+        16,
+        45
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/home_medium_corner_v1.png"
+    },
+    {
+      "definition_id": "r34.module.home_medium_twin_v1",
+      "geometry_version": "r34.module.home_medium_twin_v1.geometry-v1",
+      "label": "双脊联宅",
+      "family": "home",
+      "tier": "medium",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_home_medium_twin_v1-q1-cutout.png",
+      "source_image_sha256": "defd3402dd064b8bc1623bdda800a0e93eabd9756a09bf5508e7fb7e40329933",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 19.799999237060547,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/home_medium_twin_v1.png",
+      "sha256": "8801b57bde9c1a1c66b7060429188fc87b2b22f4dcd7d68dbdaf00836fc1a415",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        124,
+        178,
+        678,
+        618
+      ],
+      "resized_pixels": [
+        224,
+        178
+      ],
+      "canvas_offset_xy": [
+        16,
+        39
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        39,
+        16,
+        39
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/home_medium_twin_v1.png"
+    },
+    {
+      "definition_id": "r34.module.home_large_u_v1",
+      "geometry_version": "r34.module.home_large_u_v1.geometry-v1",
+      "label": "三合院宅",
+      "family": "home",
+      "tier": "large",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_home_large_u_v1-q1-cutout.png",
+      "source_image_sha256": "c1b5b89438170fbc05030c937056ab0286a5f6da59ece6bc01fae4c2febfc6a1",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 24.75,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/home_large_u_v1.png",
+      "sha256": "9fa1bc6a0a1f415ac566780ca9d0dfbded5d1056ca72c6f077088eed3b8bba80",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        107,
+        160,
+        684,
+        615
+      ],
+      "resized_pixels": [
+        224,
+        177
+      ],
+      "canvas_offset_xy": [
+        16,
+        39
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        39,
+        16,
+        40
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/home_large_u_v1.png"
+    },
+    {
+      "definition_id": "r34.module.home_large_double_v1",
+      "geometry_version": "r34.module.home_large_double_v1.geometry-v1",
+      "label": "两进院宅",
+      "family": "home",
+      "tier": "large",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_home_large_double_v1-q1-cutout.png",
+      "source_image_sha256": "2b7dfa7552d403bfa3e0058ba78b71ad63679758f84db24c4dc21abbff5f5960",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 26.399999618530273,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/home_large_double_v1.png",
+      "sha256": "48ab1df438acc76918e3d9cbe2363a14545269359b7008ac000b83927f0c076c",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        93,
+        158,
+        700,
+        617
+      ],
+      "resized_pixels": [
+        224,
+        169
+      ],
+      "canvas_offset_xy": [
+        16,
+        43
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        43,
+        16,
+        44
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/home_large_double_v1.png"
+    },
+    {
+      "definition_id": "r34.module.home_large_lodge_v1",
+      "geometry_version": "r34.module.home_large_lodge_v1.geometry-v1",
+      "label": "乡村宿舍",
+      "family": "home",
+      "tier": "large",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_home_large_lodge_v1-q1-cutout.png",
+      "source_image_sha256": "162760b6ccd1b769561577d82788a6b47c20864a715b24c63d89302db51aa41c",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 28.049999237060547,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/home_large_lodge_v1.png",
+      "sha256": "9a8f6049f8b1d0442b6a70cbef4c3d0565bea1477883b9ccb8cec088aa0c515d",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        144,
+        143,
+        677,
+        623
+      ],
+      "resized_pixels": [
+        224,
+        202
+      ],
+      "canvas_offset_xy": [
+        16,
+        27
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        27,
+        16,
+        27
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/home_large_lodge_v1.png"
+    },
+    {
+      "definition_id": "r34.module.water_low_v1",
+      "geometry_version": "r34.module.water_low_v1.geometry-v1",
+      "label": "井亭取水面",
+      "family": "water",
+      "tier": "low",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_water_low_v1-q1-cutout.png",
+      "source_image_sha256": "b611fc10444159dd716c7306d5c613f86ed3f0181e2dd103cea5ad110871c9d5",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 12.0,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/water_low_v1.png",
+      "sha256": "c637105f631b1fe70c13b0ead43c898bc7aa2095acbc82dcdee30ef0b2b1a0f4",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        243,
+        198,
+        574,
+        563
+      ],
+      "resized_pixels": [
+        203,
+        224
+      ],
+      "canvas_offset_xy": [
+        26,
+        16
+      ],
+      "safe_margins_ltrb_px": [
+        26,
+        16,
+        27,
+        16
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/water_low_v1.png"
+    },
+    {
+      "definition_id": "r34.module.water_mid_v1",
+      "geometry_version": "r34.module.water_mid_v1.geometry-v1",
+      "label": "桶棚分流院",
+      "family": "water",
+      "tier": "mid",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_water_mid_v1-q1-cutout.png",
+      "source_image_sha256": "5e5c9f024be5e2962d2f4b3f7c65bfae56efdc735b2095bb4f018e1e844dc64b",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 13.199999809265137,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/water_mid_v1.png",
+      "sha256": "01e9263306eee3eef22550285ed293001bb80665b7e0fac373d840da89787a77",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        108,
+        189,
+        656,
+        616
+      ],
+      "resized_pixels": [
+        224,
+        175
+      ],
+      "canvas_offset_xy": [
+        16,
+        40
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        40,
+        16,
+        41
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/water_mid_v1.png"
+    },
+    {
+      "definition_id": "r34.module.water_high_v1",
+      "geometry_version": "r34.module.water_high_v1.geometry-v1",
+      "label": "储水服务院",
+      "family": "water",
+      "tier": "high",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_water_high_v1-q1-cutout.png",
+      "source_image_sha256": "92f95268a9e7c78a0dea92a21c8518550be6f0a256838e88ea3048ff04caade3",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 18.149999618530273,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/water_high_v1.png",
+      "sha256": "2b47adb206eba76dccb8dc08979a70a0468f0b3b01e645a9ae5a61fec0fc2b3b",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        94,
+        155,
+        671,
+        615
+      ],
+      "resized_pixels": [
+        224,
+        179
+      ],
+      "canvas_offset_xy": [
+        16,
+        38
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        38,
+        16,
+        39
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/water_high_v1.png"
+    },
+    {
+      "definition_id": "r34.module.guard_low_v1",
+      "geometry_version": "r34.module.guard_low_v1.geometry-v1",
+      "label": "低观察棚",
+      "family": "guard",
+      "tier": "low",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_guard_low_v1-q1-cutout.png",
+      "source_image_sha256": "e6228cc328ee7743cb68c6215408925e6974614601dd1fe5e39909e9c42ee82c",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 12.0,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/guard_low_v1.png",
+      "sha256": "e5c5f3881f8627d52ef52db3b2ac0bd3e58066afd3d4da4b82819da0d4f6353a",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        216,
+        212,
+        554,
+        548
+      ],
+      "resized_pixels": [
+        224,
+        223
+      ],
+      "canvas_offset_xy": [
+        16,
+        16
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        16,
+        16,
+        17
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/guard_low_v1.png"
+    },
+    {
+      "definition_id": "r34.module.guard_mid_v1",
+      "geometry_version": "r34.module.guard_mid_v1.geometry-v1",
+      "label": "护栏架高岗亭",
+      "family": "guard",
+      "tier": "mid",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_guard_mid_v1-q1-cutout.png",
+      "source_image_sha256": "a4b54a310568d8bbcd2bc12f220b9107b723088f7ff9b7d995345d8b24494e46",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 12.0,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/guard_mid_v1.png",
+      "sha256": "8bedfcfbac0b5dd7606f11506c4c37581288e0086bff32304f2f61c18f61489b",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        185,
+        129,
+        599,
+        615
+      ],
+      "resized_pixels": [
+        191,
+        224
+      ],
+      "canvas_offset_xy": [
+        32,
+        16
+      ],
+      "safe_margins_ltrb_px": [
+        32,
+        16,
+        33,
+        16
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/guard_mid_v1.png"
+    },
+    {
+      "definition_id": "r34.module.guard_high_v1",
+      "geometry_version": "r34.module.guard_high_v1.geometry-v1",
+      "label": "砖木岗楼门岗",
+      "family": "guard",
+      "tier": "high",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_guard_high_v1-q1-cutout.png",
+      "source_image_sha256": "35ef476b062187f57197747cfeedef6ee9404c70be4b804d24d8ee3a8031099a",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 13.199999809265137,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/guard_high_v1.png",
+      "sha256": "777bfa75d7c3a1e3b8c1ef78a4c9f855cc2e8f05e9c0dea4f9460c24d84b14a3",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        85,
+        25,
+        679,
+        692
+      ],
+      "resized_pixels": [
+        199,
+        224
+      ],
+      "canvas_offset_xy": [
+        28,
+        16
+      ],
+      "safe_margins_ltrb_px": [
+        28,
+        16,
+        29,
+        16
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/guard_high_v1.png"
+    },
+    {
+      "definition_id": "r34.module.warehouse_low_v1",
+      "geometry_version": "r34.module.warehouse_low_v1.geometry-v1",
+      "label": "开敞储料棚",
+      "family": "warehouse",
+      "tier": "low",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_warehouse_low_v1-q1-cutout.png",
+      "source_image_sha256": "b772a0304232e0c91905fc2292e367e01dc7badda6de70262134bdfffb4e37da",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 12.0,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/warehouse_low_v1.png",
+      "sha256": "04db034dfce97fafcc944ee451054c681c33a82914062971c260e7b4bfcdabe5",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        138,
+        157,
+        630,
+        599
+      ],
+      "resized_pixels": [
+        224,
+        201
+      ],
+      "canvas_offset_xy": [
+        16,
+        27
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        27,
+        16,
+        28
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/warehouse_low_v1.png"
+    },
+    {
+      "definition_id": "r34.module.warehouse_mid_v1",
+      "geometry_version": "r34.module.warehouse_mid_v1.geometry-v1",
+      "label": "长仓装卸台",
+      "family": "warehouse",
+      "tier": "mid",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_warehouse_mid_v1-q1-cutout.png",
+      "source_image_sha256": "acc3e843b835b5311843d473952161f96975c58ca61951cf9d45868120b06a97",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 18.149999618530273,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/warehouse_mid_v1.png",
+      "sha256": "758c19a64592a2027dee596dc8f5d3b14af6a5e65f1c7877715a14e25749951f",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        139,
+        176,
+        607,
+        570
+      ],
+      "resized_pixels": [
+        224,
+        189
+      ],
+      "canvas_offset_xy": [
+        16,
+        33
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        33,
+        16,
+        34
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/warehouse_mid_v1.png"
+    },
+    {
+      "definition_id": "r34.module.warehouse_high_v1",
+      "geometry_version": "r34.module.warehouse_high_v1.geometry-v1",
+      "label": "围院多收货跨",
+      "family": "warehouse",
+      "tier": "high",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_warehouse_high_v1-q1-cutout.png",
+      "source_image_sha256": "498ab8643ed824c59a988d67bd9a9d8a0a99987c0987bb9f83736966f4d6baf8",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 26.399999618530273,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/warehouse_high_v1.png",
+      "sha256": "ddeefe5238e592e451fc879527c82204fc38f33f727ffc524b44360f0b69f75a",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        111,
+        158,
+        622,
+        576
+      ],
+      "resized_pixels": [
+        224,
+        183
+      ],
+      "canvas_offset_xy": [
+        16,
+        36
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        36,
+        16,
+        37
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/warehouse_high_v1.png"
+    },
+    {
+      "definition_id": "r34.module.canteen_low_v1",
+      "geometry_version": "r34.module.canteen_low_v1.geometry-v1",
+      "label": "灶棚与食廊",
+      "family": "canteen",
+      "tier": "low",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_canteen_low_v1-q1-cutout.png",
+      "source_image_sha256": "6e7f37ab9e14028231eeffb00bed1c81c09ccf8a06a1b6738594a572a1d47d1e",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 12.0,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/canteen_low_v1.png",
+      "sha256": "c263d2823f293086a8b82cffcdf55d8b416bacc99ca4120cf84093b7d460e067",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        128,
+        150,
+        643,
+        552
+      ],
+      "resized_pixels": [
+        224,
+        175
+      ],
+      "canvas_offset_xy": [
+        16,
+        40
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        40,
+        16,
+        41
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/canteen_low_v1.png"
+    },
+    {
+      "definition_id": "r34.module.canteen_mid_v1",
+      "geometry_version": "r34.module.canteen_mid_v1.geometry-v1",
+      "label": "L院厨房食堂",
+      "family": "canteen",
+      "tier": "mid",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_canteen_mid_v1-q1-cutout.png",
+      "source_image_sha256": "1e95a6723fd20c50bb7bc986cb6588e5e57cd0a7cf148e126553edcac1c1d587",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 18.149999618530273,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/canteen_mid_v1.png",
+      "sha256": "f9625216728edca45abe27fc19a9a66ffd4395f30611c981ef04b8210824d17d",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        135,
+        150,
+        610,
+        571
+      ],
+      "resized_pixels": [
+        224,
+        199
+      ],
+      "canvas_offset_xy": [
+        16,
+        28
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        28,
+        16,
+        29
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/canteen_mid_v1.png"
+    },
+    {
+      "definition_id": "r34.module.canteen_high_v1",
+      "geometry_version": "r34.module.canteen_high_v1.geometry-v1",
+      "label": "主食厅服务院",
+      "family": "canteen",
+      "tier": "high",
+      "source_batch": "A/all30-detail-cutout02/GPU-source02",
+      "source_image_path": "work/r3-4/architecture-special-v1/all30-detail-cutout02/r34_module_canteen_high_v1-q1-cutout.png",
+      "source_image_sha256": "f370b15f88a74b4f41681d9526a0c727f204958eb38fd81cf7fb3fd47107a5ae",
+      "source_manifest_sha256": "9f5f709daf84d01a49b69fdefff838bd07eeb87dfcba016f9f3018dfaef003da",
+      "source_qualification_sha256": "231a98e79ce92f1dcb710f25366feb73f76217ae1c367c14e261305ea9b7b3ac",
+      "source_snapshot_sha256": "b901b9118128955e61896b52cbfd63d95620b9f5462a0216a7d04b1d52edfe9b",
+      "quarter_turn": 1,
+      "source_camera_size": 26.399999618530273,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "res://themes/modules/architecture-gpu02/canteen_high_v1.png",
+      "sha256": "6c937b34f40db31f8d376b8f6ce0ec30ff5a0a279500db214d0c3559e752056b",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        157,
+        172,
+        635,
+        553
+      ],
+      "resized_pixels": [
+        224,
+        179
+      ],
+      "canvas_offset_xy": [
+        16,
+        38
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        38,
+        16,
+        39
+      ],
+      "status": "image-QA-ready; UI adoption and actual interface pending",
+      "processing": "Exact Alpha bbox; premultiplied LANCZOS downsample; transparent 256 canvas; unchanged content/color/lighting.",
+      "art_image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu02/canteen_high_v1.png"
+    }
+  ],
+  "pending": [
+    {
+      "definition_id": "r34.module.repair_low_v1",
+      "geometry_version": "r34.module.repair_low_v1.geometry-v1",
+      "reason": "A reports Shape.entities-only source02 omits the formal workbench; do not adopt as full-module thumbnail."
+    },
+    {
+      "definition_id": "r34.module.repair_mid_v1",
+      "geometry_version": "r34.module.repair_mid_v1.geometry-v1",
+      "reason": "A reports Shape.entities-only source02 omits the formal workbench; do not adopt as full-module thumbnail."
+    },
+    {
+      "definition_id": "r34.module.repair_high_v1",
+      "geometry_version": "r34.module.repair_high_v1.geometry-v1",
+      "reason": "A reports Shape.entities-only source02 omits the formal workbench; do not adopt as full-module thumbnail."
+    },
+    {
+      "definition_id": "r34.module.sawmill_low_v1",
+      "geometry_version": "r34.module.sawmill_low_v1.geometry-v1",
+      "reason": "A reports Shape.entities-only source02 omits the formal workbench; do not adopt as full-module thumbnail."
+    },
+    {
+      "definition_id": "r34.module.sawmill_mid_v1",
+      "geometry_version": "r34.module.sawmill_mid_v1.geometry-v1",
+      "reason": "A reports Shape.entities-only source02 omits the formal workbench; do not adopt as full-module thumbnail."
+    },
+    {
+      "definition_id": "r34.module.sawmill_high_v1",
+      "geometry_version": "r34.module.sawmill_high_v1.geometry-v1",
+      "reason": "A reports Shape.entities-only source02 omits the formal workbench; do not adopt as full-module thumbnail."
+    },
+    {
+      "definition_id": "r34.module.artisan_low_v1",
+      "geometry_version": "r34.module.artisan_low_v1.geometry-v1",
+      "reason": "A reports Shape.entities-only source02 omits the formal workbench; do not adopt as full-module thumbnail."
+    },
+    {
+      "definition_id": "r34.module.artisan_mid_v1",
+      "geometry_version": "r34.module.artisan_mid_v1.geometry-v1",
+      "reason": "A reports Shape.entities-only source02 omits the formal workbench; do not adopt as full-module thumbnail."
+    },
+    {
+      "definition_id": "r34.module.artisan_high_v1",
+      "geometry_version": "r34.module.artisan_high_v1.geometry-v1",
+      "reason": "A reports Shape.entities-only source02 omits the formal workbench; do not adopt as full-module thumbnail."
+    }
+  ],
+  "scope": "Actual source02 nonmanual21 only; manual9 deliberately unbound pending complete source03/04; no game/VA/geometry approval"
+}

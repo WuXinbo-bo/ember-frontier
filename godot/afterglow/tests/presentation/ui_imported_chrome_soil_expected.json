@@ -1,0 +1,123 @@
+{
+  "schema": "afterglow-imported-chrome-soil-increment-v1",
+  "pixel_contract": "Original imported-image oracle: decoded base RGBA8; SHA256 of opaque RGBA pixels in scan order and separate full alpha plane. Transparent RGB ignored for Godot fix_alpha_border. Soil is fully opaque and therefore all RGBA bytes are fixed.",
+  "provenance": "Formal ART manifests/original approved PNGs only. Targets independently byte-compared offline. Runtime receives expected values only; no external PNG is loaded into any consumer.",
+  "scope": "Incremental four-image consumer test; does not repeat or inherit original18, UI source59 or surface42 qualification.",
+  "manifests": [
+    {
+      "path": "assets/art/r34-factory-v1/ui-chrome/v1/manifest.json",
+      "sha256": "b138e7ea1f9c2845da2395feeeb592c85b63986d99ef1905df719ecd21308309"
+    },
+    {
+      "path": "assets/art/r34-factory-v1/surfaces/terrain-quality-v1/manifest.json",
+      "sha256": "9a71970e4519f5dffba1aa1dc480bbc79faa17fda90441896ccfd0148e06a119"
+    }
+  ],
+  "images": [
+    {
+      "kind": "soil",
+      "id": "natural_soil_side",
+      "resource_path": "res://data/world/textures/natural_soil_side_low_contrast_16m.png",
+      "source_path": "assets/art/r34-factory-v1/surfaces/terrain-quality-v1/natural_soil_side_low_contrast_16m.png",
+      "source_png_sha256": "a01e31a823094efded12c31f1d58663220889b2165bb5afa1645457c977d54fb",
+      "source_manifest": "assets/art/r34-factory-v1/surfaces/terrain-quality-v1/manifest.json",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "opaque_count": 1048576,
+      "opaque_rgba_sha256": "c9d8db6b80746dfca985d0bbf8e77aeaf33113c128b0ccfd9020ebf0c54ce20e",
+      "alpha_sha256": "f5fb04aa5b882706b9309e885f19477261336ef76a150c3b4d3489dfac3953ec",
+      "base_rgba_sha256": "c9d8db6b80746dfca985d0bbf8e77aeaf33113c128b0ccfd9020ebf0c54ce20e",
+      "metres": [
+        1.6,
+        1.6
+      ],
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "consumer_selection": "factory-country-1 saved content8/9; natural1/2 side group including downward faces; no road4 or top substitution"
+    },
+    {
+      "kind": "chrome",
+      "id": "panel",
+      "resource_path": "res://themes/chrome/workshop_panel.png",
+      "source_path": "assets/art/r34-factory-v1/ui-chrome/v1/workshop_panel.png",
+      "source_png_sha256": "4405c3c3b6782929a3074d5961578b193faed39b0f6a0fe1b10ff0ca3701f6e7",
+      "source_manifest": "assets/art/r34-factory-v1/ui-chrome/v1/manifest.json",
+      "width": 128,
+      "height": 128,
+      "mode": "RGBA",
+      "opaque_count": 16372,
+      "opaque_rgba_sha256": "4877cc797140de0de21dc89b816e5c195a390cffcf882b589b9e6199ccaf4487",
+      "alpha_sha256": "b14968abd83148a3b3cec938f8802e7952b1482ddaf689b022603cd45fcb24b9",
+      "base_rgba_sha256": "9bc93dd012f4cda26de3bc7829f52d8fea2276b5f33330fe4f4ef51a4314ab59",
+      "slices_ltrb": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "content_margins_ltrb": [
+        12,
+        8,
+        12,
+        8
+      ]
+    },
+    {
+      "kind": "chrome",
+      "id": "slot",
+      "resource_path": "res://themes/chrome/workshop_slot.png",
+      "source_path": "assets/art/r34-factory-v1/ui-chrome/v1/workshop_slot.png",
+      "source_png_sha256": "86c0d60fa30c093389fd32b4ffc0ddfecafd239301de21703ff0b13f9d9a5c4e",
+      "source_manifest": "assets/art/r34-factory-v1/ui-chrome/v1/manifest.json",
+      "width": 128,
+      "height": 160,
+      "mode": "RGBA",
+      "opaque_count": 20468,
+      "opaque_rgba_sha256": "9fe16eed0aa3b2c7d9085b5c86d9de620fbf6bfbcf724e3f9c57f2406fe13e54",
+      "alpha_sha256": "8378e5c109faf095855e8479ce7372d0fc2e39505e216a5cd7ab08797e5e3825",
+      "base_rgba_sha256": "6226cdd88943beb5d257d54cce2fb7e2c26ef263caaa58e89969372bd293d046",
+      "slices_ltrb": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "content_margins_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "kind": "chrome",
+      "id": "title",
+      "resource_path": "res://themes/chrome/workshop_title.png",
+      "source_path": "assets/art/r34-factory-v1/ui-chrome/v1/workshop_title.png",
+      "source_png_sha256": "280289104cb1f4d3f22d99a046e6998e235e5656fb86f71b50a298e538496d44",
+      "source_manifest": "assets/art/r34-factory-v1/ui-chrome/v1/manifest.json",
+      "width": 256,
+      "height": 96,
+      "mode": "RGBA",
+      "opaque_count": 24564,
+      "opaque_rgba_sha256": "9ea63186792e15cb571af2273d2337258174b6206f3c719507863d04950821c2",
+      "alpha_sha256": "4a9b818862dd462bed01a24b17114100c4528ec0c9ebc1f254488a2f44e721f0",
+      "base_rgba_sha256": "d31d308e0bca14fe1f50ac563fcaf06e95eb524362141ddd5be4878d871560fb",
+      "slices_ltrb": [
+        12,
+        8,
+        12,
+        8
+      ],
+      "content_margins_ltrb": [
+        12,
+        8,
+        12,
+        8
+      ]
+    }
+  ]
+}

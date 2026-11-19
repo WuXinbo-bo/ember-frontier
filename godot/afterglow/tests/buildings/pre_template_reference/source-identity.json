@@ -1,0 +1,9 @@
+{
+  "scope": "test-only exact B production baseline immediately after support invariant fix, before candidate-point reuse; preload paths remapped only",
+  "original_source_sha256": {
+    "building_navigation.gd": "a8cff87f925c6183766a52f219a223495b10812f63414fb46ffbe26bd109e27e",
+    "building_space.gd": "f2b1dcc5af22fd8256f143099f9d06c05ad53ff56fe7329636b0a49b0e4e8180",
+    "building_service.gd": "c6b91d1eb5d021c6cdd71473e0f0c86ba520d613e0e8ee0fc9e316ae63bc2d5b",
+    "building_door_projection.gd": "28603de009eb5dcd29cff53f674039d2b17752d4d4072f4abdea736e8b0e3e6a"
+  }
+}

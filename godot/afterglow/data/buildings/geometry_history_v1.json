@@ -1,0 +1,4392 @@
+{
+  "schema": "afterglow-building-geometry-history-v1",
+  "geometryVersion": 1,
+  "definitions": {
+    "foundation": {
+      "id": "foundation",
+      "name": "\u57fa\u7840",
+      "kind": "foundation",
+      "size": {
+        "x": 2,
+        "y": 0.4,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1,
+            "y": -0.4,
+            "z": -1
+          },
+          "max": {
+            "x": 1,
+            "y": 0,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1,
+            "y": -0.4,
+            "z": -1
+          },
+          "max": {
+            "x": 1,
+            "y": 0,
+            "z": 1
+          }
+        }
+      ],
+      "support": "terrain",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_floor_panel",
+      "materials": {
+        "top": "wood-floor",
+        "side": "concrete"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1.65
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": []
+    },
+    "entry_step": {
+      "id": "entry_step",
+      "name": "\u5165\u53e3\u8e0f\u6b65",
+      "kind": "foundation",
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 1.2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.5,
+            "y": -0.2,
+            "z": -0.6
+          },
+          "max": {
+            "x": 1.5,
+            "y": 0,
+            "z": 0.6
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.5,
+            "y": -0.2,
+            "z": -0.6
+          },
+          "max": {
+            "x": 1.5,
+            "y": 0,
+            "z": 0.6
+          }
+        }
+      ],
+      "support": "terrain",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 1
+      },
+      "salvage": {},
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_floor_panel",
+      "materials": {
+        "top": "concrete",
+        "side": "concrete"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1.65
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": []
+    },
+    "wall": {
+      "id": "wall",
+      "name": "\u5b9e\u5899",
+      "kind": "wall",
+      "size": {
+        "x": 2,
+        "y": 3.2,
+        "z": 0.2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1,
+            "y": 0,
+            "z": -0.1
+          },
+          "max": {
+            "x": 1,
+            "y": 3.2,
+            "z": 0.1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1,
+            "y": 0,
+            "z": -0.1
+          },
+          "max": {
+            "x": 1,
+            "y": 3.2,
+            "z": 0.1
+          }
+        }
+      ],
+      "support": "surface",
+      "surfaceY": null,
+      "maxHp": 120,
+      "cost": {
+        "timber": 3,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_wall_solid",
+      "materials": {
+        "interior": "plaster",
+        "exterior": "plaster"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": -0.8
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0.8
+        }
+      ],
+      "sockets": [
+        {
+          "id": "left",
+          "position": {
+            "x": -1,
+            "y": 0,
+            "z": 0
+          },
+          "accepts": [
+            "wall",
+            "corner",
+            "door",
+            "window"
+          ]
+        },
+        {
+          "id": "right",
+          "position": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "accepts": [
+            "wall",
+            "corner",
+            "door",
+            "window"
+          ]
+        }
+      ],
+      "soundLossDb": 28,
+      "stationTags": []
+    },
+    "corner": {
+      "id": "corner",
+      "name": "\u8f6c\u89d2",
+      "kind": "corner",
+      "size": {
+        "x": 2,
+        "y": 3.2,
+        "z": 0.2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1,
+            "y": 0,
+            "z": -0.1
+          },
+          "max": {
+            "x": 1,
+            "y": 3.2,
+            "z": 0.1
+          }
+        },
+        {
+          "min": {
+            "x": -0.1,
+            "y": 0,
+            "z": 0
+          },
+          "max": {
+            "x": 0.1,
+            "y": 3.2,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1,
+            "y": 0,
+            "z": -0.1
+          },
+          "max": {
+            "x": 1,
+            "y": 3.2,
+            "z": 0.1
+          }
+        },
+        {
+          "min": {
+            "x": -0.1,
+            "y": 0,
+            "z": 0
+          },
+          "max": {
+            "x": 0.1,
+            "y": 3.2,
+            "z": 1
+          }
+        }
+      ],
+      "support": "surface",
+      "surfaceY": null,
+      "maxHp": 120,
+      "cost": {
+        "timber": 3,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_wall_corner",
+      "materials": {
+        "interior": "plaster",
+        "exterior": "plaster"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": -0.8
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0.8
+        }
+      ],
+      "sockets": [
+        {
+          "id": "left",
+          "position": {
+            "x": -1,
+            "y": 0,
+            "z": 0
+          },
+          "accepts": [
+            "wall",
+            "corner",
+            "door",
+            "window"
+          ]
+        },
+        {
+          "id": "right",
+          "position": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "accepts": [
+            "wall",
+            "corner",
+            "door",
+            "window"
+          ]
+        }
+      ],
+      "soundLossDb": 28,
+      "stationTags": []
+    },
+    "door": {
+      "id": "door",
+      "name": "\u95e8\u5899",
+      "kind": "door",
+      "size": {
+        "x": 2,
+        "y": 3.2,
+        "z": 0.2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1,
+            "y": 0,
+            "z": -0.1
+          },
+          "max": {
+            "x": -0.8,
+            "y": 3.2,
+            "z": 0.1
+          }
+        },
+        {
+          "min": {
+            "x": 0.8,
+            "y": 0,
+            "z": -0.1
+          },
+          "max": {
+            "x": 1,
+            "y": 3.2,
+            "z": 0.1
+          }
+        },
+        {
+          "min": {
+            "x": -0.8,
+            "y": 2.2,
+            "z": -0.1
+          },
+          "max": {
+            "x": 0.8,
+            "y": 3.2,
+            "z": 0.1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1,
+            "y": 0,
+            "z": -0.1
+          },
+          "max": {
+            "x": -0.8,
+            "y": 3.2,
+            "z": 0.1
+          }
+        },
+        {
+          "min": {
+            "x": 0.8,
+            "y": 0,
+            "z": -0.1
+          },
+          "max": {
+            "x": 1,
+            "y": 3.2,
+            "z": 0.1
+          }
+        },
+        {
+          "min": {
+            "x": -0.8,
+            "y": 2.2,
+            "z": -0.1
+          },
+          "max": {
+            "x": 0.8,
+            "y": 3.2,
+            "z": 0.1
+          }
+        }
+      ],
+      "support": "surface",
+      "surfaceY": null,
+      "maxHp": 120,
+      "cost": {
+        "timber": 3,
+        "scrap": 2
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_door_apartment",
+      "materials": {
+        "wall": "plaster",
+        "frame": "painted-metal",
+        "leaf": "painted-metal"
+      },
+      "usePoints": [
+        {
+          "x": 1.15,
+          "y": 0,
+          "z": -0.5
+        },
+        {
+          "x": 1.15,
+          "y": 0,
+          "z": 0.5
+        }
+      ],
+      "sockets": [
+        {
+          "id": "left",
+          "position": {
+            "x": -1,
+            "y": 0,
+            "z": 0
+          },
+          "accepts": [
+            "wall",
+            "corner",
+            "door",
+            "window"
+          ]
+        },
+        {
+          "id": "right",
+          "position": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "accepts": [
+            "wall",
+            "corner",
+            "door",
+            "window"
+          ]
+        }
+      ],
+      "soundLossDb": 18,
+      "stationTags": [],
+      "door": {
+        "width": 1.6,
+        "height": 2.2,
+        "hingeX": -0.8
+      }
+    },
+    "window": {
+      "id": "window",
+      "name": "\u7a97\u5899",
+      "kind": "window",
+      "size": {
+        "x": 2,
+        "y": 3.2,
+        "z": 0.2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1,
+            "y": 0,
+            "z": -0.1
+          },
+          "max": {
+            "x": 1,
+            "y": 1,
+            "z": 0.1
+          }
+        },
+        {
+          "min": {
+            "x": -1,
+            "y": 2.3,
+            "z": -0.1
+          },
+          "max": {
+            "x": 1,
+            "y": 3.2,
+            "z": 0.1
+          }
+        },
+        {
+          "min": {
+            "x": -1,
+            "y": 1,
+            "z": -0.1
+          },
+          "max": {
+            "x": -0.8,
+            "y": 2.3,
+            "z": 0.1
+          }
+        },
+        {
+          "min": {
+            "x": 0.8,
+            "y": 1,
+            "z": -0.1
+          },
+          "max": {
+            "x": 1,
+            "y": 2.3,
+            "z": 0.1
+          }
+        },
+        {
+          "min": {
+            "x": -0.8,
+            "y": 1,
+            "z": -0.04
+          },
+          "max": {
+            "x": 0.8,
+            "y": 2.3,
+            "z": 0.04
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1,
+            "y": 0,
+            "z": -0.1
+          },
+          "max": {
+            "x": 1,
+            "y": 1,
+            "z": 0.1
+          }
+        },
+        {
+          "min": {
+            "x": -1,
+            "y": 2.3,
+            "z": -0.1
+          },
+          "max": {
+            "x": 1,
+            "y": 3.2,
+            "z": 0.1
+          }
+        },
+        {
+          "min": {
+            "x": -1,
+            "y": 1,
+            "z": -0.1
+          },
+          "max": {
+            "x": -0.8,
+            "y": 2.3,
+            "z": 0.1
+          }
+        },
+        {
+          "min": {
+            "x": 0.8,
+            "y": 1,
+            "z": -0.1
+          },
+          "max": {
+            "x": 1,
+            "y": 2.3,
+            "z": 0.1
+          }
+        }
+      ],
+      "support": "surface",
+      "surfaceY": null,
+      "maxHp": 120,
+      "cost": {
+        "timber": 3,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_wall_window",
+      "materials": {
+        "wall": "plaster",
+        "frame": "painted-metal",
+        "glass": "glass"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": -0.8
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0.8
+        }
+      ],
+      "sockets": [
+        {
+          "id": "left",
+          "position": {
+            "x": -1,
+            "y": 0,
+            "z": 0
+          },
+          "accepts": [
+            "wall",
+            "corner",
+            "door",
+            "window"
+          ]
+        },
+        {
+          "id": "right",
+          "position": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "accepts": [
+            "wall",
+            "corner",
+            "door",
+            "window"
+          ]
+        }
+      ],
+      "soundLossDb": 12,
+      "stationTags": []
+    },
+    "floor": {
+      "id": "floor",
+      "name": "\u697c\u677f",
+      "kind": "floor",
+      "size": {
+        "x": 2,
+        "y": 0.2,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1,
+            "y": 0,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1,
+            "y": 0,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_floor_panel",
+      "materials": {
+        "top": "wood-floor",
+        "side": "structural-wood",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1.65
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": []
+    },
+    "edge_floor": {
+      "id": "edge_floor",
+      "name": "\u697c\u68af\u8fb9\u6881",
+      "kind": "floor",
+      "size": {
+        "x": 0.2,
+        "y": 0.2,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -0.1,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.1,
+            "y": 0,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -0.1,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.1,
+            "y": 0,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 1
+      },
+      "salvage": {},
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_floor_panel",
+      "materials": {
+        "top": "wood-floor",
+        "side": "structural-wood",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1.65
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": []
+    },
+    "roof": {
+      "id": "roof",
+      "name": "\u5c4b\u9876",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 0.2,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1,
+            "y": 0,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1,
+            "y": 0,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": []
+    },
+    "stairs": {
+      "id": "stairs",
+      "name": "\u697c\u68af",
+      "kind": "stairs",
+      "size": {
+        "x": 2.2,
+        "y": 3.4,
+        "z": 9.6
+      },
+      "solids": [],
+      "sight": [],
+      "support": "surface",
+      "surfaceY": null,
+      "maxHp": 120,
+      "cost": {
+        "timber": 8,
+        "scrap": 3
+      },
+      "salvage": {
+        "timber": 3
+      },
+      "seconds": 20,
+      "tool": "hammering",
+      "assetId": "city_stairs",
+      "materials": {
+        "treads": "structural-wood",
+        "frame": "painted-metal"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": -0.6
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "stairs": {
+        "rise": 3.4,
+        "run": 9.6,
+        "width": 2.2
+      }
+    },
+    "workbench": {
+      "id": "workbench",
+      "name": "\u5c0f\u5de5\u574a\u5de5\u4f5c\u53f0",
+      "kind": "workbench",
+      "size": {
+        "x": 2.8,
+        "y": 1,
+        "z": 1.8
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.4,
+            "y": 0,
+            "z": -0.9
+          },
+          "max": {
+            "x": 1.4,
+            "y": 1,
+            "z": 0.9
+          }
+        }
+      ],
+      "sight": [],
+      "support": "surface",
+      "surfaceY": null,
+      "maxHp": 120,
+      "cost": {
+        "timber": 4,
+        "scrap": 2
+      },
+      "salvage": {
+        "timber": 2
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_workbench",
+      "materials": {
+        "top": "plywood",
+        "frame": "painted-metal"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": -1.5
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [
+        "workbench"
+      ],
+      "knowledge": [
+        "basic_woodwork"
+      ]
+    },
+    "cabinet": {
+      "id": "cabinet",
+      "name": "\u53ef\u642c\u79fb\u50a8\u7269\u67dc",
+      "kind": "cabinet",
+      "size": {
+        "x": 1,
+        "y": 1.5,
+        "z": 0.7
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -0.5,
+            "y": 0,
+            "z": -0.35
+          },
+          "max": {
+            "x": 0.5,
+            "y": 1.5,
+            "z": 0.35
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -0.5,
+            "y": 0,
+            "z": -0.35
+          },
+          "max": {
+            "x": 0.5,
+            "y": 1.5,
+            "z": 0.35
+          }
+        }
+      ],
+      "support": "surface",
+      "surfaceY": null,
+      "maxHp": 120,
+      "cost": {
+        "timber": 3,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "r1_storage_container",
+      "materials": {
+        "body": "painted-metal"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 5,
+      "stationTags": []
+    },
+    "domestic_kitchen": {
+      "id": "domestic_kitchen",
+      "name": "\u7ec4\u5408\u53a8\u67dc",
+      "kind": "cabinet",
+      "size": {
+        "x": 2.83,
+        "y": 2.04,
+        "z": 1.705
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.43,
+            "y": 0,
+            "z": -0.93
+          },
+          "max": {
+            "x": 1.4,
+            "y": 0.94,
+            "z": 0.775
+          }
+        },
+        {
+          "min": {
+            "x": -1.43,
+            "y": 1.38,
+            "z": -0.93
+          },
+          "max": {
+            "x": 1.4,
+            "y": 2.04,
+            "z": -0.63
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.43,
+            "y": 0,
+            "z": -0.93
+          },
+          "max": {
+            "x": 1.4,
+            "y": 0.94,
+            "z": 0.775
+          }
+        },
+        {
+          "min": {
+            "x": -1.43,
+            "y": 1.38,
+            "z": -0.93
+          },
+          "max": {
+            "x": 1.4,
+            "y": 2.04,
+            "z": -0.63
+          }
+        }
+      ],
+      "support": "surface",
+      "surfaceY": null,
+      "maxHp": 120,
+      "cost": {
+        "timber": 3,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_kitchen",
+      "materials": {
+        "body": "plaster",
+        "top": "plywood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1.4
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 4,
+      "stationTags": []
+    },
+    "domestic_table": {
+      "id": "domestic_table",
+      "name": "\u6728\u9910\u684c",
+      "kind": "cabinet",
+      "size": {
+        "x": 1.2,
+        "y": 0.8,
+        "z": 0.9
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -0.6,
+            "y": 0,
+            "z": -0.45
+          },
+          "max": {
+            "x": 0.6,
+            "y": 0.8,
+            "z": 0.45
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -0.6,
+            "y": 0.73,
+            "z": -0.45
+          },
+          "max": {
+            "x": 0.6,
+            "y": 0.8,
+            "z": 0.45
+          }
+        }
+      ],
+      "support": "surface",
+      "surfaceY": null,
+      "maxHp": 120,
+      "cost": {
+        "timber": 3,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_table",
+      "materials": {
+        "body": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": -1
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 2,
+      "stationTags": []
+    },
+    "domestic_chair": {
+      "id": "domestic_chair",
+      "name": "\u6728\u6905",
+      "kind": "cabinet",
+      "size": {
+        "x": 0.44,
+        "y": 0.92,
+        "z": 0.45
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -0.22,
+            "y": 0,
+            "z": -0.225
+          },
+          "max": {
+            "x": 0.22,
+            "y": 0.92,
+            "z": 0.225
+          }
+        }
+      ],
+      "sight": [],
+      "support": "surface",
+      "surfaceY": null,
+      "maxHp": 120,
+      "cost": {
+        "timber": 3,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_chair",
+      "materials": {
+        "body": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0.8
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 1,
+      "stationTags": []
+    },
+    "domestic_desk": {
+      "id": "domestic_desk",
+      "name": "\u4f4f\u6237\u4e66\u684c",
+      "kind": "cabinet",
+      "size": {
+        "x": 1.2,
+        "y": 1.15,
+        "z": 0.62
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -0.6,
+            "y": 0,
+            "z": -0.31
+          },
+          "max": {
+            "x": 0.6,
+            "y": 1.15,
+            "z": 0.31
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -0.6,
+            "y": 0.75,
+            "z": -0.31
+          },
+          "max": {
+            "x": 0.6,
+            "y": 1.15,
+            "z": 0.31
+          }
+        }
+      ],
+      "support": "surface",
+      "surfaceY": null,
+      "maxHp": 120,
+      "cost": {
+        "timber": 3,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_desk",
+      "materials": {
+        "body": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 2,
+      "stationTags": []
+    },
+    "foundation_rim": {
+      "id": "foundation_rim",
+      "name": "\u57fa\u7840\u6536\u8fb9",
+      "kind": "foundation",
+      "size": {
+        "x": 0.2,
+        "y": 0.4,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -0.1,
+            "y": -0.4,
+            "z": -1
+          },
+          "max": {
+            "x": 0.1,
+            "y": 0,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -0.1,
+            "y": -0.4,
+            "z": -1
+          },
+          "max": {
+            "x": 0.1,
+            "y": 0,
+            "z": 1
+          }
+        }
+      ],
+      "support": "terrain",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 1
+      },
+      "salvage": {},
+      "seconds": 4,
+      "tool": "hammering",
+      "assetId": "city_floor_panel",
+      "materials": {
+        "top": "wood-floor",
+        "side": "concrete"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1.65
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": []
+    },
+    "roof_pitch_quarter_0": {
+      "id": "roof_pitch_quarter_0",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 0.45,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 0.0625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 0.125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 0.1875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 0.25,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 0.0625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 0.125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 0.1875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 0.25,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.25,
+        "tier": 0
+      }
+    },
+    "roof_pitch_quarter_1": {
+      "id": "roof_pitch_quarter_1",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 0.7,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 0.3125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 0.375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 0.4375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 0.5,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 0.3125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 0.375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 0.4375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 0.5,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.25,
+        "tier": 1
+      }
+    },
+    "roof_pitch_quarter_2": {
+      "id": "roof_pitch_quarter_2",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 0.95,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 0.5625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 0.625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 0.6875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 0.75,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 0.5625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 0.625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 0.6875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 0.75,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.25,
+        "tier": 2
+      }
+    },
+    "roof_pitch_quarter_3": {
+      "id": "roof_pitch_quarter_3",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 1.2,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 0.8125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 0.875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 0.9375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 0.8125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 0.875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 0.9375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.25,
+        "tier": 3
+      }
+    },
+    "roof_pitch_quarter_4": {
+      "id": "roof_pitch_quarter_4",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 1.45,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 1.0625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 1.125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 1.1875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 1.25,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 1.0625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 1.125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 1.1875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 1.25,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.25,
+        "tier": 4
+      }
+    },
+    "roof_pitch_quarter_5": {
+      "id": "roof_pitch_quarter_5",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 1.7,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 1.3125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 1.375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 1.4375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 1.5,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 1.3125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 1.375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 1.4375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 1.5,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.25,
+        "tier": 5
+      }
+    },
+    "roof_pitch_quarter_6": {
+      "id": "roof_pitch_quarter_6",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 1.95,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 1.5625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 1.625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 1.6875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 1.75,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 1.5625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 1.625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 1.6875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 1.75,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.25,
+        "tier": 6
+      }
+    },
+    "roof_pitch_quarter_7": {
+      "id": "roof_pitch_quarter_7",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 2.2,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 1.8125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 1.875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 1.9375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 2.0,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 1.8125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 1.875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 1.9375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 2.0,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.25,
+        "tier": 7
+      }
+    },
+    "roof_pitch_half_0": {
+      "id": "roof_pitch_half_0",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 0.7,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 0.125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 0.25,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 0.375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 0.5,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 0.125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 0.25,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 0.375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 0.5,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.5,
+        "tier": 0
+      }
+    },
+    "roof_pitch_half_1": {
+      "id": "roof_pitch_half_1",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 1.2,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 0.625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 0.75,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 0.875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 0.625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 0.75,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 0.875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.5,
+        "tier": 1
+      }
+    },
+    "roof_pitch_half_2": {
+      "id": "roof_pitch_half_2",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 1.7,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 1.125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 1.25,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 1.375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 1.5,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 1.125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 1.25,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 1.375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 1.5,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.5,
+        "tier": 2
+      }
+    },
+    "roof_pitch_half_3": {
+      "id": "roof_pitch_half_3",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 2.2,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 1.625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 1.75,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 1.875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 2.0,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 1.625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 1.75,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 1.875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 2.0,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.5,
+        "tier": 3
+      }
+    },
+    "roof_pitch_half_4": {
+      "id": "roof_pitch_half_4",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 2.7,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 2.125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 2.25,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 2.375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 2.5,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 2.125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 2.25,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 2.375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 2.5,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.5,
+        "tier": 4
+      }
+    },
+    "roof_pitch_half_5": {
+      "id": "roof_pitch_half_5",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 3.2,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 2.625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 2.75,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 2.875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 3.0,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 2.625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 2.75,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 2.875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 3.0,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.5,
+        "tier": 5
+      }
+    },
+    "roof_pitch_half_6": {
+      "id": "roof_pitch_half_6",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 3.7,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 3.125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 3.25,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 3.375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 3.5,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 3.125,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 3.25,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 3.375,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 3.5,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.5,
+        "tier": 6
+      }
+    },
+    "roof_pitch_half_7": {
+      "id": "roof_pitch_half_7",
+      "name": "\u5761\u5c4b\u76d6",
+      "kind": "roof",
+      "size": {
+        "x": 2,
+        "y": 4.2,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 3.625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 3.75,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 3.875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 4.0,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": -0.5,
+            "y": 3.625,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": -0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.0,
+            "y": 3.75,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.0,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 0.5,
+            "y": 3.875,
+            "z": 1
+          }
+        },
+        {
+          "min": {
+            "x": 0.5,
+            "y": -0.2,
+            "z": -1
+          },
+          "max": {
+            "x": 1.0,
+            "y": 4.0,
+            "z": 1
+          }
+        }
+      ],
+      "support": "wall-top",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_roof_panel",
+      "materials": {
+        "top": "roof-tile",
+        "underside": "structural-wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": -0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0.55,
+          "y": -3.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": -0.55
+        },
+        {
+          "x": 0,
+          "y": -3.4,
+          "z": 0.55
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": [],
+      "roof_profile": {
+        "shape": "stepped-pitch",
+        "step": 0.5,
+        "rise": 0.5,
+        "tier": 7
+      }
+    },
+    "porch_post": {
+      "id": "porch_post",
+      "name": "\u5eca\u67f1",
+      "kind": "wall",
+      "size": {
+        "x": 0.18,
+        "y": 3.2,
+        "z": 0.18
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -0.09,
+            "y": 0,
+            "z": -0.09
+          },
+          "max": {
+            "x": 0.09,
+            "y": 3.2,
+            "z": 0.09
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -0.09,
+            "y": 0,
+            "z": -0.09
+          },
+          "max": {
+            "x": 0.09,
+            "y": 3.2,
+            "z": 0.09
+          }
+        }
+      ],
+      "support": "surface",
+      "surfaceY": null,
+      "maxHp": 80,
+      "cost": {
+        "timber": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 6,
+      "tool": "hammering",
+      "assetId": "timber_porch_post",
+      "materials": {
+        "exterior": "wood",
+        "interior": "wood"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": -0.8
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0.8
+        }
+      ],
+      "sockets": [
+        {
+          "id": "left",
+          "position": {
+            "x": -1,
+            "y": 0,
+            "z": 0
+          },
+          "accepts": [
+            "wall",
+            "corner",
+            "door",
+            "window"
+          ]
+        },
+        {
+          "id": "right",
+          "position": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "accepts": [
+            "wall",
+            "corner",
+            "door",
+            "window"
+          ]
+        }
+      ],
+      "soundLossDb": 28,
+      "stationTags": []
+    },
+    "foundation_rim_start": {
+      "id": "foundation_rim_start",
+      "name": "\u5185\u89d2\u57fa\u7840\u6536\u8fb9",
+      "kind": "foundation",
+      "size": {
+        "x": 0.2,
+        "y": 0.4,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -0.1,
+            "y": -0.4,
+            "z": -0.8
+          },
+          "max": {
+            "x": 0.1,
+            "y": 0,
+            "z": 1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -0.1,
+            "y": -0.4,
+            "z": -0.8
+          },
+          "max": {
+            "x": 0.1,
+            "y": 0,
+            "z": 1
+          }
+        }
+      ],
+      "support": "terrain",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 1
+      },
+      "salvage": {},
+      "seconds": 4,
+      "tool": "hammering",
+      "assetId": "city_floor_panel",
+      "materials": {
+        "top": "wood-floor",
+        "side": "concrete"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1.65
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": []
+    },
+    "foundation_rim_end": {
+      "id": "foundation_rim_end",
+      "name": "\u5185\u89d2\u57fa\u7840\u6536\u8fb9",
+      "kind": "foundation",
+      "size": {
+        "x": 0.2,
+        "y": 0.4,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -0.1,
+            "y": -0.4,
+            "z": -1
+          },
+          "max": {
+            "x": 0.1,
+            "y": 0,
+            "z": 0.8
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -0.1,
+            "y": -0.4,
+            "z": -1
+          },
+          "max": {
+            "x": 0.1,
+            "y": 0,
+            "z": 0.8
+          }
+        }
+      ],
+      "support": "terrain",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 1
+      },
+      "salvage": {},
+      "seconds": 4,
+      "tool": "hammering",
+      "assetId": "city_floor_panel",
+      "materials": {
+        "top": "wood-floor",
+        "side": "concrete"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1.65
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": []
+    },
+    "foundation_rim_both": {
+      "id": "foundation_rim_both",
+      "name": "\u5185\u89d2\u57fa\u7840\u6536\u8fb9",
+      "kind": "foundation",
+      "size": {
+        "x": 0.2,
+        "y": 0.4,
+        "z": 2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -0.1,
+            "y": -0.4,
+            "z": -0.8
+          },
+          "max": {
+            "x": 0.1,
+            "y": 0,
+            "z": 0.8
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -0.1,
+            "y": -0.4,
+            "z": -0.8
+          },
+          "max": {
+            "x": 0.1,
+            "y": 0,
+            "z": 0.8
+          }
+        }
+      ],
+      "support": "terrain",
+      "surfaceY": 0,
+      "maxHp": 120,
+      "cost": {
+        "timber": 1
+      },
+      "salvage": {},
+      "seconds": 4,
+      "tool": "hammering",
+      "assetId": "city_floor_panel",
+      "materials": {
+        "top": "wood-floor",
+        "side": "concrete"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1.65
+        }
+      ],
+      "sockets": [],
+      "soundLossDb": 28,
+      "stationTags": []
+    },
+    "yard_wall": {
+      "id": "yard_wall",
+      "name": "\u77ee\u9662\u5899",
+      "kind": "wall",
+      "size": {
+        "x": 2,
+        "y": 0.85,
+        "z": 0.2
+      },
+      "solids": [
+        {
+          "min": {
+            "x": -1,
+            "y": 0,
+            "z": -0.1
+          },
+          "max": {
+            "x": 1,
+            "y": 0.85,
+            "z": 0.1
+          }
+        }
+      ],
+      "sight": [
+        {
+          "min": {
+            "x": -1,
+            "y": 0,
+            "z": -0.1
+          },
+          "max": {
+            "x": 1,
+            "y": 0.85,
+            "z": 0.1
+          }
+        }
+      ],
+      "support": "surface",
+      "surfaceY": null,
+      "maxHp": 100,
+      "cost": {
+        "timber": 1,
+        "scrap": 1
+      },
+      "salvage": {
+        "timber": 1
+      },
+      "seconds": 8,
+      "tool": "hammering",
+      "assetId": "city_wall_solid",
+      "materials": {
+        "interior": "plaster",
+        "exterior": "plaster"
+      },
+      "usePoints": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": -0.8
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0.8
+        }
+      ],
+      "sockets": [
+        {
+          "id": "left",
+          "position": {
+            "x": -1,
+            "y": 0,
+            "z": 0
+          },
+          "accepts": [
+            "wall",
+            "corner",
+            "door",
+            "window"
+          ]
+        },
+        {
+          "id": "right",
+          "position": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "accepts": [
+            "wall",
+            "corner",
+            "door",
+            "window"
+          ]
+        }
+      ],
+      "soundLossDb": 28,
+      "stationTags": []
+    }
+  }
+}

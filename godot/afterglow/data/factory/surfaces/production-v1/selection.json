@@ -1,0 +1,53 @@
+{
+  "schema": "afterglow-production-surface-selection-v1",
+  "assets": [
+    {
+      "id": "log_endgrain_04m",
+      "source": "assets/art/r34-factory-v1/surfaces/production-v1/log_endgrain_04m.png",
+      "resource": "res://data/factory/surfaces/production-v1/log_endgrain_04m.png",
+      "sha256": "41e75c9cf47ce75f7658b12683ed1b3f6840249821ec6c8e1c340303904619a1",
+      "physical_m": [
+        0.4,
+        0.4
+      ],
+      "uv_contract": "0.4m cap UV=local(x,z)/0.4+0.5; no repeat; original v12 contract"
+    },
+    {
+      "id": "timber_sawn_face_2m",
+      "source": "assets/art/r34-factory-v1/surfaces/production-v1/timber_sawn_face_2m.png",
+      "resource": "res://data/factory/surfaces/production-v1/timber_sawn_face_2m.png",
+      "sha256": "c6f42770e8ef6bbe186670e5360a49c48ed7dfe4b3a54bd3f8108fb1edddd4e2",
+      "physical_m": [
+        2,
+        2
+      ],
+      "uv_contract": "2m metric face UV, compatible with existing wood_floor tile_meters=2; V down image follows grain"
+    },
+    {
+      "id": "drive_painted_iron_1m",
+      "source": "assets/art/r34-factory-v1/surfaces/production-v1/drive_painted_iron_1m.png",
+      "resource": "res://data/factory/surfaces/production-v1/drive_painted_iron_1m.png",
+      "sha256": "1227519bb71ff73c0adac6a71d725922a3935541338e7e493ab8bac98855d102",
+      "physical_m": [
+        1,
+        1
+      ],
+      "uv_contract": "1m local metric surface, existing painted_metal family; albedo only"
+    },
+    {
+      "id": "drive_rust_iron_1m",
+      "source": "assets/art/r34-factory-v1/surfaces/production-v1/drive_rust_iron_1m.png",
+      "resource": "res://data/factory/surfaces/production-v1/drive_rust_iron_1m.png",
+      "sha256": "a2e695cc1225b24bdc535ae994695c95eec161d29896b703e7b326f5f878b4ea",
+      "physical_m": [
+        1,
+        1
+      ],
+      "uv_contract": "1m local metric surface, existing p06 rust-family contract; albedo only"
+    }
+  ],
+  "binding_scope": "log caps; sawn timber long faces; carried recovered drive housing/base only",
+  "formal_package": false,
+  "normal_camera_VA": false,
+  "source_art_manifest_sha256": "f7dda1d1cc70cdd712f9907bcb86b96ddab8bb1bc81a296ad04e087f669385fb"
+}

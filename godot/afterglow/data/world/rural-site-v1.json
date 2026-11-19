@@ -1,0 +1,81 @@
+{
+  "format": "afterglow-r33-rural-site-proposal-v1",
+  "status": "G0 data proposal only; not registered, generated, gameplay-tested or accepted",
+  "coordinate_system": "metres; Y up; XZ ground; half-open region bounds",
+  "cell_size": 0.5,
+  "chunk_cells": 16,
+  "new_world_namespace": "rural:v1",
+  "old_world_ids_unchanged": true,
+  "world_generator_version": "UNASSIGNED: A/C migration contract must register a new supported rural content version; never rewrite r3-town-5 saves",
+  "authority": "Only A game_runtime command + C world_state can register persistent facts after G0 release",
+  "parti": "Arrival road to a usable courtyard, then visible forest resources and the village road; return by the same readable persistent route with actual supplies and companions",
+  "metrics_source": {
+    "agent_profile": "game/core/source/world/spatial/SpatialAgent.ts DEFAULT_SPATIAL_AGENT",
+    "radius": 0.26,
+    "height": 1.8,
+    "max_step": 0.55,
+    "max_move_distance_per_request": 1,
+    "primary_road_width": "4m reuses existing TownGenerator road class; no claim of Godot movement acceptance",
+    "access_width": "2m proposal, not an accepted generic minimum; B/A must test two people, tool use, gate sweep and camera at actual Godot metrics",
+    "camera": "Existing Babylon orthographic full height 24m at default zoom; Godot camera and fixed views owned by A, not locked by this proposal"
+  },
+  "regions": [
+    {
+      "id": "RH-HOME",
+      "bounds": {"min": {"x": 0, "y": -4, "z": 0}, "max": {"x": 64, "y": 20, "z": 64}},
+      "ground_elevation": 0,
+      "road": {"id": "rural:v1:RH-HOME:road:main", "axis": "z", "center_x": 32, "z_min": 0, "z_max": 54, "width": 4, "material": "road"},
+      "connection": {"to_region": "RH-VILLAGE", "road_center_x": 32, "boundary_z": 0, "width": 4, "inside_point": {"x": 32, "y": 0, "z": 0.5}},
+      "arrival": {"x": 32, "y": 0, "z": 44},
+      "site_envelopes_for_B": [
+        {"id": "home-courtyard", "xz": [4, 24, 28, 50], "use": "home, courtyard and entrance; final building footprint, floors, windows, gate and physical facilities owned by B", "suggested_gate": {"x": 28, "y": 0, "z": 40}},
+        {"id": "shed", "xz": [4, 14, 16, 22], "use": "small shed; B owns geometry and contents"},
+        {"id": "workable-ground", "xz": [16, 14, 28, 22], "use": "small real dig/fill area; no free crops or automatic farm"}
+      ],
+      "access_corridors": [
+        {"id": "rural:v1:RH-HOME:path:gate", "xz": [28, 39, 34, 41], "elevation": 0, "minimum_clear_width": 2},
+        {"id": "rural:v1:RH-HOME:path:shed", "xz": [8, 22, 10, 26], "elevation": 0, "minimum_clear_width": 2},
+        {"id": "rural:v1:RH-HOME:path:forest", "xz": [34, 26, 44, 28], "elevation": 0, "minimum_clear_width": 2}
+      ],
+      "forest_edge": {"xz": [40, 8, 62, 58], "clear_of_main_road": true, "placement": "stable real tree entities plus derived shrub/grass/leaf layers; no hidden loot in decorative shrubs"},
+      "resource_site_candidates": [
+        {"id": "rural:v1:RH-HOME:tree:01", "kind": "tree", "x": 44, "z": 14},
+        {"id": "rural:v1:RH-HOME:tree:02", "kind": "tree", "x": 52, "z": 12},
+        {"id": "rural:v1:RH-HOME:tree:03", "kind": "tree", "x": 58, "z": 20},
+        {"id": "rural:v1:RH-HOME:tree:04", "kind": "tree", "x": 48, "z": 34},
+        {"id": "rural:v1:RH-HOME:tree:05", "kind": "tree", "x": 56, "z": 42},
+        {"id": "rural:v1:RH-HOME:tree:06", "kind": "tree", "x": 44, "z": 52}
+      ]
+    },
+    {
+      "id": "RH-VILLAGE",
+      "bounds": {"min": {"x": 0, "y": -4, "z": -64}, "max": {"x": 64, "y": 20, "z": 0}},
+      "ground_elevation": 0,
+      "road": {"id": "rural:v1:RH-VILLAGE:road:main", "axis": "z", "center_x": 32, "z_min": -60, "z_max": 0, "width": 4, "material": "road"},
+      "connection": {"to_region": "RH-HOME", "road_center_x": 32, "boundary_z": 0, "width": 4, "inside_point": {"x": 32, "y": 0, "z": -0.5}},
+      "site_envelopes_for_B": [
+        {"id": "village-store", "xz": [8, -26, 24, -10], "use": "real searchable food/water containers and repair clue; amounts, permissions and quest facts owned by A/B"},
+        {"id": "repair-shop", "xz": [40, -44, 56, -28], "use": "RH-NPC-02 contact, real tools/records and reachable alternative path; B actual entrances"},
+        {"id": "neighbor-home", "xz": [8, -56, 24, -38], "use": "RH-NPC-01 contact and real departure route; B actual entrances"}
+      ],
+      "access_corridors": [
+        {"id": "rural:v1:RH-VILLAGE:path:store", "xz": [24, -19, 32, -17], "elevation": 0, "minimum_clear_width": 2},
+        {"id": "rural:v1:RH-VILLAGE:path:repair", "xz": [32, -37, 40, -35], "elevation": 0, "minimum_clear_width": 2},
+        {"id": "rural:v1:RH-VILLAGE:path:neighbor", "xz": [24, -49, 32, -47], "elevation": 0, "minimum_clear_width": 2}
+      ],
+      "critical_alternative_route": "A/B must place real reachable tools/knowledge in one of these legal sites if RH-NPC-02 refuses/dies; C does not create replacement NPC or free reward",
+      "resource_site_candidates": [
+        {"id": "rural:v1:RH-VILLAGE:tree:01", "kind": "tree", "x": 4, "z": -30},
+        {"id": "rural:v1:RH-VILLAGE:tree:02", "kind": "tree", "x": 58, "z": -10},
+        {"id": "rural:v1:RH-VILLAGE:tree:03", "kind": "tree", "x": 58, "z": -54}
+      ]
+    }
+  ],
+  "review_requirements": [
+    "B must replace site envelopes with actual shared-grammar buildings, gate, floor elevations, doors and stairs; C then validates exact body/egress/build footprint against terrain",
+    "A must approve gameplay routes, first-night supplies, alternative tools/knowledge and finite encounter facts; C does not set rewards or independent clock",
+    "No object, canopy, scatter or collision on main/access corridors; successful actual runtime route and refusal tests remain mandatory",
+    "Art reference requires B actual facade/windows/roof and A fixed camera; this proposal alone is not an actual scene or approved visual reference",
+    "Complete dual-region facts persist through harvest/dig/fill/cold-warm/revisit/save; all implementation awaits G0 release"
+  ]
+}

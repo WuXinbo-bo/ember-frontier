@@ -1,0 +1,23 @@
+[
+  {
+    "path": "godot/afterglow/tests/buildings/view_mount_reference/building_view.gd",
+    "original_sha256": "c1b11cb9db1f1ddcb9b3b65f04956a7f2759ca2676f9b14d7a8a2c9b179ddc49",
+    "reference_sha256": "badcc83077fdfbb724a0d54c4583255baeae5a13fb3c8f9c5b5ae3053391a256",
+    "only_preload_remaps": {
+      "res://scripts/buildings/building_details.gd": "res://tests/buildings/view_mount_reference/building_details.gd",
+      "res://scripts/buildings/dressing_geometry.gd": "res://tests/buildings/view_mount_reference/dressing_geometry.gd"
+    }
+  },
+  {
+    "path": "godot/afterglow/tests/buildings/view_mount_reference/building_details.gd",
+    "original_sha256": "dbed760baa24d3f28dc453787dc1069272aedc28358bc78188c87c9bcfc87223",
+    "reference_sha256": "dbed760baa24d3f28dc453787dc1069272aedc28358bc78188c87c9bcfc87223",
+    "only_preload_remaps": {}
+  },
+  {
+    "path": "godot/afterglow/tests/buildings/view_mount_reference/dressing_geometry.gd",
+    "original_sha256": "ee101846398f751006df9888ab92066faa798380983b0f5a1f7d6d87c0a847a2",
+    "reference_sha256": "ee101846398f751006df9888ab92066faa798380983b0f5a1f7d6d87c0a847a2",
+    "only_preload_remaps": {}
+  }
+]

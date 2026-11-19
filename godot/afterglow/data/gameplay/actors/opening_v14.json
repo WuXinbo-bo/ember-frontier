@@ -1,0 +1,12 @@
+{
+  "schema": "afterglow-opening-characters-v14",
+  "actors": {
+    "village-resident": {"name": "林夏", "age_years": 27, "role_id": "scout_hauler", "role_label": "勘察与采运", "appearance_id": "village_linxia_v14", "character_version": 14},
+    "repair-resident": {"name": "陈拓", "age_years": 36, "role_id": "woodworker_repair", "role_label": "木作与维修", "appearance_id": "village_chentuo_v14", "character_version": 14}
+  },
+  "visuals": {
+    "village_linxia_v14": {"source_rig": "r1_resident_commuter", "silhouette": "slim shoulders and short dark hair", "palette": "forest green work jacket"},
+    "village_chentuo_v14": {"source_rig": "r1_resident_commuter", "silhouette": "broad shoulders and short dark hair", "palette": "copper work jacket"}
+  },
+  "legacy": "Content 1-13 and saved actor facts retain their original names and appearances. Stable IDs represent opening roles; elders recruited later require independent IDs. Age is biography only."
+}

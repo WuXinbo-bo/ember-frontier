@@ -1,0 +1,683 @@
+{
+  "version": 1,
+  "source_manifest": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/manifest.json",
+  "source_manifest_sha256": "27b025c5345e12b57701e1619046b31451d1d529a335ef2005036cb0078f55ce",
+  "stage": "C independent source-image review and candidate binding; upstream visual_check remains pending; no package/VA qualification",
+  "assets": [
+    {
+      "id": "v01_fresh_grass",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/cutouts/v01_fresh_grass.png",
+      "sha256": "e1fd98ed44493d2d5c02459a885a562b842d758423fb95a1a5fb001cac0e40a3",
+      "alpha": true,
+      "tiling": false,
+      "visible_size_m": [
+        0.55,
+        0.35
+      ],
+      "state": "static botanical appearance; no inventory/harvest fact created",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v01_fresh_grass.png",
+      "full_canvas_m": [
+        0.6285714285714287,
+        0.4424691358024691
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        32,
+        75,
+        480,
+        480
+      ]
+    },
+    {
+      "id": "v02_dry_grass",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/cutouts/v02_dry_grass.png",
+      "sha256": "b2a3b4fa595db5a7fdd0c5826e9ceaca9dae7d7e92509c4bfad17806ddebf900",
+      "alpha": true,
+      "tiling": false,
+      "visible_size_m": [
+        0.55,
+        0.45
+      ],
+      "state": "static botanical appearance; no inventory/harvest fact created",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v02_dry_grass.png",
+      "full_canvas_m": [
+        0.6285714285714287,
+        0.5142857142857143
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        32,
+        32,
+        480,
+        480
+      ]
+    },
+    {
+      "id": "v03_yellow_wildflowers",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/cutouts/v03_yellow_wildflowers.png",
+      "sha256": "1a816e0b454b13fa83a2bbe87da74d6232f7c5e7f55fc24778aa260c42eac90b",
+      "alpha": true,
+      "tiling": false,
+      "visible_size_m": [
+        0.5,
+        0.45
+      ],
+      "state": "static botanical appearance; no inventory/harvest fact created",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v03_yellow_wildflowers.png",
+      "full_canvas_m": [
+        0.6066350710900474,
+        0.5142857142857143
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        45,
+        32,
+        467,
+        480
+      ]
+    },
+    {
+      "id": "v04_cattails",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/cutouts/v04_cattails.png",
+      "sha256": "14cbd9122bc380570dee8ef5fc8c96f5324942c9ff9171834c2a95533df05900",
+      "alpha": true,
+      "tiling": false,
+      "visible_size_m": [
+        0.65,
+        1.1
+      ],
+      "state": "static botanical appearance; no inventory/harvest fact created",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v04_cattails.png",
+      "full_canvas_m": [
+        0.851150895140665,
+        1.2571428571428573
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        60,
+        32,
+        451,
+        480
+      ],
+      "semantic_note": "source depicts cattail seed spikes, labelled cattail rather than reed; decorative wetland plant",
+      "previous_staged_sha256": "1ece730d9d1917d6b6c8a6ba9b8288af874a52e45c777c419af48cf12007312c",
+      "recrop_reason": "recropped from full source inter-row margin; all spike/leaf tips inside source with >20px white margin; no invented tip"
+    },
+    {
+      "id": "c01_rice_vegetative",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/cutouts/c01_rice_vegetative.png",
+      "sha256": "8a4b90f406b9cece1f5a29b6de31102242954a51d78b1e4528f117b1573992b5",
+      "alpha": true,
+      "tiling": false,
+      "visible_size_m": [
+        0.5,
+        0.75
+      ],
+      "state": "static botanical appearance; no inventory/harvest fact created",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/c01_rice_vegetative.png",
+      "full_canvas_m": [
+        0.6844919786096256,
+        0.8571428571428571
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        69,
+        32,
+        443,
+        480
+      ]
+    },
+    {
+      "id": "c02_rice_ripe",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/cutouts/c02_rice_ripe.png",
+      "sha256": "95ccf6d40a826e03cdf0ebc60af5bbdea8c725f96d06c05b95c3de6c9acc0482",
+      "alpha": true,
+      "tiling": false,
+      "visible_size_m": [
+        0.6,
+        1.1
+      ],
+      "state": "static botanical appearance; no inventory/harvest fact created",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/c02_rice_ripe.png",
+      "full_canvas_m": [
+        0.7144186046511628,
+        1.2571428571428573
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        41,
+        32,
+        471,
+        480
+      ]
+    },
+    {
+      "id": "c03_rice_stubble",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/cutouts/c03_rice_stubble.png",
+      "sha256": "6fe6f315c6013bfe0bc701f3933b7fc799c76fa6a0b56f5f1ddcaaebde866d88",
+      "alpha": true,
+      "tiling": false,
+      "visible_size_m": [
+        0.45,
+        0.2
+      ],
+      "state": "static botanical appearance; no inventory/harvest fact created",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/c03_rice_stubble.png",
+      "full_canvas_m": [
+        0.5142857142857143,
+        0.3506849315068493
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        32,
+        188,
+        480,
+        480
+      ]
+    },
+    {
+      "id": "c04_leafy_rosette",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/cutouts/c04_leafy_rosette.png",
+      "sha256": "6048aebd03d78168781ded20510025d288bd71890c5481d261ac86a30aef9f27",
+      "alpha": true,
+      "tiling": false,
+      "visible_size_m": [
+        0.55,
+        0.35
+      ],
+      "state": "static botanical appearance; no inventory/harvest fact created",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/c04_leafy_rosette.png",
+      "full_canvas_m": [
+        0.6564102564102564,
+        0.39999999999999997
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        41,
+        155,
+        470,
+        480
+      ]
+    },
+    {
+      "id": "v05_flowering_shrub_sparse",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/cutouts/v05_flowering_shrub_sparse.png",
+      "sha256": "8fd4843254a6fbce3e4803d0aa82f12dfeddccc3620916b1516550eb2016ffd6",
+      "alpha": true,
+      "tiling": false,
+      "visible_size_m": [
+        0.8,
+        0.65
+      ],
+      "state": "static botanical appearance; no inventory/harvest fact created",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v05_flowering_shrub_sparse.png",
+      "full_canvas_m": [
+        0.9142857142857144,
+        0.8
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        32,
+        64,
+        480,
+        480
+      ],
+      "semantic_note": "source includes yellow flowers; accurately classified decorative flowering shrub, not a berry resource"
+    },
+    {
+      "id": "v06_flowering_shrub_dense",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/cutouts/v06_flowering_shrub_dense.png",
+      "sha256": "7e9de18eb6a4f93e641cf667c2057a17587dca5b9cf15500904ee6da27cf2495",
+      "alpha": true,
+      "tiling": false,
+      "visible_size_m": [
+        0.9,
+        0.7
+      ],
+      "state": "static botanical appearance; no inventory/harvest fact created",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v06_flowering_shrub_dense.png",
+      "full_canvas_m": [
+        1.0285714285714287,
+        1.003921568627451
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        32,
+        123,
+        480,
+        480
+      ],
+      "semantic_note": "source includes yellow flowers; accurately classified decorative flowering shrub, not a berry resource"
+    },
+    {
+      "id": "v07_fern",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/cutouts/v07_fern.png",
+      "sha256": "68eee0d3b8d3a7348f34330fd812bcf8a36e406f94cf0904d5e2e29e658543a9",
+      "alpha": true,
+      "tiling": false,
+      "visible_size_m": [
+        0.7,
+        0.4
+      ],
+      "state": "static botanical appearance; no inventory/harvest fact created",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v07_fern.png",
+      "full_canvas_m": [
+        0.7999999999999999,
+        0.6005865102639296
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        32,
+        139,
+        480,
+        480
+      ]
+    },
+    {
+      "id": "v08_bramble",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/cutouts/v08_bramble.png",
+      "sha256": "c084c2236f2764a39c0b827055e61f50744de0360b8ce4e5e4d78bfb1678f16a",
+      "alpha": true,
+      "tiling": false,
+      "visible_size_m": [
+        0.85,
+        0.6
+      ],
+      "state": "static botanical appearance; no inventory/harvest fact created",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v08_bramble.png",
+      "full_canvas_m": [
+        0.9714285714285714,
+        0.7585185185185185
+      ],
+      "pivot": [
+        0.5,
+        0.9375
+      ],
+      "alpha_bbox": [
+        32,
+        75,
+        480,
+        480
+      ]
+    },
+    {
+      "id": "v09_broadleaf_bark",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/v09_broadleaf_bark.png",
+      "sha256": "b5e52e0f06f814aa7b64f282c4c6a58fc925192a9130ec83dc50a8a4ff3e0955",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        1,
+        1
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v09_broadleaf_bark.png",
+      "physical_m": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "v10_conifer_bark",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/v10_conifer_bark.png",
+      "sha256": "ea716e9ed337642d1b9ab1e67642a4219bda8ab7bd11285e7d2fabdf2fa27e36",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        1,
+        1
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v10_conifer_bark.png",
+      "physical_m": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "v11_dead_bark",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/v11_dead_bark.png",
+      "sha256": "fdabcff78d907bcaafbd9e3083e69bc396dd2a33c6793b7f406122d66bc86198",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        1,
+        1
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v11_dead_bark.png",
+      "physical_m": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "v12_cut_endgrain",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/v12_cut_endgrain.png",
+      "sha256": "dfe64c6d0f9a7b548eb83f92ef2f0d5433dc5a08f39fb12a8d04f17b528bb5d9",
+      "alpha": false,
+      "tiling": false,
+      "visible_size_m": [
+        0.4,
+        0.4
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v12_cut_endgrain.png",
+      "physical_m": [
+        0.4,
+        0.4
+      ]
+    },
+    {
+      "id": "v13_broadleaf_canopy_a",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/v13_broadleaf_canopy_a.png",
+      "sha256": "95bdc02073f43cfb1384ea0eeb6b1509cfe3cf9b6520991e5802ac1b57ff7d49",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        0.8,
+        0.8
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v13_broadleaf_canopy_a.png",
+      "physical_m": [
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "id": "v14_broadleaf_canopy_b",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/v14_broadleaf_canopy_b.png",
+      "sha256": "1a24f431d3f8dd2331c2ade52369f9e94e4920a8c8de88dd3c70d84361155bde",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        0.8,
+        0.8
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v14_broadleaf_canopy_b.png",
+      "physical_m": [
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "id": "v15_conifer_canopy_a",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/v15_conifer_canopy_a.png",
+      "sha256": "e70fa9389c425307ee7a090504d9d8434cb2c49a2abb900ae9ed9ad542634b50",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        0.8,
+        0.8
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v15_conifer_canopy_a.png",
+      "physical_m": [
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "id": "v16_conifer_canopy_b",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/v16_conifer_canopy_b.png",
+      "sha256": "c723e2abe5004f64cc7d6d209fd57c789a98e314233ddd8219958a5b12aed87c",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        0.8,
+        0.8
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/v16_conifer_canopy_b.png",
+      "physical_m": [
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "id": "c05_dry_tilled_soil",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/c05_dry_tilled_soil.png",
+      "sha256": "3d8610b0e2afad0dc05656cf1626da89e9128d0d058d4659f12f10088177b23f",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        1.6,
+        1.6
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/c05_dry_tilled_soil.png",
+      "physical_m": [
+        1.6,
+        1.6
+      ]
+    },
+    {
+      "id": "c06_damp_tilled_soil",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/c06_damp_tilled_soil.png",
+      "sha256": "07cf26560541c08dc2984afad1683491f2cb0c390c1d2c2407f3375148249d02",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        1.6,
+        1.6
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/c06_damp_tilled_soil.png",
+      "physical_m": [
+        1.6,
+        1.6
+      ]
+    },
+    {
+      "id": "c07_earthen_bund",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/c07_earthen_bund.png",
+      "sha256": "93c9b4f45ee2f0084a73bd981394c65dc760cbd73628e9afdb02d615cdf0f402",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        1.6,
+        1.6
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/c07_earthen_bund.png",
+      "physical_m": [
+        1.6,
+        1.6
+      ]
+    },
+    {
+      "id": "c08_straw_fibres",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/c08_straw_fibres.png",
+      "sha256": "d8c9edd008f98c0ec7d6e64b0a7d3557380ee946fca94e522df85563ff8a918c",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        0.6,
+        0.6
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/c08_straw_fibres.png",
+      "physical_m": [
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "id": "r01_weathered_stone",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/r01_weathered_stone.png",
+      "sha256": "1e17cc282841568a57a98e12c28fab9f65869f8251e5a134ffc421c972e69dae",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        1.6,
+        1.6
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/r01_weathered_stone.png",
+      "physical_m": [
+        1.6,
+        1.6
+      ]
+    },
+    {
+      "id": "r02_fractured_stone",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/r02_fractured_stone.png",
+      "sha256": "09fd62d283f59d0422f78821252ba3146258723f940900d934c6686d5f9ece35",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        1,
+        1
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/r02_fractured_stone.png",
+      "physical_m": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "r03_loose_stone_mix",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/r03_loose_stone_mix.png",
+      "sha256": "1be275aabd1ea6aa3422c3b6fdc05c9cfcb5c1eccf3486acdf4a89c7268f75b0",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        0.8,
+        0.8
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/r03_loose_stone_mix.png",
+      "physical_m": [
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "id": "r04_lichen_stone",
+      "file": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/r04_lichen_stone.png",
+      "sha256": "64bcb815a4e588568c3a0255e3429f4c4d1a442fde094ad0a55a2467347d707d",
+      "alpha": false,
+      "tiling": [
+        "X",
+        "Y"
+      ],
+      "visible_size_m": [
+        1.6,
+        1.6
+      ],
+      "state": "static species/material variant; not an authority state",
+      "visual_check": "pending",
+      "resource": "res://data/world/ecology/quality-v1/r04_lichen_stone.png",
+      "physical_m": [
+        1.6,
+        1.6
+      ]
+    }
+  ],
+  "updated_at": "2026-11-14T11:53:58.909070+08:00"
+}

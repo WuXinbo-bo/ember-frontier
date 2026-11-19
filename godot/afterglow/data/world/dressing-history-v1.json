@@ -1,0 +1,646 @@
+{
+  "schema": "afterglow-dressing-history-v1",
+  "purpose": "Exact historical C generation inputs; never substitutes a changed used B definition. Add only reviewed source snapshots.",
+  "source_sha256": "1b7d201d318a622ba006417feb06da2930fc2c9655c803e7838b8a40b7889c22",
+  "catalogues": [
+    {
+      "id": "pre-supplement-nine",
+      "profiles": [
+        {
+          "id": "well_covered",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -1.05,
+              "z": -1.05
+            },
+            "max": {
+              "x": 1.05,
+              "z": 1.05
+            }
+          },
+          "height": 2.5,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": true,
+          "geometry": "well",
+          "source_model": "",
+          "model_offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "water_barrel",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -0.45,
+              "z": -0.45
+            },
+            "max": {
+              "x": 0.45,
+              "z": 0.45
+            }
+          },
+          "height": 1.0,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": true,
+          "geometry": "barrel",
+          "source_model": "",
+          "model_offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "haystack",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -1.15,
+              "z": -0.8
+            },
+            "max": {
+              "x": 1.15,
+              "z": 0.8
+            }
+          },
+          "height": 1.45,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": true,
+          "geometry": "haystack",
+          "source_model": "",
+          "model_offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "village_sign",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -1.5,
+              "z": -0.1
+            },
+            "max": {
+              "x": 1.5,
+              "z": 0.1
+            }
+          },
+          "height": 2.08,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": false,
+          "geometry": "sign",
+          "source_model": "city_sign_board",
+          "model_offset": {
+            "x": 0,
+            "y": 1.55,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "stored_water_tank",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -0.64,
+              "z": -0.64
+            },
+            "max": {
+              "x": 0.64,
+              "z": 0.765
+            }
+          },
+          "height": 1.7,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": true,
+          "geometry": "model",
+          "source_model": "city_roof_tank",
+          "model_offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "abandoned_bicycle",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -0.27,
+              "z": -0.91
+            },
+            "max": {
+              "x": 0.28,
+              "z": 0.91
+            }
+          },
+          "height": 1.0923,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": false,
+          "geometry": "model",
+          "source_model": "city_bicycle",
+          "model_offset": {
+            "x": 0,
+            "y": 0.0073,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "abandoned_scooter",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -0.29,
+              "z": -0.84
+            },
+            "max": {
+              "x": 0.29,
+              "z": 0.84
+            }
+          },
+          "height": 1.1309,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": false,
+          "geometry": "model",
+          "source_model": "city_scooter",
+          "model_offset": {
+            "x": 0,
+            "y": 0.0073,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "rural_fence",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -1.02,
+              "z": -0.085
+            },
+            "max": {
+              "x": 1.02,
+              "z": 0.085
+            }
+          },
+          "height": 1.34,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": false,
+          "geometry": "model",
+          "source_model": "rural_fence",
+          "model_offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "abandoned_car",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -0.94,
+              "z": -2.12
+            },
+            "max": {
+              "x": 0.94,
+              "z": 2.12
+            }
+          },
+          "height": 1.52,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": true,
+          "geometry": "car",
+          "source_model": "",
+          "model_offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "aged abandoned sedan scenery only; no driving, loot, free stock or fake damage state"
+        }
+      ]
+    },
+    {
+      "id": "pre-car-eight",
+      "profiles": [
+        {
+          "id": "well_covered",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -1.05,
+              "z": -1.05
+            },
+            "max": {
+              "x": 1.05,
+              "z": 1.05
+            }
+          },
+          "height": 2.5,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": true,
+          "geometry": "well",
+          "source_model": "",
+          "model_offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "water_barrel",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -0.45,
+              "z": -0.45
+            },
+            "max": {
+              "x": 0.45,
+              "z": 0.45
+            }
+          },
+          "height": 1.0,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": true,
+          "geometry": "barrel",
+          "source_model": "",
+          "model_offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "haystack",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -1.15,
+              "z": -0.8
+            },
+            "max": {
+              "x": 1.15,
+              "z": 0.8
+            }
+          },
+          "height": 1.45,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": true,
+          "geometry": "haystack",
+          "source_model": "",
+          "model_offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "village_sign",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -1.5,
+              "z": -0.1
+            },
+            "max": {
+              "x": 1.5,
+              "z": 0.1
+            }
+          },
+          "height": 2.08,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": false,
+          "geometry": "sign",
+          "source_model": "city_sign_board",
+          "model_offset": {
+            "x": 0,
+            "y": 1.55,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "stored_water_tank",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -0.64,
+              "z": -0.64
+            },
+            "max": {
+              "x": 0.64,
+              "z": 0.765
+            }
+          },
+          "height": 1.7,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": true,
+          "geometry": "model",
+          "source_model": "city_roof_tank",
+          "model_offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "abandoned_bicycle",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -0.27,
+              "z": -0.91
+            },
+            "max": {
+              "x": 0.28,
+              "z": 0.91
+            }
+          },
+          "height": 1.0923,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": false,
+          "geometry": "model",
+          "source_model": "city_bicycle",
+          "model_offset": {
+            "x": 0,
+            "y": 0.0073,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "abandoned_scooter",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -0.29,
+              "z": -0.84
+            },
+            "max": {
+              "x": 0.29,
+              "z": 0.84
+            }
+          },
+          "height": 1.1309,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": false,
+          "geometry": "model",
+          "source_model": "city_scooter",
+          "model_offset": {
+            "x": 0,
+            "y": 0.0073,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        },
+        {
+          "id": "rural_fence",
+          "version": 1,
+          "footprint": {
+            "min": {
+              "x": -1.02,
+              "z": -0.085
+            },
+            "max": {
+              "x": 1.02,
+              "z": 0.085
+            }
+          },
+          "height": 1.34,
+          "terrain_tolerance": 0.025,
+          "clearance": {
+            "road": 0.8,
+            "entrance": 1.6,
+            "actor": 0.8
+          },
+          "no_stock": true,
+          "no_interaction": true,
+          "solid": true,
+          "opaque": false,
+          "geometry": "model",
+          "source_model": "rural_fence",
+          "model_offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "allowed_states": [
+            "aged"
+          ],
+          "placement": "outside_only; actual full-footprint support; no road/door/reservation/actor overlap",
+          "semantic": "scenery only; no infinite clean water, loot, driving, crop yield or work station"
+        }
+      ]
+    }
+  ]
+}

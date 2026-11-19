@@ -1,0 +1,200 @@
+[
+  {
+    "id": "grass_top",
+    "source": "assets/art/world-foundation-r3-v1/images/01_grass_soil_top.png",
+    "resource": "res://data/world/textures/01_grass_soil_top.png",
+    "sha256": "5a8031dd4cd00ae81ddb57d7b43adc62c699b682ea2e178c085cb584dfe569c5",
+    "metres": [
+      1.6,
+      1.6
+    ]
+  },
+  {
+    "id": "soil_side",
+    "source": "assets/art/world-foundation-r3-v1/images/02_soil_section.png",
+    "resource": "res://data/world/textures/02_soil_section.png",
+    "sha256": "3195defed6073b30394dddce3e4953f503318b2504b9d9f2a3a7b9891d59a33d",
+    "metres": [
+      1.6,
+      1.6
+    ]
+  },
+  {
+    "id": "dirt_road",
+    "source": "assets/art/world-foundation-r3-v1/images/03_compacted_dirt_path.png",
+    "resource": "res://data/world/textures/03_compacted_dirt_path.png",
+    "sha256": "69f21be653717f9aec98c8c368c62713f827181b32bfb8f6115aae4277ce3b71",
+    "metres": [
+      1.6,
+      1.6
+    ]
+  },
+  {
+    "id": "gravel",
+    "source": "assets/art/world-foundation-r3-v1/images/04_gravel_ground.png",
+    "resource": "res://data/world/textures/04_gravel_ground.png",
+    "sha256": "d8032661aad45c101bcdd81c380b1ee65edf2cda3687e49b195de654e804a1fc",
+    "metres": [
+      1.6,
+      1.6
+    ]
+  },
+  {
+    "id": "stone",
+    "source": "assets/art/world-foundation-r3-v1/images/05_exposed_rock.png",
+    "resource": "res://data/world/textures/05_exposed_rock.png",
+    "sha256": "25a5177dd77d0a8f5df69070d6ef99a4e4e0fdd4a0fa11d92fd15a3de6e8f624",
+    "metres": [
+      1.6,
+      1.6
+    ]
+  },
+  {
+    "id": "concrete",
+    "source": "assets/art/world-foundation-r3-v1/images/06_rough_concrete_foundation.png",
+    "resource": "res://data/world/textures/06_rough_concrete_foundation.png",
+    "sha256": "51f45cb45b221c7459043942d03c789fef45aeda196c28b0602a60d4021e0e6a",
+    "metres": [
+      1.6,
+      1.6
+    ]
+  },
+  {
+    "id": "grass_edge",
+    "source": "assets/art/world-foundation-r3-v1/images/09_grass_soil_edge.png",
+    "resource": "res://data/world/textures/09_grass_soil_edge.png",
+    "sha256": "902973514a698efa7d107798c98197ed8ce7fba1b24137a1d9427453c347122b",
+    "metres": [
+      1.6,
+      0.65
+    ]
+  },
+  {
+    "id": "grass_corner",
+    "source": "assets/art/world-foundation-r3-v1/images/10_grass_soil_corner.png",
+    "resource": "res://data/world/textures/10_grass_soil_corner.png",
+    "sha256": "35db45f41c057b8f2bc0f6515da6d3bd2a6ea186c930066b4750c8b966e983ca",
+    "metres": [
+      1.6,
+      1.6
+    ]
+  },
+  {
+    "id": "bark",
+    "source": "assets/art/world-detail-r3-v2/images/m12_stylized_bark.png",
+    "resource": "res://data/world/textures/m12_stylized_bark.png",
+    "sha256": "439b3007919b5ba20945f22a81cd8b136e4b0d14422d6dd63da41217f1b9fa44",
+    "metres": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "leaves",
+    "source": "assets/art/world-detail-r3-v2/images/d06_sparse_fallen_leaves.png",
+    "resource": "res://data/world/textures/d06_sparse_fallen_leaves.png",
+    "sha256": "6dd4ab54877c41ac8c50d27d63b6d418e6e4b029a7fe9223b896b148a7411433",
+    "metres": [
+      1.5,
+      1.5
+    ]
+  },
+  {
+    "id": "moss_edge",
+    "source": "assets/art/world-detail-r3-v2/images/d03_paving_moss_edge.png",
+    "resource": "res://data/world/textures/d03_paving_moss_edge.png",
+    "sha256": "f7ce528d933b014c6aca22fbd5f9276a8bfae656562cad04db5a45b7ae537fe4",
+    "metres": [
+      2,
+      0.5
+    ]
+  },
+  {
+    "id": "foliage_atlas",
+    "source": "assets/art/world-detail-r3-1-v1/images/a03_foliage_blocks.png",
+    "resource": "res://data/world/textures/a03_foliage_blocks.png",
+    "sha256": "a1ec0a6ae1bd8ab615cda1f3b8d818d4a78f4fc7b630357dc4ee3c3c306efb81",
+    "metres": null
+  },
+  {
+    "id": "grass_top_detail",
+    "source": "assets/art/rural-quality-r3-3-v1/images/g01_grass_soil_top.png",
+    "resource": "res://data/world/textures/g01_grass_soil_top.png",
+    "sha256": "1d8af167e41fa51a19153c78738e2b8e241b4211d722fda3428b1473bd246c37",
+    "metres": [
+      1.6,
+      1.6
+    ]
+  },
+  {
+    "id": "gravel_fine",
+    "source": "assets/art/rural-quality-r3-3-v1/images/g02_gravel_ground.png",
+    "resource": "res://data/world/textures/g02_gravel_ground.png",
+    "sha256": "81dc4b5d809ec455dda14fdec5f10cf0331e2fc74889d33642037ea585baecc8",
+    "metres": [
+      1.6,
+      1.6
+    ]
+  },
+  {
+    "id": "soil_top_fine",
+    "source": "assets/art/rural-quality-r3-3-v1/images/g03_loose_soil_top_fine.png",
+    "resource": "res://data/world/textures/g03_loose_soil_top_fine.png",
+    "sha256": "d1c6aa8a0e41dd340813ad52b4964eb92d372d4fd97564db4f32305924979917",
+    "metres": [
+      1.6,
+      1.6
+    ]
+  },
+  {
+    "id": "low_cover_atlas",
+    "source": "assets/art/rural-quality-r3-3-v1/images/a06_low_ground_cover.png",
+    "resource": "res://data/world/textures/a06_low_ground_cover.png",
+    "sha256": "2189beaea078309b6c3fa8f06fa4cbf9669a416fdad672b45866a692ffccd879",
+    "metres": null,
+    "grid": [
+      2,
+      2
+    ],
+    "cell_pixels": 256,
+    "gutter_pixels": 8,
+    "inner_pixels": 240,
+    "baseline_pixels": 232,
+    "alpha_bboxes": [
+      [
+        24,
+        118,
+        232,
+        232
+      ],
+      [
+        24,
+        107,
+        232,
+        232
+      ],
+      [
+        24,
+        127,
+        232,
+        232
+      ],
+      [
+        24,
+        125,
+        232,
+        232
+      ]
+    ]
+  },
+  {
+    "id": "natural_soil_side",
+    "source": "assets/art/r34-factory-v1/surfaces/terrain-quality-v1/natural_soil_side_low_contrast_16m.png",
+    "resource": "res://data/world/textures/natural_soil_side_low_contrast_16m.png",
+    "sha256": "a01e31a823094efded12c31f1d58663220889b2165bb5afa1645457c977d54fb",
+    "metres": [
+      1.6,
+      1.6
+    ]
+  }
+]

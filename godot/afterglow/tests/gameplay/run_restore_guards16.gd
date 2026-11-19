@@ -1,0 +1,51 @@
+extends "res://tests/gameplay/run_interaction16.gd"
+func run()->void:
+	var args:=OS.get_cmdline_user_args();output=args[0];DirAccess.make_dir_recursive_absolute(output)
+	var decoded:Dictionary=Store.decode(FileAccess.get_file_as_string(args[1]))
+	check("original actual supply input decodes",decoded.get("ok",false))
+	if not decoded.get("ok",false):return finish()
+	var built:=mount(decoded.capture)
+	check("original real finite supply input mounts",built.get("ok",false),built.get("reason"))
+	if not built.get("ok",false):return finish()
+	runtime=built.runtime
+	var source_before:Dictionary=runtime.facts();var revision:int=runtime.world.get_revision()
+	var request:Dictionary={"command_id":"restore16:stale-prepare","kind":"module.restore","actor_id":"player","target_id":WAREHOUSE,"payload":{}}
+	var prepared:Dictionary=runtime._services.modules.prepare(request)
+	check("one-click restoration prepares original transaction with a genuine path",prepared.get("ok",false),prepared.get("reason"))
+	check("preparing path holds never mutates live actors stock or world",Data.json_equal(runtime.facts(),source_before) and runtime.world.get_revision()==revision)
+	var drink:Dictionary=command("drink")
+	check("real intervening player action commits through original authority",drink.ok,drink)
+	var stale:Dictionary=runtime._commit(prepared) if prepared.get("ok",false) else prepared
+	check("stale restoration preparation is refused by original CAS",not stale.ok and stale.get("code")=="CAS_MISMATCH",stale)
+	check("stale restore cannot spend construction materials",runtime.actor("player").pack.get("timber",0)==23 and runtime.actor("player").pack.get("scrap",0)==13)
+	for i:int in 25:
+		runtime.tick(.1)
+		if runtime.actor("player").get("intent")==null:break
+	var started:Dictionary=command("module.restore",WAREHOUSE)
+	check("fresh restore still begins after refused stale plan",started.ok,started)
+	if not started.ok:return finish()
+	var before_pack:Dictionary=runtime.actor("player").pack.duplicate(true)
+	var npc_request:Dictionary={"command_id":"restore16:no-steal","kind":"module.work","actor_id":"repair-resident","target_id":WAREHOUSE,"payload":{}}
+	var steal:Dictionary=runtime.availability(npc_request)
+	check("raw NPC work command cannot steal the player's live approach",not steal.ok and steal.get("code")=="MODULE_WORKER_OCCUPIED",steal)
+	var candidate:Dictionary=runtime._services.actions.workforce_candidate("repair-resident","module-project:"+str(project().id))
+	check("existing autonomous NPC candidate preserves the same live claim",not candidate.get("valid",false) and candidate.get("reason")=="worker_occupied",candidate)
+	var held:Dictionary=runtime.availability({"command_id":"restore16:no-hold","kind":"module.held","actor_id":"repair-resident","target_id":WAREHOUSE,"payload":{"held":false}})
+	check("another worker cannot pause the actual player's claim",not held.ok and held.get("code")=="MODULE_WORKER_PERMISSION",held)
+	var vanished:Dictionary=runtime.availability({"command_id":"restore16:unknown-worker","kind":"module.restore","actor_id":"unknown-person","target_id":WAREHOUSE,"payload":{}})
+	check("missing worker has no restoration authority",not vanished.ok and vanished.get("code")=="ACTOR_UNAVAILABLE",vanished)
+	var relinquished:Dictionary=command("cancel")
+	check("ordinary movement-owner cancellation safely pauses original project",relinquished.ok and runtime.actor("player").intent==null and project().status=="paused" and project().paused_reason=="safe_handoff" and runtime.actor("player").pack==before_pack,relinquished)
+	var takeover:Dictionary=runtime._services.actions.workforce_candidate("repair-resident","module-project:"+str(project().id))
+	check("replacement worker cannot teleport materials from player's pack",not takeover.get("valid",false) and takeover.get("reason") in ["missing_input","source_unavailable"],takeover)
+	if not cold("safely handed-off real restore"):return finish()
+	var resumed:Dictionary=command("module.work",WAREHOUSE)
+	check("module.work resumes the same saved project through actual navigation",resumed.ok and runtime.actor("player").intent.kind=="module_approach" and project().progress_seconds==0,resumed)
+	var cancel:Dictionary=command("module.cancel",WAREHOUSE)
+	check("final cancel still releases all unspent input without refund duplication",cancel.ok and runtime.actor("player").pack==before_pack)
+	finish()
+func finish()->void:
+	var failed:int=checks.filter(func(c:Dictionary)->bool:return not c.ok).size()
+	FileAccess.open(output+"/results.json",FileAccess.WRITE).store_string(JSON.stringify({"suite":"restore-guards16","checks":checks,"failed":failed,"scope":"Actual naturally acquired finite supply capture. Original CAS refusal, no prepare mutation, no worker theft or remote pack transfer, explicit safe handoff and cold module.work resume. No actor/resource injection; headless, not GUI/FPS."},"\t",true,true))
+	if runtime!=null:runtime.retire()
+	print(JSON.stringify({"suite":"restore-guards16","checks":checks.size(),"failed":failed}));quit(1 if failed else 0)

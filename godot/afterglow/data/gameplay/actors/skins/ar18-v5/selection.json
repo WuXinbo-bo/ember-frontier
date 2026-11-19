@@ -1,0 +1,38 @@
+{
+  "schema": "afterglow-resident-skin-selection-v1",
+  "candidate": "AR18-v5",
+  "channels": "opaque daily albedo only; original role-specific TEXCOORD_0; no flip",
+  "assets": [
+    {
+      "source": "assets/art/r34-factory-v1/characters/ar18-v5/r1_resident_commuter_normal.png",
+      "resource": "res://data/gameplay/actors/skins/ar18-v5/r1_resident_commuter_normal.png",
+      "sha256": "2bf88c35ab7353b07071a25a3d20a4c410cad6e3bb0b17c66d6e70a2b8b64c24",
+      "physical_m": null,
+      "uv_contract": "original role-specific 4x4/128px cells, 2px extension, top-left origin, no V flip, no repeat",
+      "role": "commuter"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/characters/ar18-v5/r1_resident_neighbor_normal.png",
+      "resource": "res://data/gameplay/actors/skins/ar18-v5/r1_resident_neighbor_normal.png",
+      "sha256": "68c90c9e24fe745c9a410adb9e1eaae206308f376967581c035b3c568f6a997c",
+      "physical_m": null,
+      "uv_contract": "original role-specific 4x4/128px cells, 2px extension, top-left origin, no V flip, no repeat",
+      "role": "neighbor"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/characters/ar18-v5/r1_resident_shopkeeper_normal.png",
+      "resource": "res://data/gameplay/actors/skins/ar18-v5/r1_resident_shopkeeper_normal.png",
+      "sha256": "4d7fc036e2a83e048e4f3320ee282d301699feadf89609daafad7ffdf19fa6e7",
+      "physical_m": null,
+      "uv_contract": "original role-specific 4x4/128px cells, 2px extension, top-left origin, no V flip, no repeat",
+      "role": "shopkeeper"
+    }
+  ],
+  "reason": "reduced oversized diagonal/color patches; retained original UV and distinct boots/soles; normal-camera quality pending",
+  "source_binding": true,
+  "formal_import": "A only; pending",
+  "formal_package": false,
+  "normal_camera_VA": false,
+  "legacy_and_v4_preserved": true,
+  "source_art_manifest_sha256": "80cdfda7cc723d1ba0aecc9ff94b064f914fcb863d28fd4be17db9338a03e6aa"
+}

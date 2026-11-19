@@ -1,5 +1,11 @@
 # 余烬边界 · 基础开发版本
 
+## Godot 测试版（develop / wxb）
+
+用 Godot 4.7 打开 `godot/afterglow/project.godot`，按 F5 进入游戏。Windows 导出使用 `Windows Desktop` 预设。
+
+Godot 工程包含源代码、场景、工程配置、美术资产和回归测试。协作和发布流程见[分支与版本发布](docs/branch-workflow.md)。下方是原有的 ForgeAX 工程说明。
+
 天工 ForgeAX 0.4.19 / TypeScript。目标为电脑、手机双端的 **2.5D 像素生存游戏**，视觉参考为用户确认的 **《隔离区》**。
 
 当前交付重点是可运行、可验证、可继续开发的底层架构。画面、角色和场景均为调试占位资产，不是正式美术；正式素材将在下一阶段重新配置与导入。

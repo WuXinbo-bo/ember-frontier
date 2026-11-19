@@ -1,0 +1,353 @@
+{
+  "schema": "afterglow-factory-content-v1",
+  "version": 1,
+  "categories": [
+    {
+      "id": "terrain_resource",
+      "name": "地形与资源点"
+    },
+    {
+      "id": "module",
+      "name": "完整功能建筑模块"
+    },
+    {
+      "id": "machine_facility",
+      "name": "独立机器与完整设施"
+    },
+    {
+      "id": "outdoor_segment",
+      "name": "室外段设施与连接"
+    },
+    {
+      "id": "material_part",
+      "name": "材料与零件"
+    },
+    {
+      "id": "tool_equipment",
+      "name": "工具与装备"
+    },
+    {
+      "id": "knowledge_recipe",
+      "name": "知识与配方"
+    }
+  ],
+  "handbook_sections": [
+    {
+      "id": "sources",
+      "name": "地形资源"
+    },
+    {
+      "id": "materials",
+      "name": "材料零件"
+    },
+    {
+      "id": "tools",
+      "name": "工具与装备"
+    },
+    {
+      "id": "modules",
+      "name": "建筑设施"
+    },
+    {
+      "id": "processes",
+      "name": "制作加工"
+    },
+    {
+      "id": "knowledge",
+      "name": "知识方法"
+    }
+  ],
+  "items": [
+    {
+      "id": "r34:salvaged_drive_unit",
+      "name": "回收动力总成",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "machine_part",
+        "salvaged"
+      ],
+      "description": "从料场设备中回收的完整动力部件，用于恢复燃料木作坊。"
+    },
+    {
+      "id": "r34:raw_water",
+      "name": "原水",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "water",
+        "raw"
+      ],
+      "description": "取自真实水源，尚未处理，不能直接饮用"
+    },
+    {
+      "id": "r34:filtered_water",
+      "name": "过滤原水",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "water",
+        "unsafe"
+      ],
+      "description": "已过滤但未消毒，不能直接饮用"
+    },
+    {
+      "id": "r34:potato_seed",
+      "name": "种薯",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "seed"
+      ],
+      "description": "用于播种，受留种策略保护"
+    },
+    {
+      "id": "r34:bean_seed",
+      "name": "菜豆种子",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "seed"
+      ],
+      "description": "用于播种，不属于生活食物"
+    },
+    {
+      "id": "r34:rice_seed",
+      "name": "稻种",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "seed"
+      ],
+      "description": "用于平整灌溉田播种"
+    },
+    {
+      "id": "r34:potato",
+      "name": "生马铃薯",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "crop",
+        "raw_food"
+      ],
+      "description": "农田实际收获，供灶台加工"
+    },
+    {
+      "id": "r34:beans",
+      "name": "生菜豆",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "crop",
+        "raw_food"
+      ],
+      "description": "农田实际收获，需要熟制"
+    },
+    {
+      "id": "r34:paddy",
+      "name": "带壳稻谷",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "crop",
+        "grain"
+      ],
+      "description": "实际收获后须先脱壳再熟制"
+    },
+    {
+      "id": "r34:rice",
+      "name": "脱壳米",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "food_ingredient",
+        "grain"
+      ],
+      "description": "加工后的米，需要熟制"
+    },
+    {
+      "id": "r34:broadleaf_seed",
+      "name": "阔叶树种",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "tree_seed"
+      ],
+      "description": "采种后育苗"
+    },
+    {
+      "id": "r34:conifer_seed",
+      "name": "针叶树种",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "tree_seed"
+      ],
+      "description": "采种后育苗"
+    },
+    {
+      "id": "r34:broadleaf_seedling",
+      "name": "阔叶苗",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "seedling"
+      ],
+      "description": "实际种植后逐步成长"
+    },
+    {
+      "id": "r34:conifer_seedling",
+      "name": "针叶苗",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "seedling"
+      ],
+      "description": "实际种植后逐步成长"
+    },
+    {
+      "id": "r34:compost",
+      "name": "堆肥",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "farm_supply"
+      ],
+      "description": "农业残余物加工，用于田畦肥力"
+    },
+    {
+      "id": "r34:crop_residue",
+      "name": "作物残余",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "farm_supply"
+      ],
+      "description": "收获和清理产生，可加工堆肥"
+    },
+    {
+      "id": "r34:meal_simple",
+      "name": "乡野简餐",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "meal",
+        "safe_food"
+      ],
+      "description": "食材、安全饮水与燃料实际加工",
+      "consumable": {
+        "kind": "eat",
+        "restore": 35,
+        "duration": 1.3
+      }
+    },
+    {
+      "id": "r34:meal_hearty",
+      "name": "丰盛炖餐",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "meal",
+        "safe_food"
+      ],
+      "description": "多种食材制成的熟食",
+      "consumable": {
+        "kind": "eat",
+        "restore": 45,
+        "duration": 1.3
+      }
+    },
+    {
+      "id": "r34:dry_ration",
+      "name": "耐储干粮",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "meal",
+        "safe_food"
+      ],
+      "description": "适合远行的熟制干粮",
+      "consumable": {
+        "kind": "eat",
+        "restore": 30,
+        "duration": 1.3
+      }
+    },
+    {
+      "id": "r34:structural_timber",
+      "name": "结构木料",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "building_part"
+      ],
+      "description": "由木板进一步加工的建筑构件"
+    },
+    {
+      "id": "r34:metal_fitting",
+      "name": "金属构件",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "material_part",
+      "tags": [
+        "building_part"
+      ],
+      "description": "由废金属整理加工的标准构件"
+    },
+    {
+      "id": "r34:water_bucket",
+      "name": "提水桶",
+      "unit": "count",
+      "step": 1,
+      "stackable": true,
+      "category": "tool_equipment",
+      "tags": [
+        "container",
+        "water",
+        "reusable"
+      ],
+      "description": "可重复使用的提水容器。取水时须随身携带，使用不消耗；水本身按实际原水或饮水物资另行记录。"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "afterglow-opening-modules-v15",
+  "version": 15,
+  "definitions": [
+    {
+      "id": "r35.module.village_workshop.opening-v15",
+      "inherits": "r35.module.village_workshop",
+      "opening_only": true,
+      "name": "旧村生活与手工作业棚",
+      "description": "原有手作台和灶位可完成少量锯料、修工具、制桶、煮水与炖薯；原料、燃料、工具和劳动均需实际投入。专用设施承接后续专业生产。",
+      "mechanism": {
+        "version": 2,
+        "family": "sawmill",
+        "tier": 1,
+        "recipes": [
+          "r34:saw_timber_v2",
+          "r34:make_handle_v2",
+          "r34:make_water_bucket_v2",
+          "r34:repair_axe_v2",
+          "r34:repair_hand_saw_v2",
+          "r34:repair_hammer_v2",
+          "r34:repair_shovel_v2",
+          "r34:repair_pickaxe_v2",
+          "r34:raw_boil_water_v2",
+          "r34:compost_v2",
+          "r34:cook_potato_v2"
+        ],
+        "upgrade_to": []
+      }
+    }
+  ]
+}

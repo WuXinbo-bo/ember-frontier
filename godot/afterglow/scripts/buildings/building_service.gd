@@ -1,0 +1,819 @@
+extends RefCounted
+const Geometry = preload("res://scripts/buildings/building_geometry.gd")
+const Space = preload("res://scripts/buildings/building_space.gd")
+const DoorProjection=preload("res://scripts/buildings/building_door_projection.gd")
+const Interaction=preload("res://scripts/buildings/interaction_contact.gd")
+const Content=preload("res://scripts/runtime/content_definitions.gd")
+const ModuleClearance=preload("res://scripts/buildings/building_module_clearance.gd")
+const Costs=preload("res://scripts/runtime/frame_costs.gd")
+const EXTENSION := "r3:structures"
+var context: Dictionary = {}
+var source_catalog: Dictionary = {}
+var geometry := Geometry.new()
+var _space: RefCounted
+var _space_world: RefCounted
+var _space_revision := -1
+var _space_generation: Dictionary = {}
+var _validation_key: Array = []
+var _validation_space: RefCounted
+var _storage_index:RefCounted
+var _storage_index_inputs:Dictionary={}
+var _exit_hints: Dictionary = {}
+var content_validation:Dictionary={}
+# B-private immutable support proof only. Never actor/exit/leaf authorization.
+var _support_world: RefCounted
+var _support_revision := -1
+var _support_state: Dictionary = {}
+var _support_roots: Dictionary = {}
+
+func configure(value: Dictionary) -> void:
+	context = preload("res://scripts/actions/domain_context.gd").isolate(value, false)
+	source_catalog = JSON.parse_string(FileAccess.get_file_as_string("res://data/buildings/catalog.json"))
+	geometry.configure(source_catalog)
+	# Snapshot/reference validation and geometry consumers see the same resolved
+	# historic geometry, including a definition retired from the current catalog.
+	source_catalog.structure_definitions=geometry.definitions.duplicate(true)
+	var assets:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/buildings/asset_manifest.json"))
+	content_validation=preload("res://scripts/buildings/building_content.gd").validate(source_catalog,assets.get("models",{}))
+	_space = null
+	_storage_index=null;_storage_index_inputs={}
+	_discard_support_proof()
+	_validation_key=[]; _validation_space=null; _exit_hints.clear()
+	var runtime: Variant = value.get("runtime")
+	if runtime != null and not runtime.changed.is_connected(_world_changed): runtime.changed.connect(_world_changed)
+
+func _world_changed(changes: Dictionary) -> void:
+	var operations:Array=changes.get("world",[])
+	_advance_support_proof(operations)
+	if not metadata_preserves_geometry(operations):
+		_space=null;_validation_key=[];_validation_space=null
+		return
+	# Only carry a cache over the exact commit observed here. Display-only
+	# commits do not advance the projection revision on the native world.
+	var world: RefCounted = context.world
+	var ignores_display := world.has_method("factory_visual_revision")
+	var revision := _space_input_revision(world)
+	var generation := _space_input_generation(world)
+	var previous := revision
+	for operation: Dictionary in operations:
+		if ignores_display and operation.id == "r34:display":
+			continue
+		if not operation.before_exists or operation.before != operation.after:
+			previous -= 1
+			break
+	if _space != null and _space_world == world and _space_revision == previous and _space_generation == generation:
+		_space_revision = revision
+	if _validation_space != null and _validation_space.world == world and _validation_key == [world.get_instance_id(), generation, previous]:
+		_validation_key = [world.get_instance_id(), generation, revision]
+	else:
+		_validation_key = []
+		_validation_space = null
+
+func _discard_support_proof() -> void:
+	_support_world=null;_support_revision=-1
+	_support_state={};_support_roots={}
+
+func _advance_support_proof(operations:Array) -> void:
+	if _support_world==null:return
+	var revision:int=context.world.get_revision()
+	var previous:int=revision-1 if operations.any(func(c:Dictionary)->bool:return not c.get("before_exists",true) or not c.has("after") or c.get("before")!=c.after) else revision
+	if _support_world!=context.world or _support_revision!=previous:
+		_discard_support_proof();return
+	if not metadata_preserves_geometry(operations) and not _support_only_door_commit(operations):
+		_discard_support_proof();return
+	_support_revision=revision
+
+func _support_only_door_commit(operations:Array) -> bool:
+	# The complete structure DTO equality, not a field/hash approximation,
+	# proves no HP, topology, geometry-version or non-leaf metadata change.
+	var structure:Dictionary={};var entity:Dictionary={}
+	for change:Dictionary in operations:
+		if metadata_preserves_geometry([change]):continue
+		if change.get("op")=="extension.set" and change.get("id")==EXTENSION and structure.is_empty():structure=change
+		elif change.get("op")=="entity.put" and entity.is_empty():entity=change
+		else:return false
+	if structure.is_empty() or entity.is_empty() or not structure.get("before_exists",false) or not entity.get("before_exists",false):return false
+	if not structure.get("before") is Dictionary or not structure.get("after") is Dictionary:return false
+	if _support_state!=structure.before and _support_state!=structure.after:return false
+	var door:Dictionary=DoorProjection.changed_door(structure.before,structure.after)
+	if door.is_empty() or entity.get("id")!=door.id:return false
+	var before:Dictionary={}
+	for piece:Dictionary in structure.before.instances:
+		if piece.id==door.id:before=piece;break
+	# Only the original paired door entity may change. An extra collider,
+	# chunk/region/voxel/generation edit, direct revision gap or unknown op
+	# discards the proof, even when a full final draft happened to pass.
+	if before.is_empty() or not entity.get("before") is Dictionary or not entity.get("after") is Dictionary:return false
+	# Historical city entity bounds contain double/float differences and C's
+	# revision is not piece.version. Support never reads entity bounds/data:
+	# it reads cells plus this exact structure graph. Require the paired
+	# door payloads, not equality to a freshly regenerated historic entity.
+	# All body/entity/leaf geometry is still rebuilt and checked below.
+	return entity.before.get("kind")=="structure" and entity.before.get("id")==door.id and entity.before.get("data",{}).get("structure")==before and entity.after==geometry.entity(door)
+
+func _reuse_support_proof(query:RefCounted,view:RefCounted,data:Dictionary) -> void:
+	if query.support_roots.size()==query.pieces.size():return
+	if _support_world!=view or view!=context.world or _support_revision!=view.get_revision():return
+	if _support_state==data or not DoorProjection.changed_door(_support_state,data).is_empty():
+		# Positive root truth only. No recursive witnesses, stair/body/LOS,
+		# navigation, permission or living-resident fact can cross queries.
+		query.support_roots=_support_roots.duplicate(false)
+
+func _remember_support_proof(query:RefCounted,view:RefCounted) -> void:
+	if view!=context.world:return
+	if _support_world==view and _support_revision==view.get_revision() and _support_state==query.state:return
+	_support_world=view;_support_revision=view.get_revision()
+	_support_state=query.state.duplicate(true)
+	_support_roots=query.support_roots.duplicate(false)
+
+static func metadata_preserves_geometry(changes:Array)->bool:
+	# Actual dependencies of Space/Geometry/Navigation and exit validation:
+	# config/identity, chunks (including residency), regions, entities,
+	# r3:structures and generation:* plans. Only typed extension mutations can
+	# preserve all of them. No gameplay-name whitelist and NO validation bypass:
+	# validate_structures still checks every living staged actor/exit/permission.
+	# Add any future spatial extension consumer here before retaining projections.
+	for change:Dictionary in changes:
+		if change.get("op")!="extension.set" or not change.get("id") is String or change.id.is_empty():return false
+		if not change.get("before_exists") is bool or not change.has("before") or not change.has("after"):return false
+		if change.id==EXTENSION or str(change.id).begins_with("generation:"):return false
+	return true
+
+static func failure(code: String, reason: String) -> Dictionary:
+	return {"ok": false, "code": code, "reason": reason, "world_changes": [], "fact_changes": [], "duration": 0.0, "destination": {}, "events": []}
+
+static func success(world_changes: Array = [], fact_changes: Array = [], duration: float = 0.0, destination: Dictionary = {}, events: Array = []) -> Dictionary:
+	return {"ok": true, "code": "OK", "reason": null, "world_changes": world_changes, "fact_changes": fact_changes, "duration": duration, "destination": destination, "events": events}
+
+func structures(view: RefCounted = null) -> Dictionary:
+	var w: RefCounted = context.world if view == null else view
+	var value: Variant = w.extension(EXTENSION)
+	return value if value is Dictionary else {"schemaVersion": 1, "catalogVersion": 1, "instances": [], "storeys": []}
+
+func actor(id: String) -> Dictionary:
+	var value: Variant = context.actor.call(id)
+	return value if value is Dictionary else {}
+
+func facts() -> Dictionary:
+	return context.facts.call()
+
+static func list(values: Variant) -> Array:
+	return values.values() if values is Dictionary else values if values is Array else []
+
+func permission(actor_id: String, target_id: String, action: String, piece: Dictionary = {}, staged: Dictionary = {}) -> Variant:
+	var resident := actor(actor_id)
+	if not staged.is_empty():
+		for a in list(staged.get("actors", [])):
+			if a.id == actor_id: resident = a
+	if resident.is_empty() or float(resident.get("hp", 0)) <= 0: return "角色已失能"
+	var target := piece
+	if target.is_empty():
+		var entity: Dictionary = context.world.entity(target_id)
+		target = entity.get("data", {}).get("structure", entity.get("data", {}))
+	var owner: Variant = target.get("owner")
+	var visiting: bool = target.has("door") and not target.door.get("locked", false) and action in ["open", "close", "use"]
+	if owner != null and owner not in ["home-residents", actor_id, resident.get("householdId", resident.get("household_id"))] and not visiting: return "尚未获得物主许可"
+	var relationship: Dictionary = resident.get("relationship", {})
+	if actor_id != "player" and action in ["place", "remove", "damage", "move"] and not relationship.get("consent", false) and relationship.get("promise") != target_id: return "住户没有同意这项工作"
+	return null
+
+func space(view: RefCounted = null, proposed: Dictionary = {}, staged: Dictionary = {}) -> RefCounted:
+	var w: RefCounted = context.world if view == null else view
+	var data := structures(w) if proposed.is_empty() else proposed
+	var query := Space.new()
+	query.configure(w,data,geometry,_validation_permission(staged))
+	return query
+
+func _validation_permission(staged:Dictionary)->Callable:
+	var owner_ref:WeakRef=weakref(self)
+	return func(a:String,t:String,k:String,p:Dictionary)->Variant:return owner_ref.get_ref().permission(a,t,k,p,staged) if owner_ref.get_ref()!=null else "运行时已关闭"
+
+static func _is_storage_only(changes: Array) -> bool:
+	return not changes.is_empty() and changes.all(func(c: Dictionary) -> bool:
+		return c.get("op") in ["chunk.storage", "chunk.residency"])
+
+static func _storage_index_inputs_for(view: RefCounted) -> Dictionary:
+	return {"config": view.config(), "regions": Space.region_membership(view), "entities": Space.indexed_entities(view)}
+
+func _storage_validation_space(view:RefCounted,data:Dictionary,staged:Dictionary)->RefCounted:
+	var inputs: Dictionary = _storage_index_inputs_for(view)
+	var query:=Space.new()
+	var can_open:=_validation_permission(staged)
+	if _storage_index!=null and _storage_index.state==data and _storage_index_inputs==inputs:
+		_storage_index.copy_static_index_to(query)
+		query.world=view;query.permission=can_open
+	else:
+		query.configure(view,data,geometry,can_open,inputs)
+		# A single detached index retains neither world pages nor actor facts.
+		_storage_index=Space.new()
+		query.copy_static_index_to(_storage_index)
+		_storage_index_inputs=inputs
+	return query
+
+func _space_input_revision(world: RefCounted) -> int:
+	return world.factory_visual_revision() if world.has_method("factory_visual_revision") else world.get_revision()
+
+func _space_input_generation(world: RefCounted) -> Dictionary:
+	return world.extension_token("") if world.has_method("extension_token") else {}
+
+func current_space() -> RefCounted:
+	var world: RefCounted = context.world
+	var revision := _space_input_revision(world)
+	var generation := _space_input_generation(world)
+	if _space == null or _space_world != world or revision != _space_revision or generation != _space_generation:
+		_space = space()
+		_space_world = world
+		_space_revision = revision
+		_space_generation = generation
+	return _space
+
+func validation_space(view: RefCounted,data: Dictionary,staged: Dictionary) -> RefCounted:
+	if view != context.world:return space(view,data,staged)
+	# Native value equality compares the complete immutable projection without
+	# serializing every structure for every moving actor's preview. Actor facts
+	# are still rebound below; world identity/revision remains a separate guard.
+	var revision := _space_input_revision(view)
+	var generation := _space_input_generation(view)
+	var key := [view.get_instance_id(), generation, revision]
+	if _validation_space==null or key!=_validation_key or _validation_space.state!=data:
+		var base:RefCounted=_space if _space!=null and _space_world==view and _space_revision==revision and _space_generation==generation else null
+		var door:Dictionary=DoorProjection.changed_door(base.state,data) if base!=null else {}
+		if not door.is_empty():
+			var owner_ref:WeakRef=weakref(self)
+			var can_open:Callable=func(a:String,t:String,k:String,p:Dictionary)->Variant:return owner_ref.get_ref().permission(a,t,k,p,staged) if owner_ref.get_ref()!=null else "运行时已关闭"
+			_validation_space=DoorProjection.project(base,data,door,can_open)
+		else:_validation_space=space(view,data,staged)
+		_validation_key=key
+	else:
+		# Geometry cache never stores actor authorization: replace the full staged binding.
+		var owner_ref:WeakRef=weakref(self)
+		_validation_space.permission=func(a:String,t:String,k:String,p:Dictionary)->Variant:return owner_ref.get_ref().permission(a,t,k,p,staged) if owner_ref.get_ref()!=null else "运行时已关闭"
+	return _validation_space
+
+func exit_reachable(query:RefCounted,actor_id:String,from:Dictionary,to:Dictionary) -> bool:
+	# A route in THIS immutable Space proves only geometry at its EXACT start
+	# and end. Every living resident's feet/HP are still checked by the caller,
+	# and every closed door on the route rechecks THIS actor's current access.
+	# No false result or authorization is cached. A revoked route may still have
+	# another valid exit, so denial falls through to the original search below.
+	var proof_key:Array=[from.duplicate(true),to.duplicate(true)]
+	if query.exit_proofs.has(proof_key):
+		var permitted:=true
+		for id:String in query.exit_proofs[proof_key]:
+			var v:Dictionary=query.by_id.get(id,{})
+			if v.is_empty() or query.permission.call(actor_id,id,"open",v)!=null:permitted=false;break
+		if permitted:return true
+	var key:=actor_id+"|"+str([to.regionId,to.x,to.y,to.z])
+	var hint:Array=_exit_hints.get(key,[])
+	var current:=from
+	var valid:=not hint.is_empty()
+	var crossed:Array=[]
+	for step in hint:
+		if step.kind=="move":
+			var r:Dictionary=query.walk(actor_id,current,step.to,true)
+			if not r.ok or Geometry.point(r.location).distance_to(Geometry.point(step.to))>0.025:valid=false;break
+			# A hint authored while this leaf was OPEN has no opening step.
+			# Retain the CURRENT closed doors discovered by actual revalidation,
+			# otherwise a later permission withdrawal could miss that dependency.
+			for id:String in r.get("doors",[]):
+				if not crossed.has(id):crossed.append(id)
+			current=r.location
+		elif step.kind=="open-door":
+			var door:Dictionary=query.by_id.get(step.targetId,{})
+			if door.is_empty() or float(door.hp)<=0:valid=false;break
+			if not door.door.open and (door.door.locked or door.door.blocked or query.permission.call(actor_id,door.id,"open",door)!=null):valid=false;break
+		elif step.kind=="stairs":
+			var stair:Dictionary=query.by_id.get(step.targetId,{})
+			if stair.is_empty() or not query.stair_clear(stair) or Geometry.point(current).distance_to(Geometry.point(step.from))>0.025:valid=false;break
+			current=step.to
+		else:valid=false;break
+	if valid and Geometry.point(current).distance_to(Geometry.point(to))<=0.025:
+		remember_exit(query,proof_key,hint,crossed)
+		return true
+	var path:Dictionary=query.route(actor_id,from,to)
+	if not path.ok:return false
+	if _exit_hints.size()>=64:_exit_hints.erase(_exit_hints.keys()[0])
+	_exit_hints[key]=path.steps.duplicate(true)
+	remember_exit(query,proof_key,path.steps)
+	return true
+
+func remember_exit(query:RefCounted,key:Array,steps:Array,required_doors:Array=[])->void:
+	var doors:Array=required_doors.duplicate()
+	for id:String in doors:
+		if not query.by_id.get(id,{}).get("door") is Dictionary:return
+	for step:Dictionary in steps:
+		if step.get("kind")=="open-door":
+			var v:Dictionary=query.by_id.get(str(step.targetId),{})
+			if v.is_empty() or not v.get("door") is Dictionary:return
+			if not v.door.open and not doors.has(v.id):doors.append(v.id)
+		elif step.get("kind") not in ["move","stairs"]:return
+	# These proofs are intentionally NOT copied by DoorProjection or across a
+	# world/configure/physics change. Metadata retention is already guarded by
+	# metadata_preserves_geometry; positions and permissions stay independent.
+	if query.exit_proofs.size()>=1024:query.exit_proofs.erase(query.exit_proofs.keys()[0])
+	query.exit_proofs[key]=doors
+
+func instance(id: String) -> Dictionary:
+	return current_space().by_id.get(id, {}).duplicate(true)
+
+func use_points(id: String) -> Array:
+	var v := instance(id)
+	if v.is_empty():
+		var e:Dictionary=context.world.entity(id);var bed:Dictionary=e.get("data",{}).get("module_bed",{})
+		if bed.get("version")==2 and bed.get("approach") is Dictionary:
+			var feet:Dictionary=current_space().standing_point(bed.approach)
+			return [feet] if not feet.is_empty() and Interaction.entity(current_space(),feet,e) else []
+	return current_space().use_points(v) if not v.is_empty() else []
+
+func can_use(actor_id: String, target: Dictionary, at: Dictionary = {}, staged: Dictionary = {}) -> Variant:
+	var a := actor(actor_id)
+	if not staged.is_empty():
+		for resident in list(staged.get("actors",[])):
+			if resident.id==actor_id:a=resident;break
+	if a.is_empty() or float(a.get("hp", 0)) <= 0: return "角色已失能"
+	var from := Geometry.location(a)
+	var query := current_space()
+	if at.is_empty() and Interaction.structure(query,from,target):return null
+	var uses: Array = query.use_points(target) if at.is_empty() else [at]
+	for p in uses:
+		var feet: Dictionary = query.standing_point(p)
+		if not feet.is_empty() and Interaction.same_level(from,feet) and Geometry.point(from).distance_to(Geometry.point(feet)) <= 1.3 and query.contact_clear(from, feet, str(target.get("id", ""))):
+			if geometry.definition(target).get("kind") == "roof":
+				if absf(float(target.position.y) - float(feet.y) - 3.4) > Geometry.EPS: continue
+				var hand := Geometry.point(from) + Vector3(0,1.3,0)
+				var underside := Vector3(feet.x,float(target.position.y)-0.215,feet.z)
+				var clear := true
+				if not query.terrain_clear(str(from.regionId),AABB(hand.min(underside)-Vector3(0.025,0,0.025),(hand.max(underside)-hand.min(underside))+Vector3(0.05,0,0.05))): clear=false
+				for entry in query.candidates(str(from.regionId),hand,underside,0.025):
+					if entry.instance.id != target.id and entry.bounds.intersects_segment(hand,underside) != null: clear=false;break
+				if not clear: continue
+			return null
+	return "需要靠近同层物件或门洞，且使用线不能被遮挡"
+
+func availability(request: Dictionary) -> Dictionary:
+	var result := prepare(request)
+	if result.ok:
+		result.world_changes = []
+		result.fact_changes = []
+	return result
+
+func prepare(request: Dictionary) -> Dictionary:
+	if not content_validation.get("ok",false):return content_validation.duplicate(true)
+	if request.get("kind") == "door": return prepare_door(request)
+	return failure("UNKNOWN_COMMAND", "建筑服务不处理此动作")
+
+func hostile_contact(query:RefCounted,a:Dictionary,v:Dictionary)->Dictionary:
+	if float(v.get("hp",0))<=0 or v.get("protected",false) or geometry.definition(v).get("kind") not in ["door","wall","corner","window"] or v.regionId!=a.get("regionId"):return {}
+	var chest:=Geometry.point(Geometry.location(a))+Vector3(0,1.2,0)
+	var nearest:=INF;var contact:=Vector3.ZERO
+	for bounds in geometry.boxes(v):
+		var at:Vector3=chest.max(bounds.position).min(bounds.end)
+		var distance:=chest.distance_to(at)
+		if distance<nearest:nearest=distance;contact=at
+	if nearest>0.9:return {}
+	var to:=Geometry.location(a);to.x=contact.x;to.y=contact.y-1.2;to.z=contact.z
+	if not query.contact_clear(Geometry.location(a),to,str(v.id)):return {}
+	return {"distance":nearest,"point":Geometry.json_point(contact)}
+
+func strike_structure(tx:RefCounted,actor_id:String,target_id:String="")->Dictionary:
+	# Called by A's hostile AI inside its existing Draft, never a player/hammer
+	# command or another clock/commit. Every accepted hit uses normal edit safety.
+	var a:Dictionary=tx.actor(actor_id)
+	if a.is_empty() or a.get("faction")!="infected" or float(a.get("hp",0))<=0:return failure("FORBIDDEN","只有存活感染者可执行敌方近战")
+	if float(a.get("cooldown",0))>0 or float(a.get("stunned_until",0))>float(context.clock.call()):return failure("COOLDOWN","敌方近战冷却或受控中")
+	var data:Dictionary=tx.extensions.get(EXTENSION,structures())
+	var query:RefCounted=current_space() if not tx.extensions.has(EXTENSION) else space(context.world,data,tx.staged)
+	var target:Dictionary={};var contact:Dictionary={}
+	var candidates:Array=data.instances if not target_id.is_empty() else query.nearby_pieces(str(a.regionId),AABB(Geometry.point(a)-Vector3(1.2,0,1.2),Vector3(2.4,1.8,2.4)))
+	for v in candidates:
+		if not target_id.is_empty() and v.id!=target_id:continue
+		var hit:=hostile_contact(query,a,v)
+		if hit.is_empty():continue
+		if contact.is_empty() or hit.distance<contact.distance:target=v;contact=hit
+	if target.is_empty():return failure("OUT_OF_REACH","没有接触距离内且无遮挡的可破坏门墙")
+	var next:=target.duplicate(true)
+	var damage:=minf(12.0,float(next.hp))
+	next.hp=maxf(0,float(next.hp)-damage);next.version=int(next.version)+1
+	if next.hp<=0 and next.has("door"):next.door.open=true;next.door.locked=false;next.door.blocked=false
+	var edit:=prepare_edit([target.id],[next],tx.staged,data)
+	if not edit.ok:return edit
+	for op in edit.world_changes:
+		if op.op=="extension.set":tx.extensions[op.id]=op.after
+		else:
+			# Several enemies may hit the same door in one A fixed step. Keep
+			# its original CAS before-image and the final staged after-image.
+			var merged:=false
+			for prior in tx.extra:
+				if prior.get("op")=="entity.put" and op.op=="entity.put" and prior.id==op.id:prior.after=op.after;merged=true;break
+			if not merged:tx.extra.append(op)
+	a.cooldown=1.3;a.attack_until=float(context.clock.call())+0.28;a.activity="撞击真实门墙"
+	tx.events.append({"kind":"structure-damaged","actor_id":actor_id,"target_id":target.id,"damage":damage,"hp":next.hp,"position":contact.point,"hostile":true})
+	return success([],[],0,{},[{"kind":"structure-damaged","target_id":target.id,"damage":damage}])
+
+func local_door_plan(request: Dictionary, proposed: Dictionary = {}, staged: Dictionary = {}) -> Dictionary:
+	var id := str(request.get("target_id", ""))
+	var resident_id := str(request.get("actor_id", ""))
+	var query := current_space() if proposed.is_empty() else space(context.world, proposed, staged)
+	var v: Dictionary = query.by_id.get(id, {}).duplicate(true)
+	var current_facts := facts() if staged.is_empty() else staged
+	var operation := str(request.get("payload", {}).get("operation", "close" if v.get("door",{}).get("open",false) else "open"))
+	if operation not in ["open", "close", "lock", "unlock"]: return failure("INVALID", "门操作无效")
+	if not v.has("door") or float(v.get("hp", 0)) <= 0: return failure("DESTROYED", "门已毁坏或不存在")
+	var access: Variant = can_use(resident_id, v, {}, current_facts)
+	if access != null: return failure("UNREACHABLE", access)
+	access = permission(resident_id, id, operation, v, current_facts)
+	if access != null: return failure("FORBIDDEN", access)
+	if v.door.get("blocked", false): return failure("BLOCKED", "门被堵塞")
+	if operation == "open" and v.door.get("locked", false): return failure("LOCKED", "门已上锁")
+	if operation == "lock" and v.door.get("open", false): return failure("BLOCKED", "请先关门再上锁")
+	var next := v.duplicate(true)
+	if operation in ["open", "close"]: next.door.open = operation == "open"
+	else: next.door.locked = operation == "lock"
+	if next.door.open != v.door.open:
+		var signs: Array = [int(v.door.swing), -int(v.door.swing)] if operation == "open" else [int(v.door.swing)]
+		var clear := false
+		for sign in signs:
+			var safe := true
+			for n in range(25):
+				var leaf: AABB = geometry.leaf(v, sign * PI / 2.0 * n / 24.0)
+				if not query.terrain_clear(str(v.regionId), leaf): safe = false; break
+				for a in list(current_facts.get("actors", [])):
+					if float(a.get("hp", 0)) <= 0: continue
+					var p := Geometry.location(a)
+					if p.regionId == v.regionId and Geometry.overlap(leaf, AABB(Geometry.point(p) + Vector3(-0.26, 0.02, -0.26), Vector3(0.52, 1.78, 0.52))): safe = false; break
+				if not safe: break
+				for entry in query.candidates(str(v.regionId), leaf.position, leaf.end, 0.0):
+					if entry.instance.id != id and Geometry.overlap(leaf, entry.bounds): safe = false; break
+				if not safe: break
+			if safe:
+				next.door.swing = sign
+				clear = true
+				break
+		if not clear: return failure("OCCUPIED", "门扇完整扫掠被人物、构件或地形占用")
+	return {"ok":true,"piece":v,"next":next,"current_facts":current_facts,"operation":operation}
+
+func door_preview(request:Dictionary)->Dictionary:
+	# Discovery/local feedback is not a prepared capability. No support, exit,
+	# inventory or actor result is authorized by this response; E/commit always
+	# call the complete prepare_door against their current staged authority.
+	var local:=local_door_plan(request)
+	var target:=str(request.get("target_id",""))
+	var piece:Dictionary=local.get("piece",current_space().by_id.get(target,{}))
+	var operation:String=str(local.get("operation",request.get("payload",{}).get("operation","")))
+	var result:Dictionary=success() if local.ok else local.duplicate(true)
+	if local.ok:
+		var resident:=actor(str(request.get("actor_id","")))
+		if float(resident.get("stamina",0))<0.25:result=failure("EXHAUSTED","体力不足")
+	result.merge({"proof_state":"pending" if result.ok else "rejected","target_id":target,"target_version":piece.get("version",-1),"world_revision":context.world.get_revision(),"operation":operation},true)
+	return result
+
+func prepare_door(request: Dictionary, proposed: Dictionary = {}, staged: Dictionary = {}) -> Dictionary:
+	var local:=local_door_plan(request,proposed,staged)
+	if not local.ok:return local
+	var id:=str(request.get("target_id",""));var resident_id:=str(request.get("actor_id",""))
+	var v:Dictionary=local.piece;var next:Dictionary=local.next
+	var current_facts:Dictionary=local.current_facts;var operation:String=local.operation
+	next.version = int(v.version) + 1
+	var data := structures() if proposed.is_empty() else proposed.duplicate(true)
+	for i in data.instances.size():
+		if data.instances[i].id == id: data.instances[i] = next
+	var valid := validate_structures(context.world, data, current_facts, [], [])
+	if not valid.ok: return valid
+	var a := actor(resident_id)
+	for resident in list(current_facts.get("actors",[])):
+		if resident.id==resident_id:a=resident;break
+	if float(a.get("stamina", 0)) < 0.25: return failure("EXHAUSTED", "体力不足")
+	var after := a.duplicate(true)
+	after.stamina = maxf(0, float(a.stamina) - 0.25)
+	return success(changes_for(data, [next], []), [{"collection": "actors", "id": resident_id, "before": a, "after": after}], 0.4, Geometry.display_location(Geometry.location(a)), [{"kind": "door", "target_id": id, "operation": operation, "noise_radius": 4}])
+
+func extension_change(key: String, after: Variant, view: RefCounted = null) -> Dictionary:
+	var w: RefCounted = context.world if view == null else view
+	return {"op": "extension.set", "id": key, "before_exists": w.has_extension(key), "before": w.extension(key), "after": after.duplicate(true) if after is Dictionary or after is Array else after}
+
+func changes_for(data: Dictionary, added: Array, removed: Array) -> Array:
+	var changes: Array = [extension_change(EXTENSION, data)]
+	for v in added:
+		var prior: Dictionary = context.world.entity(str(v.id))
+		changes.append({"op": "entity.put", "id": v.id, "before_exists": not prior.is_empty(), "before": prior if not prior.is_empty() else null, "after": geometry.entity(v)})
+	for id in removed:
+		changes.append({"op": "entity.remove", "id": id, "before": context.world.entity(id)})
+	return changes
+
+func supported(query: RefCounted, v: Dictionary, visited: Dictionary = {}, terrain_proofs: Dictionary = {}) -> bool:
+	if visited.is_empty():
+		if query.support_roots.has(v.id):return query.support_roots[v.id]
+		var result:=supported_uncached(query,v,visited,terrain_proofs)
+		query.support_roots[v.id]=result
+		return result
+	return supported_uncached(query,v,visited,terrain_proofs)
+
+func supported_uncached(query: RefCounted, v: Dictionary, visited: Dictionary, terrain_proofs: Dictionary) -> bool:
+	var slabs:=0
+	for id in visited:
+		if query.by_id.has(id) and geometry.definition(query.by_id[id]).kind in ["floor","roof"]:slabs+=1
+	return not support_witness(query,v,visited,terrain_proofs,slabs).is_empty()
+
+func support_witness(query:RefCounted,v:Dictionary,visited:Dictionary,terrain_proofs:Dictionary,slabs:int)->Dictionary:
+	# Positive certificates contain every chosen dependency and the greatest
+	# incoming slab count accepted by that proof. Reuse requires disjoint actual
+	# ancestors AND sufficient slab budget. An ancestry-dependent false is never
+	# memoized, and any conflict falls back to the original ordered predicate.
+	if float(v.get("hp",0))<=0:return {"ids":{},"slab_limit":2147483647}
+	if visited.has(v.id):return {}
+	var saved:Dictionary=query.support_witnesses.get(v.id,{})
+	if not saved.is_empty() and slabs<=int(saved.slab_limit):
+		var compatible:=true
+		for id in visited:
+			if saved.ids.has(id):compatible=false;break
+		if compatible:return saved
+	var ancestry := visited.duplicate()
+	ancestry[v.id] = true
+	var d: Dictionary = geometry.definition(v)
+	var b: AABB = query.bounds(v)
+	var own_slab:=1 if d.kind in ["floor","roof"] else 0
+	var witness:Dictionary={"ids":{v.id:true},"slab_limit":2147483647}
+	if d.support == "terrain":
+		if not terrain_proofs.has(v.id): terrain_proofs[v.id] = query.terrain_supports(str(v.regionId), AABB(b.position, Vector3(b.size.x, 0, b.size.z)))
+		if not terrain_proofs[v.id]:return {}
+	elif d.support == "wall-top":
+		var child:Dictionary={}
+		for other in query.support_walls(v):
+			child=support_witness(query,other,ancestry,terrain_proofs,slabs+own_slab)
+			if not child.is_empty():break
+		if child.is_empty():
+			if slabs+own_slab>=3:return {}
+			witness.slab_limit=2-own_slab
+			for other in query.support_slabs(v):
+				child=support_witness(query,other,ancestry,terrain_proofs,slabs+own_slab)
+				if not child.is_empty():break
+		if child.is_empty():return {}
+		witness.ids.merge(child.ids)
+		witness.slab_limit=mini(int(witness.slab_limit),int(child.slab_limit)-own_slab)
+	else:
+		for sample:Dictionary in surface_support_samples(query,v,b):
+			if sample.ground:continue
+			var child:Dictionary={}
+			for floor_piece:Dictionary in sample.pieces:
+				child=support_witness(query,floor_piece,ancestry,terrain_proofs,slabs+own_slab)
+				if not child.is_empty():break
+			if child.is_empty():return {}
+			witness.ids.merge(child.ids)
+			witness.slab_limit=mini(int(witness.slab_limit),int(child.slab_limit)-own_slab)
+	query.support_witnesses[v.id]=witness
+	return witness
+
+func surface_support_samples(query:RefCounted,v:Dictionary,b:AABB)->Array:
+	# Cache only immutable geometric candidates and exact terrain samples for
+	# this complete query. Recursive truth still uses the caller's ancestry and
+	# three-slab limit; no success/failure is shared across recursion contexts.
+	if query.surface_support_neighbors.has(v.id):return query.surface_support_neighbors[v.id]
+	var d:Dictionary=geometry.definition(v)
+	var footprint:=b
+	if d.has("stairs"):footprint=Geometry.transformed_box(AABB(Vector3(-float(d.size.x)/2,0,0),Vector3(float(d.size.x),0,0.4)),v)
+	var result:Array=[]
+	for x in samples(footprint.position.x,footprint.end.x):
+		for z in samples(footprint.position.z,footprint.end.z):
+			var pieces:Array=[]
+			for floor_piece:Dictionary in query.support_at(str(v.regionId),Vector3(x,v.position.y,z)):
+				if floor_piece.id!=v.id:pieces.append(floor_piece)
+			result.append({"pieces":pieces,"ground":v.get("storeyId")==null and query.terrain_supports(str(v.regionId),AABB(Vector3(x,v.position.y,z),Vector3.ZERO))})
+	query.surface_support_neighbors[v.id]=result
+	return result
+
+static func samples(lo: float, hi: float) -> Array:
+	if hi - lo < 0.35: return [(lo + hi) / 2.0]
+	var values: Array = [lo + 0.01, hi - 0.01]
+	var n := lo + 0.5
+	while n < hi:
+		values.append(n)
+		n += 0.5
+	return values
+
+func validate_structures(view: RefCounted, data: Dictionary, staged: Dictionary, removed: Array = [], added: Array = [], storage_only:bool=false) -> Dictionary:
+	var started:int=Costs.begin()
+	var query := _storage_validation_space(view,data,staged) if storage_only else validation_space(view,data,staged)
+	_reuse_support_proof(query,view,data)
+	Costs.end("buildings/validate_index",started)
+	started=Costs.begin()
+	var terrain_proofs: Dictionary = {}
+	# The view is immutable for this synchronous validation. Reuse only this
+	# metadata predicate within the call; every structural/body check still runs.
+	var previous:Dictionary=structures()
+	var previous_by_id:Dictionary={}
+	var indexed:bool=false
+	var region_residency:Dictionary={};var supports_residency:bool=view.has_method("region_is_resident")
+	for v in data.get("instances", []):
+		var region_id:String=str(v.regionId)
+		if supports_residency and not region_residency.has(region_id):region_residency[region_id]=view.region_is_resident(region_id)
+		if supports_residency and not region_residency[region_id]:
+			if not indexed:
+				for row:Dictionary in previous.instances:
+					if not previous_by_id.has(row.id):previous_by_id[row.id]=row
+				indexed=true
+			if added.any(func(n:Dictionary)->bool:return n.id==v.id) or removed.has(v.id) or previous_by_id.get(str(v.id),{})!=v:return failure("REGION_PAUSED","冷区不能改造建筑")
+			continue
+		if geometry.definition(v).is_empty(): return failure("INVALID", "未知建筑目录或几何版本")
+		if not supported(query, v, {}, terrain_proofs): return failure("DEPENDENT", "修改会使构件失去基础或承重支撑：" + str(v.id))
+		if v.has("stairs") and float(v.hp) > 0 and not query.stair_clear(v): return failure("BLOCKED", "楼梯净空、真实连接或平台不足")
+	_remember_support_proof(query,view)
+	Costs.end("buildings/validate_structure_support",started)
+	started=Costs.begin()
+	var module_clearance:Dictionary=ModuleClearance.validate(view,added,geometry)
+	if not module_clearance.ok:return failure(str(module_clearance.code),str(module_clearance.reason))
+	for v in added:
+		for part in geometry.boxes(v):
+			if geometry.definition(v).kind != "foundation" and not query.terrain_clear(str(v.regionId), part): return failure("OCCUPIED", "构件与实体地形冲突："+str(v.id))
+			for entry in query.candidates(str(v.regionId), part.position, part.end, 0.0):
+				if entry.instance.id == v.id or not Geometry.overlap(part, entry.bounds): continue
+				var walls: Array = ["wall", "corner", "door", "window"]
+				var intersection: AABB = part.intersection(entry.bounds)
+				if geometry.definition(v).kind in walls and geometry.definition(entry.instance).kind in walls and intersection.size.x <= 0.201 and intersection.size.z <= 0.201: continue
+				return failure("OCCUPIED", "建筑占地冲突：" + str(entry.instance.id))
+			for a in list(staged.get("actors", [])):
+				if float(a.get("hp", 0)) <= 0: continue
+				var p := Geometry.location(a)
+				if p.regionId == v.regionId and Geometry.overlap(part, AABB(Geometry.point(p) + Vector3(-0.26, 0.015, -0.26), Vector3(0.52, 1.785, 0.52))): return failure("OCCUPIED", "有人占用施工体积")
+	for v in previous.instances:
+		var region_id:String=str(v.regionId)
+		if supports_residency and not region_residency.has(region_id):region_residency[region_id]=view.region_is_resident(region_id)
+		if supports_residency and not region_residency[region_id]:
+			if removed.has(v.id):return failure("REGION_PAUSED","冷区不能移除建筑")
+			continue
+		if not v.get("protected", false) and not v.has("stairs"): continue
+		if removed.has(v.id) and not query.by_id.has(v.id): return failure("BLOCKED", "唯一楼梯或关键出口不能移除")
+		# Without a new volume there is no overlap to test. Standing,
+		# protected removal and the exit reachability pass still run.
+		if added.is_empty():continue
+		for p in current_space().use_points(v):
+			var volume := AABB(Geometry.point(p) + Vector3(-0.3, 0.05, -0.3), Vector3(0.6, 1.8, 0.6))
+			for n in added:
+				if n.id == v.id: continue
+				for part in geometry.boxes(n):
+					if Geometry.overlap(volume, part): return failure("BLOCKED", "修改会堵住楼梯或关键出口")
+	Costs.end("buildings/validate_clearance",started)
+	started=Costs.begin()
+	var generation_exits:Dictionary={}
+	for a in list(staged.get("actors", [])):
+		if float(a.get("hp", 0)) <= 0: continue
+		var p := Geometry.location(a)
+		var feet: Dictionary = query.standing_point(p)
+		if feet.is_empty() or Geometry.point(feet).distance_to(Geometry.point(p)) > 0.025: return failure("SPATIAL_REJECTED", "人物脚下支撑或身体净空失效：" + str(a.id))
+		if p.get("buildingId") == null: continue
+		var generation_key:String="generation:"+str(p.regionId)
+		if not generation_exits.has(generation_key):
+			# Exit safety reads the same slots, not every road cell/resource seed.
+			# This candidate stays immutable throughout the synchronous validation.
+			var fields:Array[String]=["slots"]
+			generation_exits[generation_key]=view.extension_fields(generation_key,fields) if view.has_method("extension_fields") else view.extension(generation_key)
+		var generation:Variant=generation_exits[generation_key]
+		if not generation is Dictionary: continue
+		for slot in generation.get("slots", []):
+			if slot.get("kind") != "entrance" or slot.get("buildingId") != p.buildingId: continue
+			var exit := Geometry.location(slot)
+			exit.buildingId = null
+			exit.storeyId = null
+			var ground: Variant = view.surface_height(exit.x, exit.z)
+			if ground != null: exit.y = float(ground)
+			if not exit_reachable(query,str(a.id),p,exit): return failure("SPATIAL_REJECTED", "修改会困住住户，必须保留可达出口：" + str(a.id))
+	Costs.end("buildings/validate_living_exits",started)
+	return success()
+
+func validate_world_draft(world_draft: RefCounted, fact_snapshot: Dictionary, changes: Array) -> Dictionary:
+	if not content_validation.get("ok",false):return content_validation.duplicate(true)
+	var structure_facts := false
+	var production_facts := false
+	for c in changes:
+		if c.get("id") == EXTENSION or c.get("op") in ["entity.put","entity.remove"]: structure_facts = true
+		if c.get("id") in ["r3:production","r3:structure-orders"]: production_facts = true
+	var started:int=Costs.begin()
+	var integrity: Dictionary = preload("res://scripts/buildings/building_snapshot.gd").validate(world_draft, fact_snapshot, source_catalog, structure_facts, production_facts)
+	Costs.end("buildings/validate_integrity",started)
+	if not integrity.ok: return integrity
+	# Production/order facts do not alter terrain, geometry or actor permissions.
+	# Never reuse this shortcut for unknown extensions, entities, doors or voxel edits.
+	var spatial := false
+	for c in changes:
+		if c.get("op") != "extension.set" or c.get("id") not in ["r3:production", "r3:structure-orders"]: spatial = true; break
+	if not spatial:
+		var old: Dictionary = facts()
+		for a in list(fact_snapshot.get("actors", [])):
+			var before: Dictionary = {}
+			for other in list(old.get("actors", [])):
+				if other.id == a.id: before = other; break
+			if before.is_empty() or Geometry.location(before) != Geometry.location(a) or before.get("relationship") != a.get("relationship") or float(before.get("hp", 0)) != float(a.get("hp", 0)): spatial = true; break
+		if not spatial: return success()
+	var data := structures(world_draft)
+	var removed: Array = []
+	var added: Array = []
+	for change in changes:
+		if change.get("op") == "entity.remove": removed.append(change.id)
+		if change.get("op") == "entity.put" and change.get("after", {}).get("kind") == "structure": added.append(change.after.data.structure)
+	var terrain_equivalent:=metadata_preserves_geometry(changes) and data==structures()
+	if not terrain_equivalent:
+		terrain_equivalent=true
+		for c in changes:
+			if c.get("op")=="extension.set" and c.get("id") in [EXTENSION,"r3:production","r3:structure-orders"]:continue
+			if c.get("op") in ["entity.put","entity.remove"]:
+				var before:Variant=c.get("before")
+				var after:Variant=c.get("after")
+				if (before==null or (before is Dictionary and before.get("kind")=="structure")) and (after==null or (after is Dictionary and after.get("kind")=="structure")):continue
+			terrain_equivalent=false;break
+	var storage_only := _is_storage_only(changes)
+	return validate_structures(context.world if terrain_equivalent else world_draft, data, fact_snapshot, removed, added,storage_only)
+
+func validate_snapshot(view: RefCounted, fact_snapshot: Dictionary) -> Dictionary:
+	if not content_validation.get("ok",false):return content_validation.duplicate(true)
+	return preload("res://scripts/buildings/building_snapshot.gd").validate(view, fact_snapshot, source_catalog)
+
+func create_view(value: Dictionary) -> Node3D:
+	var View = load("res://scripts/buildings/building_view.gd")
+	var node: Node3D = View.new()
+	var options := value.duplicate()
+	options.service = self
+	node.configure(options)
+	return node
+
+func catalog() -> Array:
+	return source_catalog.get("structure_definitions", {}).values().duplicate(true)
+
+static func generation_profiles()->Array:
+	# Pure DTO: no world read, randomness, actor, time or persistent mutation.
+	var document:Variant=JSON.parse_string(FileAccess.get_file_as_string("res://data/buildings/generation_profiles.json"))
+	return document.get("profiles",[]).duplicate(true) if document is Dictionary else []
+
+static func dressing_profiles()->Array:
+	return preload("res://scripts/buildings/building_dressing.gd").profiles()
+
+func seed_rural(world: RefCounted) -> Dictionary:
+	if not content_validation.get("ok",false):return content_validation.duplicate(true)
+	if world.identity().generatorVersion!="rural-1":return prepare_generation(world)
+	var Seeder = load("res://scripts/buildings/rural_buildings.gd")
+	return Seeder.new().generate(self, world)
+
+func prepare_generation(view:RefCounted,region_ids:Array=[])->Dictionary:
+	if not content_validation.get("ok",false):return content_validation.duplicate(true)
+	# A owns the final world/facts transaction, including initial finite stock.
+	var family:Dictionary=preload("res://scripts/buildings/building_families.gd").new().prepare(self,view,region_ids)
+	if not family.ok and family.code!="ALREADY_SEEDED":return family
+	var spawns:Array=[]
+	for p:Dictionary in family.get("spawn_points",{}).values():spawns.append(p)
+	var dressing:Dictionary=preload("res://scripts/buildings/building_dressing.gd").new().prepare(self,view,region_ids,family.get("world_changes",[]),spawns)
+	if not dressing.ok and dressing.code!="ALREADY_SEEDED":return dressing
+	if not dressing.ok:return family
+	if not family.ok:family={"ok":true,"code":"OK","reason":null,"world_changes":[],"fact_changes":[],"initial_stocks":[],"initial_tools":[],"initial_records":[],"life_anchors":{},"assembled_parcels":[],"entrances":{},"spawn_points":{}}
+	family.world_changes.append_array(dressing.world_changes)
+	family.dressing_results=dressing.dressing_results
+	return family
+
+func life_anchors(view:RefCounted=null)->Dictionary:
+	var w:RefCounted=context.world if view==null else view
+	var marker:Variant=w.extension("r3:building-generation")
+	var result:Dictionary={}
+	if not marker is Dictionary:return result
+	for id:String in marker.get("parcels",{}):
+		var anchors:Dictionary=marker.parcels[id].get("life_anchors",{}).duplicate(true)
+		# Stored sockets identify initial purposes; live object positions remain
+		# authoritative after actual relocation/demolition and native restore.
+		for purpose:String in anchors.keys():
+			var entity:Dictionary=w.entity(str(anchors[purpose].get("target_id","")))
+			if entity.is_empty() or float(entity.get("data",{}).get("structure",{}).get("hp",1))<=0:anchors.erase(purpose)
+			else:anchors[purpose].position=Geometry.location(entity)
+		result[id]=anchors
+	return result
+
+func generation_work_sites()->Array:
+	var marker:Variant=context.world.extension("r3:building-generation")
+	var result:Array=[]
+	if marker is Dictionary:
+		for parcel:Dictionary in marker.get("parcels",{}).values():result.append_array(parcel.get("construction_sites",[]))
+	return result
+
+func make_instance(definition_id: String, id: String, location: Dictionary, quarter_turn: int = 0, owner: Variant = "home-residents") -> Dictionary:
+	var d: Dictionary = geometry.definitions.get(definition_id, {})
+	if d.is_empty(): return {}
+	var p := Geometry.location(location)
+	var result := {"id": id, "definitionId": definition_id, "geometryVersion":Geometry.GEOMETRY_VERSION,"regionId": p.regionId, "buildingId": p.buildingId, "storeyId": p.storeyId,
+		"position": Geometry.json_point(Geometry.point(p)), "quarterTurn": posmod(quarter_turn, 4), "hp": d.maxHp, "version": 0, "protected": false, "owner": owner}
+	if d.has("door"): result.door = {"open": false, "locked": false, "blocked": false, "swing": 1}
+	return result
+
+func prepare_edit(removed: Array, added: Array, staged: Dictionary = {}, proposed: Dictionary = {}) -> Dictionary:
+	var data := structures() if proposed.is_empty() else proposed.duplicate(true)
+	var ids: Dictionary = {}
+	for v in data.instances:
+		if not removed.has(v.id): ids[v.id] = true
+	var next: Array = data.instances.filter(func(v: Dictionary) -> bool: return not removed.has(v.id))
+	for v in added:
+		if ids.has(v.get("id")) or not geometry.definitions.has(v.get("definitionId")): return failure("INVALID", "构件身份重复或目录未知")
+		if not v.get("position") is Dictionary or not [v.position.get("x"), v.position.get("y"), v.position.get("z"), v.get("hp")].all(func(n: Variant) -> bool: return (n is float or n is int) and is_finite(float(n))): return failure("INVALID", "构件坐标或生命值无效")
+		if not context.world.entity(v.id).is_empty() and not removed.has(v.id): return failure("OCCUPIED", "世界身份已被占用")
+		ids[v.id] = true; next.append(v.duplicate(true))
+	data.instances = next
+	var valid := validate_structures(context.world, data, facts() if staged.is_empty() else staged, removed, added)
+	return valid if not valid.ok else success(changes_for(data, added, removed.filter(func(id: String) -> bool: return not ids.has(id))))
+
+static func find_structure_record(rows:Array,id:String)->Dictionary:
+	for row:Dictionary in rows:
+		if row.id==id:return row
+	return {}
