@@ -1,0 +1,144 @@
+{
+  "source": "work/r3-4-ddd/catalog-thumbnails-post23-01/ui-art-handoff.json",
+  "source_sha256": "b1b895e4a560b88752868c5af92b626353b1ad79417cd987f5e125c7ecf74476",
+  "scope": "post23 image inputs only; UI owner must add exact mappings and image resources; ART refinement continues; no game/VA acceptance",
+  "existing_mapping_count": 8,
+  "supplement_count": 4,
+  "union_current23_catalog_count": 12,
+  "covers_exact_current23_catalog_ids": true,
+  "items": [
+    {
+      "id": "r34.module.warehouse",
+      "name": "仓储棚",
+      "geometry_version": "r34.module.warehouse.geometry-v1",
+      "suggested_mapping_stem": "warehouse",
+      "front": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/catalog-thumbnails-post23-01/export01/thumbnails/warehouse-front.png",
+      "front_sha256": "daee3c217f7bbd39e37c5e0229b15b09f3abc7efb61ff20e9ed14d127fce0255",
+      "rear": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/catalog-thumbnails-post23-01/export01/thumbnails/warehouse-rear.png",
+      "rear_sha256": "826c1b88b2778b15571ebd5afe93fa2b01646da5b9ea2dd7ee7659e9e6754c41",
+      "footprint": {
+        "max": {
+          "x": 2.0,
+          "y": 3.4,
+          "z": 1.5
+        },
+        "min": {
+          "x": -2.0,
+          "y": 0.0,
+          "z": -1.5
+        }
+      },
+      "shape": "warehouse",
+      "design_id": null,
+      "surface_count": 16,
+      "assembly_branch": "actual Shape.entities plus manual workbench if applicable"
+    },
+    {
+      "id": "r34.module.hand_workshop",
+      "name": "手工加工点",
+      "geometry_version": "r34.module.hand_workshop.geometry-v1",
+      "suggested_mapping_stem": "hand_workshop",
+      "front": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/catalog-thumbnails-post23-01/export01/thumbnails/hand_workshop-front.png",
+      "front_sha256": "6c30f706f4b4bdf250ab930694f5eafb22eb233079765f083ce744306a13204b",
+      "rear": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/catalog-thumbnails-post23-01/export01/thumbnails/hand_workshop-rear.png",
+      "rear_sha256": "404b00cc7ab1c9618d9f059354882522a9f59ab914190c20bb6cc7604e5cebd6",
+      "footprint": {
+        "max": {
+          "x": 1.5,
+          "y": 2.6,
+          "z": 1.0
+        },
+        "min": {
+          "x": -1.5,
+          "y": 0.0,
+          "z": -1.0
+        }
+      },
+      "shape": "manual",
+      "design_id": null,
+      "surface_count": 1,
+      "assembly_branch": "original manual workbench only"
+    },
+    {
+      "id": "r34.module.home_service",
+      "name": "旧宅补给服务",
+      "geometry_version": "r34.module.home_service.geometry-v1",
+      "suggested_mapping_stem": "home_service",
+      "front": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/catalog-thumbnails-post23-01/export01/thumbnails/home_service-front.png",
+      "front_sha256": "399d05efcf6dd52153e29908eef23dbf46d0de99646957acfa6444521235c3d2",
+      "rear": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/catalog-thumbnails-post23-01/export01/thumbnails/home_service-rear.png",
+      "rear_sha256": "aa735bb05962464e0b2ccd8caa0aae309f3fa2e1b46414a94cbfbc4cf282faeb",
+      "footprint": {
+        "max": {
+          "x": 3.0,
+          "y": 4.2,
+          "z": 2.5
+        },
+        "min": {
+          "x": -3.0,
+          "y": 0.0,
+          "z": -2.5
+        }
+      },
+      "shape": "home",
+      "design_id": null,
+      "surface_count": 16,
+      "assembly_branch": "actual Shape.entities plus manual workbench if applicable"
+    },
+    {
+      "id": "r34.module.supply_rear_v3",
+      "name": "村路小店收货处",
+      "geometry_version": "r34.module.supply_rear_v3.geometry-v1",
+      "suggested_mapping_stem": "supply_rear_v3",
+      "front": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/catalog-thumbnails-post23-01/export01/thumbnails/supply_rear_v3-front.png",
+      "front_sha256": "f93efc5da34439e10201591735619cbd47aa936b2e146200d060c8a334076c35",
+      "rear": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/catalog-thumbnails-post23-01/export01/thumbnails/supply_rear_v3-rear.png",
+      "rear_sha256": "df6e5d5da8c77c20294f5afab7ed21cc711a407b170796e6a793f8d755a89d0e",
+      "footprint": {
+        "max": {
+          "x": 2.25,
+          "y": 3.8,
+          "z": 2.0
+        },
+        "min": {
+          "x": -2.25,
+          "y": 0.0,
+          "z": -2.0
+        }
+      },
+      "shape": "supply",
+      "design_id": "BC06-supply-rear-v3",
+      "surface_count": 66,
+      "assembly_branch": "actual Shape.entities plus manual workbench if applicable"
+    }
+  ],
+  "mapping_additions": {
+    "r34.module.warehouse": "warehouse",
+    "r34.module.hand_workshop": "hand_workshop",
+    "r34.module.home_service": "home_service",
+    "r34.module.supply_rear_v3": "supply_rear_v3"
+  },
+  "notes": [
+    "warehouse / home_service are original no-design-id definitions; do not substitute v2 images",
+    "hand_workshop is only original real workbench; no synthetic manual shed or duplicate bench",
+    "supply_rear_v3 belongs actual candidate23/content7; front shelves empty, receiving hatch at rear",
+    "all views independently framed; footprint is authority for metres, not relative thumbnail sizes",
+    "no guard_post/fence/gate module invented"
+  ],
+  "catalog_ids": [
+    "r34.module.warehouse",
+    "r34.module.hand_workshop",
+    "r34.module.fuel_woodshop",
+    "r34.module.home_service",
+    "r34.module.warehouse_long_v2",
+    "r34.module.warehouse_court_v2",
+    "r34.module.home_court_v2",
+    "r34.module.home_roadside_v2",
+    "r34.module.repair_shed_v2",
+    "r34.module.supply_roadside_v2",
+    "r34.module.woodshop_long_v2",
+    "r34.module.supply_rear_v3"
+  ],
+  "historical_input_manifest": true,
+  "current_ui_bindings": "res://themes/ui-art-bindings.json"
+}

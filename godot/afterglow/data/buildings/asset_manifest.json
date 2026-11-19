@@ -1,0 +1,1994 @@
+{
+  "schema": "afterglow-bbb-godot-assets-v1",
+  "textures": {
+  "architecture_gray_roof": {
+    "id": "architecture_gray_roof",
+    "source": "references/r34-architecture-30-v1/surfaces/gray_clay_pan_roof_albedo_2m.png",
+    "sha256": "6693d448e20eb4224146f240795c8dc150f97aae83b0398a3ad7cc23bbe02337",
+    "verified_sha256": "6693d448e20eb4224146f240795c8dc150f97aae83b0398a3ad7cc23bbe02337",
+    "resource": "res://data/buildings/textures/architecture-v1/gray_clay_pan_roof_albedo_2m.png",
+    "tile_meters": 2.0,
+    "uv": {
+      "repeat": true,
+      "meters_xy": [
+        2.0,
+        2.0
+      ],
+      "u": "along eave",
+      "v": "up slope to ridge"
+    },
+    "alpha": false,
+    "lazy": true,
+    "source_status": "Exact ART original bytes; additive architecture set only",
+    "godot_status": "Source binding; A import/package/visual review pending",
+    "VA_passed": false
+  },
+    "straw_fibres": {
+      "id": "straw_fibres",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/c08_straw_fibres.png",
+      "sha256": "d8c9edd008f98c0ec7d6e64b0a7d3557380ee946fca94e522df85563ff8a918c",
+      "verified_sha256": "d8c9edd008f98c0ec7d6e64b0a7d3557380ee946fca94e522df85563ff8a918c",
+      "resource": "res://data/world/ecology/quality-v1/c08_straw_fibres.png",
+      "tile_meters": 0.6,
+      "uv": { "repeat": true, "meters_xy": [0.6, 0.6] },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "source_status": "reuse C original resource bytes; no duplicate or image changes",
+      "godot_status": "actual nine-bale haystack surface; normal-camera and package adoption pending",
+      "VA_passed": false
+    },
+    "concrete": {
+      "id": "concrete",
+      "source": "assets/art/world-foundation-r3-v1/images/06_rough_concrete_foundation.png",
+      "sha256": "51f45cb45b221c7459043942d03c789fef45aeda196c28b0602a60d4021e0e6a",
+      "tile_meters": 1.6,
+      "uv": {
+        "repeat": true,
+        "meters": 1.6
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/06_rough_concrete_foundation.png",
+      "verified_sha256": "51f45cb45b221c7459043942d03c789fef45aeda196c28b0602a60d4021e0e6a",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 44,
+            "visible_surfaces": 18
+          },
+          "inside": {
+            "bound_surfaces": 44,
+            "visible_surfaces": 18
+          }
+        }
+      }
+    },
+    "plaster_crack": {
+      "id": "plaster_crack",
+      "source": "assets/art/world-foundation-r3-v1/images/07_plaster_hairline_cracks.png",
+      "sha256": "6ea4936a0f79c6f68f22ba6ecb204a8e08ebc6d7467c5cbff7f1f66cb7f46bb9",
+      "tile_meters": 1.2,
+      "uv": {
+        "repeat": false,
+        "meters": 1.2
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "registered reusable resource; no binding in these sampled states",
+      "resource": "res://data/buildings/textures/07_plaster_hairline_cracks.png",
+      "verified_sha256": "6ea4936a0f79c6f68f22ba6ecb204a8e08ebc6d7467c5cbff7f1f66cb7f46bb9",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          },
+          "inside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          }
+        }
+      }
+    },
+    "brick_wear": {
+      "id": "brick_wear",
+      "source": "assets/art/world-foundation-r3-v1/images/08_exposed_brick_wear.png",
+      "sha256": "5ed2cc1d5a8ce9cc54d53ea27eb9418d0555b170984cb4ca17133dfab7e12502",
+      "tile_meters": 1.6,
+      "uv": {
+        "repeat": false,
+        "meters": 1.6
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "registered reusable resource; no binding in these sampled states",
+      "resource": "res://data/buildings/textures/08_exposed_brick_wear.png",
+      "verified_sha256": "5ed2cc1d5a8ce9cc54d53ea27eb9418d0555b170984cb4ca17133dfab7e12502",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          },
+          "inside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          }
+        }
+      }
+    },
+    "damp": {
+      "id": "damp",
+      "source": "assets/art/world-foundation-r3-v1/images/11_damp_stain.png",
+      "sha256": "22254907603f9a08f5cfdfc7d173f947db76cd7b8e5c57350a3b750581ce2f2f",
+      "tile_meters": 1.6,
+      "uv": {
+        "repeat": false,
+        "meters": 1.6
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/11_damp_stain.png",
+      "verified_sha256": "22254907603f9a08f5cfdfc7d173f947db76cd7b8e5c57350a3b750581ce2f2f",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 2,
+            "visible_surfaces": 2
+          },
+          "inside": {
+            "bound_surfaces": 2,
+            "visible_surfaces": 1
+          }
+        }
+      }
+    },
+    "road_crack": {
+      "id": "road_crack",
+      "source": "assets/art/world-foundation-r3-v1/images/12_road_cracks.png",
+      "sha256": "ebcd1d8505ac20946e16e432e6b6312f779da047e4b238c141e0eb4a1451659e",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": false,
+        "meters": 2
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "registered reusable resource; no binding in these sampled states",
+      "resource": "res://data/buildings/textures/12_road_cracks.png",
+      "verified_sha256": "ebcd1d8505ac20946e16e432e6b6312f779da047e4b238c141e0eb4a1451659e",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          },
+          "inside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          }
+        }
+      }
+    },
+    "cream_plaster": {
+      "id": "cream_plaster",
+      "source": "assets/art/world-detail-r3-v2/images/m01_cream_plaster.png",
+      "sha256": "4e27c920990505f54b65d3c5f1d58d9727a196471e1d872a9b57d2a13157b331",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters": 2
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/m01_cream_plaster.png",
+      "verified_sha256": "4e27c920990505f54b65d3c5f1d58d9727a196471e1d872a9b57d2a13157b331",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 136,
+            "visible_surfaces": 49
+          },
+          "inside": {
+            "bound_surfaces": 136,
+            "visible_surfaces": 49
+          }
+        }
+      }
+    },
+    "mint_paint": {
+      "id": "mint_paint",
+      "source": "assets/art/world-detail-r3-v2/images/m02_faded_mint_paint.png",
+      "sha256": "b4ba1766ec7d348cdfb9d43c0862cf6b2fd88e9f75bf40025fbacae7382f542a",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters": 2
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/m02_faded_mint_paint.png",
+      "verified_sha256": "b4ba1766ec7d348cdfb9d43c0862cf6b2fd88e9f75bf40025fbacae7382f542a",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 30,
+            "visible_surfaces": 0
+          },
+          "inside": {
+            "bound_surfaces": 30,
+            "visible_surfaces": 0
+          }
+        }
+      }
+    },
+    "old_brick": {
+      "id": "old_brick",
+      "source": "assets/art/world-detail-r3-v2/images/m03_old_red_brick.png",
+      "sha256": "5e9b8e19f6e6286d20bcc9ce2818fe809bcb200a7b929ec8d4d041519c75f7d5",
+      "tile_meters": 1.68,
+      "uv": {
+        "repeat": true,
+        "meters": 1.68
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/m03_old_red_brick.png",
+      "verified_sha256": "5e9b8e19f6e6286d20bcc9ce2818fe809bcb200a7b929ec8d4d041519c75f7d5",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 42,
+            "visible_surfaces": 0
+          },
+          "inside": {
+            "bound_surfaces": 42,
+            "visible_surfaces": 0
+          }
+        }
+      }
+    },
+    "wood_floor": {
+      "id": "wood_floor",
+      "source": "assets/art/world-detail-r3-v2/images/m04_warm_wood_floor.png",
+      "sha256": "4e1673efb078597be4940c871e59d8263b07cb5fb758a78ff32eb668a82cad62",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters": 2
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/m04_warm_wood_floor.png",
+      "verified_sha256": "4e1673efb078597be4940c871e59d8263b07cb5fb758a78ff32eb668a82cad62",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 218,
+            "visible_surfaces": 95
+          },
+          "inside": {
+            "bound_surfaces": 218,
+            "visible_surfaces": 77
+          }
+        }
+      }
+    },
+    "ceramic": {
+      "id": "ceramic",
+      "source": "assets/art/world-detail-r3-v2/images/m05_small_ceramic_tiles.png",
+      "sha256": "418482c9c4aeb71c8d7f70d9de838c3a1216e4ddec2081f4d8279b2b74a38372",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters": 2
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/m05_small_ceramic_tiles.png",
+      "verified_sha256": "418482c9c4aeb71c8d7f70d9de838c3a1216e4ddec2081f4d8279b2b74a38372",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 1,
+            "visible_surfaces": 1
+          },
+          "inside": {
+            "bound_surfaces": 1,
+            "visible_surfaces": 1
+          }
+        }
+      }
+    },
+    "plywood": {
+      "id": "plywood",
+      "source": "assets/art/world-detail-r3-v2/images/m10_workbench_plywood.png",
+      "sha256": "9e959fe04fed23a39b028c61bc411b3193beb425fb4cfaaf52289a4092d0d81c",
+      "tile_meters": 1,
+      "uv": {
+        "repeat": true,
+        "meters": 1
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "registered reusable resource; no binding in these sampled states",
+      "resource": "res://data/buildings/textures/m10_workbench_plywood.png",
+      "verified_sha256": "9e959fe04fed23a39b028c61bc411b3193beb425fb4cfaaf52289a4092d0d81c",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          },
+          "inside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          }
+        }
+      }
+    },
+    "roof_tile": {
+      "id": "roof_tile",
+      "source": "assets/art/world-detail-r3-v2/images/m08_faded_roof_tiles.png",
+      "sha256": "324b0edd34439caafd4e0e45a6341ee096ea4cdb67f934520a653671eb162ebb",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters": 2
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/m08_faded_roof_tiles.png",
+      "verified_sha256": "324b0edd34439caafd4e0e45a6341ee096ea4cdb67f934520a653671eb162ebb",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 119,
+            "visible_surfaces": 48
+          },
+          "inside": {
+            "bound_surfaces": 119,
+            "visible_surfaces": 25
+          }
+        }
+      }
+    },
+    "zinc": {
+      "id": "zinc",
+      "source": "assets/art/world-detail-r3-v2/images/m09_corrugated_zinc.png",
+      "sha256": "9e46b2c159e5a31401f2a8402f00106d1a69b352f9d21d55621acec6db083617",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters": 2
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/m09_corrugated_zinc.png",
+      "verified_sha256": "9e46b2c159e5a31401f2a8402f00106d1a69b352f9d21d55621acec6db083617",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 12,
+            "visible_surfaces": 12
+          },
+          "inside": {
+            "bound_surfaces": 12,
+            "visible_surfaces": 12
+          }
+        }
+      }
+    },
+    "painted_metal": {
+      "id": "painted_metal",
+      "source": "assets/art/world-detail-r3-v2/images/m11_painted_metal.png",
+      "sha256": "56436135a91ad887705ae4477572a6a505671a511520e7ed56b06896d0e2829f",
+      "tile_meters": 1,
+      "uv": {
+        "repeat": true,
+        "meters": 1
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/m11_painted_metal.png",
+      "verified_sha256": "56436135a91ad887705ae4477572a6a505671a511520e7ed56b06896d0e2829f",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 10,
+            "visible_surfaces": 7
+          },
+          "inside": {
+            "bound_surfaces": 10,
+            "visible_surfaces": 6
+          }
+        }
+      }
+    },
+    "threshold": {
+      "id": "threshold",
+      "source": "assets/art/world-detail-r3-v2/images/d05_threshold_scuff.png",
+      "sha256": "b5dd3dfb7bf9056f4dd4a61472451d785d262f1ae7db3bdc7d9ad52f83c0ca8c",
+      "tile_meters": 1,
+      "uv": {
+        "repeat": false,
+        "meters": 1
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/d05_threshold_scuff.png",
+      "verified_sha256": "b5dd3dfb7bf9056f4dd4a61472451d785d262f1ae7db3bdc7d9ad52f83c0ca8c",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 9,
+            "visible_surfaces": 6
+          },
+          "inside": {
+            "bound_surfaces": 9,
+            "visible_surfaces": 5
+          }
+        }
+      }
+    },
+    "wall_dust": {
+      "id": "wall_dust",
+      "source": "assets/art/world-detail-r3-v2/images/d01_wall_base_dust.png",
+      "sha256": "0329b9f7ad089bedeb6e5274be3f02cd9286fa47966f12d38f73d62db424cf1e",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": false,
+        "meters": 2
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/d01_wall_base_dust.png",
+      "verified_sha256": "0329b9f7ad089bedeb6e5274be3f02cd9286fa47966f12d38f73d62db424cf1e",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 87,
+            "visible_surfaces": 35
+          },
+          "inside": {
+            "bound_surfaces": 87,
+            "visible_surfaces": 30
+          }
+        }
+      }
+    },
+    "dust_corner": {
+      "id": "dust_corner",
+      "source": "assets/art/world-detail-r3-v2/images/d02_wall_base_corner.png",
+      "sha256": "35a58e15d676d1411277b0f30356c8a0459b6f7b0d6d807ecbed3b67fa358a6a",
+      "tile_meters": 1,
+      "uv": {
+        "repeat": false,
+        "meters": 1
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "registered reusable resource; no binding in these sampled states",
+      "resource": "res://data/buildings/textures/d02_wall_base_corner.png",
+      "verified_sha256": "35a58e15d676d1411277b0f30356c8a0459b6f7b0d6d807ecbed3b67fa358a6a",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          },
+          "inside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          }
+        }
+      }
+    },
+    "rust_runoff": {
+      "id": "rust_runoff",
+      "source": "assets/art/world-detail-r3-v2/images/d04_sill_rust_runoff.png",
+      "sha256": "da24cae79a92d2e6a3b9f4097d26ed73804c78c4b8d75736009951994cad29d3",
+      "tile_meters": 0.6,
+      "uv": {
+        "repeat": false,
+        "meters": 0.6
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/d04_sill_rust_runoff.png",
+      "verified_sha256": "da24cae79a92d2e6a3b9f4097d26ed73804c78c4b8d75736009951994cad29d3",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 2,
+            "visible_surfaces": 2
+          },
+          "inside": {
+            "bound_surfaces": 2,
+            "visible_surfaces": 2
+          }
+        }
+      }
+    },
+    "sawdust": {
+      "id": "sawdust",
+      "source": "assets/art/world-detail-r3-v2/images/d07_workshop_sawdust.png",
+      "sha256": "09d6bd90d715eff42a8569031ef5c9fd0ffc6924d7335d229df3168702f8203d",
+      "tile_meters": 1,
+      "uv": {
+        "repeat": false,
+        "meters": 1
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "registered reusable resource; no binding in these sampled states",
+      "resource": "res://data/buildings/textures/d07_workshop_sawdust.png",
+      "verified_sha256": "09d6bd90d715eff42a8569031ef5c9fd0ffc6924d7335d229df3168702f8203d",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          },
+          "inside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          }
+        }
+      }
+    },
+    "repaired_plaster": {
+      "id": "repaired_plaster",
+      "source": "assets/art/world-detail-r3-v2/images/d08_repaired_plaster.png",
+      "sha256": "d4c6e9c1025bebacac5e180255baad76c602237b27b0994371dc6f6a2d74f280",
+      "tile_meters": 1,
+      "uv": {
+        "repeat": false,
+        "meters": 1
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "registered reusable resource; no binding in these sampled states",
+      "resource": "res://data/buildings/textures/d08_repaired_plaster.png",
+      "verified_sha256": "d4c6e9c1025bebacac5e180255baad76c602237b27b0994371dc6f6a2d74f280",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          },
+          "inside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          }
+        }
+      }
+    },
+    "board_patch": {
+      "id": "board_patch",
+      "source": "assets/art/world-detail-r3-v2/images/d09_board_patch_detail.png",
+      "sha256": "c81addbef796bc8f51265b2ac0cecaeea9e0218aa4239f9e549b7fd91eb4e7f2",
+      "tile_meters": 1,
+      "uv": {
+        "repeat": false,
+        "meters": 1
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "registered reusable resource; no binding in these sampled states",
+      "resource": "res://data/buildings/textures/d09_board_patch_detail.png",
+      "verified_sha256": "c81addbef796bc8f51265b2ac0cecaeea9e0218aa4239f9e549b7fd91eb4e7f2",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          },
+          "inside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          }
+        }
+      }
+    },
+    "moved_trace": {
+      "id": "moved_trace",
+      "source": "assets/art/world-detail-r3-v2/images/d10_moved_furniture_trace.png",
+      "sha256": "736c2d4461b6411824cb512394e94b5cc06fcdc967148a392b75191d7a9a9993",
+      "tile_meters": 1,
+      "uv": {
+        "repeat": false,
+        "meters": 1
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "registered reusable resource; no binding in these sampled states",
+      "resource": "res://data/buildings/textures/d10_moved_furniture_trace.png",
+      "verified_sha256": "736c2d4461b6411824cb512394e94b5cc06fcdc967148a392b75191d7a9a9993",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          },
+          "inside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          }
+        }
+      }
+    },
+    "book_atlas": {
+      "id": "book_atlas",
+      "source": "assets/art/world-detail-r3-v2/images/a01_book_surfaces.png",
+      "sha256": "1067087dddb0de24b660ca27a4dfbfa2f087b27b4aacfd887f7f8b8e97611dbe",
+      "tile_meters": 1,
+      "uv": {
+        "grid": [
+          4,
+          4
+        ],
+        "paddingPixels": 8,
+        "cellPixels": 256,
+        "repeat": false
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "registered reusable resource; no binding in these sampled states",
+      "resource": "res://data/buildings/textures/a01_book_surfaces.png",
+      "verified_sha256": "1067087dddb0de24b660ca27a4dfbfa2f087b27b4aacfd887f7f8b8e97611dbe",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          },
+          "inside": {
+            "bound_surfaces": 0,
+            "visible_surfaces": 0
+          }
+        }
+      }
+    },
+    "grocery_atlas": {
+      "id": "grocery_atlas",
+      "source": "assets/art/world-detail-r3-v2/images/a02_grocery_surfaces.png",
+      "sha256": "ed00fc43263fcde01e82921fd4e7ac8dc8761fc3948407e6d23cefb0393b11e1",
+      "tile_meters": 1,
+      "uv": {
+        "grid": [
+          4,
+          4
+        ],
+        "paddingPixels": 8,
+        "cellPixels": 256,
+        "repeat": false
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/a02_grocery_surfaces.png",
+      "verified_sha256": "ed00fc43263fcde01e82921fd4e7ac8dc8761fc3948407e6d23cefb0393b11e1",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 1,
+            "visible_surfaces": 0
+          },
+          "inside": {
+            "bound_surfaces": 1,
+            "visible_surfaces": 1
+          }
+        }
+      }
+    },
+    "textile_atlas": {
+      "id": "textile_atlas",
+      "source": "assets/art/world-detail-r3-1-v1/images/a04_home_textiles.png",
+      "sha256": "ee96065ae6df05dfdc7a2259cd3fbe7174191ec760aa29731f753e5707d324ed",
+      "tile_meters": 1,
+      "uv": {
+        "grid": [
+          4,
+          4
+        ],
+        "paddingPixels": 8,
+        "cellPixels": 256,
+        "repeat": false
+      },
+      "source_status": "existing file; retain original bytes",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "resource": "res://data/buildings/textures/a04_home_textiles.png",
+      "verified_sha256": "ee96065ae6df05dfdc7a2259cd3fbe7174191ec760aa29731f753e5707d324ed",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 8,
+            "visible_surfaces": 7
+          },
+          "inside": {
+            "bound_surfaces": 8,
+            "visible_surfaces": 6
+          }
+        }
+      }
+    },
+    "damaged_wood": {
+      "id": "damaged_wood",
+      "source": "assets/art/rural-quality-r3-3-v1/images/d11_damaged_wood.png",
+      "sha256": "acd75ade1ce4bf78859bb5e930fea496259f9303946b1a15b2786affe7362a07",
+      "verified_sha256": "acd75ade1ce4bf78859bb5e930fea496259f9303946b1a15b2786affe7362a07",
+      "resource": "res://data/buildings/textures/d11_damaged_wood.png",
+      "tile_meters": 0.65,
+      "physical_m": [
+        0.65,
+        0.65
+      ],
+      "uv": {
+        "repeat": false,
+        "canvas": "whole",
+        "width_m": 0.65,
+        "height_m": 0.65
+      },
+      "channels": "RGBA straight alpha, blend",
+      "source_status": "ART AC-02 / D11 received exact bytes; see rural-quality-r3-3-v1/sources/runtime-supplement-records.json",
+      "godot_status": "bound to derived native geometry; formal visual pending",
+      "binding_evidence": {
+        "scope": "headless geometry/material instances, not rendered quality or FPS",
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "states": {
+          "outside": {
+            "bound_surfaces": 2,
+            "visible_surfaces": 1
+          },
+          "inside": {
+            "bound_surfaces": 2,
+            "visible_surfaces": 1
+          }
+        }
+      }
+    },
+    "stone_masonry": {
+      "id": "stone_masonry",
+      "source": "public/art/world-foundation-r3-v1/images/05_exposed_rock.png",
+      "resource": "res://data/buildings/textures/05_exposed_rock.png",
+      "sha256": "25a5177dd77d0a8f5df69070d6ef99a4e4e0fdd4a0fa11d92fd15a3de6e8f624",
+      "tile_meters": 1.6,
+      "uv": {
+        "repeat": true
+      },
+      "source_status": "existing original image bytes; no new artwork",
+      "godot_status": "native dressing binding in progress; formal app pending"
+    },
+    "weathered_timber": {
+      "id": "weathered_timber",
+      "source": "public/art/living-world-v2/materials/timber_weathered.png",
+      "resource": "res://data/buildings/textures/timber_weathered.png",
+      "sha256": "a99a72514cc019a8770cad31d9627c0b410cfb48b572d9d3e7bfc4a21a31e0ec",
+      "tile_meters": 0.8,
+      "uv": {
+        "repeat": true
+      },
+      "source_status": "existing original image bytes; no new artwork",
+      "godot_status": "native dressing binding in progress; formal app pending"
+    },
+    "living_palette": {
+      "id": "living_palette",
+      "source": "public/art/living-world-v2/atlases/model_albedo.png",
+      "resource": "res://data/buildings/textures/model_albedo.png",
+      "sha256": "c7d85db74ea9721957b25f1bc265af52879d4eb0d1f37d44bcec29278692143f",
+      "tile_meters": 1.0,
+      "uv": {
+        "repeat": false,
+        "regions": {
+          "straw_pixels": [
+            642,
+            770,
+            124,
+            124
+          ]
+        }
+      },
+      "source_status": "existing original image bytes; no new artwork",
+      "godot_status": "native dressing binding in progress; formal app pending"
+    },
+    "well_stone": {
+      "id": "well_stone",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/p01_well_stone.png",
+      "sha256": "1bfb72c149cc5168727df41716f3c88b361b496f833b848d6d7e6252da548aab",
+      "verified_sha256": "1bfb72c149cc5168727df41716f3c88b361b496f833b848d6d7e6252da548aab",
+      "tile_meters": 1,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          1,
+          1
+        ]
+      },
+      "lazy": true,
+      "source_status": "passed_image_QA; original bytes copied",
+      "godot_status": "native dressing geometry binding; normal-view and package pending",
+      "resource": "res://data/buildings/textures/p01_well_stone.png",
+      "image_QA": "passed_image_QA",
+      "VA_passed": false
+    },
+    "sign_wood": {
+      "id": "sign_wood",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/p02_sign_wood.png",
+      "sha256": "2b92b87b05fa7c58268e8d996873003671111965ee9b0c5a2fc3e95b04c94fd7",
+      "verified_sha256": "2b92b87b05fa7c58268e8d996873003671111965ee9b0c5a2fc3e95b04c94fd7",
+      "tile_meters": 1,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          1,
+          0.5
+        ]
+      },
+      "lazy": true,
+      "source_status": "passed_image_QA; original bytes copied",
+      "godot_status": "native dressing geometry binding; normal-view and package pending",
+      "resource": "res://data/buildings/textures/p02_sign_wood.png",
+      "image_QA": "passed_image_QA",
+      "VA_passed": false
+    },
+    "tank_paint": {
+      "id": "tank_paint",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/p03_water_tank_paint.png",
+      "sha256": "388f2660364805fd34cf6272014b5789daf2aaabaa316db9cb6b49e61f75dbb4",
+      "verified_sha256": "388f2660364805fd34cf6272014b5789daf2aaabaa316db9cb6b49e61f75dbb4",
+      "tile_meters": 1,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          1,
+          1
+        ]
+      },
+      "lazy": true,
+      "source_status": "passed_image_QA; original bytes copied",
+      "godot_status": "native dressing geometry binding; normal-view and package pending",
+      "resource": "res://data/buildings/textures/p03_water_tank_paint.png",
+      "image_QA": "passed_image_QA",
+      "VA_passed": false
+    },
+    "hemp_rope": {
+      "id": "hemp_rope",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/p04_hemp_rope.png",
+      "sha256": "ea84ae8e636754177810824091e0477d16ba4d78bde5285b242543425b42cf7b",
+      "verified_sha256": "ea84ae8e636754177810824091e0477d16ba4d78bde5285b242543425b42cf7b",
+      "tile_meters": 0.15,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          0.15,
+          0.15
+        ]
+      },
+      "lazy": true,
+      "source_status": "passed_image_QA; original bytes copied",
+      "godot_status": "native dressing geometry binding; normal-view and package pending",
+      "resource": "res://data/buildings/textures/p04_hemp_rope.png",
+      "image_QA": "passed_image_QA",
+      "VA_passed": false
+    },
+    "car_paint": {
+      "id": "car_paint",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/p05_car_faded_paint.png",
+      "sha256": "a92c808ad629810ae587288a6de801c75e0a3a9046e84d79bb3af5f29dc2b517",
+      "verified_sha256": "a92c808ad629810ae587288a6de801c75e0a3a9046e84d79bb3af5f29dc2b517",
+      "tile_meters": 1,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          1,
+          1
+        ]
+      },
+      "lazy": true,
+      "source_status": "passed_image_QA; original bytes copied",
+      "godot_status": "native dressing geometry binding; normal-view and package pending",
+      "resource": "res://data/buildings/textures/p05_car_faded_paint.png",
+      "image_QA": "passed_image_QA",
+      "VA_passed": false
+    },
+    "car_rust": {
+      "id": "car_rust",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/p06_car_rust.png",
+      "sha256": "954f9e63744a96b2cd95010e748a51e6dd43bf1e00cb5cf525ac1bff58431d7d",
+      "verified_sha256": "954f9e63744a96b2cd95010e748a51e6dd43bf1e00cb5cf525ac1bff58431d7d",
+      "tile_meters": 1,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          1,
+          1
+        ]
+      },
+      "lazy": true,
+      "source_status": "passed_image_QA; original bytes copied",
+      "godot_status": "native dressing geometry binding; normal-view and package pending",
+      "resource": "res://data/buildings/textures/p06_car_rust.png",
+      "image_QA": "passed_image_QA",
+      "VA_passed": false
+    },
+    "car_tyre": {
+      "id": "car_tyre",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/p07_worn_tyre.png",
+      "sha256": "25bccd46614649dd2f31696b1a40fe4dc840a02276867f762f9d9e497c0c3cfd",
+      "verified_sha256": "25bccd46614649dd2f31696b1a40fe4dc840a02276867f762f9d9e497c0c3cfd",
+      "tile_meters": 0.5,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          0.5,
+          0.5
+        ]
+      },
+      "lazy": true,
+      "source_status": "passed_image_QA; original bytes copied",
+      "godot_status": "native dressing geometry binding; normal-view and package pending",
+      "resource": "res://data/buildings/textures/p07_worn_tyre.png",
+      "image_QA": "passed_image_QA",
+      "VA_passed": false
+    },
+    "car_glass": {
+      "id": "car_glass",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/surfaces/p08_dusty_glass.png",
+      "sha256": "3d1acfee182e1dbd2bc7026bc77f3c6c8a12e4ed3c8ddb5babe95d1715d989e1",
+      "verified_sha256": "3d1acfee182e1dbd2bc7026bc77f3c6c8a12e4ed3c8ddb5babe95d1715d989e1",
+      "tile_meters": 1,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          1,
+          1
+        ]
+      },
+      "lazy": true,
+      "source_status": "passed_image_QA; original bytes copied",
+      "godot_status": "native dressing geometry binding; normal-view and package pending",
+      "resource": "res://data/buildings/textures/p08_dusty_glass.png",
+      "image_QA": "passed_image_QA",
+      "VA_passed": false
+    },
+    "b_brick_damage_detail": {
+      "id": "b_brick_damage_detail",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/decals/b_brick_damage_detail.png",
+      "sha256": "8e8f99167e70168d7c67207d9fd3babfc96fc8fca8442b86629375d06a755fcf",
+      "verified_sha256": "8e8f99167e70168d7c67207d9fd3babfc96fc8fca8442b86629375d06a755fcf",
+      "resource": "res://data/buildings/textures/b_brick_damage_detail.png",
+      "tile_meters": 0.65,
+      "uv": {
+        "repeat": false,
+        "meters_xy": [
+          0.65,
+          0.65
+        ]
+      },
+      "alpha": true,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "real HP damage",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_brick_repair_detail": {
+      "id": "b_brick_repair_detail",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/decals/b_brick_repair_detail.png",
+      "sha256": "d6c35c8d31dc224c8bb13785238e5d43f5554799b282e5dd413cd4459efa9593",
+      "verified_sha256": "d6c35c8d31dc224c8bb13785238e5d43f5554799b282e5dd413cd4459efa9593",
+      "resource": "res://data/buildings/textures/b_brick_repair_detail.png",
+      "tile_meters": 0.65,
+      "uv": {
+        "repeat": false,
+        "meters_xy": [
+          0.65,
+          0.65
+        ]
+      },
+      "alpha": true,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "real completed repair; patch geometry by B",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_brick_intact": {
+      "id": "b_brick_intact",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_brick_intact.png",
+      "sha256": "09df9c46aafea6b357ccdf2a04456edf11bf489518b0f1096ee09ed5fb3aa1e2",
+      "verified_sha256": "09df9c46aafea6b357ccdf2a04456edf11bf489518b0f1096ee09ed5fb3aa1e2",
+      "resource": "res://data/buildings/textures/b_brick_intact.png",
+      "tile_meters": 1.68,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          1.68,
+          1.68
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "static age/condition only",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_brick_aged": {
+      "id": "b_brick_aged",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_brick_aged.png",
+      "sha256": "c75ec3ccc29c36220eb0c0a92c7a42214f2ef03147d02a1450d33bdbeccfd7f8",
+      "verified_sha256": "c75ec3ccc29c36220eb0c0a92c7a42214f2ef03147d02a1450d33bdbeccfd7f8",
+      "resource": "res://data/buildings/textures/b_brick_aged.png",
+      "tile_meters": 1.68,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          1.68,
+          1.68
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "static age/condition only",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_brick_damaged": {
+      "id": "b_brick_damaged",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_brick_damaged.png",
+      "sha256": "8de30506ad6b004a9e17f95180d9a15b96f59dd91cab3425de364c6ae7183887",
+      "verified_sha256": "8de30506ad6b004a9e17f95180d9a15b96f59dd91cab3425de364c6ae7183887",
+      "resource": "res://data/buildings/textures/b_brick_damaged.png",
+      "tile_meters": 1.68,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          1.68,
+          1.68
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "actual damage HP",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_brick_repaired": {
+      "id": "b_brick_repaired",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_brick_repaired.png",
+      "sha256": "e88c57b5cd4b7663867f16758eb0bc36fe659bb8e11d365659fc0e4169cb58ee",
+      "verified_sha256": "e88c57b5cd4b7663867f16758eb0bc36fe659bb8e11d365659fc0e4169cb58ee",
+      "resource": "res://data/buildings/textures/b_brick_repaired.png",
+      "tile_meters": 1.68,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          1.68,
+          1.68
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "actual completed repair",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_plaster_damage_detail": {
+      "id": "b_plaster_damage_detail",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/decals/b_plaster_damage_detail.png",
+      "sha256": "795b867897caf66cdf1b5f2c8375682e1841ca6f3dc1331ace7517b8b4add576",
+      "verified_sha256": "795b867897caf66cdf1b5f2c8375682e1841ca6f3dc1331ace7517b8b4add576",
+      "resource": "res://data/buildings/textures/b_plaster_damage_detail.png",
+      "tile_meters": 0.8,
+      "uv": {
+        "repeat": false,
+        "meters_xy": [
+          0.8,
+          0.8
+        ]
+      },
+      "alpha": true,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "real HP damage",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_plaster_repair_detail": {
+      "id": "b_plaster_repair_detail",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/decals/b_plaster_repair_detail.png",
+      "sha256": "198784f2572feae4ade6d29eb4e23d81280f6ce7443e6f783a29212e95b17133",
+      "verified_sha256": "198784f2572feae4ade6d29eb4e23d81280f6ce7443e6f783a29212e95b17133",
+      "resource": "res://data/buildings/textures/b_plaster_repair_detail.png",
+      "tile_meters": 0.8,
+      "uv": {
+        "repeat": false,
+        "meters_xy": [
+          0.8,
+          0.8
+        ]
+      },
+      "alpha": true,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "real completed repair; patch geometry by B",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_plaster_intact": {
+      "id": "b_plaster_intact",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_plaster_intact.png",
+      "sha256": "0c1e8677627cb80a01c095660d488529bec8b7818567b2dba852aa163e7930fd",
+      "verified_sha256": "0c1e8677627cb80a01c095660d488529bec8b7818567b2dba852aa163e7930fd",
+      "resource": "res://data/buildings/textures/b_plaster_intact.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "static age/condition only",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_plaster_aged": {
+      "id": "b_plaster_aged",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_plaster_aged.png",
+      "sha256": "bf9c60fff3fb23b5cb6740949575e78043469aa86c4140f7ee3d722fce1080f4",
+      "verified_sha256": "bf9c60fff3fb23b5cb6740949575e78043469aa86c4140f7ee3d722fce1080f4",
+      "resource": "res://data/buildings/textures/b_plaster_aged.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "static age/condition only",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_plaster_damaged": {
+      "id": "b_plaster_damaged",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_plaster_damaged.png",
+      "sha256": "0fac43026e1decf15f9f3b06e57dcfa6b09a1b596af65df8b4ad0abddba78b4e",
+      "verified_sha256": "0fac43026e1decf15f9f3b06e57dcfa6b09a1b596af65df8b4ad0abddba78b4e",
+      "resource": "res://data/buildings/textures/b_plaster_damaged.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "actual damage HP",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_plaster_repaired": {
+      "id": "b_plaster_repaired",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_plaster_repaired.png",
+      "sha256": "7449fc9e2add9e6d762b7d883a587180cf7b322392e6426c3058fe85e7320d5f",
+      "verified_sha256": "7449fc9e2add9e6d762b7d883a587180cf7b322392e6426c3058fe85e7320d5f",
+      "resource": "res://data/buildings/textures/b_plaster_repaired.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "actual completed repair",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_wood_damage_detail": {
+      "id": "b_wood_damage_detail",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/decals/b_wood_damage_detail.png",
+      "sha256": "79a9d12b5b9d47eb7461fb2b722fdfc11eb6a858f1264cbd00283cea1eee3d82",
+      "verified_sha256": "79a9d12b5b9d47eb7461fb2b722fdfc11eb6a858f1264cbd00283cea1eee3d82",
+      "resource": "res://data/buildings/textures/b_wood_damage_detail.png",
+      "tile_meters": 0.7,
+      "uv": {
+        "repeat": false,
+        "meters_xy": [
+          0.7,
+          0.7
+        ]
+      },
+      "alpha": true,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "real HP damage",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_wood_repair_detail": {
+      "id": "b_wood_repair_detail",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/decals/b_wood_repair_detail.png",
+      "sha256": "a8cbbf58609a73ef0f4d3e4ad942b40d38ea4a92cc53f8636c3c1d8ec8dc750d",
+      "verified_sha256": "a8cbbf58609a73ef0f4d3e4ad942b40d38ea4a92cc53f8636c3c1d8ec8dc750d",
+      "resource": "res://data/buildings/textures/b_wood_repair_detail.png",
+      "tile_meters": 0.7,
+      "uv": {
+        "repeat": false,
+        "meters_xy": [
+          0.7,
+          0.7
+        ]
+      },
+      "alpha": true,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "real completed repair; patch geometry by B",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_wood_intact": {
+      "id": "b_wood_intact",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_wood_intact.png",
+      "sha256": "99bf53c1737e518736908b3cc8424818f2dadfbb655bab4564fd103f747c6813",
+      "verified_sha256": "99bf53c1737e518736908b3cc8424818f2dadfbb655bab4564fd103f747c6813",
+      "resource": "res://data/buildings/textures/b_wood_intact.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "static age/condition only",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_wood_aged": {
+      "id": "b_wood_aged",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_wood_aged.png",
+      "sha256": "43b1adab2f7d2a6ecb12368fe20c9ba6de830650e089bb6b4876e9c5bfcce2e3",
+      "verified_sha256": "43b1adab2f7d2a6ecb12368fe20c9ba6de830650e089bb6b4876e9c5bfcce2e3",
+      "resource": "res://data/buildings/textures/b_wood_aged.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "static age/condition only",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_wood_damaged": {
+      "id": "b_wood_damaged",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_wood_damaged.png",
+      "sha256": "7be0f5ae90569574b5d9573d9ede19e23f390ce6c76a983d873d21fcb6a513fc",
+      "verified_sha256": "7be0f5ae90569574b5d9573d9ede19e23f390ce6c76a983d873d21fcb6a513fc",
+      "resource": "res://data/buildings/textures/b_wood_damaged.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "actual damage HP",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_wood_repaired": {
+      "id": "b_wood_repaired",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_wood_repaired.png",
+      "sha256": "b042ee79586ad6442b810abe3160d5f6993242689992e7c183bfe66a0541483c",
+      "verified_sha256": "b042ee79586ad6442b810abe3160d5f6993242689992e7c183bfe66a0541483c",
+      "resource": "res://data/buildings/textures/b_wood_repaired.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "actual completed repair",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_roof_damage_detail": {
+      "id": "b_roof_damage_detail",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/decals/b_roof_damage_detail.png",
+      "sha256": "576d681c81afe2a08509a3af619e2fd69926b6a85a647015ef757cdad6982a58",
+      "verified_sha256": "576d681c81afe2a08509a3af619e2fd69926b6a85a647015ef757cdad6982a58",
+      "resource": "res://data/buildings/textures/b_roof_damage_detail.png",
+      "tile_meters": 0.65,
+      "uv": {
+        "repeat": false,
+        "meters_xy": [
+          0.65,
+          0.65
+        ]
+      },
+      "alpha": true,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "real HP damage",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_roof_repair_detail": {
+      "id": "b_roof_repair_detail",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/decals/b_roof_repair_detail.png",
+      "sha256": "514e3793ae62d003f55161699e1b56ee9d8256f5071db548b51394ffd3a27fde",
+      "verified_sha256": "514e3793ae62d003f55161699e1b56ee9d8256f5071db548b51394ffd3a27fde",
+      "resource": "res://data/buildings/textures/b_roof_repair_detail.png",
+      "tile_meters": 0.65,
+      "uv": {
+        "repeat": false,
+        "meters_xy": [
+          0.65,
+          0.65
+        ]
+      },
+      "alpha": true,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "real completed repair; patch geometry by B",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_roof_intact": {
+      "id": "b_roof_intact",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_roof_intact.png",
+      "sha256": "35b0a32424dc2171036a8a541f5e0a18c16fe1c8294e0aa83caa3e46c8edaf8f",
+      "verified_sha256": "35b0a32424dc2171036a8a541f5e0a18c16fe1c8294e0aa83caa3e46c8edaf8f",
+      "resource": "res://data/buildings/textures/b_roof_intact.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "static age/condition only",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_roof_aged": {
+      "id": "b_roof_aged",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_roof_aged.png",
+      "sha256": "21749e61725128b351f2dc4bebe3a6e7a31204ed7f89394e1b4e36cde2c63450",
+      "verified_sha256": "21749e61725128b351f2dc4bebe3a6e7a31204ed7f89394e1b4e36cde2c63450",
+      "resource": "res://data/buildings/textures/b_roof_aged.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "static age/condition only",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_roof_damaged": {
+      "id": "b_roof_damaged",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_roof_damaged.png",
+      "sha256": "a02cc97ecaf2f476816e32e4b44d772bee99bdfa8a3e915777f397fd9e8817d7",
+      "verified_sha256": "a02cc97ecaf2f476816e32e4b44d772bee99bdfa8a3e915777f397fd9e8817d7",
+      "resource": "res://data/buildings/textures/b_roof_damaged.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "actual damage HP",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_roof_repaired": {
+      "id": "b_roof_repaired",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_roof_repaired.png",
+      "sha256": "243ae427aca322d3acce6b8169b42aa05e704f50a8155b3d9a17fcb12357c782",
+      "verified_sha256": "243ae427aca322d3acce6b8169b42aa05e704f50a8155b3d9a17fcb12357c782",
+      "resource": "res://data/buildings/textures/b_roof_repaired.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "actual completed repair",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_zinc_damage_detail": {
+      "id": "b_zinc_damage_detail",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/decals/b_zinc_damage_detail.png",
+      "sha256": "2cc1f29e91b3da1922041dfe39d188be1f2a467e3d9307249d32fcce648677e9",
+      "verified_sha256": "2cc1f29e91b3da1922041dfe39d188be1f2a467e3d9307249d32fcce648677e9",
+      "resource": "res://data/buildings/textures/b_zinc_damage_detail.png",
+      "tile_meters": 0.65,
+      "uv": {
+        "repeat": false,
+        "meters_xy": [
+          0.65,
+          0.65
+        ]
+      },
+      "alpha": true,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "real HP damage",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_zinc_repair_detail": {
+      "id": "b_zinc_repair_detail",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/decals/b_zinc_repair_detail.png",
+      "sha256": "492296c6fb5ac3f1d8c40a5ab87f7e24d60b24ec7fbfd70d0e369912f3052a32",
+      "verified_sha256": "492296c6fb5ac3f1d8c40a5ab87f7e24d60b24ec7fbfd70d0e369912f3052a32",
+      "resource": "res://data/buildings/textures/b_zinc_repair_detail.png",
+      "tile_meters": 0.65,
+      "uv": {
+        "repeat": false,
+        "meters_xy": [
+          0.65,
+          0.65
+        ]
+      },
+      "alpha": true,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "real completed repair; patch geometry by B",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_zinc_intact": {
+      "id": "b_zinc_intact",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_zinc_intact.png",
+      "sha256": "5067b468dcddc4952b955fdc7b7d5742fab1427c95ca42eeb0a43325778a62b7",
+      "verified_sha256": "5067b468dcddc4952b955fdc7b7d5742fab1427c95ca42eeb0a43325778a62b7",
+      "resource": "res://data/buildings/textures/b_zinc_intact.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "static age/condition only",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_zinc_aged": {
+      "id": "b_zinc_aged",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_zinc_aged.png",
+      "sha256": "6172c0af844c9d6870661c7ade252ebae2279b3d75d6247409cacd4e87b951e8",
+      "verified_sha256": "6172c0af844c9d6870661c7ade252ebae2279b3d75d6247409cacd4e87b951e8",
+      "resource": "res://data/buildings/textures/b_zinc_aged.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "static age/condition only",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_zinc_damaged": {
+      "id": "b_zinc_damaged",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_zinc_damaged.png",
+      "sha256": "ceb89248ad020b52da5231c1fa9cbb1c78c883e352bde2a6e4c4814fc73c2ca0",
+      "verified_sha256": "ceb89248ad020b52da5231c1fa9cbb1c78c883e352bde2a6e4c4814fc73c2ca0",
+      "resource": "res://data/buildings/textures/b_zinc_damaged.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "actual damage HP",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_zinc_repaired": {
+      "id": "b_zinc_repaired",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_zinc_repaired.png",
+      "sha256": "68cdb777dbe9d73e4b78d7684bd6ee5531cddec28296b12f37679da24c45db98",
+      "verified_sha256": "68cdb777dbe9d73e4b78d7684bd6ee5531cddec28296b12f37679da24c45db98",
+      "resource": "res://data/buildings/textures/b_zinc_repaired.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "actual completed repair",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_paint_damage_detail": {
+      "id": "b_paint_damage_detail",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/decals/b_paint_damage_detail.png",
+      "sha256": "9b81e16d866b63a4a748d63018fac3213fb26d7d39b67df47aa3659646e60320",
+      "verified_sha256": "9b81e16d866b63a4a748d63018fac3213fb26d7d39b67df47aa3659646e60320",
+      "resource": "res://data/buildings/textures/b_paint_damage_detail.png",
+      "tile_meters": 0.65,
+      "uv": {
+        "repeat": false,
+        "meters_xy": [
+          0.65,
+          0.65
+        ]
+      },
+      "alpha": true,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "real HP damage",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_paint_repair_detail": {
+      "id": "b_paint_repair_detail",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/decals/b_paint_repair_detail.png",
+      "sha256": "e1875540d5df3d92779d769d6689bd58c9e1da74755b1ad47ac68c7f7392899f",
+      "verified_sha256": "e1875540d5df3d92779d769d6689bd58c9e1da74755b1ad47ac68c7f7392899f",
+      "resource": "res://data/buildings/textures/b_paint_repair_detail.png",
+      "tile_meters": 0.65,
+      "uv": {
+        "repeat": false,
+        "meters_xy": [
+          0.65,
+          0.65
+        ]
+      },
+      "alpha": true,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "real completed repair; patch geometry by B",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_paint_intact": {
+      "id": "b_paint_intact",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_paint_intact.png",
+      "sha256": "58c83fa31a6ed3941eb6d100a7b0957841ab7c56d9792b6f6e4dacb009903815",
+      "verified_sha256": "58c83fa31a6ed3941eb6d100a7b0957841ab7c56d9792b6f6e4dacb009903815",
+      "resource": "res://data/buildings/textures/b_paint_intact.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "static age/condition only",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_paint_aged": {
+      "id": "b_paint_aged",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_paint_aged.png",
+      "sha256": "9c878a09f0d6c886d1dd8dee73f2faf3de2b3b3e3a26183eef014dd7d2d9d910",
+      "verified_sha256": "9c878a09f0d6c886d1dd8dee73f2faf3de2b3b3e3a26183eef014dd7d2d9d910",
+      "resource": "res://data/buildings/textures/b_paint_aged.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "static age/condition only",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_paint_damaged": {
+      "id": "b_paint_damaged",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_paint_damaged.png",
+      "sha256": "ba4fa4afdac39b8b6acb7b68c64c22b2eef576fd8fa4ee1e7b1caed0618707e3",
+      "verified_sha256": "ba4fa4afdac39b8b6acb7b68c64c22b2eef576fd8fa4ee1e7b1caed0618707e3",
+      "resource": "res://data/buildings/textures/b_paint_damaged.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "actual damage HP",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    },
+    "b_paint_repaired": {
+      "id": "b_paint_repaired",
+      "source": "assets/art/rural-quality-r3-3-v1/quality-expansion-v1/states/b_paint_repaired.png",
+      "sha256": "df64edf66f1a94b864fe4b8d75fbe91a14271a169b512011b7224d893482b93d",
+      "verified_sha256": "df64edf66f1a94b864fe4b8d75fbe91a14271a169b512011b7224d893482b93d",
+      "resource": "res://data/buildings/textures/b_paint_repaired.png",
+      "tile_meters": 2,
+      "uv": {
+        "repeat": true,
+        "meters_xy": [
+          2,
+          2
+        ]
+      },
+      "alpha": false,
+      "lazy": true,
+      "image_QA": "passed_image_QA",
+      "state_binding": "actual completed repair",
+      "source_status": "approved original bytes copied; full canvas/UV/metres preserved",
+      "godot_status": "native fact-driven baseline/HP/completed-repair binding; package/Metal/VA pending",
+      "VA_passed": false
+    }
+  },
+  "models": {
+    "city_bed": {
+      "source": "public/art/city-opening-v1/models/domestic/city_bed.glb",
+      "resource": "res://data/buildings/models/city_bed.glb",
+      "sha256": "c20d5fb9ad53c10917b910d579c82efc792dff525ef214e44d1c87c641b1ac8f",
+      "atlas_source": "public/art/city-opening-v1/atlases/models/city_bed.png",
+      "atlas_resource": "res://data/buildings/models/city_bed_atlas.png",
+      "atlas_sha256": "4b2c6908711d5d9c30f72eaf1e7fa80ae98f77324e29cf897d8b16d971d4ad73",
+      "units": "metres Y up, no rescale",
+      "front": "GLB +Z (Blender -Y)",
+      "source_sha256": "c20d5fb9ad53c10917b910d579c82efc792dff525ef214e44d1c87c641b1ac8f",
+      "godot_status": "instantiated in sampled derived scene; formal visual pending",
+      "binding_evidence": {
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "instantiated": true,
+        "declared_atlas_embedded": true
+      }
+    },
+    "city_chair": {
+      "source": "public/art/city-opening-v1/models/domestic/city_chair.glb",
+      "resource": "res://data/buildings/models/city_chair.glb",
+      "sha256": "a816d10cee6d3e8b98a258a9ca26fe6d58f499a7352efe832d27505d99d32ced",
+      "atlas_source": "public/art/city-opening-v1/atlases/models/city_chair.png",
+      "atlas_resource": "res://data/buildings/models/city_chair_atlas.png",
+      "atlas_sha256": "c695030c96ee41ec0fba50a88c5bc59f09190c2e1c1638a4cfd279e94d4e5e23",
+      "units": "metres Y up, no rescale",
+      "front": "GLB +Z (Blender -Y)",
+      "source_sha256": "a816d10cee6d3e8b98a258a9ca26fe6d58f499a7352efe832d27505d99d32ced",
+      "godot_status": "verified reusable model; not instantiated in sampled scene",
+      "binding_evidence": {
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "instantiated": false,
+        "declared_atlas_embedded": true
+      }
+    },
+    "city_desk": {
+      "source": "public/art/city-opening-v1/models/domestic/city_desk.glb",
+      "resource": "res://data/buildings/models/city_desk.glb",
+      "sha256": "adda54d3b77d2989dd11764c22d90f451c0ffa385e3d8a9016357eb69a6e7248",
+      "atlas_source": "public/art/city-opening-v1/atlases/models/city_desk.png",
+      "atlas_resource": "res://data/buildings/models/city_desk_atlas.png",
+      "atlas_sha256": "c8663c4e83407cb4310305604f4d1016731801292c7d46e60790d7d4ac4b0a32",
+      "units": "metres Y up, no rescale",
+      "front": "GLB +Z (Blender -Y)",
+      "source_sha256": "adda54d3b77d2989dd11764c22d90f451c0ffa385e3d8a9016357eb69a6e7248",
+      "godot_status": "verified reusable model; not instantiated in sampled scene",
+      "binding_evidence": {
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "instantiated": false,
+        "declared_atlas_embedded": true
+      }
+    },
+    "city_kitchen": {
+      "source": "public/art/city-opening-v1/models/domestic/city_kitchen.glb",
+      "resource": "res://data/buildings/models/city_kitchen.glb",
+      "sha256": "5a65007c98ede0025449d9d29cc17bcf928de8a3655d10884b43259da6810647",
+      "atlas_source": "public/art/city-opening-v1/atlases/models/city_kitchen.png",
+      "atlas_resource": "res://data/buildings/models/city_kitchen_atlas.png",
+      "atlas_sha256": "7c75d923b53322e652f12abbeb8fe70c055fb9b4d650616723d5bfee3e53e84e",
+      "units": "metres Y up, no rescale",
+      "front": "GLB +Z (Blender -Y)",
+      "source_sha256": "5a65007c98ede0025449d9d29cc17bcf928de8a3655d10884b43259da6810647",
+      "godot_status": "instantiated in sampled derived scene; formal visual pending",
+      "binding_evidence": {
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "instantiated": true,
+        "declared_atlas_embedded": true
+      }
+    },
+    "city_repair_kit": {
+      "source": "public/art/city-opening-v1/models/restoration/city_repair_kit.glb",
+      "resource": "res://data/buildings/models/city_repair_kit.glb",
+      "sha256": "94b75e767f78cbcc48d300d19d8aee7cc4c44236940ff57c7552730884ad8b63",
+      "atlas_source": "public/art/city-opening-v1/atlases/models/city_repair_kit.png",
+      "atlas_resource": "res://data/buildings/models/city_repair_kit_atlas.png",
+      "atlas_sha256": "6088b76ca6248b6b9bc986be6551b69d133492af728482b3a9d3de11c30ed158",
+      "units": "metres Y up, no rescale",
+      "front": "GLB +Z (Blender -Y)",
+      "source_sha256": "94b75e767f78cbcc48d300d19d8aee7cc4c44236940ff57c7552730884ad8b63",
+      "godot_status": "verified reusable model; not instantiated in sampled scene",
+      "binding_evidence": {
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "instantiated": false,
+        "declared_atlas_embedded": true
+      }
+    },
+    "city_table": {
+      "source": "public/art/city-opening-v1/models/domestic/city_table.glb",
+      "resource": "res://data/buildings/models/city_table.glb",
+      "sha256": "043a34890292c7647ceaf4e821a827bef6304336b3c7cf724f65d53fd8eb887c",
+      "atlas_source": "public/art/city-opening-v1/atlases/models/city_table.png",
+      "atlas_resource": "res://data/buildings/models/city_table_atlas.png",
+      "atlas_sha256": "c695030c96ee41ec0fba50a88c5bc59f09190c2e1c1638a4cfd279e94d4e5e23",
+      "units": "metres Y up, no rescale",
+      "front": "GLB +Z (Blender -Y)",
+      "source_sha256": "043a34890292c7647ceaf4e821a827bef6304336b3c7cf724f65d53fd8eb887c",
+      "godot_status": "instantiated in sampled derived scene; formal visual pending",
+      "binding_evidence": {
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "instantiated": true,
+        "declared_atlas_embedded": true
+      }
+    },
+    "city_water_jug": {
+      "source": "public/art/city-opening-v1/models/restoration/city_water_jug.glb",
+      "resource": "res://data/buildings/models/city_water_jug.glb",
+      "sha256": "a5a726ff731af7a41ae2ff03b4886e1104fbc8207c9ee30b923161579b937236",
+      "atlas_source": "public/art/city-opening-v1/atlases/models/city_water_jug.png",
+      "atlas_resource": "res://data/buildings/models/city_water_jug_atlas.png",
+      "atlas_sha256": "3270b1f01b2552f5b9bdb19591aa645e01155b4ae09e465e20ea0fe28f5483e9",
+      "units": "metres Y up, no rescale",
+      "front": "GLB +Z (Blender -Y)",
+      "source_sha256": "a5a726ff731af7a41ae2ff03b4886e1104fbc8207c9ee30b923161579b937236",
+      "godot_status": "instantiated in sampled derived scene; formal visual pending",
+      "binding_evidence": {
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "instantiated": true,
+        "declared_atlas_embedded": true
+      }
+    },
+    "city_workbench": {
+      "source": "public/art/city-opening-v1/models/commercial/city_workbench.glb",
+      "resource": "res://data/buildings/models/city_workbench.glb",
+      "sha256": "d1a8f2f46cd7d38d55a89dfd84db7a22ad2b76e76983ceb5c664d9e65c3f2d3a",
+      "atlas_source": "public/art/city-opening-v1/atlases/models/city_workbench.png",
+      "atlas_resource": "res://data/buildings/models/city_workbench_atlas.png",
+      "atlas_sha256": "2408f7860418a22edd01703980807d5187b1937edf8b255c5b12ba3c5aa48d56",
+      "units": "metres Y up, no rescale",
+      "front": "GLB +Z (Blender -Y)",
+      "source_sha256": "d1a8f2f46cd7d38d55a89dfd84db7a22ad2b76e76983ceb5c664d9e65c3f2d3a",
+      "godot_status": "instantiated in sampled derived scene; formal visual pending",
+      "binding_evidence": {
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "instantiated": true,
+        "declared_atlas_embedded": true
+      }
+    },
+    "r1_storage_container": {
+      "source": "public/art/city-life-r1-v1/models/states/r1_storage_container.glb",
+      "resource": "res://data/buildings/models/r1_storage_container.glb",
+      "sha256": "ca6ecb90b5d5396ac8cafe4a83287947b6a78abf782f50d216d23a25f945455a",
+      "atlas_source": "public/art/city-life-r1-v1/atlases/models/r1_storage_container.png",
+      "atlas_resource": "res://data/buildings/models/r1_storage_container_atlas.png",
+      "atlas_sha256": "0d793701d876ebc20772f6176de52ea3b245fbb0c8a836a55d9626987a982b2a",
+      "units": "metres Y up, no rescale",
+      "front": "GLB +Z (Blender -Y)",
+      "source_sha256": "ca6ecb90b5d5396ac8cafe4a83287947b6a78abf782f50d216d23a25f945455a",
+      "godot_status": "instantiated in sampled derived scene; formal visual pending",
+      "binding_evidence": {
+        "path": "work/r3-3-bbb/presentation_suite-final-spatial-0014.json",
+        "instantiated": true,
+        "declared_atlas_embedded": true
+      }
+    },
+    "city_bicycle": {
+      "source": "public/art/city-opening-v1/models/street/city_bicycle.glb",
+      "resource": "res://data/buildings/models/city_bicycle.glb",
+      "sha256": "f70654c82fa86f3456f341ab5f406b7f39d02dcf27f7496b5d917cadbd836277",
+      "atlas_source": "public/art/city-opening-v1/atlases/models/city_bicycle.png",
+      "atlas_resource": "res://data/buildings/models/city_bicycle_atlas.png",
+      "atlas_sha256": "c0148afa29e936ee3cba0d0f522ef2ac2d6aeb265c738b4e73723459c0653adc",
+      "units": "original metres Y up; original UV; only profile model_offset changes pivot",
+      "godot_status": "copied byte-identical original GLB and embedded image; formal app quality pending"
+    },
+    "city_sign_board": {
+      "source": "public/art/city-opening-v1/models/architecture/city_sign_board.glb",
+      "resource": "res://data/buildings/models/city_sign_board.glb",
+      "sha256": "6672c838a592798f6165af484ab64f4a54138351358cce11224c225025de37a2",
+      "atlas_source": "public/art/city-opening-v1/atlases/models/city_sign_board.png",
+      "atlas_resource": "res://data/buildings/models/city_sign_board_atlas.png",
+      "atlas_sha256": "7f3f1ec94c08d97ec5ff8c9bce83bdac2dc48a9549a020bc5acae9e041b6fb3f",
+      "units": "original metres Y up; original UV; only profile model_offset changes pivot",
+      "godot_status": "copied byte-identical original GLB and embedded image; formal app quality pending"
+    },
+    "city_scooter": {
+      "source": "public/art/city-opening-v1/models/street/city_scooter.glb",
+      "resource": "res://data/buildings/models/city_scooter.glb",
+      "sha256": "8b9b94b7c9fb7b3cf5ae6d96ffbc8609fb51ca56b2329aaf446740164be727c6",
+      "atlas_source": "public/art/city-opening-v1/atlases/models/city_scooter.png",
+      "atlas_resource": "res://data/buildings/models/city_scooter_atlas.png",
+      "atlas_sha256": "00a127c310f84e43cfb045d1fb4e5bc1eb7a662576332cafcb555105f8db314d",
+      "units": "original metres Y up; original UV; only profile model_offset changes pivot",
+      "godot_status": "copied byte-identical original GLB and embedded image; formal app quality pending"
+    },
+    "city_roof_tank": {
+      "source": "public/art/city-opening-v1/models/restoration/city_roof_tank.glb",
+      "resource": "res://data/buildings/models/city_roof_tank.glb",
+      "sha256": "c5c4995dca667f2fea1e4acfd9fb1a3a55285d1ebb7c4f7e2d3bae0ecb9e8f7a",
+      "atlas_source": "public/art/city-opening-v1/atlases/models/city_roof_tank.png",
+      "atlas_resource": "res://data/buildings/models/city_roof_tank_atlas.png",
+      "atlas_sha256": "ed7142eaa851575e540db2b6a61fe51818cb683dac2f4506cef8918d1fefa5a0",
+      "units": "original metres Y up; original UV; only profile model_offset changes pivot",
+      "godot_status": "copied byte-identical original GLB and embedded image; formal app quality pending"
+    },
+    "rural_fence": {
+      "source": "public/art/living-world-v2/models/camp/fence.glb",
+      "resource": "res://data/buildings/models/rural_fence.glb",
+      "sha256": "d992f032e525739838db08fbc27c9af73587c096a7940ee4be1b9efc2093b9cc",
+      "atlas_source": "public/art/living-world-v2/atlases/models/fence.png",
+      "atlas_resource": "res://data/buildings/models/rural_fence_atlas.png",
+      "atlas_sha256": "3ea490b05ef11c61defa3f1ff6f7ef7d1b41c5db33f595298e88e74fc5e5c35d",
+      "units": "original metres Y up; original UV; only profile model_offset changes pivot",
+      "godot_status": "copied byte-identical original GLB and embedded image; formal app quality pending"
+    }
+  },
+  "source_status": "Original textures/GLBs/embedded atlases byte-verified; actual headless usage recorded individually. Formal app visual acceptance pending."
+}

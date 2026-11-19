@@ -1,0 +1,36 @@
+extends SceneTree
+## Exact decoded facts with real Native assembly, no live float tolerance.
+const Data=preload("res://scripts/world/world_data.gd")
+const State=preload("res://scripts/world/world_state.gd")
+const Native=preload("res://scripts/runtime/native_client.gd")
+const Store=preload("res://scripts/storage/native_store.gd")
+const Factory=preload("res://scripts/world/factory_generator.gd")
+var checks:Array=[]
+func _initialize()->void:call_deferred("run")
+func check(label:String,ok:bool,detail:Variant=null)->void:
+	checks.append({"label":label,"ok":ok,"detail":detail})
+	if not ok:push_error("FAIL "+label+" "+str(detail))
+func finish()->void:
+	var failed:int=checks.filter(func(c:Dictionary)->bool:return not c.ok).size()
+	var args:=OS.get_cmdline_user_args()
+	if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify({"checks":checks,"failed":failed,"scope":"actual archived normal4 finite-tool modified world, exact decoded State and actual Native facts restoration; no live coordinate tolerance, preview/export/OS/VA/performance"},"\t",true,true))
+	print("native decoded exact: ",checks.size()," checks, ",failed," failed");quit(0 if failed==0 else 1)
+func run()->void:
+	var args:=OS.get_cmdline_user_args()
+	check("explicit archived normal4 modified save input required",args.size()==2)
+	if args.size()!=2:return finish()
+	var raw:String=FileAccess.get_file_as_string(args[1]);var decoded:Dictionary=Store.decode(raw)
+	check("real original Native envelope checksum decodes",decoded.ok,decoded.get("reason"))
+	if not decoded.ok:return finish()
+	var capture:Dictionary=decoded.capture;var world:=State.new();var loaded:Dictionary=world.load_snapshot(capture.world)
+	check("decoded full world loads and remains exactly identical",loaded.ok and Data.json_equal(capture.world,world.snapshot()),loaded.get("reason"))
+	var host:=Native.new();var restored:Dictionary=host._assemble(capture);host.free()
+	check("actual current Native offscreen assembly restores original modified source",restored.ok,restored.get("reason"))
+	if not restored.ok:return finish()
+	var again:Dictionary=restored.runtime.capture_checkpoint()
+	check("all decoded facts actors packs tools jobs stories clocks preserve exact values",Data.json_equal(capture.facts,again.facts))
+	check("decoded receipts content simulation and command revision are exact",Data.json_equal(capture.get("receipts",{}),again.receipts) and Data.json_equal(capture.get("content",{}),again.content) and Data.json_equal(capture.get("simulation",{}),again.simulation) and capture.get("command_revision")==again.command_revision)
+	check("actual Native restore leaves every persisted plan and generation lock exactly decoded",capture.world.extensions.keys().filter(func(id:String)->bool:return id.begins_with("generation:")).all(func(id:String)->bool:return Data.json_equal(capture.world.extensions[id],restored.world.extension(id))))
+	var checksum:String=FileAccess.get_file_as_string(args[1]).sha256_text()
+	check("original normal input bytes stay unchanged",raw.sha256_text()==checksum)
+	finish()

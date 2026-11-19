@@ -1,0 +1,30 @@
+{
+  "schema": "afterglow-resident-skin-selection-v1",
+  "candidate": "AR18-v4",
+  "channels": "opaque daily albedo only; original TEXCOORD_0; no flip",
+  "assets": [
+    {
+      "role": "commuter",
+      "source": "assets/art/r34-factory-v1/characters/ar18-v4/r1_resident_commuter_normal.png",
+      "resource": "res://data/gameplay/actors/skins/ar18-v4/r1_resident_commuter_normal.png",
+      "sha256": "e236c40b7e47befed6f74b63ab60589d9652d5f5f19e40346d357bbe055a63ed"
+    },
+    {
+      "role": "neighbor",
+      "source": "assets/art/r34-factory-v1/characters/ar18-v4/r1_resident_neighbor_normal.png",
+      "resource": "res://data/gameplay/actors/skins/ar18-v4/r1_resident_neighbor_normal.png",
+      "sha256": "dca86be1552e1f37438aba5d01915c1c3d34756bbdb93f7f36d144b842674875"
+    },
+    {
+      "role": "shopkeeper",
+      "source": "assets/art/r34-factory-v1/characters/ar18-v4/r1_resident_shopkeeper_normal.png",
+      "resource": "res://data/gameplay/actors/skins/ar18-v4/r1_resident_shopkeeper_normal.png",
+      "sha256": "7ef8734b9b8c76dd21288f848709b1a9e8308226919ff2087d413bd6910db1f4"
+    }
+  ],
+  "source_binding": true,
+  "formal_import": "A only; pending",
+  "formal_package": false,
+  "normal_camera_VA": false,
+  "legacy_preserved": true
+}

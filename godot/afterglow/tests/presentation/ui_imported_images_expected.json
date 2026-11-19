@@ -1,0 +1,399 @@
+{
+  "schema": "afterglow-ui-imported-images-expectations-v1",
+  "pixel_contract": "Image RGBA8, base level, row-major. SHA256 of RGBA bytes for alpha==255 pixels in scan order; separate complete alpha-plane SHA fixes locations. Transparent RGB deliberately ignored because Godot fix_alpha_border may change it.",
+  "provenance": "Frozen formal ART manifests and their original PNGs, independently checked against UI target bytes offline; not generated from ResourceLoader or UI outputs.",
+  "manifests": [
+    {
+      "path": "assets/art/r34-factory-v1/portraits/ui-v1/manifest.json",
+      "sha256": "cb8c6aad1823447e8252ffd2b73221736a2b265f1cb72fed677cc49a6a8f9c92"
+    },
+    {
+      "path": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "sha256": "20ba669aefc8ae52ea965c912ebb03cfc9c0d72162d6e8321b0b68c94a4d5778"
+    },
+    {
+      "path": "assets/art/r34-factory-v1/thumbnails/ui-post23-v1/manifest.json",
+      "sha256": "94768ad37dd0663ad0d95e2241447d37a3db898be852effab458421abd7df85b"
+    }
+  ],
+  "images": [
+    {
+      "kind": "module",
+      "id": "r34.module.fuel_woodshop",
+      "resource_path": "res://themes/modules/fuel_woodshop-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-v1/fuel_woodshop.png",
+      "source_png_sha256": "f2ff4e4859bdd32f44c882deb0550f85a5623988cf4ddca89c38015e7d4ef1de",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 23675,
+      "opaque_rgba_sha256": "26b6765947178c54c64966a310c7d334f773c24b200be219ba341e7e728da156",
+      "alpha_sha256": "d352f5a54eb5ec012dd9710ad728985d4f85014cba8568c2aa411c876a63a344",
+      "alpha_bbox_xyxy": [
+        21,
+        40,
+        235,
+        216
+      ],
+      "geometry_version": "r34.module.fuel_woodshop.geometry-v1"
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.hand_workshop",
+      "resource_path": "res://themes/modules/hand_workshop-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-post23-v1/hand_workshop.png",
+      "source_png_sha256": "1137affd4546546b8d8f21ed36a8710c952820ebe65ac0d157be3a68dc06c242",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-post23-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 16901,
+      "opaque_rgba_sha256": "d4fd56426d92f81e0d4d509e1a904024a676524025d46ecd11952b643a6c4212",
+      "alpha_sha256": "77092491eeab01424d51af5fb192fe0f9ee3bb527106ff72a9a4e27db14a5dec",
+      "alpha_bbox_xyxy": [
+        21,
+        43,
+        235,
+        213
+      ],
+      "geometry_version": "r34.module.hand_workshop.geometry-v1"
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.home_court_v2",
+      "resource_path": "res://themes/modules/home_court_v2-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-v1/home_court_v2.png",
+      "source_png_sha256": "f864f5ea2d86a48c528766269b1fc83043bf9f894091c76897b199112f9ff06e",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 21412,
+      "opaque_rgba_sha256": "984b7322421157a4c309bed7f1188709ba415264e29443d6a90a4339719618df",
+      "alpha_sha256": "ce574d4fac0aac20904b3ce7541136d6bdfd48cb643b419b114672fc6bed532e",
+      "alpha_bbox_xyxy": [
+        21,
+        44,
+        235,
+        212
+      ],
+      "geometry_version": "r34.module.home_court_v2.geometry-v1"
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.home_roadside_v2",
+      "resource_path": "res://themes/modules/home_roadside_v2-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-v1/home_roadside_v2.png",
+      "source_png_sha256": "06dba81465141635d54dd18929c2bbd77f14aee37b4644831ab6999bf8a84a1a",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 30743,
+      "opaque_rgba_sha256": "762801c45c4777f40e2fcf91dd573d08222a29a8509d586fd8708833e0e1dbc1",
+      "alpha_sha256": "82f3a248ca728127f1d32bc2fd06b4304cee7420faf84e97d34f80a89dfe0ae2",
+      "alpha_bbox_xyxy": [
+        21,
+        22,
+        235,
+        234
+      ],
+      "geometry_version": "r34.module.home_roadside_v2.geometry-v1"
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.home_service",
+      "resource_path": "res://themes/modules/home_service-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-post23-v1/home_service.png",
+      "source_png_sha256": "a834878b6d728e0ae2f9569170001b0754258696a58b84a324a50c894a89d38b",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-post23-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 22658,
+      "opaque_rgba_sha256": "888d8bdf37b420d6fbbd8f00d44ebd0bb8593f30c117380812946961bd4d8b2d",
+      "alpha_sha256": "dc9cfbb536714950a4cb624ca5104a30798b0061bcc515e38b50aa365dcc6f41",
+      "alpha_bbox_xyxy": [
+        21,
+        40,
+        235,
+        216
+      ],
+      "geometry_version": "r34.module.home_service.geometry-v1"
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.repair_shed_v2",
+      "resource_path": "res://themes/modules/repair_shed_v2-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-v1/repair_shed_v2.png",
+      "source_png_sha256": "4997e09824c63a5b9eff364bbd423830dc0fcdf061bc87a782d5cfcf3ea92bcd",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 27759,
+      "opaque_rgba_sha256": "59b5da1e3d7454ab518eb027b7e930484a5c9dc2d47665de2f16fb4fd753194c",
+      "alpha_sha256": "f656e8f96c00137d3cad01a030658b6619ba823e590a7342154d5ea3e6221c6c",
+      "alpha_bbox_xyxy": [
+        21,
+        27,
+        235,
+        229
+      ],
+      "geometry_version": "r34.module.repair_shed_v2.geometry-v1"
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.supply_rear_v3",
+      "resource_path": "res://themes/modules/supply_rear_v3-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-post23-v1/supply_rear_v3.png",
+      "source_png_sha256": "b8323f8f3512cad11fdc632dacfc54f5e53bb0d7dc3724a795dcbc2c0ff6cd79",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-post23-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 28261,
+      "opaque_rgba_sha256": "1eb540deb6f306e9750ece61d6690b1c4d9993a0fd7d9262e88b582f1eedb9ed",
+      "alpha_sha256": "a51c4d193737f04cbae3077aab908f9c62e361adb18511df4a68b9b0b9e82ecb",
+      "alpha_bbox_xyxy": [
+        21,
+        30,
+        235,
+        226
+      ],
+      "geometry_version": "r34.module.supply_rear_v3.geometry-v1"
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.supply_roadside_v2",
+      "resource_path": "res://themes/modules/supply_roadside_v2-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-v1/supply_roadside_v2.png",
+      "source_png_sha256": "b8323f8f3512cad11fdc632dacfc54f5e53bb0d7dc3724a795dcbc2c0ff6cd79",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 28261,
+      "opaque_rgba_sha256": "1eb540deb6f306e9750ece61d6690b1c4d9993a0fd7d9262e88b582f1eedb9ed",
+      "alpha_sha256": "a51c4d193737f04cbae3077aab908f9c62e361adb18511df4a68b9b0b9e82ecb",
+      "alpha_bbox_xyxy": [
+        21,
+        30,
+        235,
+        226
+      ],
+      "geometry_version": "r34.module.supply_roadside_v2.geometry-v1"
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.warehouse",
+      "resource_path": "res://themes/modules/warehouse-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-post23-v1/warehouse.png",
+      "source_png_sha256": "0abc929bd357770dff862602d48962a0f5a7d280f54350f4a0112a3ea40a97c9",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-post23-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 24381,
+      "opaque_rgba_sha256": "21e7d76292b3c4c451a77b51bb559460968ca2ed09d16278f9565619edf30851",
+      "alpha_sha256": "025e93ebfb599646584a146780ea68ab69c891aa4890c93efca6295ce007b077",
+      "alpha_bbox_xyxy": [
+        21,
+        36,
+        235,
+        220
+      ],
+      "geometry_version": "r34.module.warehouse.geometry-v1"
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.warehouse_court_v2",
+      "resource_path": "res://themes/modules/warehouse_court_v2-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-v1/warehouse_court_v2.png",
+      "source_png_sha256": "99335af3f32c58bee10ac898c07dbdf47e4fb68b498101b0675b614e35df3a16",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 21181,
+      "opaque_rgba_sha256": "25a2e9980450b55c3e942b25b79d5b38db1594891760da2ae5a163c90ff029ba",
+      "alpha_sha256": "efddb9e561c09b33719788cc1198975631bd3c50ca378ae6e09097aa8210a380",
+      "alpha_bbox_xyxy": [
+        21,
+        49,
+        235,
+        207
+      ],
+      "geometry_version": "r34.module.warehouse_court_v2.geometry-v1"
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.warehouse_long_v2",
+      "resource_path": "res://themes/modules/warehouse_long_v2-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-v1/warehouse_long_v2.png",
+      "source_png_sha256": "5d27da3ba148fc766f4b3220c7222067451dbde90410dd300d2c87be096fed12",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 25439,
+      "opaque_rgba_sha256": "fb34b34ef30b6878d8dd46f05b479bd72bb4b58c65c08995a11c4331c988b0e4",
+      "alpha_sha256": "5a9a9f3550f161afafaa43a465aaab4eface6f89ae0e12d87dfe5be252a72997",
+      "alpha_bbox_xyxy": [
+        21,
+        36,
+        235,
+        220
+      ],
+      "geometry_version": "r34.module.warehouse_long_v2.geometry-v1"
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.woodshop_long_v2",
+      "resource_path": "res://themes/modules/woodshop_long_v2-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-v1/woodshop_long_v2.png",
+      "source_png_sha256": "1f44a70030f8b332bfc33dd05f5cec072b0571b905d5eedb93da4beeb5605637",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 26636,
+      "opaque_rgba_sha256": "1dda69b3f6cc0763e89ba2405b680ab0795e4f5fa1613c9e015d365c3f31e39d",
+      "alpha_sha256": "e3e931480009c2e525ca8935f7bf59f77f1c4780d1f79f5df4470557802dd535",
+      "alpha_bbox_xyxy": [
+        21,
+        34,
+        235,
+        222
+      ],
+      "geometry_version": "r34.module.woodshop_long_v2.geometry-v1"
+    },
+    {
+      "kind": "portrait",
+      "id": "r1_resident_commuter",
+      "resource_path": "res://themes/portraits/r1_resident_commuter.png",
+      "source_path": "assets/art/r34-factory-v1/portraits/ui-v1/r1_resident_commuter.png",
+      "source_png_sha256": "ac6617614ddc6d5935e7bc4bc681060530cadc936c99d065685270d31284c523",
+      "source_manifest": "assets/art/r34-factory-v1/portraits/ui-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 30918,
+      "opaque_rgba_sha256": "1561a353509452e2b5247a1e2d97118938a891f49f48c9a6c8b66419f00073a6",
+      "alpha_sha256": "8b1ec5b2e1c9387ba00b8f8ac70ab0f8ffccf69d5d9a813bc0b320635f911c56",
+      "alpha_bbox_xyxy": [
+        14,
+        18,
+        251,
+        256
+      ],
+      "actor_id": "player"
+    },
+    {
+      "kind": "portrait",
+      "id": "r1_resident_neighbor",
+      "resource_path": "res://themes/portraits/r1_resident_neighbor.png",
+      "source_path": "assets/art/r34-factory-v1/portraits/ui-v1/r1_resident_neighbor.png",
+      "source_png_sha256": "a86305308f014ed0343a28e9e18c2b8aa37a7aa57f04fbcd323495d1fffeda05",
+      "source_manifest": "assets/art/r34-factory-v1/portraits/ui-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 30573,
+      "opaque_rgba_sha256": "6413c55ef24476e1084ccfe14fa849a90f06f4229f499448b32d38e6f5dd7c2b",
+      "alpha_sha256": "f7b9d8b1199dee84f8d08c0d5c031861ca3a6a0dc99b26371367070b0a553df9",
+      "alpha_bbox_xyxy": [
+        14,
+        19,
+        246,
+        256
+      ],
+      "actor_id": "village-resident"
+    },
+    {
+      "kind": "portrait",
+      "id": "r1_resident_shopkeeper",
+      "resource_path": "res://themes/portraits/r1_resident_shopkeeper.png",
+      "source_path": "assets/art/r34-factory-v1/portraits/ui-v1/r1_resident_shopkeeper.png",
+      "source_png_sha256": "075066f6dea9bb7a89e79b8c0ee0e81d7a84d277bbab15b3ae6fe8c9aa9c9429",
+      "source_manifest": "assets/art/r34-factory-v1/portraits/ui-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 31347,
+      "opaque_rgba_sha256": "b9c5a681f9ff55429cbe2b4eda40c04e56322367bda228d3220decdfa6fc0947",
+      "alpha_sha256": "0fe28398113f668da787cc2b29fee8cd308e39b2cac808b1cbdef076a641e447",
+      "alpha_bbox_xyxy": [
+        6,
+        19,
+        251,
+        256
+      ],
+      "actor_id": "repair-resident"
+    },
+    {
+      "kind": "water",
+      "id": "WT01-empty",
+      "resource_path": "res://themes/water/WT01-empty-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-v1/wt01_empty.png",
+      "source_png_sha256": "c80c81fcfea789cf5cb27c7a58ae8338cb54e94a9e0be5464ad6512cac4c5396",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 20453,
+      "opaque_rgba_sha256": "96369750d411c6b560490cfaabacff27903dbbedfc913ff8229b585fd09c0140",
+      "alpha_sha256": "74d8a33c7b08101e606c5f439127ae451016a66b511079a856fdba96745d63bd",
+      "alpha_bbox_xyxy": [
+        54,
+        21,
+        202,
+        235
+      ],
+      "geometry_version": "factory_water_view-d87147a0"
+    },
+    {
+      "kind": "water",
+      "id": "WT01-repaired",
+      "resource_path": "res://themes/water/WT01-repaired-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-v1/wt01_repaired.png",
+      "source_png_sha256": "72397fa9b0399b2de5be31fc1ddc16a73fb131744d0a35de2ae9ca08f93c8d12",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 20453,
+      "opaque_rgba_sha256": "51dc3408b746f269ff2d8e063e7603fcf10116c9dfea90cb120dd15a38652ba6",
+      "alpha_sha256": "74d8a33c7b08101e606c5f439127ae451016a66b511079a856fdba96745d63bd",
+      "alpha_bbox_xyxy": [
+        54,
+        21,
+        202,
+        235
+      ],
+      "geometry_version": "factory_water_view-d87147a0"
+    },
+    {
+      "kind": "water",
+      "id": "WT01-unknown",
+      "resource_path": "res://themes/water/WT01-unknown-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-v1/wt01_unknown.png",
+      "source_png_sha256": "db76f7589fd3b270c57a4637c42b4ccff248a14c320e8530c8a6e01216737cf8",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 20453,
+      "opaque_rgba_sha256": "65c45d68b3d47236e32783ebead51bfcabff0d0830544d04875ff1c28c40075a",
+      "alpha_sha256": "74d8a33c7b08101e606c5f439127ae451016a66b511079a856fdba96745d63bd",
+      "alpha_bbox_xyxy": [
+        54,
+        21,
+        202,
+        235
+      ],
+      "geometry_version": "factory_water_view-d87147a0"
+    }
+  ]
+}

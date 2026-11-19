@@ -1,0 +1,87 @@
+{
+  "source": "work/r3-4-ddd/world-hints-01/wt-thumbnail-input/thumbnails/manifest.json",
+  "source_sha256": "4bf4acfef4cfcdc87f72f99937ead13bfe58fdef4c8ec5c2837e9398a67ae2d3",
+  "scope": "Actual B/D source mesh reference input for ART/UI, not final icon art or runtime image; source identities in parent manifest",
+  "items": [
+    {
+      "id": "WT01-unknown",
+      "name": "WT01 unknown",
+      "geometry_version": "factory_water_view-d87147a0",
+      "view": "front",
+      "eye": [
+        0.9,
+        0.72,
+        -1.0
+      ],
+      "png": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/world-hints-01/wt-thumbnail-input/thumbnails/WT01-unknown-front.png",
+      "sha256": "accb8f781b716c9e7bda54b3bd16aaa0f9fe05c16dd480982b703e5200e63092",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        54,
+        21,
+        202,
+        235
+      ],
+      "safe_margin_at_least_16": true,
+      "scope": "Exact final accepted WT attempt07 actual local mesh snapshot rotated Y180 only for front thumbnail convention; unknown is sealed/broken physical pose, repaired is intact/dry, empty is capped/dry. CPU image input, no renderer/VA."
+    },
+    {
+      "id": "WT01-repaired",
+      "name": "WT01 repaired",
+      "geometry_version": "factory_water_view-d87147a0",
+      "view": "front",
+      "eye": [
+        0.9,
+        0.72,
+        -1.0
+      ],
+      "png": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/world-hints-01/wt-thumbnail-input/thumbnails/WT01-repaired-front.png",
+      "sha256": "842b7e4772f7d01ae5da8e84dd177aa5f8bb3048bd7dcd63550b4f679caf4282",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        54,
+        21,
+        202,
+        235
+      ],
+      "safe_margin_at_least_16": true,
+      "scope": "Exact final accepted WT attempt07 actual local mesh snapshot rotated Y180 only for front thumbnail convention; unknown is sealed/broken physical pose, repaired is intact/dry, empty is capped/dry. CPU image input, no renderer/VA."
+    },
+    {
+      "id": "WT01-empty",
+      "name": "WT01 empty",
+      "geometry_version": "factory_water_view-d87147a0",
+      "view": "front",
+      "eye": [
+        0.9,
+        0.72,
+        -1.0
+      ],
+      "png": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/world-hints-01/wt-thumbnail-input/thumbnails/WT01-empty-front.png",
+      "sha256": "aab7fc26b53bfb70f15a6720eb75acda61cf2068155d27b312dc7ca32fd06da5",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        54,
+        21,
+        202,
+        235
+      ],
+      "safe_margin_at_least_16": true,
+      "scope": "Exact final accepted WT attempt07 actual local mesh snapshot rotated Y180 only for front thumbnail convention; unknown is sealed/broken physical pose, repaired is intact/dry, empty is capped/dry. CPU image input, no renderer/VA."
+    }
+  ],
+  "historical_input_manifest": true,
+  "current_ui_bindings": "res://themes/ui-art-bindings.json"
+}

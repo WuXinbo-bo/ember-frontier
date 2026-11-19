@@ -1,0 +1,163 @@
+{
+  "model": "gpt-image-2.6-flare",
+  "skill": "fatdog-pro/Image2-generate/image2-generate",
+  "base_url": "https://88cf.scxai.top/v1",
+  "runtime_network": false,
+  "notes": "Generated text-free UI skins and functional atmosphere illustrations. Live text, values, state and interactions are native controls. No building geometry claim.",
+  "assets": [
+    {
+      "path": "godot/afterglow/themes/illustrated19/panel.png",
+      "sha256": "2a249d55c758604cbfd832883299e416465404b6bb90f708706ff5941752c19a",
+      "source": "outputs/experience19/generated/ui19-skin-20261117-221920-1.png",
+      "source_sha256": "7bac383d39ddc42320fee1dd3609692d0254f609f1346555d9c42a25b09a7ed1",
+      "source_box": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "path": "godot/afterglow/themes/illustrated19/button_primary.png",
+      "sha256": "e411d68fa5cbd3b25e2d495de80ecd7b4321c9b9702bd93a11f42eb8979bf173",
+      "source": "outputs/experience19/generated/ui19-skin-20261117-221920-1.png",
+      "source_sha256": "7bac383d39ddc42320fee1dd3609692d0254f609f1346555d9c42a25b09a7ed1",
+      "source_box": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "path": "godot/afterglow/themes/illustrated19/title.png",
+      "sha256": "a5064405ba7d7e6b72d57018787ab5024b61cf3737bae047ec306a50ef1642db",
+      "source": "outputs/experience19/generated/ui19-skin-20261117-221920-1.png",
+      "source_sha256": "7bac383d39ddc42320fee1dd3609692d0254f609f1346555d9c42a25b09a7ed1",
+      "source_box": [
+        1024,
+        0,
+        1536,
+        512
+      ],
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "path": "godot/afterglow/themes/illustrated19/card.png",
+      "sha256": "b25cc47cb8ed0efb8519c44eebd9d9cb787ba441a6a3640aa5a6456a7319b7d8",
+      "source": "outputs/experience19/generated/ui19-skin-20261117-221920-1.png",
+      "source_sha256": "7bac383d39ddc42320fee1dd3609692d0254f609f1346555d9c42a25b09a7ed1",
+      "source_box": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "path": "godot/afterglow/themes/illustrated19/button.png",
+      "sha256": "f6c1865ca185b1cd5881e9c18bab52a6dedee81d3a66c9f6173954535f318fed",
+      "source": "outputs/experience19/generated/ui19-skin-20261117-221920-1.png",
+      "source_sha256": "7bac383d39ddc42320fee1dd3609692d0254f609f1346555d9c42a25b09a7ed1",
+      "source_box": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "path": "godot/afterglow/themes/illustrated19/slot.png",
+      "sha256": "d4af7e376f01bfc74707de61b951dd5dbe17822a7272744ef9c4e4e929c96d68",
+      "source": "outputs/experience19/generated/ui19-skin-20261117-221920-1.png",
+      "source_sha256": "7bac383d39ddc42320fee1dd3609692d0254f609f1346555d9c42a25b09a7ed1",
+      "source_box": [
+        1024,
+        512,
+        1536,
+        1024
+      ],
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "path": "godot/afterglow/themes/illustrated19/header_workshop.png",
+      "sha256": "308810fcc040fd5c27de6e4f24f4b145d1ae9ca18416b3d27d6a46f5b24c7463",
+      "source": "outputs/experience19/generated/ui19-vignettes-20261117-221953-1.png",
+      "source_sha256": "263dd94b065a65a1d399b329c6b62c35f105ae114f29a3fd0527421877e672ed",
+      "source_box": [
+        0,
+        0,
+        1536,
+        341
+      ],
+      "size": [
+        768,
+        256
+      ]
+    },
+    {
+      "path": "godot/afterglow/themes/illustrated19/header_warehouse.png",
+      "sha256": "f2c6d917f53e3de4946aad052db6cc426e8e3b82b97090b754c236c0bc7b37eb",
+      "source": "outputs/experience19/generated/ui19-vignettes-20261117-221953-1.png",
+      "source_sha256": "263dd94b065a65a1d399b329c6b62c35f105ae114f29a3fd0527421877e672ed",
+      "source_box": [
+        0,
+        341,
+        1536,
+        683
+      ],
+      "size": [
+        768,
+        256
+      ]
+    },
+    {
+      "path": "godot/afterglow/themes/illustrated19/header_home.png",
+      "sha256": "0eb00a0c1156dcf371ae80e2d6289175437feb07ec2f3d723fe2cbd2b84aa827",
+      "source": "outputs/experience19/generated/ui19-vignettes-20261117-221953-1.png",
+      "source_sha256": "263dd94b065a65a1d399b329c6b62c35f105ae114f29a3fd0527421877e672ed",
+      "source_box": [
+        0,
+        683,
+        1536,
+        1024
+      ],
+      "size": [
+        768,
+        256
+      ]
+    },
+    {
+      "path": "godot/afterglow/themes/illustrated19/menu_background.jpg",
+      "sha256": "91df54c08e6eb9d60ab9a9b784e8608b2686b9f71beac8069181b7493a6c40fb",
+      "source": "outputs/experience19/generated/ui19-menu-20261117-224845-1.png",
+      "source_sha256": "5aed57181bd72eb772edf6538d8c5d9e79779ec844e3b1cb275cc23140c3e6c8",
+      "size": [
+        1280,
+        720
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2414 @@
+{
+  "schema": "afterglow-building-profiles-v1",
+  "coordinate_convention": "metres; Y-up; local origin is foundation top; quarter_turn uses Geometry.rotate; rectangles minX,minZ,maxX,maxZ",
+  "profiles": [
+    {
+      "id": "homestead_l",
+      "family_id": "homestead",
+      "recipe_id": "homestead_l",
+      "version": 2,
+      "allowed_quarter_turns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "footprint": {
+        "min": {
+          "x": -0.2,
+          "z": -0.2
+        },
+        "max": {
+          "x": 16.2,
+          "z": 16.2
+        }
+      },
+      "foundation": {
+        "top_offset": 0,
+        "depth": 0.4,
+        "max_pad_error": 0.015,
+        "pad_rectangles": [
+          [
+            0,
+            0,
+            16,
+            10
+          ],
+          [
+            4,
+            10,
+            16,
+            12
+          ],
+          [
+            8,
+            12,
+            14,
+            14
+          ],
+          [
+            0,
+            14,
+            16,
+            16
+          ]
+        ],
+        "route_max_step": 0.55,
+        "entrance_apron": 1.6
+      },
+      "entrance_ports": [
+        {
+          "id": "rear-door",
+          "position": [
+            3,
+            0,
+            -1.2
+          ],
+          "door_position": [
+            3,
+            0,
+            0
+          ],
+          "width": 1.6
+        },
+        {
+          "id": "yard-gate",
+          "position": [
+            13,
+            0,
+            17.2
+          ],
+          "door_position": [
+            13,
+            0,
+            16
+          ],
+          "width": 1.6
+        }
+      ],
+      "use_reservations": [
+        {
+          "id": "front-door:sweep",
+          "rect": [
+            9.4,
+            10,
+            12.6,
+            14
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        },
+        {
+          "id": "rear-door:sweep",
+          "rect": [
+            1.4,
+            -2,
+            4.6,
+            2
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        },
+        {
+          "id": "living-kitchen-door:sweep",
+          "rect": [
+            6,
+            7.4,
+            10,
+            10.6
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        },
+        {
+          "id": "living-sleep-door:sweep",
+          "rect": [
+            6,
+            1.4,
+            10,
+            4.6
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        },
+        {
+          "id": "kitchen-sleep-door:sweep",
+          "rect": [
+            3.4,
+            4,
+            6.6,
+            8
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        },
+        {
+          "id": "yard-gate:sweep",
+          "rect": [
+            11.4,
+            14,
+            14.6,
+            18
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full actual yard gate swing and entrance apron"
+        },
+        {
+          "id": "workbench-reservation:clearance",
+          "rect": [
+            10.85,
+            4.2,
+            14.15,
+            7.15
+          ],
+          "min_y": 0,
+          "max_y": 1.8,
+          "purpose": "future real workbench and worker approach; no free initial station"
+        }
+      ],
+      "npc_anchors": [
+        {
+          "id": "storage",
+          "position": [
+            14.5,
+            0,
+            1.5
+          ],
+          "purpose": "stock"
+        },
+        {
+          "id": "kitchen",
+          "position": [
+            1.5,
+            0,
+            8
+          ],
+          "purpose": "cooking-water"
+        },
+        {
+          "id": "sleeping-place",
+          "position": [
+            2.5,
+            0,
+            2.5
+          ],
+          "purpose": "sleep"
+        },
+        {
+          "id": "yard-gate",
+          "position": [
+            14.15,
+            0,
+            15.5
+          ],
+          "purpose": "yard-entrance"
+        }
+      ],
+      "recipe": {
+        "rectangles": [
+          [
+            0,
+            0,
+            16,
+            10
+          ],
+          [
+            4,
+            10,
+            16,
+            12
+          ]
+        ],
+        "partitions": [
+          [
+            8,
+            0,
+            8,
+            10
+          ],
+          [
+            0,
+            6,
+            8,
+            6
+          ]
+        ],
+        "doors": [
+          {
+            "id": "front-door",
+            "position": [
+              11,
+              0,
+              12
+            ],
+            "quarter_turn": 0,
+            "exterior": true
+          },
+          {
+            "id": "rear-door",
+            "position": [
+              3,
+              0,
+              0
+            ],
+            "quarter_turn": 0,
+            "exterior": true
+          },
+          {
+            "id": "living-kitchen-door",
+            "position": [
+              8,
+              0,
+              9
+            ],
+            "quarter_turn": 1,
+            "exterior": false
+          },
+          {
+            "id": "living-sleep-door",
+            "position": [
+              8,
+              0,
+              3
+            ],
+            "quarter_turn": 1,
+            "exterior": false
+          },
+          {
+            "id": "kitchen-sleep-door",
+            "position": [
+              5,
+              0,
+              6
+            ],
+            "quarter_turn": 0,
+            "exterior": false
+          }
+        ],
+        "objects": [
+          {
+            "id": "storage",
+            "definition_id": "cabinet",
+            "position": [
+              14.5,
+              0,
+              1.5
+            ],
+            "quarter_turn": 1,
+            "items": {
+              "food": 2,
+              "water": 3,
+              "cloth": 2,
+              "timber": 2,
+              "scrap": 1
+            },
+            "searched": true,
+            "purpose": "stock"
+          },
+          {
+            "id": "kitchen",
+            "definition_id": "domestic_kitchen",
+            "position": [
+              1.5,
+              0,
+              8
+            ],
+            "quarter_turn": 1,
+            "purpose": "cooking-water"
+          },
+          {
+            "id": "table",
+            "definition_id": "domestic_table",
+            "position": [
+              5.5,
+              0,
+              9
+            ],
+            "quarter_turn": 0
+          },
+          {
+            "id": "chair",
+            "definition_id": "domestic_chair",
+            "position": [
+              5.5,
+              0,
+              7.5
+            ],
+            "quarter_turn": 0
+          },
+          {
+            "id": "sleeping-place",
+            "definition_id": "",
+            "asset_id": "city_bed",
+            "position": [
+              2.5,
+              0,
+              2.5
+            ],
+            "quarter_turn": 0,
+            "purpose": "sleep"
+          }
+        ],
+        "porch": [
+          8,
+          12,
+          14,
+          14
+        ],
+        "roof": {
+          "shape": "gable",
+          "axis": "z",
+          "rise_per_meter": 0.25,
+          "material": "roof_tile"
+        },
+        "style": {
+          "wall": "cream_plaster",
+          "floor": "wood_floor"
+        },
+        "owner": "home-residents",
+        "yard": {
+          "min_x": 0,
+          "max_x": 16,
+          "front_z": 16,
+          "side_start_z": 14,
+          "gate_x": 13
+        },
+        "construction_sites": [
+          {
+            "id": "workbench-reservation",
+            "definition_id": "workbench",
+            "name": "旧宅工作台",
+            "position": [
+              12.5,
+              0,
+              6
+            ],
+            "quarter_turn": 0,
+            "purpose": "learned-camp-workbench"
+          }
+        ]
+      }
+    },
+    {
+      "id": "homestead_wing",
+      "family_id": "homestead",
+      "recipe_id": "homestead_wing",
+      "version": 2,
+      "allowed_quarter_turns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "footprint": {
+        "min": {
+          "x": -0.2,
+          "z": -0.2
+        },
+        "max": {
+          "x": 16.2,
+          "z": 14.2
+        }
+      },
+      "foundation": {
+        "top_offset": 0,
+        "depth": 0.4,
+        "max_pad_error": 0.015,
+        "pad_rectangles": [
+          [
+            0,
+            0,
+            12,
+            10
+          ],
+          [
+            12,
+            4,
+            16,
+            10
+          ],
+          [
+            6,
+            10,
+            12,
+            12
+          ],
+          [
+            0,
+            12,
+            16,
+            14
+          ]
+        ],
+        "route_max_step": 0.55,
+        "entrance_apron": 1.6
+      },
+      "entrance_ports": [
+        {
+          "id": "rear-door",
+          "position": [
+            3,
+            0,
+            -1.2
+          ],
+          "door_position": [
+            3,
+            0,
+            0
+          ],
+          "width": 1.6
+        },
+        {
+          "id": "yard-gate",
+          "position": [
+            13,
+            0,
+            15.2
+          ],
+          "door_position": [
+            13,
+            0,
+            14
+          ],
+          "width": 1.6
+        }
+      ],
+      "use_reservations": [
+        {
+          "id": "front-door:sweep",
+          "rect": [
+            7.4,
+            8,
+            10.6,
+            12
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        },
+        {
+          "id": "rear-door:sweep",
+          "rect": [
+            1.4,
+            -2,
+            4.6,
+            2
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        },
+        {
+          "id": "living-kitchen-door:sweep",
+          "rect": [
+            4,
+            5.4,
+            8,
+            8.6
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        },
+        {
+          "id": "living-sleep-door:sweep",
+          "rect": [
+            4,
+            1.4,
+            8,
+            4.6
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        },
+        {
+          "id": "kitchen-sleep-door:sweep",
+          "rect": [
+            1.4,
+            4,
+            4.6,
+            8
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        },
+        {
+          "id": "yard-gate:sweep",
+          "rect": [
+            11.4,
+            12,
+            14.6,
+            16
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full actual yard gate swing and entrance apron"
+        },
+        {
+          "id": "workbench-reservation:clearance",
+          "rect": [
+            8.35,
+            0.7,
+            11.65,
+            3.65
+          ],
+          "min_y": 0,
+          "max_y": 1.8,
+          "purpose": "future real workbench and worker approach; no free initial station"
+        }
+      ],
+      "npc_anchors": [
+        {
+          "id": "storage",
+          "position": [
+            14.5,
+            0,
+            5.5
+          ],
+          "purpose": "stock"
+        },
+        {
+          "id": "kitchen",
+          "position": [
+            1.5,
+            0,
+            8
+          ],
+          "purpose": "cooking-water"
+        },
+        {
+          "id": "sleeping-place",
+          "position": [
+            2.5,
+            0,
+            2.5
+          ],
+          "purpose": "sleep"
+        },
+        {
+          "id": "yard-gate",
+          "position": [
+            14.15,
+            0,
+            13.5
+          ],
+          "purpose": "yard-entrance"
+        }
+      ],
+      "recipe": {
+        "rectangles": [
+          [
+            0,
+            0,
+            12,
+            10
+          ],
+          [
+            12,
+            4,
+            16,
+            10
+          ]
+        ],
+        "partitions": [
+          [
+            6,
+            0,
+            6,
+            10
+          ],
+          [
+            0,
+            6,
+            6,
+            6
+          ]
+        ],
+        "doors": [
+          {
+            "id": "front-door",
+            "position": [
+              9,
+              0,
+              10
+            ],
+            "quarter_turn": 0,
+            "exterior": true
+          },
+          {
+            "id": "rear-door",
+            "position": [
+              3,
+              0,
+              0
+            ],
+            "quarter_turn": 0,
+            "exterior": true
+          },
+          {
+            "id": "living-kitchen-door",
+            "position": [
+              6,
+              0,
+              7
+            ],
+            "quarter_turn": 1,
+            "exterior": false
+          },
+          {
+            "id": "living-sleep-door",
+            "position": [
+              6,
+              0,
+              3
+            ],
+            "quarter_turn": 1,
+            "exterior": false
+          },
+          {
+            "id": "kitchen-sleep-door",
+            "position": [
+              3,
+              0,
+              6
+            ],
+            "quarter_turn": 0,
+            "exterior": false
+          }
+        ],
+        "objects": [
+          {
+            "id": "storage",
+            "definition_id": "cabinet",
+            "position": [
+              14.5,
+              0,
+              5.5
+            ],
+            "quarter_turn": 1,
+            "items": {
+              "food": 2,
+              "water": 3,
+              "cloth": 2,
+              "timber": 2,
+              "scrap": 1
+            },
+            "searched": true,
+            "purpose": "stock"
+          },
+          {
+            "id": "kitchen",
+            "definition_id": "domestic_kitchen",
+            "position": [
+              1.5,
+              0,
+              8
+            ],
+            "quarter_turn": 1,
+            "purpose": "cooking-water"
+          },
+          {
+            "id": "table",
+            "definition_id": "domestic_table",
+            "position": [
+              9,
+              0,
+              7
+            ],
+            "quarter_turn": 0
+          },
+          {
+            "id": "sleeping-place",
+            "definition_id": "",
+            "asset_id": "city_bed",
+            "position": [
+              2.5,
+              0,
+              2.5
+            ],
+            "quarter_turn": 0,
+            "purpose": "sleep"
+          }
+        ],
+        "porch": [
+          6,
+          10,
+          12,
+          12
+        ],
+        "roof": {
+          "shape": "gable",
+          "axis": "z",
+          "rise_per_meter": 0.25,
+          "material": "roof_tile"
+        },
+        "style": {
+          "wall": "cream_plaster",
+          "floor": "wood_floor"
+        },
+        "owner": "home-residents",
+        "yard": {
+          "min_x": 0,
+          "max_x": 16,
+          "front_z": 14,
+          "side_start_z": 12,
+          "gate_x": 13
+        },
+        "construction_sites": [
+          {
+            "id": "workbench-reservation",
+            "definition_id": "workbench",
+            "name": "旧宅工作台",
+            "position": [
+              10,
+              0,
+              2.5
+            ],
+            "quarter_turn": 0,
+            "purpose": "learned-camp-workbench"
+          }
+        ]
+      }
+    },
+    {
+      "id": "shed_lean",
+      "family_id": "storage",
+      "recipe_id": "shed_lean",
+      "version": 1,
+      "allowed_quarter_turns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "footprint": {
+        "min": {
+          "x": -0.2,
+          "z": -0.2
+        },
+        "max": {
+          "x": 8.2,
+          "z": 6.2
+        }
+      },
+      "foundation": {
+        "top_offset": 0,
+        "depth": 0.4,
+        "max_pad_error": 0.015,
+        "pad_rectangles": [
+          [
+            0,
+            0,
+            8,
+            6
+          ]
+        ],
+        "route_max_step": 0.55,
+        "entrance_apron": 1.6
+      },
+      "entrance_ports": [
+        {
+          "id": "front-door",
+          "position": [
+            5,
+            0,
+            7.2
+          ],
+          "door_position": [
+            5,
+            0,
+            6
+          ],
+          "width": 1.6
+        }
+      ],
+      "use_reservations": [
+        {
+          "id": "front-door:sweep",
+          "rect": [
+            3.4,
+            4,
+            6.6,
+            8
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        }
+      ],
+      "npc_anchors": [
+        {
+          "id": "storage",
+          "position": [
+            1.5,
+            0,
+            1.5
+          ],
+          "purpose": "tool-stock"
+        }
+      ],
+      "recipe": {
+        "rectangles": [
+          [
+            0,
+            0,
+            8,
+            6
+          ]
+        ],
+        "partitions": [],
+        "doors": [
+          {
+            "id": "front-door",
+            "position": [
+              5,
+              0,
+              6
+            ],
+            "quarter_turn": 0,
+            "exterior": true
+          }
+        ],
+        "objects": [
+          {
+            "id": "storage",
+            "definition_id": "cabinet",
+            "position": [
+              1.5,
+              0,
+              1.5
+            ],
+            "quarter_turn": 0,
+            "items": {
+              "timber": 8,
+              "scrap": 6,
+              "book_woodwork": 1,
+              "book_tool_repair": 1
+            },
+            "searched": false,
+            "tool_kinds": [
+              "salvaged_axe",
+              "hand_saw",
+              "hammer"
+            ],
+            "records": true,
+            "purpose": "tool-stock"
+          },
+          {
+            "id": "sorting-table",
+            "definition_id": "domestic_table",
+            "position": [
+              6,
+              0,
+              1.5
+            ],
+            "quarter_turn": 0
+          }
+        ],
+        "porch": null,
+        "roof": {
+          "shape": "lean",
+          "axis": "x",
+          "rise_per_meter": 0.125,
+          "material": "zinc"
+        },
+        "style": {
+          "wall": "old_brick",
+          "floor": "concrete"
+        },
+        "owner": "home-residents"
+      }
+    },
+    {
+      "id": "shed_through",
+      "family_id": "storage",
+      "recipe_id": "shed_through",
+      "version": 1,
+      "allowed_quarter_turns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "footprint": {
+        "min": {
+          "x": -0.2,
+          "z": -0.2
+        },
+        "max": {
+          "x": 8.2,
+          "z": 8.2
+        }
+      },
+      "foundation": {
+        "top_offset": 0,
+        "depth": 0.4,
+        "max_pad_error": 0.015,
+        "pad_rectangles": [
+          [
+            0,
+            0,
+            8,
+            8
+          ]
+        ],
+        "route_max_step": 0.55,
+        "entrance_apron": 1.6
+      },
+      "entrance_ports": [
+        {
+          "id": "front-door",
+          "position": [
+            5,
+            0,
+            9.2
+          ],
+          "door_position": [
+            5,
+            0,
+            8
+          ],
+          "width": 1.6
+        },
+        {
+          "id": "rear-door",
+          "position": [
+            5,
+            0,
+            -1.2
+          ],
+          "door_position": [
+            5,
+            0,
+            0
+          ],
+          "width": 1.6
+        }
+      ],
+      "use_reservations": [
+        {
+          "id": "front-door:sweep",
+          "rect": [
+            3.4,
+            6,
+            6.6,
+            10
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        },
+        {
+          "id": "rear-door:sweep",
+          "rect": [
+            3.4,
+            -2,
+            6.6,
+            2
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        }
+      ],
+      "npc_anchors": [
+        {
+          "id": "storage",
+          "position": [
+            1.5,
+            0,
+            2
+          ],
+          "purpose": "tool-stock"
+        }
+      ],
+      "recipe": {
+        "rectangles": [
+          [
+            0,
+            0,
+            8,
+            8
+          ]
+        ],
+        "partitions": [],
+        "doors": [
+          {
+            "id": "front-door",
+            "position": [
+              5,
+              0,
+              8
+            ],
+            "quarter_turn": 0,
+            "exterior": true
+          },
+          {
+            "id": "rear-door",
+            "position": [
+              5,
+              0,
+              0
+            ],
+            "quarter_turn": 0,
+            "exterior": true
+          }
+        ],
+        "objects": [
+          {
+            "id": "storage",
+            "definition_id": "cabinet",
+            "position": [
+              1.5,
+              0,
+              2
+            ],
+            "quarter_turn": 0,
+            "items": {
+              "timber": 8,
+              "scrap": 6,
+              "book_woodwork": 1,
+              "book_tool_repair": 1
+            },
+            "searched": false,
+            "tool_kinds": [
+              "salvaged_axe",
+              "hand_saw",
+              "hammer"
+            ],
+            "records": true,
+            "purpose": "tool-stock"
+          },
+          {
+            "id": "sorting-table",
+            "definition_id": "domestic_table",
+            "position": [
+              1.5,
+              0,
+              6
+            ],
+            "quarter_turn": 0
+          }
+        ],
+        "porch": null,
+        "roof": {
+          "shape": "gable",
+          "axis": "z",
+          "rise_per_meter": 0.125,
+          "material": "zinc"
+        },
+        "style": {
+          "wall": "old_brick",
+          "floor": "concrete"
+        },
+        "owner": "home-residents"
+      }
+    },
+    {
+      "id": "shop_front",
+      "family_id": "roadside",
+      "recipe_id": "shop_front",
+      "version": 1,
+      "allowed_quarter_turns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "footprint": {
+        "min": {
+          "x": -0.2,
+          "z": -0.2
+        },
+        "max": {
+          "x": 10.2,
+          "z": 10.2
+        }
+      },
+      "foundation": {
+        "top_offset": 0,
+        "depth": 0.4,
+        "max_pad_error": 0.015,
+        "pad_rectangles": [
+          [
+            0,
+            0,
+            10,
+            8
+          ],
+          [
+            4,
+            8,
+            10,
+            10
+          ]
+        ],
+        "route_max_step": 0.55,
+        "entrance_apron": 1.6
+      },
+      "entrance_ports": [
+        {
+          "id": "front-door",
+          "position": [
+            7,
+            0,
+            9.2
+          ],
+          "door_position": [
+            7,
+            0,
+            8
+          ],
+          "width": 1.6
+        }
+      ],
+      "use_reservations": [
+        {
+          "id": "front-door:sweep",
+          "rect": [
+            5.4,
+            6,
+            8.6,
+            10
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        }
+      ],
+      "npc_anchors": [
+        {
+          "id": "shelf:0",
+          "position": [
+            1.5,
+            0,
+            1.5
+          ],
+          "purpose": "stock"
+        }
+      ],
+      "recipe": {
+        "rectangles": [
+          [
+            0,
+            0,
+            10,
+            8
+          ]
+        ],
+        "partitions": [],
+        "doors": [
+          {
+            "id": "front-door",
+            "position": [
+              7,
+              0,
+              8
+            ],
+            "quarter_turn": 0,
+            "exterior": true
+          }
+        ],
+        "objects": [
+          {
+            "id": "shelf:0",
+            "definition_id": "cabinet",
+            "position": [
+              1.5,
+              0,
+              1.5
+            ],
+            "quarter_turn": 2,
+            "items": {
+              "food": 2,
+              "water": 2,
+              "scrap": 1
+            },
+            "searched": false,
+            "purpose": "stock"
+          },
+          {
+            "id": "shelf:1",
+            "definition_id": "cabinet",
+            "position": [
+              3.5,
+              0,
+              1.5
+            ],
+            "quarter_turn": 2,
+            "items": {
+              "food": 2,
+              "water": 2,
+              "scrap": 1
+            },
+            "searched": false
+          },
+          {
+            "id": "counter",
+            "definition_id": "domestic_table",
+            "position": [
+              3,
+              0,
+              5
+            ],
+            "quarter_turn": 0
+          }
+        ],
+        "porch": [
+          4,
+          8,
+          10,
+          10
+        ],
+        "roof": {
+          "shape": "gable",
+          "axis": "x",
+          "rise_per_meter": 0.25,
+          "material": "roof_tile"
+        },
+        "style": {
+          "wall": "mint_paint",
+          "floor": "ceramic"
+        },
+        "owner": null
+      }
+    },
+    {
+      "id": "repair_court",
+      "family_id": "roadside",
+      "recipe_id": "repair_court",
+      "version": 1,
+      "allowed_quarter_turns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "footprint": {
+        "min": {
+          "x": -0.2,
+          "z": -0.2
+        },
+        "max": {
+          "x": 12.2,
+          "z": 12.2
+        }
+      },
+      "foundation": {
+        "top_offset": 0,
+        "depth": 0.4,
+        "max_pad_error": 0.015,
+        "pad_rectangles": [
+          [
+            0,
+            0,
+            12,
+            8
+          ],
+          [
+            0,
+            8,
+            4,
+            12
+          ],
+          [
+            6,
+            8,
+            12,
+            10
+          ]
+        ],
+        "route_max_step": 0.55,
+        "entrance_apron": 1.6
+      },
+      "entrance_ports": [
+        {
+          "id": "front-door",
+          "position": [
+            9,
+            0,
+            9.2
+          ],
+          "door_position": [
+            9,
+            0,
+            8
+          ],
+          "width": 1.6
+        },
+        {
+          "id": "side-door",
+          "position": [
+            -1.2,
+            0,
+            5
+          ],
+          "door_position": [
+            0,
+            0,
+            5
+          ],
+          "width": 1.6
+        }
+      ],
+      "use_reservations": [
+        {
+          "id": "front-door:sweep",
+          "rect": [
+            7.4,
+            6,
+            10.6,
+            10
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        },
+        {
+          "id": "side-door:sweep",
+          "rect": [
+            -2,
+            3.4,
+            2,
+            6.6
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full door sweep and both supported use sides"
+        }
+      ],
+      "npc_anchors": [
+        {
+          "id": "bench",
+          "position": [
+            2,
+            0,
+            2
+          ],
+          "purpose": "work"
+        },
+        {
+          "id": "tools",
+          "position": [
+            10.5,
+            0,
+            1.5
+          ],
+          "purpose": "tool-stock"
+        }
+      ],
+      "recipe": {
+        "rectangles": [
+          [
+            0,
+            0,
+            12,
+            8
+          ],
+          [
+            0,
+            8,
+            4,
+            12
+          ]
+        ],
+        "partitions": [],
+        "doors": [
+          {
+            "id": "front-door",
+            "position": [
+              9,
+              0,
+              8
+            ],
+            "quarter_turn": 0,
+            "exterior": true
+          },
+          {
+            "id": "side-door",
+            "position": [
+              0,
+              0,
+              5
+            ],
+            "quarter_turn": 1,
+            "exterior": true
+          }
+        ],
+        "objects": [
+          {
+            "id": "bench",
+            "definition_id": "workbench",
+            "position": [
+              2,
+              0,
+              2
+            ],
+            "quarter_turn": 2,
+            "purpose": "work"
+          },
+          {
+            "id": "tools",
+            "definition_id": "cabinet",
+            "position": [
+              10.5,
+              0,
+              1.5
+            ],
+            "quarter_turn": 1,
+            "items": {
+              "axe_head": 1,
+              "tool_handle": 1,
+              "scrap": 4
+            },
+            "searched": false,
+            "purpose": "tool-stock"
+          },
+          {
+            "id": "sorting-table",
+            "definition_id": "domestic_table",
+            "position": [
+              2,
+              0,
+              10
+            ],
+            "quarter_turn": 0
+          }
+        ],
+        "porch": [
+          6,
+          8,
+          12,
+          10
+        ],
+        "roof": {
+          "shape": "lean",
+          "axis": "x",
+          "rise_per_meter": 0.125,
+          "material": "zinc"
+        },
+        "style": {
+          "wall": "old_brick",
+          "floor": "concrete"
+        },
+        "owner": "repair-resident"
+      }
+    },
+    {
+      "id": "homestead_compact",
+      "family_id": "homestead",
+      "recipe_id": "homestead_compact",
+      "version": 1,
+      "allowed_quarter_turns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "footprint": {
+        "min": {
+          "x": -0.2,
+          "z": -0.2
+        },
+        "max": {
+          "x": 12.2,
+          "z": 12.2
+        }
+      },
+      "foundation": {
+        "top_offset": 0,
+        "depth": 0.4,
+        "max_pad_error": 0.015,
+        "pad_rectangles": [
+          [
+            0,
+            0,
+            12,
+            8
+          ],
+          [
+            6,
+            8,
+            12,
+            10
+          ],
+          [
+            0,
+            10,
+            12,
+            12
+          ]
+        ],
+        "route_max_step": 0.55,
+        "entrance_apron": 1.6
+      },
+      "entrance_ports": [
+        {
+          "id": "yard-gate",
+          "position": [
+            9,
+            0,
+            13.2
+          ],
+          "door_position": [
+            9,
+            0,
+            12
+          ],
+          "width": 1.6
+        }
+      ],
+      "use_reservations": [
+        {
+          "id": "front-door:sweep",
+          "rect": [
+            7.4,
+            6,
+            10.6,
+            10
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full real door sweep and supported approach on both sides"
+        },
+        {
+          "id": "living-sleep-door:sweep",
+          "rect": [
+            2,
+            3.4,
+            6,
+            6.6
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full real door sweep and supported approach on both sides"
+        },
+        {
+          "id": "living-kitchen-door:sweep",
+          "rect": [
+            5.4,
+            2,
+            8.6,
+            6
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full real door sweep and supported approach on both sides"
+        },
+        {
+          "id": "yard-gate:sweep",
+          "rect": [
+            7.4,
+            10,
+            10.6,
+            14
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full real door sweep and supported approach on both sides"
+        },
+        {
+          "id": "workbench-reservation:clearance",
+          "rect": [
+            8.049999999999999,
+            0.6500000000000001,
+            11.35,
+            3.6500000000000004
+          ],
+          "min_y": 0,
+          "max_y": 1.8,
+          "purpose": "future learned workbench plus actual worker use point; no free work station"
+        }
+      ],
+      "npc_anchors": [
+        {
+          "id": "storage",
+          "position": [
+            10.5,
+            0,
+            6.7
+          ],
+          "purpose": "stock"
+        },
+        {
+          "id": "kitchen",
+          "position": [
+            5.7,
+            0,
+            1.4
+          ],
+          "purpose": "cooking-water"
+        },
+        {
+          "id": "sleeping-place",
+          "position": [
+            1.6,
+            0,
+            2
+          ],
+          "purpose": "sleep"
+        },
+        {
+          "id": "yard-gate",
+          "position": [
+            10.15,
+            0,
+            11.5
+          ],
+          "purpose": "yard-entrance"
+        }
+      ],
+      "recipe": {
+        "rectangles": [
+          [
+            0,
+            0,
+            12,
+            8
+          ]
+        ],
+        "partitions": [
+          [
+            4,
+            0,
+            4,
+            8
+          ],
+          [
+            4,
+            4,
+            12,
+            4
+          ]
+        ],
+        "doors": [
+          {
+            "id": "front-door",
+            "position": [
+              9,
+              0,
+              8
+            ],
+            "quarter_turn": 0,
+            "exterior": true
+          },
+          {
+            "id": "living-sleep-door",
+            "position": [
+              4,
+              0,
+              5
+            ],
+            "quarter_turn": 1,
+            "exterior": false
+          },
+          {
+            "id": "living-kitchen-door",
+            "position": [
+              7,
+              0,
+              4
+            ],
+            "quarter_turn": 0,
+            "exterior": false
+          }
+        ],
+        "objects": [
+          {
+            "id": "storage",
+            "definition_id": "cabinet",
+            "position": [
+              10.5,
+              0,
+              6.7
+            ],
+            "quarter_turn": 0,
+            "items": {
+              "food": 2,
+              "water": 3,
+              "cloth": 2,
+              "timber": 2,
+              "scrap": 1
+            },
+            "searched": true,
+            "purpose": "stock"
+          },
+          {
+            "id": "kitchen",
+            "definition_id": "domestic_kitchen",
+            "position": [
+              5.7,
+              0,
+              1.4
+            ],
+            "quarter_turn": 0,
+            "purpose": "cooking-water"
+          },
+          {
+            "id": "table",
+            "definition_id": "domestic_table",
+            "position": [
+              6.8,
+              0,
+              6.5
+            ],
+            "quarter_turn": 0
+          },
+          {
+            "id": "chair",
+            "definition_id": "domestic_chair",
+            "position": [
+              7.8,
+              0,
+              6.5
+            ],
+            "quarter_turn": 3
+          },
+          {
+            "id": "sleeping-place",
+            "definition_id": "",
+            "position": [
+              1.6,
+              0,
+              2
+            ],
+            "quarter_turn": 0,
+            "asset_id": "city_bed",
+            "purpose": "sleep"
+          },
+          {
+            "id": "writing-desk",
+            "definition_id": "domestic_desk",
+            "position": [
+              1.6,
+              0,
+              6.4
+            ],
+            "quarter_turn": 2
+          }
+        ],
+        "porch": [
+          6,
+          8,
+          12,
+          10
+        ],
+        "roof": {
+          "shape": "gable",
+          "axis": "z",
+          "rise_per_meter": 0.25,
+          "material": "roof_tile"
+        },
+        "style": {
+          "wall": "cream_plaster",
+          "floor": "wood_floor"
+        },
+        "owner": "home-residents",
+        "yard": {
+          "min_x": 0,
+          "max_x": 12,
+          "front_z": 12,
+          "side_start_z": 10,
+          "gate_x": 9
+        },
+        "construction_sites": [
+          {
+            "id": "workbench-reservation",
+            "definition_id": "workbench",
+            "name": "旧宅工作台",
+            "position": [
+              9.7,
+              0,
+              1.8
+            ],
+            "quarter_turn": 2,
+            "purpose": "learned-camp-workbench"
+          }
+        ],
+        "room_zones": [
+          {
+            "id": "bedroom",
+            "purpose": "sleep",
+            "rect": [
+              0,
+              0,
+              4,
+              8
+            ],
+            "floor": "wood_floor"
+          },
+          {
+            "id": "kitchen",
+            "purpose": "cooking-water",
+            "rect": [
+              4,
+              0,
+              8,
+              4
+            ],
+            "floor": "ceramic"
+          },
+          {
+            "id": "work-corner",
+            "purpose": "work",
+            "rect": [
+              8,
+              0,
+              12,
+              4
+            ],
+            "floor": "concrete"
+          },
+          {
+            "id": "living",
+            "purpose": "living",
+            "rect": [
+              4,
+              4,
+              10,
+              8
+            ],
+            "floor": "wood_floor"
+          },
+          {
+            "id": "pantry",
+            "purpose": "stock",
+            "rect": [
+              10,
+              4,
+              12,
+              8
+            ],
+            "floor": "wood_floor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "homestead_courtyard",
+      "family_id": "homestead",
+      "recipe_id": "homestead_courtyard",
+      "version": 1,
+      "allowed_quarter_turns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "footprint": {
+        "min": {
+          "x": -0.2,
+          "z": -0.2
+        },
+        "max": {
+          "x": 16.2,
+          "z": 14.2
+        }
+      },
+      "foundation": {
+        "top_offset": 0,
+        "depth": 0.4,
+        "max_pad_error": 0.015,
+        "pad_rectangles": [
+          [
+            0,
+            0,
+            16,
+            6
+          ],
+          [
+            0,
+            6,
+            6,
+            12
+          ],
+          [
+            12,
+            6,
+            16,
+            12
+          ],
+          [
+            6,
+            6,
+            12,
+            8
+          ],
+          [
+            0,
+            12,
+            16,
+            14
+          ]
+        ],
+        "route_max_step": 0.55,
+        "entrance_apron": 1.6
+      },
+      "entrance_ports": [
+        {
+          "id": "rear-door",
+          "position": [
+            3,
+            0,
+            -1.2
+          ],
+          "door_position": [
+            3,
+            0,
+            0
+          ],
+          "width": 1.6
+        },
+        {
+          "id": "yard-gate",
+          "position": [
+            9,
+            0,
+            15.2
+          ],
+          "door_position": [
+            9,
+            0,
+            14
+          ],
+          "width": 1.6
+        }
+      ],
+      "use_reservations": [
+        {
+          "id": "front-door:sweep",
+          "rect": [
+            7.4,
+            4,
+            10.6,
+            8
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full real door sweep and supported approach on both sides"
+        },
+        {
+          "id": "rear-door:sweep",
+          "rect": [
+            1.4,
+            -2,
+            4.6,
+            2
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full real door sweep and supported approach on both sides"
+        },
+        {
+          "id": "living-storage-door:sweep",
+          "rect": [
+            4,
+            1.4,
+            8,
+            4.6
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full real door sweep and supported approach on both sides"
+        },
+        {
+          "id": "living-kitchen-door:sweep",
+          "rect": [
+            10,
+            1.4,
+            14,
+            4.6
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full real door sweep and supported approach on both sides"
+        },
+        {
+          "id": "storage-sleep-door:sweep",
+          "rect": [
+            1.4,
+            4,
+            4.6,
+            8
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full real door sweep and supported approach on both sides"
+        },
+        {
+          "id": "kitchen-workshop-door:sweep",
+          "rect": [
+            13.4,
+            4,
+            16.6,
+            8
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full real door sweep and supported approach on both sides"
+        },
+        {
+          "id": "yard-gate:sweep",
+          "rect": [
+            7.4,
+            12,
+            10.6,
+            16
+          ],
+          "min_y": 0,
+          "max_y": 2.3,
+          "purpose": "full real door sweep and supported approach on both sides"
+        },
+        {
+          "id": "workbench-reservation:clearance",
+          "rect": [
+            12.85,
+            7.8,
+            15.85,
+            11.2
+          ],
+          "min_y": 0,
+          "max_y": 1.8,
+          "purpose": "future learned workbench plus actual worker use point; no free work station"
+        }
+      ],
+      "npc_anchors": [
+        {
+          "id": "storage",
+          "position": [
+            1.5,
+            0,
+            2
+          ],
+          "purpose": "stock"
+        },
+        {
+          "id": "kitchen",
+          "position": [
+            14,
+            0,
+            1.5
+          ],
+          "purpose": "cooking-water"
+        },
+        {
+          "id": "sleeping-place",
+          "position": [
+            2.5,
+            0,
+            9
+          ],
+          "purpose": "sleep"
+        },
+        {
+          "id": "yard-gate",
+          "position": [
+            10.15,
+            0,
+            13.5
+          ],
+          "purpose": "yard-entrance"
+        }
+      ],
+      "recipe": {
+        "rectangles": [
+          [
+            0,
+            0,
+            16,
+            6
+          ],
+          [
+            0,
+            6,
+            6,
+            12
+          ],
+          [
+            12,
+            6,
+            16,
+            12
+          ]
+        ],
+        "partitions": [
+          [
+            6,
+            0,
+            6,
+            6
+          ],
+          [
+            12,
+            0,
+            12,
+            6
+          ],
+          [
+            0,
+            6,
+            6,
+            6
+          ],
+          [
+            12,
+            6,
+            16,
+            6
+          ]
+        ],
+        "doors": [
+          {
+            "id": "front-door",
+            "position": [
+              9,
+              0,
+              6
+            ],
+            "quarter_turn": 0,
+            "exterior": true
+          },
+          {
+            "id": "rear-door",
+            "position": [
+              3,
+              0,
+              0
+            ],
+            "quarter_turn": 0,
+            "exterior": true
+          },
+          {
+            "id": "living-storage-door",
+            "position": [
+              6,
+              0,
+              3
+            ],
+            "quarter_turn": 1,
+            "exterior": false
+          },
+          {
+            "id": "living-kitchen-door",
+            "position": [
+              12,
+              0,
+              3
+            ],
+            "quarter_turn": 1,
+            "exterior": false
+          },
+          {
+            "id": "storage-sleep-door",
+            "position": [
+              3,
+              0,
+              6
+            ],
+            "quarter_turn": 0,
+            "exterior": false
+          },
+          {
+            "id": "kitchen-workshop-door",
+            "position": [
+              15,
+              0,
+              6
+            ],
+            "quarter_turn": 2,
+            "exterior": false
+          }
+        ],
+        "objects": [
+          {
+            "id": "storage",
+            "definition_id": "cabinet",
+            "position": [
+              1.5,
+              0,
+              2
+            ],
+            "quarter_turn": 0,
+            "items": {
+              "food": 2,
+              "water": 3,
+              "cloth": 2,
+              "timber": 2,
+              "scrap": 1
+            },
+            "searched": true,
+            "purpose": "stock"
+          },
+          {
+            "id": "kitchen",
+            "definition_id": "domestic_kitchen",
+            "position": [
+              14,
+              0,
+              1.5
+            ],
+            "quarter_turn": 0,
+            "purpose": "cooking-water"
+          },
+          {
+            "id": "table",
+            "definition_id": "domestic_table",
+            "position": [
+              8.4,
+              0,
+              4.5
+            ],
+            "quarter_turn": 0
+          },
+          {
+            "id": "chair",
+            "definition_id": "domestic_chair",
+            "position": [
+              10,
+              0,
+              4.5
+            ],
+            "quarter_turn": 3
+          },
+          {
+            "id": "sleeping-place",
+            "definition_id": "",
+            "position": [
+              2.5,
+              0,
+              9
+            ],
+            "quarter_turn": 0,
+            "asset_id": "city_bed",
+            "purpose": "sleep"
+          },
+          {
+            "id": "writing-desk",
+            "definition_id": "domestic_desk",
+            "position": [
+              1.2,
+              0,
+              6.9
+            ],
+            "quarter_turn": 0
+          }
+        ],
+        "porch": [
+          6,
+          6,
+          12,
+          8
+        ],
+        "roof": {
+          "shape": "gable",
+          "axis": "z",
+          "rise_per_meter": 0.25,
+          "material": "roof_tile"
+        },
+        "style": {
+          "wall": "cream_plaster",
+          "floor": "wood_floor"
+        },
+        "owner": "home-residents",
+        "yard": {
+          "min_x": 0,
+          "max_x": 16,
+          "front_z": 14,
+          "side_start_z": 12,
+          "gate_x": 9
+        },
+        "construction_sites": [
+          {
+            "id": "workbench-reservation",
+            "definition_id": "workbench",
+            "name": "旧宅工作台",
+            "position": [
+              14,
+              0,
+              9.5
+            ],
+            "quarter_turn": 1,
+            "purpose": "learned-camp-workbench"
+          }
+        ],
+        "room_zones": [
+          {
+            "id": "pantry",
+            "purpose": "stock",
+            "rect": [
+              0,
+              0,
+              6,
+              6
+            ],
+            "floor": "wood_floor"
+          },
+          {
+            "id": "bedroom",
+            "purpose": "sleep",
+            "rect": [
+              0,
+              6,
+              6,
+              12
+            ],
+            "floor": "wood_floor"
+          },
+          {
+            "id": "living",
+            "purpose": "living",
+            "rect": [
+              6,
+              0,
+              12,
+              6
+            ],
+            "floor": "wood_floor"
+          },
+          {
+            "id": "kitchen",
+            "purpose": "cooking-water",
+            "rect": [
+              12,
+              0,
+              16,
+              6
+            ],
+            "floor": "ceramic"
+          },
+          {
+            "id": "work-wing",
+            "purpose": "work",
+            "rect": [
+              12,
+              6,
+              16,
+              12
+            ],
+            "floor": "concrete"
+          }
+        ],
+        "porch_posts": [
+          [
+            6.5,
+            0,
+            7.7
+          ],
+          [
+            11.5,
+            0,
+            7.7
+          ]
+        ]
+      }
+    }
+  ]
+}

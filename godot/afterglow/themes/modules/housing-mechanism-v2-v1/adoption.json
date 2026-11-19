@@ -1,0 +1,700 @@
+{
+  "manifest": "assets/art/r34-factory-v1/thumbnails/housing-mechanism-v2-v1/manifest.json",
+  "manifest_sha256": "e0238dfc7173ba757d711efc62d0a6bdd948d8de2f4c9027b211248e95d7aa94",
+  "entries": [
+    {
+      "definition_id": "r34.module.home_small_porch_v1.mechanism-v2",
+      "geometry_source_id": "r34.module.home_small_porch_v1",
+      "geometry_version": "r34.module.home_small_porch_v1.geometry-v2",
+      "label": "深廊小宅",
+      "family": "home",
+      "tier": "small",
+      "source_batch": "A/homes-v2-cutout02/actual-BuildingView-Metal",
+      "source_image_path": "work/r3-4/zone-production-v1/homes-v2-cutout02/r34_module_home_small_porch_v1_mechanism-v2-q1-cutout.png",
+      "source_image_sha256": "4e736a06d572c0f6c32569fa8b2e0d367c54b18f0d3f080e3ea88aa631154e8c",
+      "source_manifest_sha256": "471e002af096b8758d4ebee661e13b35b319afaf8d21bd5e1c0e6fecea12b8e4",
+      "source_qualification_sha256": "6ccb84a5f6df9386029aa5904a53f05e74b2f5f18920fddf161ad5d7c1da27fa",
+      "source_snapshot_sha256": "416a45bf61eff714a0487d0e5887614289e3d6ce275cfe2c3fdd01756defc469",
+      "B_housing_source_manifest": "work/r34-bbb-zone-production-v1/housing-source01/manifest.json",
+      "B_housing_source_sha256": "01599d872d1bbcbd3ac0ebfb5f71860d39f6fd0d97386e1acfa9cee21f976def",
+      "quarter_turn": 1,
+      "source_camera_size": 12.0,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "source_actual_consumer": "module_service.append_instance -> building_view.entity_object + building_view.furniture (original workbench)",
+      "source_structures_count": 0,
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "assets/art/r34-factory-v1/thumbnails/housing-mechanism-v2-v1/home_small_porch_v1-mechanism-v2.png",
+      "sha256": "58f2a3652a31253b8c19998de086350edab54912bb1e26380c3bee1c2d7cfd8a",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        116,
+        137,
+        695,
+        646
+      ],
+      "resized_pixels": [
+        224,
+        197
+      ],
+      "canvas_offset_xy": [
+        16,
+        29
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        29,
+        16,
+        30
+      ],
+      "old_v1_comparison": {
+        "definition_id": "r34.module.home_small_porch_v1",
+        "geometry_version": "r34.module.home_small_porch_v1.geometry-v1",
+        "image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu03/home_small_porch_v1.png",
+        "sha256": "a79289b610da9ab5a887402fa73f08e8ae5622ac8cb7147c64a0e52c24569ffa",
+        "new_actual_source_png_differs": true,
+        "new_thumbnail_file_differs": true
+      },
+      "status": "image-QA-ready; actual UI adoption and package remain separately evidenced",
+      "processing": "Exact new-source Alpha bbox; premultiplied LANCZOS proportional downsample; centered transparent 256 canvas; 8px invisible RGB dilation; no repaint, recolor, new contents or geometry changes.",
+      "target": "godot/afterglow/themes/modules/housing-mechanism-v2-v1/home_small_porch_v1-mechanism-v2.png",
+      "target_sha256": "58f2a3652a31253b8c19998de086350edab54912bb1e26380c3bee1c2d7cfd8a"
+    },
+    {
+      "definition_id": "r34.module.home_small_annex_v1.mechanism-v2",
+      "geometry_source_id": "r34.module.home_small_annex_v1",
+      "geometry_version": "r34.module.home_small_annex_v1.geometry-v2",
+      "label": "侧厢小宅",
+      "family": "home",
+      "tier": "small",
+      "source_batch": "A/homes-v2-cutout02/actual-BuildingView-Metal",
+      "source_image_path": "work/r3-4/zone-production-v1/homes-v2-cutout02/r34_module_home_small_annex_v1_mechanism-v2-q1-cutout.png",
+      "source_image_sha256": "0a7b000653afe6714b5298d380f8a1cbec55b295d6e95fcb3c5210c65df34a09",
+      "source_manifest_sha256": "471e002af096b8758d4ebee661e13b35b319afaf8d21bd5e1c0e6fecea12b8e4",
+      "source_qualification_sha256": "6ccb84a5f6df9386029aa5904a53f05e74b2f5f18920fddf161ad5d7c1da27fa",
+      "source_snapshot_sha256": "416a45bf61eff714a0487d0e5887614289e3d6ce275cfe2c3fdd01756defc469",
+      "B_housing_source_manifest": "work/r34-bbb-zone-production-v1/housing-source01/manifest.json",
+      "B_housing_source_sha256": "01599d872d1bbcbd3ac0ebfb5f71860d39f6fd0d97386e1acfa9cee21f976def",
+      "quarter_turn": 1,
+      "source_camera_size": 13.199999809265137,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "source_actual_consumer": "module_service.append_instance -> building_view.entity_object + building_view.furniture (original workbench)",
+      "source_structures_count": 0,
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "assets/art/r34-factory-v1/thumbnails/housing-mechanism-v2-v1/home_small_annex_v1-mechanism-v2.png",
+      "sha256": "3d43a5907af5b386b326831fbac165c61559529e24514cebac3d25949b877fd3",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        144,
+        136,
+        684,
+        639
+      ],
+      "resized_pixels": [
+        224,
+        209
+      ],
+      "canvas_offset_xy": [
+        16,
+        23
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        23,
+        16,
+        24
+      ],
+      "old_v1_comparison": {
+        "definition_id": "r34.module.home_small_annex_v1",
+        "geometry_version": "r34.module.home_small_annex_v1.geometry-v1",
+        "image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu03/home_small_annex_v1.png",
+        "sha256": "4aaebfe2458150a909dbc2c1e50b74a434a5f7c847031fcf6a82bdd92bb89af6",
+        "new_actual_source_png_differs": true,
+        "new_thumbnail_file_differs": true
+      },
+      "status": "image-QA-ready; actual UI adoption and package remain separately evidenced",
+      "processing": "Exact new-source Alpha bbox; premultiplied LANCZOS proportional downsample; centered transparent 256 canvas; 8px invisible RGB dilation; no repaint, recolor, new contents or geometry changes.",
+      "target": "godot/afterglow/themes/modules/housing-mechanism-v2-v1/home_small_annex_v1-mechanism-v2.png",
+      "target_sha256": "3d43a5907af5b386b326831fbac165c61559529e24514cebac3d25949b877fd3"
+    },
+    {
+      "definition_id": "r34.module.home_small_court_v1.mechanism-v2",
+      "geometry_source_id": "r34.module.home_small_court_v1",
+      "geometry_version": "r34.module.home_small_court_v1.geometry-v2",
+      "label": "灶院小宅",
+      "family": "home",
+      "tier": "small",
+      "source_batch": "A/homes-v2-cutout02/actual-BuildingView-Metal",
+      "source_image_path": "work/r3-4/zone-production-v1/homes-v2-cutout02/r34_module_home_small_court_v1_mechanism-v2-q1-cutout.png",
+      "source_image_sha256": "f525054596b270b9185f333a7d305def1d0c49554a396f9baff78d493c780692",
+      "source_manifest_sha256": "471e002af096b8758d4ebee661e13b35b319afaf8d21bd5e1c0e6fecea12b8e4",
+      "source_qualification_sha256": "6ccb84a5f6df9386029aa5904a53f05e74b2f5f18920fddf161ad5d7c1da27fa",
+      "source_snapshot_sha256": "416a45bf61eff714a0487d0e5887614289e3d6ce275cfe2c3fdd01756defc469",
+      "B_housing_source_manifest": "work/r34-bbb-zone-production-v1/housing-source01/manifest.json",
+      "B_housing_source_sha256": "01599d872d1bbcbd3ac0ebfb5f71860d39f6fd0d97386e1acfa9cee21f976def",
+      "quarter_turn": 1,
+      "source_camera_size": 14.850000381469727,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "source_actual_consumer": "module_service.append_instance -> building_view.entity_object + building_view.furniture (original workbench)",
+      "source_structures_count": 0,
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "assets/art/r34-factory-v1/thumbnails/housing-mechanism-v2-v1/home_small_court_v1-mechanism-v2.png",
+      "sha256": "3d9ee13f6739df4ba9eac1288001eb86e3439e8eaa9f49d2c09319878cae529c",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        110,
+        137,
+        687,
+        632
+      ],
+      "resized_pixels": [
+        224,
+        192
+      ],
+      "canvas_offset_xy": [
+        16,
+        32
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        32,
+        16,
+        32
+      ],
+      "old_v1_comparison": {
+        "definition_id": "r34.module.home_small_court_v1",
+        "geometry_version": "r34.module.home_small_court_v1.geometry-v1",
+        "image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu03/home_small_court_v1.png",
+        "sha256": "d3174eb30b809478df076a7493ea25e4e5341a3f64851cc3b0acf02f3e763288",
+        "new_actual_source_png_differs": true,
+        "new_thumbnail_file_differs": true
+      },
+      "status": "image-QA-ready; actual UI adoption and package remain separately evidenced",
+      "processing": "Exact new-source Alpha bbox; premultiplied LANCZOS proportional downsample; centered transparent 256 canvas; 8px invisible RGB dilation; no repaint, recolor, new contents or geometry changes.",
+      "target": "godot/afterglow/themes/modules/housing-mechanism-v2-v1/home_small_court_v1-mechanism-v2.png",
+      "target_sha256": "3d9ee13f6739df4ba9eac1288001eb86e3439e8eaa9f49d2c09319878cae529c"
+    },
+    {
+      "definition_id": "r34.module.home_medium_long_v1.mechanism-v2",
+      "geometry_source_id": "r34.module.home_medium_long_v1",
+      "geometry_version": "r34.module.home_medium_long_v1.geometry-v2",
+      "label": "连廊长宅",
+      "family": "home",
+      "tier": "medium",
+      "source_batch": "A/homes-v2-cutout02/actual-BuildingView-Metal",
+      "source_image_path": "work/r3-4/zone-production-v1/homes-v2-cutout02/r34_module_home_medium_long_v1_mechanism-v2-q1-cutout.png",
+      "source_image_sha256": "414e60994d80efa5dce46d37518aaf3a254d94ced397791b508a4c76ad53b8e7",
+      "source_manifest_sha256": "471e002af096b8758d4ebee661e13b35b319afaf8d21bd5e1c0e6fecea12b8e4",
+      "source_qualification_sha256": "6ccb84a5f6df9386029aa5904a53f05e74b2f5f18920fddf161ad5d7c1da27fa",
+      "source_snapshot_sha256": "416a45bf61eff714a0487d0e5887614289e3d6ce275cfe2c3fdd01756defc469",
+      "B_housing_source_manifest": "work/r34-bbb-zone-production-v1/housing-source01/manifest.json",
+      "B_housing_source_sha256": "01599d872d1bbcbd3ac0ebfb5f71860d39f6fd0d97386e1acfa9cee21f976def",
+      "quarter_turn": 1,
+      "source_camera_size": 18.149999618530273,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "source_actual_consumer": "module_service.append_instance -> building_view.entity_object + building_view.furniture (original workbench)",
+      "source_structures_count": 0,
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "assets/art/r34-factory-v1/thumbnails/housing-mechanism-v2-v1/home_medium_long_v1-mechanism-v2.png",
+      "sha256": "52f648d37b4347f5bbf6723d3b34678f4a30779c6f189e845540a03703355bf6",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        137,
+        166,
+        658,
+        609
+      ],
+      "resized_pixels": [
+        224,
+        190
+      ],
+      "canvas_offset_xy": [
+        16,
+        33
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        33,
+        16,
+        33
+      ],
+      "old_v1_comparison": {
+        "definition_id": "r34.module.home_medium_long_v1",
+        "geometry_version": "r34.module.home_medium_long_v1.geometry-v1",
+        "image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu03/home_medium_long_v1.png",
+        "sha256": "a9d960c747316cb85091136786d7e960db41cd0d966d12aebc2833978fa0b5ee",
+        "new_actual_source_png_differs": true,
+        "new_thumbnail_file_differs": true
+      },
+      "status": "image-QA-ready; actual UI adoption and package remain separately evidenced",
+      "processing": "Exact new-source Alpha bbox; premultiplied LANCZOS proportional downsample; centered transparent 256 canvas; 8px invisible RGB dilation; no repaint, recolor, new contents or geometry changes.",
+      "target": "godot/afterglow/themes/modules/housing-mechanism-v2-v1/home_medium_long_v1-mechanism-v2.png",
+      "target_sha256": "52f648d37b4347f5bbf6723d3b34678f4a30779c6f189e845540a03703355bf6"
+    },
+    {
+      "definition_id": "r34.module.home_medium_corner_v1.mechanism-v2",
+      "geometry_source_id": "r34.module.home_medium_corner_v1",
+      "geometry_version": "r34.module.home_medium_corner_v1.geometry-v2",
+      "label": "折角合宅",
+      "family": "home",
+      "tier": "medium",
+      "source_batch": "A/homes-v2-cutout02/actual-BuildingView-Metal",
+      "source_image_path": "work/r3-4/zone-production-v1/homes-v2-cutout02/r34_module_home_medium_corner_v1_mechanism-v2-q1-cutout.png",
+      "source_image_sha256": "3da38e82dd6abe484183168a979ddf3c02d3b963a9d4443f4523b7e9e4188790",
+      "source_manifest_sha256": "471e002af096b8758d4ebee661e13b35b319afaf8d21bd5e1c0e6fecea12b8e4",
+      "source_qualification_sha256": "6ccb84a5f6df9386029aa5904a53f05e74b2f5f18920fddf161ad5d7c1da27fa",
+      "source_snapshot_sha256": "416a45bf61eff714a0487d0e5887614289e3d6ce275cfe2c3fdd01756defc469",
+      "B_housing_source_manifest": "work/r34-bbb-zone-production-v1/housing-source01/manifest.json",
+      "B_housing_source_sha256": "01599d872d1bbcbd3ac0ebfb5f71860d39f6fd0d97386e1acfa9cee21f976def",
+      "quarter_turn": 1,
+      "source_camera_size": 18.149999618530273,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "source_actual_consumer": "module_service.append_instance -> building_view.entity_object + building_view.furniture (original workbench)",
+      "source_structures_count": 0,
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "assets/art/r34-factory-v1/thumbnails/housing-mechanism-v2-v1/home_medium_corner_v1-mechanism-v2.png",
+      "sha256": "682f1881d9cf6fdfa0f54b75fae985279831c844555bf3abe286e56c2193b9f0",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        105,
+        192,
+        691,
+        630
+      ],
+      "resized_pixels": [
+        224,
+        167
+      ],
+      "canvas_offset_xy": [
+        16,
+        44
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        44,
+        16,
+        45
+      ],
+      "old_v1_comparison": {
+        "definition_id": "r34.module.home_medium_corner_v1",
+        "geometry_version": "r34.module.home_medium_corner_v1.geometry-v1",
+        "image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu03/home_medium_corner_v1.png",
+        "sha256": "cbe9f2a11b048e6afe46a734432aa3abe11bef9f0ef6111c06f7c0afa4b3f719",
+        "new_actual_source_png_differs": true,
+        "new_thumbnail_file_differs": true
+      },
+      "status": "image-QA-ready; actual UI adoption and package remain separately evidenced",
+      "processing": "Exact new-source Alpha bbox; premultiplied LANCZOS proportional downsample; centered transparent 256 canvas; 8px invisible RGB dilation; no repaint, recolor, new contents or geometry changes.",
+      "target": "godot/afterglow/themes/modules/housing-mechanism-v2-v1/home_medium_corner_v1-mechanism-v2.png",
+      "target_sha256": "682f1881d9cf6fdfa0f54b75fae985279831c844555bf3abe286e56c2193b9f0"
+    },
+    {
+      "definition_id": "r34.module.home_medium_twin_v1.mechanism-v2",
+      "geometry_source_id": "r34.module.home_medium_twin_v1",
+      "geometry_version": "r34.module.home_medium_twin_v1.geometry-v2",
+      "label": "双脊联宅",
+      "family": "home",
+      "tier": "medium",
+      "source_batch": "A/homes-v2-cutout02/actual-BuildingView-Metal",
+      "source_image_path": "work/r3-4/zone-production-v1/homes-v2-cutout02/r34_module_home_medium_twin_v1_mechanism-v2-q1-cutout.png",
+      "source_image_sha256": "c15c545a31e09f0bbe8fe210222aaf39c7d025fa6613ff451e0df3d350f3e86a",
+      "source_manifest_sha256": "471e002af096b8758d4ebee661e13b35b319afaf8d21bd5e1c0e6fecea12b8e4",
+      "source_qualification_sha256": "6ccb84a5f6df9386029aa5904a53f05e74b2f5f18920fddf161ad5d7c1da27fa",
+      "source_snapshot_sha256": "416a45bf61eff714a0487d0e5887614289e3d6ce275cfe2c3fdd01756defc469",
+      "B_housing_source_manifest": "work/r34-bbb-zone-production-v1/housing-source01/manifest.json",
+      "B_housing_source_sha256": "01599d872d1bbcbd3ac0ebfb5f71860d39f6fd0d97386e1acfa9cee21f976def",
+      "quarter_turn": 1,
+      "source_camera_size": 19.799999237060547,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "source_actual_consumer": "module_service.append_instance -> building_view.entity_object + building_view.furniture (original workbench)",
+      "source_structures_count": 0,
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "assets/art/r34-factory-v1/thumbnails/housing-mechanism-v2-v1/home_medium_twin_v1-mechanism-v2.png",
+      "sha256": "31a4f9ab1e7f352424b3a7454189655c3792198906b3a2589d546672b100e79e",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        124,
+        178,
+        678,
+        618
+      ],
+      "resized_pixels": [
+        224,
+        178
+      ],
+      "canvas_offset_xy": [
+        16,
+        39
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        39,
+        16,
+        39
+      ],
+      "old_v1_comparison": {
+        "definition_id": "r34.module.home_medium_twin_v1",
+        "geometry_version": "r34.module.home_medium_twin_v1.geometry-v1",
+        "image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu03/home_medium_twin_v1.png",
+        "sha256": "8801b57bde9c1a1c66b7060429188fc87b2b22f4dcd7d68dbdaf00836fc1a415",
+        "new_actual_source_png_differs": true,
+        "new_thumbnail_file_differs": true
+      },
+      "status": "image-QA-ready; actual UI adoption and package remain separately evidenced",
+      "processing": "Exact new-source Alpha bbox; premultiplied LANCZOS proportional downsample; centered transparent 256 canvas; 8px invisible RGB dilation; no repaint, recolor, new contents or geometry changes.",
+      "target": "godot/afterglow/themes/modules/housing-mechanism-v2-v1/home_medium_twin_v1-mechanism-v2.png",
+      "target_sha256": "31a4f9ab1e7f352424b3a7454189655c3792198906b3a2589d546672b100e79e"
+    },
+    {
+      "definition_id": "r34.module.home_large_u_v1.mechanism-v2",
+      "geometry_source_id": "r34.module.home_large_u_v1",
+      "geometry_version": "r34.module.home_large_u_v1.geometry-v2",
+      "label": "三合院宅",
+      "family": "home",
+      "tier": "large",
+      "source_batch": "A/homes-v2-cutout02/actual-BuildingView-Metal",
+      "source_image_path": "work/r3-4/zone-production-v1/homes-v2-cutout02/r34_module_home_large_u_v1_mechanism-v2-q1-cutout.png",
+      "source_image_sha256": "45313e13e385d81ea605495269e1da972efd0828b76f550970fa1fc5d51b29df",
+      "source_manifest_sha256": "471e002af096b8758d4ebee661e13b35b319afaf8d21bd5e1c0e6fecea12b8e4",
+      "source_qualification_sha256": "6ccb84a5f6df9386029aa5904a53f05e74b2f5f18920fddf161ad5d7c1da27fa",
+      "source_snapshot_sha256": "416a45bf61eff714a0487d0e5887614289e3d6ce275cfe2c3fdd01756defc469",
+      "B_housing_source_manifest": "work/r34-bbb-zone-production-v1/housing-source01/manifest.json",
+      "B_housing_source_sha256": "01599d872d1bbcbd3ac0ebfb5f71860d39f6fd0d97386e1acfa9cee21f976def",
+      "quarter_turn": 1,
+      "source_camera_size": 24.75,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "source_actual_consumer": "module_service.append_instance -> building_view.entity_object + building_view.furniture (original workbench)",
+      "source_structures_count": 0,
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "assets/art/r34-factory-v1/thumbnails/housing-mechanism-v2-v1/home_large_u_v1-mechanism-v2.png",
+      "sha256": "38ad7748a61869e36d37cf147bc95454f90ee7df249f396bb71756a57ef9984c",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        107,
+        160,
+        684,
+        615
+      ],
+      "resized_pixels": [
+        224,
+        177
+      ],
+      "canvas_offset_xy": [
+        16,
+        39
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        39,
+        16,
+        40
+      ],
+      "old_v1_comparison": {
+        "definition_id": "r34.module.home_large_u_v1",
+        "geometry_version": "r34.module.home_large_u_v1.geometry-v1",
+        "image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu03/home_large_u_v1.png",
+        "sha256": "9fa1bc6a0a1f415ac566780ca9d0dfbded5d1056ca72c6f077088eed3b8bba80",
+        "new_actual_source_png_differs": true,
+        "new_thumbnail_file_differs": true
+      },
+      "status": "image-QA-ready; actual UI adoption and package remain separately evidenced",
+      "processing": "Exact new-source Alpha bbox; premultiplied LANCZOS proportional downsample; centered transparent 256 canvas; 8px invisible RGB dilation; no repaint, recolor, new contents or geometry changes.",
+      "target": "godot/afterglow/themes/modules/housing-mechanism-v2-v1/home_large_u_v1-mechanism-v2.png",
+      "target_sha256": "38ad7748a61869e36d37cf147bc95454f90ee7df249f396bb71756a57ef9984c"
+    },
+    {
+      "definition_id": "r34.module.home_large_double_v1.mechanism-v2",
+      "geometry_source_id": "r34.module.home_large_double_v1",
+      "geometry_version": "r34.module.home_large_double_v1.geometry-v2",
+      "label": "两进院宅",
+      "family": "home",
+      "tier": "large",
+      "source_batch": "A/homes-v2-cutout02/actual-BuildingView-Metal",
+      "source_image_path": "work/r3-4/zone-production-v1/homes-v2-cutout02/r34_module_home_large_double_v1_mechanism-v2-q1-cutout.png",
+      "source_image_sha256": "57a84927809e2995f387e45593479d390c5ceb8cbccfe287db665112011960bb",
+      "source_manifest_sha256": "471e002af096b8758d4ebee661e13b35b319afaf8d21bd5e1c0e6fecea12b8e4",
+      "source_qualification_sha256": "6ccb84a5f6df9386029aa5904a53f05e74b2f5f18920fddf161ad5d7c1da27fa",
+      "source_snapshot_sha256": "416a45bf61eff714a0487d0e5887614289e3d6ce275cfe2c3fdd01756defc469",
+      "B_housing_source_manifest": "work/r34-bbb-zone-production-v1/housing-source01/manifest.json",
+      "B_housing_source_sha256": "01599d872d1bbcbd3ac0ebfb5f71860d39f6fd0d97386e1acfa9cee21f976def",
+      "quarter_turn": 1,
+      "source_camera_size": 26.399999618530273,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "source_actual_consumer": "module_service.append_instance -> building_view.entity_object + building_view.furniture (original workbench)",
+      "source_structures_count": 0,
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "assets/art/r34-factory-v1/thumbnails/housing-mechanism-v2-v1/home_large_double_v1-mechanism-v2.png",
+      "sha256": "f155e01ead6dd3b5c03fe61a0e82455d7a4fa0f4854016aba55bcefcdb269bae",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        93,
+        158,
+        700,
+        617
+      ],
+      "resized_pixels": [
+        224,
+        169
+      ],
+      "canvas_offset_xy": [
+        16,
+        43
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        43,
+        16,
+        44
+      ],
+      "old_v1_comparison": {
+        "definition_id": "r34.module.home_large_double_v1",
+        "geometry_version": "r34.module.home_large_double_v1.geometry-v1",
+        "image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu03/home_large_double_v1.png",
+        "sha256": "48ab1df438acc76918e3d9cbe2363a14545269359b7008ac000b83927f0c076c",
+        "new_actual_source_png_differs": true,
+        "new_thumbnail_file_differs": true
+      },
+      "status": "image-QA-ready; actual UI adoption and package remain separately evidenced",
+      "processing": "Exact new-source Alpha bbox; premultiplied LANCZOS proportional downsample; centered transparent 256 canvas; 8px invisible RGB dilation; no repaint, recolor, new contents or geometry changes.",
+      "target": "godot/afterglow/themes/modules/housing-mechanism-v2-v1/home_large_double_v1-mechanism-v2.png",
+      "target_sha256": "f155e01ead6dd3b5c03fe61a0e82455d7a4fa0f4854016aba55bcefcdb269bae"
+    },
+    {
+      "definition_id": "r34.module.home_large_lodge_v1.mechanism-v2",
+      "geometry_source_id": "r34.module.home_large_lodge_v1",
+      "geometry_version": "r34.module.home_large_lodge_v1.geometry-v2",
+      "label": "乡村宿舍",
+      "family": "home",
+      "tier": "large",
+      "source_batch": "A/homes-v2-cutout02/actual-BuildingView-Metal",
+      "source_image_path": "work/r3-4/zone-production-v1/homes-v2-cutout02/r34_module_home_large_lodge_v1_mechanism-v2-q1-cutout.png",
+      "source_image_sha256": "283cd644fd6f1af3a2588387f34e5a15327c4a55cf94066e5d245536cf9785db",
+      "source_manifest_sha256": "471e002af096b8758d4ebee661e13b35b319afaf8d21bd5e1c0e6fecea12b8e4",
+      "source_qualification_sha256": "6ccb84a5f6df9386029aa5904a53f05e74b2f5f18920fddf161ad5d7c1da27fa",
+      "source_snapshot_sha256": "416a45bf61eff714a0487d0e5887614289e3d6ce275cfe2c3fdd01756defc469",
+      "B_housing_source_manifest": "work/r34-bbb-zone-production-v1/housing-source01/manifest.json",
+      "B_housing_source_sha256": "01599d872d1bbcbd3ac0ebfb5f71860d39f6fd0d97386e1acfa9cee21f976def",
+      "quarter_turn": 1,
+      "source_camera_size": 28.049999237060547,
+      "source_camera_offset": [
+        24,
+        29,
+        31
+      ],
+      "source_viewport": [
+        768,
+        768
+      ],
+      "source_actual_consumer": "module_service.append_instance -> building_view.entity_object + building_view.furniture (original workbench)",
+      "source_structures_count": 0,
+      "same_pixels_per_meter": false,
+      "visual_quality_accepted": false,
+      "gameplay_accepted": false,
+      "image_path": "assets/art/r34-factory-v1/thumbnails/housing-mechanism-v2-v1/home_large_lodge_v1-mechanism-v2.png",
+      "sha256": "848c19f7e226f5f21bb9ca3e8a27388b8d7017033cd59034f4fbb27adad8c00e",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "color_space": "sRGB",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "tileable": false,
+      "source_crop_xyxy": [
+        144,
+        143,
+        677,
+        623
+      ],
+      "resized_pixels": [
+        224,
+        202
+      ],
+      "canvas_offset_xy": [
+        16,
+        27
+      ],
+      "safe_margins_ltrb_px": [
+        16,
+        27,
+        16,
+        27
+      ],
+      "old_v1_comparison": {
+        "definition_id": "r34.module.home_large_lodge_v1",
+        "geometry_version": "r34.module.home_large_lodge_v1.geometry-v1",
+        "image_path": "assets/art/r34-factory-v1/thumbnails/architecture30-gpu03/home_large_lodge_v1.png",
+        "sha256": "9a8f6049f8b1d0442b6a70cbef4c3d0565bea1477883b9ccb8cec088aa0c515d",
+        "new_actual_source_png_differs": true,
+        "new_thumbnail_file_differs": true
+      },
+      "status": "image-QA-ready; actual UI adoption and package remain separately evidenced",
+      "processing": "Exact new-source Alpha bbox; premultiplied LANCZOS proportional downsample; centered transparent 256 canvas; 8px invisible RGB dilation; no repaint, recolor, new contents or geometry changes.",
+      "target": "godot/afterglow/themes/modules/housing-mechanism-v2-v1/home_large_lodge_v1-mechanism-v2.png",
+      "target_sha256": "848c19f7e226f5f21bb9ca3e8a27388b8d7017033cd59034f4fbb27adad8c00e"
+    }
+  ],
+  "scope": "Exact source PNG additive adoption, no import/export/package/OS/VA acceptance"
+}

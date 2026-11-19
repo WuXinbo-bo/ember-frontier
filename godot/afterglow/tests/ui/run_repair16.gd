@@ -1,0 +1,103 @@
+extends "res://tests/ui/run_controls15.gd"
+## Actual normal15 naturally acquired supply checkpoint, unchanged on disk.
+## Native Viewport button -> authority auto approach -> real project -> UI hold.
+const Conditions=preload("res://scripts/presentation/factory_view.gd")
+const P=preload("res://scripts/ui/ui_projection.gd")
+func card(id:String)->Node:
+	for candidate:Node in ui._body.find_children("*","VBoxContainer",true,false):
+		if candidate.get_meta("ui_restoration_card","")==id:return candidate
+	return null
+func construction(id:String)->Dictionary:
+	return F.instance(runtime.factory_page_snapshot("player","factory_module",id),id).get("visuals",{}).get("construction",{})
+func run()->void:
+	var args:=OS.get_cmdline_user_args();output=args[0];DirAccess.make_dir_recursive_absolute(output)
+	var original:String=FileAccess.get_file_as_string(args[1]);var decoded:Dictionary=Store.decode(original)
+	check("unchanged naturally acquired real checkpoint decodes",decoded.get("ok",false))
+	if not decoded.get("ok",false):return finish()
+	root.size=Vector2i(1280,800);root.content_scale_size=root.size
+	host=ControlsHost.new();root.add_child(host)
+	var made:Dictionary=host._assemble(decoded.capture)
+	check("same Native authority assembles natural supplies",made.get("ok",false),made.get("reason"))
+	if not made.get("ok",false):return finish()
+	runtime=made.runtime;router=RealRouter.new();router.controls_path=output+"/controls.json";host.add_child(router);router.configure(runtime)
+	ui=Mount.mount(host,runtime,router);await flush()
+	var id:String="r34:generated:RH-HOME:village-warehouse"
+	ui.open_panel("factory_module",id);await flush()
+	var restore:Node=card(id)
+	check("actual warehouse has primary restoration card",restore!=null)
+	if restore==null:return finish()
+	var text:String=text_in(restore)
+	check("primary explains actual required and carried quantities",text.contains("需要") and text.contains("随身可用") and text.contains("锤子"),text)
+	check("beginner restoration has no tool picker or effective-labor jargon",restore.find_children("*","OptionButton",true,false).is_empty() and not text.contains("有效劳动") and not text.contains("来源库存"))
+	var initial:Dictionary=runtime.capture_checkpoint()
+	var cost:Dictionary=F.instance(ui.factory,id).get("restoration_requirements",{}).get("cost",{})
+	var position:Dictionary=runtime.actor("player").duplicate(true)
+	if not await click_key("factory:command:module.restore:"+id):return finish()
+	check("one actual native click closes modal and starts real authority intent",ui.pages.is_empty() and runtime.actor("player").get("intent") is Dictionary and not runtime.is_paused(),runtime.actor("player").get("intent"))
+	ui.refresh();await flush()
+	check("walk-to-repair HUD shows actual approach",ui._scene_hint.text.contains("正在走向修复位置"),ui._scene_hint.text)
+	if not await click_key("hud:repair:details"):return finish()
+	check("persistent construction entry opens actual building",ui.pages.back().get("subject")==id)
+	if not await click_key("factory:command:module.held:"+id):return finish()
+	ui.close_panels();await flush()
+	var paused_position:Dictionary=runtime.actor("player")
+	for index:int in 5:runtime.tick(0.1)
+	check("pause also stops real approach movement",is_equal_approx(float(paused_position.x),float(runtime.actor("player").x)) and is_equal_approx(float(paused_position.z),float(runtime.actor("player").z)))
+	ui.open_panel("factory_module",id);await flush()
+	if not await click_key("factory:command:module.held:"+id):return finish()
+	var source:Dictionary=runtime.actor("player").pack.duplicate(true)
+	var arrived:=false
+	for index:int in 1800:
+		runtime.tick(0.1)
+		var intent:Variant=runtime.actor("player").get("intent")
+		if intent is Dictionary and intent.get("owner")=="modules":arrived=true;break
+		if index%120==0:await process_frame
+	check("auto route reaches real module construction",arrived,runtime.actor("player").get("intent"))
+	if not arrived:return finish()
+	check("player physically moved before construction",not is_equal_approx(float(position.x),float(runtime.actor("player").x)) or not is_equal_approx(float(position.z),float(runtime.actor("player").z)))
+	for index:int in 15:runtime.tick(0.1)
+	ui.refresh();await flush()
+	var partial:Dictionary=construction(id)
+	check("real project progressed before finish",float(partial.get("progress_seconds",0))>0 and float(partial.get("progress_seconds",0))<float(partial.get("duration_seconds",0)),partial)
+	check("scene HUD shows real repair state and percent",ui._scene_hint.text.contains("修复") and ui._scene_hint.text.contains("%"),ui._scene_hint.text)
+	var view:=Conditions.new();host.add_child(view);view.configure(runtime);view.set_process(false)
+	var projected:Node3D=view._conditions.get(id)
+	check("actual module project drives visible temporary staging",projected!=null and projected.statistics().staging_visible and projected.statistics().construction_stage==1,view.statistics())
+	ui.open_panel("factory_module",id);await flush()
+	var button_id:String="factory:command:module.held:"+id
+	if not await click_key(button_id):return finish()
+	check("native pause changes actual held flag",runtime.actor("player").intent.held==false)
+	ui.close_panels();await flush()
+	var frozen:Dictionary=construction(id)
+	for index:int in 12:runtime.tick(0.1)
+	ui.refresh();await flush();view.sync()
+	check("paused construction makes no progress",is_equal_approx(float(frozen.progress_seconds),float(construction(id).progress_seconds)))
+	check("paused real stage remains but no labor animation",projected.statistics().staging_visible and not projected.statistics().construction_active)
+	check("paused HUD is readable",ui._scene_hint.text.contains("暂停"),ui._scene_hint.text)
+	ui.open_panel("factory_module",id);await flush()
+	var continuing:Button=keyed(button_id)
+	check("same native action now offers continue",continuing!=null and continuing.text=="继续修复")
+	if not await click_key(button_id):return finish()
+	check("continue actually resumes same project",runtime.actor("player").intent.held==true and construction(id).project_id==partial.project_id)
+	for index:int in 5:runtime.tick(0.1)
+	check("continued authority labor advances",float(construction(id).progress_seconds)>float(frozen.progress_seconds))
+	for index:int in 100:runtime.tick(0.1)
+	view.sync()
+	check("real middle labor changes village facade before finish",projected.statistics().construction_stage==2 and projected._facade.visible)
+	for index:int in 60:runtime.tick(0.1)
+	view.sync()
+	check("real late labor advances facade stage",projected.statistics().construction_stage==3)
+	for index:int in 100:
+		if runtime.actor("player").get("intent")==null:break
+		runtime.tick(0.1)
+	view.sync();ui.open_panel("factory_module",id);await flush()
+	var final:Dictionary=F.instance(ui.factory,id)
+	check("completed real warehouse removes restoration primary",final.get("status")=="operational" and keyed("factory:command:module.restore:"+id)==null)
+	check("owner completion clears temporary facade and work",not projected.statistics().staging_visible and not projected.statistics().construction_active)
+	check("actual completion consumes finite cost once",cost.keys().all(func(item:String):return is_equal_approx(float(source.get(item,0))-float(cost[item]),float(runtime.actor("player").pack.get(item,0)))))
+	check("no source file mutation",FileAccess.get_file_as_string(args[1])==original)
+	var encoded:Dictionary=Store.encode(runtime.capture_checkpoint())
+	if encoded.get("ok",false):
+		var file:=FileAccess.open(output+"/actual-ui-repair16.native.json",FileAccess.WRITE);file.store_string(encoded.text);file.close()
+	observed.append({"original_checkpoint":args[1],"module_id":id,"actor_start":position,"project":construction(id),"scope":"actual same-owner Viewport start/pause/continue; original natural checkpoint read-only; no economic injection, OS/GPU/FPS or final-completion qualification"})
+	finish()

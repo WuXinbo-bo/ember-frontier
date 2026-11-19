@@ -1,0 +1,801 @@
+{
+  "schema": "afterglow-bbb-rural-layout-and-surfaces-v2",
+  "status": "G0 proposal only: no runtime registration, Godot scene, Gameplay Pass or visual acceptance",
+  "source_site": "outputs/r3.3-ccc-evidence/rural-layout-g0.json",
+  "parti": "Arrival road -> visible courtyard gate -> usable old house -> short shed/forest supply loop -> return with real water, bedding and repair materials. Village departures and returns use the same physical entrances.",
+  "coordinates": "metres, Y up, XZ plan; proposed world origin matches C site; old city IDs never reused",
+  "metrics": {
+    "source": "game/core/source/world/spatial/SpatialAgent.ts and structures/StructureCatalog.ts",
+    "agent_radius": 0.26,
+    "agent_height": 1.8,
+    "max_step": 0.55,
+    "module_pitch": 2,
+    "wall_thickness": 0.2,
+    "wall_height": 3.2,
+    "storey_pitch": 3.4,
+    "door_leaf_width": 1.6,
+    "door_leaf_height": 2.2,
+    "stairs_width": 2.2,
+    "stairs_run": 9.6,
+    "stairs_rise": 3.4,
+    "proposed_clear_circulation": 2,
+    "validation": "These are source metrics and proposed clear reservations, not a claim of Godot movement/companion/camera acceptance. Use exact sweep and full exit checks after G0 release."
+  },
+  "home": {
+    "id": "rural:v1:RH-HOME:old-house",
+    "site_envelope_xz": [
+      4,
+      24,
+      28,
+      50
+    ],
+    "footprint_xz": [
+      8,
+      26,
+      24,
+      38
+    ],
+    "storeys": [
+      {
+        "id": "rural:v1:RH-HOME:old-house:ground",
+        "elevation": 0
+      }
+    ],
+    "roof": {
+      "elevation": 3.4,
+      "kind": "shared supported roof modules",
+      "finish": "roof_tile",
+      "note": "No inaccessible decorative second storey. Roof panels and state attachments obey actual support and cutaway. Internal load-bearing walls divide the span; source support validation remains mandatory."
+    },
+    "doors": [
+      {
+        "id_suffix": "front-door",
+        "wall_center": [
+          19,
+          0,
+          38
+        ],
+        "quarter_turn": 0,
+        "use_centers": [
+          [
+            20.15,
+            0,
+            37.5
+          ],
+          [
+            20.15,
+            0,
+            38.5
+          ]
+        ],
+        "reserve_xz": [
+          17.8,
+          36.2,
+          21.4,
+          39.8
+        ],
+        "use": "courtyard entrance; full original swing and body clear checks"
+      },
+      {
+        "id_suffix": "rear-door",
+        "wall_center": [
+          11,
+          0,
+          26
+        ],
+        "quarter_turn": 0,
+        "use_centers": [
+          [
+            12.15,
+            0,
+            25.5
+          ],
+          [
+            12.15,
+            0,
+            26.5
+          ]
+        ],
+        "reserve_xz": [
+          9.8,
+          24.2,
+          13.4,
+          27.8
+        ],
+        "use": "shed loop; no forced quest lock"
+      },
+      {
+        "id_suffix": "living-kitchen-door",
+        "wall_center": [
+          16,
+          0,
+          35
+        ],
+        "quarter_turn": 1,
+        "use": "opening in x=16 internal support wall"
+      },
+      {
+        "id_suffix": "kitchen-sleep-door",
+        "wall_center": [
+          13,
+          0,
+          32
+        ],
+        "quarter_turn": 0,
+        "use": "opening in western z=32 support wall"
+      },
+      {
+        "id_suffix": "living-sleep-door",
+        "wall_center": [
+          16,
+          0,
+          29
+        ],
+        "quarter_turn": 1,
+        "use": "second internal connection; avoids furnishing a single choke point"
+      }
+    ],
+    "windows": [
+      {
+        "center": [
+          21,
+          0,
+          26
+        ],
+        "quarter_turn": 0
+      },
+      {
+        "center": [
+          11,
+          0,
+          38
+        ],
+        "quarter_turn": 0
+      },
+      {
+        "center": [
+          21,
+          0,
+          38
+        ],
+        "quarter_turn": 0
+      },
+      {
+        "center": [
+          8,
+          0,
+          29
+        ],
+        "quarter_turn": 1
+      },
+      {
+        "center": [
+          8,
+          0,
+          35
+        ],
+        "quarter_turn": 1
+      },
+      {
+        "center": [
+          24,
+          0,
+          29
+        ],
+        "quarter_turn": 1
+      },
+      {
+        "center": [
+          24,
+          0,
+          35
+        ],
+        "quarter_turn": 1
+      }
+    ],
+    "zones": [
+      {
+        "id": "sleep",
+        "xz": [
+          8.2,
+          26.2,
+          15.8,
+          31.8
+        ],
+        "use": "existing bed-frame asset plus actual prepared/unprepared sleeping facts; no free recovery before actual preparation"
+      },
+      {
+        "id": "kitchen-water",
+        "xz": [
+          8.2,
+          32.2,
+          15.8,
+          37.8
+        ],
+        "use": "existing domestic kitchen/table and finite real water container; quantities come from A facts"
+      },
+      {
+        "id": "living-storage",
+        "xz": [
+          16.2,
+          26.2,
+          23.8,
+          37.8
+        ],
+        "use": "readable arrival/return aisle; storage along west/north perimeter, not on door swing or actor-use pads"
+      },
+      {
+        "id": "courtyard",
+        "xz": [
+          8,
+          40,
+          28,
+          48
+        ],
+        "use": "entrance repair, actual hauling and later building reservations; keep first-night scene sparse"
+      }
+    ],
+    "objects": [
+      {
+        "id_suffix": "sleeping-place",
+        "position": [
+          10.5,
+          0,
+          28.5
+        ],
+        "asset_id": "city_bed",
+        "initial": "unprepared",
+        "fact_owner": "A sleeping/quest facts; B physical placement and action access"
+      },
+      {
+        "id_suffix": "kitchen",
+        "position": [
+          11,
+          0,
+          33.4
+        ],
+        "definition_id": "domestic_kitchen",
+        "initial": "existing worn furniture, not an infinite food source"
+      },
+      {
+        "id_suffix": "table",
+        "position": [
+          10.5,
+          0,
+          36
+        ],
+        "definition_id": "domestic_table"
+      },
+      {
+        "id_suffix": "storage",
+        "position": [
+          22.5,
+          0,
+          28.5
+        ],
+        "definition_id": "cabinet",
+        "initial": "finite actual stock; searched/ownership remains authoritative"
+      },
+      {
+        "id_suffix": "water-placement",
+        "position": [
+          14.5,
+          0,
+          36
+        ],
+        "asset_id": "city_water_jug",
+        "initial": "candidate physical container position; finite water only through real items/stock"
+      },
+      {
+        "id_suffix": "workbench-reservation",
+        "position": [
+          21,
+          0,
+          44
+        ],
+        "definition_id": "workbench",
+        "initial": "not built; no visible or usable free workbench in RH-Q01 after-state",
+        "build_later": "RH-Q05 with actual knowledge, tools, materials and construction"
+      }
+    ],
+    "gate": {
+      "center": [
+        28,
+        0,
+        40
+      ],
+      "axis": "z",
+      "clear_opening": 2,
+      "reserve_xz": [
+        26,
+        38,
+        30,
+        42
+      ],
+      "initial": "repairable damaged entry with passable approach; source catalog lacks dedicated fence/gate definition, must adapt existing wall/door rules in B after G0, not fake a quest-button repair"
+    },
+    "paths": [
+      {
+        "id": "arrival",
+        "points": [
+          [
+            32,
+            0,
+            44
+          ],
+          [
+            32,
+            0,
+            40
+          ],
+          [
+            28.5,
+            0,
+            41.15
+          ],
+          [
+            27.5,
+            0,
+            41.15
+          ],
+          [
+            22,
+            0,
+            40
+          ],
+          [
+            20.15,
+            0,
+            39
+          ],
+          [
+            20.15,
+            0,
+            38.5
+          ]
+        ],
+        "clear_width": 2,
+        "note": "Action-pad approach only. Actual traversal passes through gate/door opening after real open; use pads are offset from the physical opening and are not teleport destinations."
+      },
+      {
+        "id": "shed-loop",
+        "points": [
+          [
+            12.15,
+            0,
+            25.5
+          ],
+          [
+            12.15,
+            0,
+            23
+          ],
+          [
+            11,
+            0,
+            22
+          ]
+        ],
+        "clear_width": 2
+      },
+      {
+        "id": "forest-return",
+        "points": [
+          [
+            44,
+            0,
+            27
+          ],
+          [
+            36,
+            0,
+            27
+          ],
+          [
+            32,
+            0,
+            27
+          ],
+          [
+            32,
+            0,
+            40
+          ],
+          [
+            28,
+            0,
+            40
+          ]
+        ],
+        "clear_width": 2
+      }
+    ],
+    "reference_states": {
+      "arrival": "Same house/roof/windows/yard/path/tree placement. Damaged entrance and unprepared sleep slot; finite containers and scattered existing household belongings. No automatic supply or workbench.",
+      "first_night_ready": "Same geometry and camera. One real entrance repair, prepared sleeping place, moved real water/storage items. Only authoritative completed work changes surfaces and state attachments. No new farm, free workbench or radio installation."
+    }
+  },
+  "other_buildings": [
+    {
+      "id": "rural:v1:RH-HOME:shed",
+      "footprint_xz": [
+        6,
+        15,
+        14,
+        21
+      ],
+      "storeys": 1,
+      "wall_height": 3.2,
+      "roof_elevation": 3.4,
+      "entry": [
+        11,
+        0,
+        21
+      ],
+      "usage": "finite material storage, not an initial fully working station",
+      "door_quarter_turn": 0,
+      "use_centers": [
+        [
+          12.15,
+          0,
+          20.5
+        ],
+        [
+          12.15,
+          0,
+          21.5
+        ]
+      ]
+    },
+    {
+      "id": "rural:v1:RH-VILLAGE:store",
+      "footprint_xz": [
+        12,
+        -22,
+        20,
+        -14
+      ],
+      "storeys": 1,
+      "wall_height": 3.2,
+      "roof_elevation": 3.4,
+      "entry": [
+        20,
+        0,
+        -19
+      ],
+      "usage": "reuse commercial aisle/counter grammar; real searchable supplies and repair clue",
+      "door_quarter_turn": 1,
+      "use_centers": [
+        [
+          20.5,
+          0,
+          -17.85
+        ],
+        [
+          19.5,
+          0,
+          -17.85
+        ]
+      ]
+    },
+    {
+      "id": "rural:v1:RH-VILLAGE:repair-shop",
+      "footprint_xz": [
+        42,
+        -42,
+        54,
+        -32
+      ],
+      "storeys": 1,
+      "wall_height": 3.2,
+      "roof_elevation": 3.4,
+      "entry": [
+        42,
+        0,
+        -37
+      ],
+      "usage": "actual work surface/tool and record locations; A controls help/consent and reachable alternative route",
+      "door_quarter_turn": 1,
+      "use_centers": [
+        [
+          42.5,
+          0,
+          -35.85
+        ],
+        [
+          41.5,
+          0,
+          -35.85
+        ]
+      ]
+    },
+    {
+      "id": "rural:v1:RH-VILLAGE:neighbor-home",
+      "footprint_xz": [
+        10,
+        -52,
+        20,
+        -42
+      ],
+      "storeys": 1,
+      "wall_height": 3.2,
+      "roof_elevation": 3.4,
+      "entry": [
+        20,
+        0,
+        -49
+      ],
+      "usage": "contact and escort to home along actual route; no teleporting companion",
+      "door_quarter_turn": 1,
+      "use_centers": [
+        [
+          20.5,
+          0,
+          -47.85
+        ],
+        [
+          19.5,
+          0,
+          -47.85
+        ]
+      ]
+    }
+  ],
+  "art_surface_contract": {
+    "status": "B G0 reuse choice; not a claim that assets are bound, visible or accepted in Godot",
+    "channels": "Reuse existing RGB albedo and native alpha decals; no invented normal/roughness maps or generated assets",
+    "art03": [
+      {
+        "surface": "door/window frame and lintel",
+        "geometry_meters": "0.07-0.09 wide visible jambs, real 0.07 depth; existing 2m wall module and 1.6x2.2 door opening",
+        "reuse": [
+          "wood_floor",
+          "painted_metal"
+        ],
+        "grain": "local U along beam/jamb; scale in metres, do not stretch one full PNG across every strip",
+        "coverage": "wood_floor 2x2m; painted_metal 1x1m",
+        "new_image_gap": "none proven; use current textures before asking for a new atlas"
+      },
+      {
+        "surface": "wall crown/skirting/cutaway cap",
+        "geometry_meters": "existing crown y3.08..3.2; skirting y0.025..0.14; actual 0.2m wall cut cap",
+        "reuse": [
+          "cream_plaster",
+          "concrete",
+          "wood_floor"
+        ],
+        "coverage": "plaster/wood 2x2m, concrete 1.6x1.6m",
+        "new_image_gap": "none proven; avoid painting artificial edge shadows into albedo"
+      },
+      {
+        "surface": "roof fascia/eaves and underside",
+        "geometry_meters": "fascia height0.09, visible shallow projection0.035 following each real roof panel; no doorway cover",
+        "reuse": [
+          "roof_tile",
+          "zinc",
+          "painted_metal",
+          "wood_floor"
+        ],
+        "coverage": "tile/zinc/wood 2x2m, metal1x1m",
+        "new_image_gap": "none proven; rural roof geometry/overhang requires B implementation and support checks, not a new image"
+      },
+      {
+        "surface": "stairs tread/nosing/rail (legacy city)",
+        "geometry_meters": "24 physical treads, rise3.4/run9.6/width2.2; existing 0.025m nosing and 0.085m handrail",
+        "reuse": [
+          "plywood",
+          "painted_metal",
+          "wood_floor"
+        ],
+        "coverage": "plywood/metal1x1m, wood2x2m",
+        "new_image_gap": "none proven; do not change legacy footprint to simplify migration"
+      }
+    ],
+    "art04": [
+      {
+        "object": "bed, kitchen, table, chair, storage container, water jug, repair kit",
+        "reuse": "existing dedicated GLB + embedded/dedicated atlas pairs; preserve matching UV and original bytes",
+        "new_image_gap": "none proven; do not paste generic16-cell atlas over existing dedicated models",
+        "purpose": "finite actual sleeping/storage/tool/water facts and physical use points"
+      },
+      {
+        "object": "books/records on actual stock or station",
+        "reuse": "book_atlas",
+        "uv": "existing4x4 grid;8px inset in each256px cell of1024 image; preserve current cell mapping",
+        "coverage": "0.14-0.28m book faces; use existing side treatment",
+        "new_image_gap": "none proven; real record count/visibility still required"
+      },
+      {
+        "object": "finite grocery packages",
+        "reuse": "grocery_atlas",
+        "uv": "existing4x4/8px protected cell; preserve brand-free source mapping",
+        "coverage": "0.12-0.35m package surfaces, no full-image repeat",
+        "new_image_gap": "none proven; do not create visual stock not present in facts"
+      },
+      {
+        "object": "curtain/bedding/threshold textile",
+        "reuse": "textile_atlas",
+        "uv": "existing4x4/8px color-extension cells; per-cell crop; room-specific curtain cells4/5 and threshold12 from source recipe",
+        "coverage": "existing curtain gathered faces1.08..2.39m; floor textile1.2x1.8m; mat0.75x0.45m",
+        "new_image_gap": "none proven; final mip/filter/bleed validation owned by B/A in actual client"
+      }
+    ],
+    "fallback_atlas_if_actual_gap": {
+      "status": "not requested for production; only a contract if an actual surface gap is proven",
+      "image_size": [
+        1024,
+        1024
+      ],
+      "grid": [
+        4,
+        4
+      ],
+      "padding_px": 8,
+      "cell_interior_px": 240,
+      "channels": "RGB opaque",
+      "requirements": "B must list exact named missing cells, metres and grain before art produces them; no speculative16-object content pack"
+    },
+    "state_decals": "threshold/wall_dust as ordinary surface wear; repaired_plaster/board_patch only from actual repair ledger; sawdust only during/after real wood work; moved_trace only at recorded previous location. Remove or rebuild attachments with parent edit/reload, preserving unknown-room privacy."
+  },
+  "unresolved": [
+    "A fixed camera/cutaway direction and exact start supplies/quest facts; no camera approval invented",
+    "C exact terrain foundation, two-region corridor and extension IDs; registration only after A module release",
+    "B after module release shared-grammar generation, gate/sleep/water physical adaptation, full support/body/door sweep and all-resident exit checks",
+    "Godot Gameplay Pass and actual scene/asset binding; preliminary numerical footprint fit is not acceptance"
+  ],
+  "platform": "macOS native first per explicit total-control relay; Web later; neutral metre coordinates retained",
+  "site_alignment": {
+    "status": "B requested connector reservations against C G0 site; not yet adopted into C generation or Gameplay Pass",
+    "source_site": "outputs/r3.3-ccc-evidence/rural-layout-g0.json",
+    "reason": "C corridors terminate at site envelopes; B actual building footprints are inset. Door use pads also offset 1.15m along local wall. Preserve full physical connection rather than assume envelope edge equals entrance.",
+    "requested_connectors": [
+      {
+        "id": "gate",
+        "region_id": "RH-HOME",
+        "reservation_xz": [
+          26,
+          38,
+          34,
+          42.5
+        ],
+        "points": [
+          [
+            32,
+            0,
+            40
+          ],
+          [
+            28.5,
+            0,
+            41.15
+          ],
+          [
+            27.5,
+            0,
+            41.15
+          ]
+        ],
+        "note": "Reserve full gate sweep/use-pad and courtyard arrival; C former z39..41 strip alone does not cover action-pad body."
+      },
+      {
+        "id": "shed",
+        "region_id": "RH-HOME",
+        "reservation_xz": [
+          8,
+          21.5,
+          13.5,
+          26.5
+        ],
+        "points": [
+          [
+            12.15,
+            0,
+            25.5
+          ],
+          [
+            12.15,
+            0,
+            23
+          ],
+          [
+            12.15,
+            0,
+            21.5
+          ]
+        ],
+        "note": "Joins rear-door and shed action pads; C former x8..10 strip misses actual rear use x12.15."
+      },
+      {
+        "id": "store",
+        "region_id": "RH-VILLAGE",
+        "reservation_xz": [
+          19.5,
+          -19,
+          34,
+          -16.5
+        ],
+        "points": [
+          [
+            32,
+            0,
+            -18
+          ],
+          [
+            24,
+            0,
+            -18
+          ],
+          [
+            20.5,
+            0,
+            -17.85
+          ]
+        ],
+        "note": "Extends C envelope-edge x24 to real exterior door side x20.5."
+      },
+      {
+        "id": "repair",
+        "region_id": "RH-VILLAGE",
+        "reservation_xz": [
+          30,
+          -37,
+          42.5,
+          -34.5
+        ],
+        "points": [
+          [
+            32,
+            0,
+            -36
+          ],
+          [
+            40,
+            0,
+            -36
+          ],
+          [
+            41.5,
+            0,
+            -35.85
+          ]
+        ],
+        "note": "Extends C endpoint x40 to west-facing real exterior pad x41.5."
+      },
+      {
+        "id": "neighbor",
+        "region_id": "RH-VILLAGE",
+        "reservation_xz": [
+          19.5,
+          -49,
+          34,
+          -46.5
+        ],
+        "points": [
+          [
+            32,
+            0,
+            -48
+          ],
+          [
+            24,
+            0,
+            -48
+          ],
+          [
+            20.5,
+            0,
+            -47.85
+          ]
+        ],
+        "note": "Extends C endpoint x24 to actual east-facing exterior pad x20.5."
+      }
+    ],
+    "checks_after_module_release": [
+      "C finite terrain is flat and known throughout floor contact and all reserved corridors",
+      "B wall/frame geometry leaves body clearance, both pads, full leaf sweep and actual opening traverse",
+      "B/A test exact two-person paths and full resident egress using real geometry/facts",
+      "No tree/solid scatter/furniture/fence is registered inside corridors or sweeps; derived decoration respects same masks",
+      "A fixed orthographic camera and first-night states approved separately; numeric envelope fit does not prove playability"
+    ]
+  }
+}

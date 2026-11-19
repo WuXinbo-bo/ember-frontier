@@ -1,0 +1,231 @@
+{
+  "source_manifest": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/world-hints-01/thumbnails02/thumbnails/manifest.json",
+  "items": [
+    {
+      "id": "r34.module.fuel_woodshop",
+      "name": "燃料木作坊",
+      "geometry_version": "r34.module.fuel_woodshop.geometry-v1",
+      "view": "front",
+      "eye": [
+        0.9,
+        0.72,
+        -1.0
+      ],
+      "png": "res://themes/modules/fuel_woodshop-front.png",
+      "sha256": "44ed839b2566311d44ea33a2f262bef66624e4625e2e1db560f702999682c0f5",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        21,
+        40,
+        235,
+        216
+      ],
+      "safe_margin_at_least_16": true,
+      "scope": "catalog-built reference; empty buffers, idle mechanical pose; not a player-built or operating instance; textures extracted from immutable22 imported resources",
+      "source": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/world-hints-01/thumbnails02/thumbnails/fuel_woodshop-front.png",
+      "adoption": "exact CPU-derived geometry input; final ART/OS/VA pending"
+    },
+    {
+      "id": "r34.module.woodshop_long_v2",
+      "name": "长棚燃料木作坊",
+      "geometry_version": "r34.module.woodshop_long_v2.geometry-v1",
+      "view": "front",
+      "eye": [
+        0.9,
+        0.72,
+        -1.0
+      ],
+      "png": "res://themes/modules/woodshop_long_v2-front.png",
+      "sha256": "005bd50c47aaf0bced479a0252db58ba5406e093a77fd4623b3c15fc385b22a0",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        21,
+        34,
+        235,
+        222
+      ],
+      "safe_margin_at_least_16": true,
+      "scope": "catalog-built reference; empty buffers, idle mechanical pose; not a player-built or operating instance; textures extracted from immutable22 imported resources",
+      "source": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/world-hints-01/thumbnails02/thumbnails/woodshop_long_v2-front.png",
+      "adoption": "exact CPU-derived geometry input; final ART/OS/VA pending"
+    },
+    {
+      "id": "r34.module.warehouse_long_v2",
+      "name": "长排仓棚",
+      "geometry_version": "r34.module.warehouse_long_v2.geometry-v1",
+      "view": "front",
+      "eye": [
+        0.9,
+        0.72,
+        -1.0
+      ],
+      "png": "res://themes/modules/warehouse_long_v2-front.png",
+      "sha256": "964095775f7f4af9d73f6f0bd665742f04dd7ddc1d74b4bfeeb401056f6c1c2c",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        21,
+        36,
+        235,
+        220
+      ],
+      "safe_margin_at_least_16": true,
+      "scope": "catalog-built reference; empty buffers, idle mechanical pose; not a player-built or operating instance; textures extracted from immutable22 imported resources",
+      "source": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/world-hints-01/thumbnails02/thumbnails/warehouse_long_v2-front.png",
+      "adoption": "exact CPU-derived geometry input; final ART/OS/VA pending"
+    },
+    {
+      "id": "r34.module.warehouse_court_v2",
+      "name": "转角院仓",
+      "geometry_version": "r34.module.warehouse_court_v2.geometry-v1",
+      "view": "front",
+      "eye": [
+        0.9,
+        0.72,
+        -1.0
+      ],
+      "png": "res://themes/modules/warehouse_court_v2-front.png",
+      "sha256": "546fb4c3baa09bde2e008c2c965734323296552654c2b89a482aba6bde14e4c5",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        21,
+        49,
+        235,
+        207
+      ],
+      "safe_margin_at_least_16": true,
+      "scope": "catalog-built reference; empty buffers, idle mechanical pose; not a player-built or operating instance; textures extracted from immutable22 imported resources",
+      "source": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/world-hints-01/thumbnails02/thumbnails/warehouse_court_v2-front.png",
+      "adoption": "exact CPU-derived geometry input; final ART/OS/VA pending"
+    },
+    {
+      "id": "r34.module.repair_shed_v2",
+      "name": "临路手工修理棚",
+      "geometry_version": "r34.module.repair_shed_v2.geometry-v1",
+      "view": "front",
+      "eye": [
+        0.9,
+        0.72,
+        -1.0
+      ],
+      "png": "res://themes/modules/repair_shed_v2-front.png",
+      "sha256": "242e070891cd2f8ecc20a25b0315596dbb6576985951c65f4317d37438270080",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        21,
+        27,
+        235,
+        229
+      ],
+      "safe_margin_at_least_16": true,
+      "scope": "catalog-built reference; empty buffers, idle mechanical pose; not a player-built or operating instance; textures extracted from immutable22 imported resources",
+      "source": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/world-hints-01/thumbnails02/thumbnails/repair_shed_v2-front.png",
+      "adoption": "exact CPU-derived geometry input; final ART/OS/VA pending"
+    },
+    {
+      "id": "r34.module.home_court_v2",
+      "name": "小院旧宅",
+      "geometry_version": "r34.module.home_court_v2.geometry-v1",
+      "view": "front",
+      "eye": [
+        0.9,
+        0.72,
+        -1.0
+      ],
+      "png": "res://themes/modules/home_court_v2-front.png",
+      "sha256": "7914c0d6be5b4a20707dfa6b3a937804cc5f1d29046255f1a5061ccbd546eb39",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        21,
+        44,
+        235,
+        212
+      ],
+      "safe_margin_at_least_16": true,
+      "scope": "catalog-built reference; empty buffers, idle mechanical pose; not a player-built or operating instance; textures extracted from immutable22 imported resources",
+      "source": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/world-hints-01/thumbnails02/thumbnails/home_court_v2-front.png",
+      "adoption": "exact CPU-derived geometry input; final ART/OS/VA pending"
+    },
+    {
+      "id": "r34.module.home_roadside_v2",
+      "name": "临路歇脚宅",
+      "geometry_version": "r34.module.home_roadside_v2.geometry-v1",
+      "view": "front",
+      "eye": [
+        0.9,
+        0.72,
+        -1.0
+      ],
+      "png": "res://themes/modules/home_roadside_v2-front.png",
+      "sha256": "9fd3481c08daaa6317b1d410f3990b5d04f84a84b8197c395cd07bd60593bfa3",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        21,
+        22,
+        235,
+        234
+      ],
+      "safe_margin_at_least_16": true,
+      "scope": "catalog-built reference; empty buffers, idle mechanical pose; not a player-built or operating instance; textures extracted from immutable22 imported resources",
+      "source": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/world-hints-01/thumbnails02/thumbnails/home_roadside_v2-front.png",
+      "adoption": "exact CPU-derived geometry input; final ART/OS/VA pending"
+    },
+    {
+      "id": "r34.module.supply_roadside_v2",
+      "name": "村路补给点",
+      "geometry_version": "r34.module.supply_roadside_v2.geometry-v1",
+      "view": "front",
+      "eye": [
+        0.9,
+        0.72,
+        -1.0
+      ],
+      "png": "res://themes/modules/supply_roadside_v2-front.png",
+      "sha256": "f93efc5da34439e10201591735619cbd47aa936b2e146200d060c8a334076c35",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_bbox": [
+        21,
+        30,
+        235,
+        226
+      ],
+      "safe_margin_at_least_16": true,
+      "scope": "catalog-built reference; empty buffers, idle mechanical pose; not a player-built or operating instance; textures extracted from immutable22 imported resources",
+      "source": "/Users/wxbbo/Documents/末日余晖4/work/r3-4-ddd/world-hints-01/thumbnails02/thumbnails/supply_roadside_v2-front.png",
+      "adoption": "exact CPU-derived geometry input; final ART/OS/VA pending"
+    }
+  ],
+  "historical_input_manifest": true,
+  "current_ui_bindings": "res://themes/ui-art-bindings.json"
+}

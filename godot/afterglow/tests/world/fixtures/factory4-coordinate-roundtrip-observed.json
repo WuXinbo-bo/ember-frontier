@@ -1,0 +1,1305 @@
+{
+  "schema": "r34-observed-coordinate-roundtrip-v1",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "policy": "A20261116: exact103 indexed plan leaves plus82 indexed actual tree:drops bounds.min.x leaves. FLOAT->FLOAT, abs<1e-12,ULP<=1,Vector2/3 components exact. No other entity/global allowance.",
+  "evidence_manifest": "outputs/r3.4-ccc-evidence/actual-coordinate-roundtrip-01/manifest.json",
+  "evidence_results_sha256": "363b3b7270185cb0ee6c75a0e4ef1056619ff9bf36a7a0e7f85bf05d2d325541",
+  "rows": [
+    {
+      "seed": 713,
+      "region": "RH-HOME",
+      "path": "plan.parcels[0].foundation.pad_rectangles[1][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 713,
+      "region": "RH-HOME",
+      "path": "plan.parcels[1].foundation.pad_rectangles[2][1]",
+      "before_bits_le": "0000004033330fc0",
+      "after_bits_le": "0100004033330fc0"
+    },
+    {
+      "seed": 713,
+      "region": "RH-HOME",
+      "path": "plan.parcels[1].foundation.pad_rectangles[3][3]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 713,
+      "region": "RH-HOME",
+      "path": "plan.grade_controls[4].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "RH-HOME",
+      "path": "plan.grade_controls[5].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "RH-VILLAGE",
+      "path": "plan.parcels[0].foundation.pad_rectangles[1][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 713,
+      "region": "R34:-2:0",
+      "path": "plan.grade_controls[1].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:-1:0",
+      "path": "plan.grade_controls[4].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:0",
+      "path": "plan.grade_controls[4].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:0",
+      "path": "plan.grade_controls[5].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:2:0",
+      "path": "plan.grade_controls[2].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:-2:1",
+      "path": "plan.grade_controls[1].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:-1:1",
+      "path": "plan.grade_controls[2].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:1",
+      "path": "plan.paths[11].points[0].z",
+      "before_bits_le": "0000009a99395740",
+      "after_bits_le": "0100009a99395740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].footprint.max.y",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].foundation.pad_rectangles[1][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].foundation.pad_rectangles[2][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].pad.xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].entrance_ports[2].position.z",
+      "before_bits_le": "0000009a99395740",
+      "after_bits_le": "0100009a99395740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].entrance_ports[2].use_points[0].z",
+      "before_bits_le": "0000009a99395740",
+      "after_bits_le": "0100009a99395740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].use_reservations[1].bounds.max.z",
+      "before_bits_le": "9a99193333b35640",
+      "after_bits_le": "9b99193333b35640"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].use_reservations[2].bounds.min.z",
+      "before_bits_le": "6666660000205740",
+      "after_bits_le": "6766660000205740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:1",
+      "path": "plan.grade_controls[2].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:1",
+      "path": "plan.grade_controls[3].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:1",
+      "path": "plan.paths[11].points[0].z",
+      "before_bits_le": "0000009a99395740",
+      "after_bits_le": "0100009a99395740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:1",
+      "path": "plan.parcels[0].footprint.max.y",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:1",
+      "path": "plan.parcels[0].foundation.pad_rectangles[1][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:1",
+      "path": "plan.parcels[0].foundation.pad_rectangles[2][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:1",
+      "path": "plan.parcels[0].pad.xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:1",
+      "path": "plan.parcels[0].entrance_ports[2].position.z",
+      "before_bits_le": "0000009a99395740",
+      "after_bits_le": "0100009a99395740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:1",
+      "path": "plan.parcels[0].entrance_ports[2].use_points[0].z",
+      "before_bits_le": "0000009a99395740",
+      "after_bits_le": "0100009a99395740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:1",
+      "path": "plan.parcels[0].use_reservations[1].bounds.max.z",
+      "before_bits_le": "9a99193333b35640",
+      "after_bits_le": "9b99193333b35640"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:1",
+      "path": "plan.parcels[0].use_reservations[2].bounds.min.z",
+      "before_bits_le": "6666660000205740",
+      "after_bits_le": "6766660000205740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:1",
+      "path": "plan.grade_controls[2].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:1",
+      "path": "plan.grade_controls[3].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:2:1",
+      "path": "plan.grade_controls[1].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:-2:2",
+      "path": "plan.grade_controls[0].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:-1:2",
+      "path": "plan.grade_controls[0].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:2",
+      "path": "plan.parcels[0].footprint.max.y",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:2",
+      "path": "plan.parcels[0].foundation.pad_rectangles[1][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:2",
+      "path": "plan.parcels[0].foundation.pad_rectangles[2][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:2",
+      "path": "plan.grade_controls[0].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:0:2",
+      "path": "plan.grade_controls[1].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:2",
+      "path": "plan.grade_controls[0].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "R34:1:2",
+      "path": "plan.grade_controls[1].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "RH-HOME",
+      "path": "plan.parcels[0].foundation.pad_rectangles[1][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "RH-HOME",
+      "path": "plan.parcels[1].foundation.pad_rectangles[2][1]",
+      "before_bits_le": "0000004033330fc0",
+      "after_bits_le": "0100004033330fc0"
+    },
+    {
+      "seed": 2026,
+      "region": "RH-HOME",
+      "path": "plan.parcels[1].foundation.pad_rectangles[3][3]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "RH-HOME",
+      "path": "plan.grade_controls[5].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "RH-VILLAGE",
+      "path": "plan.parcels[0].foundation.pad_rectangles[1][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:1:-2",
+      "path": "plan.grade_controls[1].xz[3]",
+      "before_bits_le": "00000066668658c0",
+      "after_bits_le": "ffffff65668658c0"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:-2",
+      "path": "plan.paths[11].points[0].z",
+      "before_bits_le": "0000006666c658c0",
+      "after_bits_le": "ffffff6566c658c0"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:-2",
+      "path": "plan.parcels[0].footprint.max.y",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:-2",
+      "path": "plan.parcels[0].foundation.pad_rectangles[1][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:-2",
+      "path": "plan.parcels[0].foundation.pad_rectangles[2][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:-2",
+      "path": "plan.parcels[0].pad.xz[3]",
+      "before_bits_le": "00000066668658c0",
+      "after_bits_le": "ffffff65668658c0"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:-2",
+      "path": "plan.parcels[0].entrance_ports[2].position.z",
+      "before_bits_le": "0000006666c658c0",
+      "after_bits_le": "ffffff6566c658c0"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:-2",
+      "path": "plan.parcels[0].entrance_ports[2].use_points[0].z",
+      "before_bits_le": "0000006666c658c0",
+      "after_bits_le": "ffffff6566c658c0"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:-2",
+      "path": "plan.parcels[0].use_reservations[0].bounds.min.z",
+      "before_bits_le": "9a99193333335ac0",
+      "after_bits_le": "9b99193333335ac0"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:-2",
+      "path": "plan.parcels[0].use_reservations[1].bounds.max.z",
+      "before_bits_le": "6666e6cccc4c59c0",
+      "after_bits_le": "6566e6cccc4c59c0"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:-2",
+      "path": "plan.parcels[0].use_reservations[2].bounds.min.z",
+      "before_bits_le": "9a9999ffffdf58c0",
+      "after_bits_le": "999999ffffdf58c0"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:-2",
+      "path": "plan.grade_controls[1].xz[3]",
+      "before_bits_le": "00000066668658c0",
+      "after_bits_le": "ffffff65668658c0"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:-2",
+      "path": "plan.grade_controls[2].xz[3]",
+      "before_bits_le": "00000066668658c0",
+      "after_bits_le": "ffffff65668658c0"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:1:-1",
+      "path": "plan.parcels[0].footprint.max.y",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:1:-1",
+      "path": "plan.parcels[0].foundation.pad_rectangles[1][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:1:-1",
+      "path": "plan.parcels[0].foundation.pad_rectangles[2][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:1:-1",
+      "path": "plan.grade_controls[0].xz[3]",
+      "before_bits_le": "00000066668658c0",
+      "after_bits_le": "ffffff65668658c0"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:-1",
+      "path": "plan.grade_controls[0].xz[3]",
+      "before_bits_le": "00000066668658c0",
+      "after_bits_le": "ffffff65668658c0"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:-1",
+      "path": "plan.grade_controls[1].xz[3]",
+      "before_bits_le": "00000066668658c0",
+      "after_bits_le": "ffffff65668658c0"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:-2:0",
+      "path": "plan.grade_controls[2].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:-1:0",
+      "path": "plan.grade_controls[4].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:1:0",
+      "path": "plan.grade_controls[5].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:1:0",
+      "path": "plan.grade_controls[6].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:0",
+      "path": "plan.grade_controls[3].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:-2:1",
+      "path": "plan.grade_controls[1].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:-1:1",
+      "path": "plan.grade_controls[2].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:0:1",
+      "path": "plan.paths[11].points[0].z",
+      "before_bits_le": "0000009a99395740",
+      "after_bits_le": "0100009a99395740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].footprint.max.y",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].foundation.pad_rectangles[1][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].foundation.pad_rectangles[2][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].pad.xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].entrance_ports[2].position.z",
+      "before_bits_le": "0000009a99395740",
+      "after_bits_le": "0100009a99395740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].entrance_ports[2].use_points[0].z",
+      "before_bits_le": "0000009a99395740",
+      "after_bits_le": "0100009a99395740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].use_reservations[1].bounds.max.z",
+      "before_bits_le": "9a99193333b35640",
+      "after_bits_le": "9b99193333b35640"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:0:1",
+      "path": "plan.parcels[0].use_reservations[2].bounds.min.z",
+      "before_bits_le": "6666660000205740",
+      "after_bits_le": "6766660000205740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:0:1",
+      "path": "plan.grade_controls[2].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:1:1",
+      "path": "plan.grade_controls[2].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:1:1",
+      "path": "plan.grade_controls[3].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:1",
+      "path": "plan.paths[11].points[0].z",
+      "before_bits_le": "0000009a99395740",
+      "after_bits_le": "0100009a99395740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:1",
+      "path": "plan.parcels[0].footprint.max.y",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:1",
+      "path": "plan.parcels[0].foundation.pad_rectangles[1][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:1",
+      "path": "plan.parcels[0].foundation.pad_rectangles[2][2]",
+      "before_bits_le": "0000004033330f40",
+      "after_bits_le": "0100004033330f40"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:1",
+      "path": "plan.parcels[0].pad.xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:1",
+      "path": "plan.parcels[0].entrance_ports[2].position.z",
+      "before_bits_le": "0000009a99395740",
+      "after_bits_le": "0100009a99395740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:1",
+      "path": "plan.parcels[0].entrance_ports[2].use_points[0].z",
+      "before_bits_le": "0000009a99395740",
+      "after_bits_le": "0100009a99395740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:1",
+      "path": "plan.parcels[0].use_reservations[1].bounds.max.z",
+      "before_bits_le": "9a99193333b35640",
+      "after_bits_le": "9b99193333b35640"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:1",
+      "path": "plan.parcels[0].use_reservations[2].bounds.min.z",
+      "before_bits_le": "6666660000205740",
+      "after_bits_le": "6766660000205740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:2:1",
+      "path": "plan.grade_controls[1].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:-2:2",
+      "path": "plan.grade_controls[0].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:-1:2",
+      "path": "plan.grade_controls[0].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:0:2",
+      "path": "plan.grade_controls[0].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:1:2",
+      "path": "plan.grade_controls[0].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 2026,
+      "region": "R34:1:2",
+      "path": "plan.grade_controls[1].xz[3]",
+      "before_bits_le": "0000009a99795740",
+      "after_bits_le": "0100009a99795740"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:53:23:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:57:23:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:57:27:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:45:39:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:49:39:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64840",
+      "after_bits_le": "6666666666c64840"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:61:39:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:45:43:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:53:43:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:57:43:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:45:47:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:49:47:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64840",
+      "after_bits_le": "6666666666c64840"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:53:47:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:57:47:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:61:47:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:45:51:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:53:51:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:57:51:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:61:51:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:45:55:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:49:55:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64840",
+      "after_bits_le": "6666666666c64840"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:53:55:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:57:55:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:61:55:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:45:59:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:49:59:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64840",
+      "after_bits_le": "6666666666c64840"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:57:59:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:0:tree:61:59:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:45:23:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:57:23:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:61:23:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:57:27:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:61:27:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:57:31:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:45:35:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:49:35:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64840",
+      "after_bits_le": "6666666666c64840"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:53:35:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:49:47:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64840",
+      "after_bits_le": "6666666666c64840"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:53:47:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:57:47:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:61:47:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:49:51:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64840",
+      "after_bits_le": "6666666666c64840"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:53:51:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:57:51:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:61:51:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:45:55:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:49:55:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64840",
+      "after_bits_le": "6666666666c64840"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:53:55:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:57:55:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:61:55:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:45:59:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:53:59:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:57:59:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:-1:tree:61:59:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:45:23:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:57:23:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:61:23:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:45:35:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:49:35:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64840",
+      "after_bits_le": "6666666666c64840"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:53:35:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:57:35:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:45:39:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:53:39:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:57:39:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:61:39:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:49:43:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64840",
+      "after_bits_le": "6666666666c64840"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:53:43:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:49:47:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64840",
+      "after_bits_le": "6666666666c64840"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:53:47:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:57:47:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:61:47:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:45:51:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:49:51:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64840",
+      "after_bits_le": "6666666666c64840"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:53:51:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:57:51:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:61:51:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:45:55:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:57:55:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:61:55:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64e40",
+      "after_bits_le": "6666666666c64e40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:45:59:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64640",
+      "after_bits_le": "6666666666c64640"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:49:59:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64840",
+      "after_bits_le": "6666666666c64840"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:53:59:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64a40",
+      "after_bits_le": "6666666666c64a40"
+    },
+    {
+      "seed": 713,
+      "region": "@world",
+      "path": "world.entities.r34:713:0:1:tree:57:59:drops.bounds.min.x",
+      "before_bits_le": "6766666666c64c40",
+      "after_bits_le": "6666666666c64c40"
+    }
+  ],
+  "entity_evidence": "outputs/r3.4-ccc-evidence/actual-codec-identity-02/results.json"
+}

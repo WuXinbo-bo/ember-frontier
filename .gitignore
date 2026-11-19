@@ -14,3 +14,8 @@ node_modules/
 .env.*
 !.env.example
 *.log
+
+# Local Godot work products
+/.codegraph/
+/outputs/
+/work/

@@ -1,0 +1,27 @@
+{
+  "scope": "byte-identical reuse; no new art production",
+  "assets": [
+    {
+      "source": "public/art/living-world-v2/models/infected/infected_walker.glb",
+      "destination": "godot/afterglow/data/gameplay/actors/infected_walker.glb",
+      "sha256": "9d230d2dcbe64f6cacf8027c56b12fd5b764f27f97cca3c36cdd2c9473c69e7b"
+    },
+    {
+      "source": "public/art/map-world-v3/models/poi/poi_relay.glb",
+      "destination": "godot/afterglow/data/gameplay/poi/poi_relay.glb",
+      "sha256": "634a4de0c2ac6eb7585a07f3af9940b4b17de55d1f749a2ccd8fe58a9efb07e1",
+      "usage": "retained original shelter/antenna POI, rejected for tabletop radio; not instantiated"
+    },
+    {
+      "source": "public/art/city-life-r1-v1/models/states/r1_dropped_bundle.glb",
+      "destination": "godot/afterglow/data/gameplay/props/r1_dropped_bundle.glb",
+      "sha256": "f755823d7f2f4d76cd6603f4f11a30130c50b856ee83d7aa4f7e019ac12b3a24"
+    },
+    {
+      "source": "assets/art/rural-quality-r3-3-v1/images/a05_radio_panel_states.png",
+      "destination": "godot/afterglow/data/gameplay/radio-panel.png",
+      "sha256": "96a0818ccd453c806cf9e655bd8c86b2b26fe323d8d52eb98fac50526afaaa57",
+      "usage": "A05 actual radio state panel, four 256px cells, 8px guard; binding implemented, next formal package/VA pending"
+    }
+  ]
+}

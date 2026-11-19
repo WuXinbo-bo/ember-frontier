@@ -1,0 +1,174 @@
+{
+  "schema": "afterglow-ui-art-source-bindings-v1",
+  "scope": "accurate source images only; import/PCK/OS/VA follow A build receipts",
+  "items": [
+    {
+      "source": "assets/art/r34-factory-v1/portraits/ui-v1/r1_resident_commuter.png",
+      "destination": "godot/afterglow/themes/portraits/r1_resident_commuter.png",
+      "before_sha256": null,
+      "sha256": "ac6617614ddc6d5935e7bc4bc681060530cadc936c99d065685270d31284c523",
+      "mapping": "player",
+      "geometry_version": null,
+      "manifest": "assets/art/r34-factory-v1/portraits/ui-v1/manifest.json",
+      "manifest_sha256": "cb8c6aad1823447e8252ffd2b73221736a2b265f1cb72fed677cc49a6a8f9c92"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/portraits/ui-v1/r1_resident_neighbor.png",
+      "destination": "godot/afterglow/themes/portraits/r1_resident_neighbor.png",
+      "before_sha256": null,
+      "sha256": "a86305308f014ed0343a28e9e18c2b8aa37a7aa57f04fbcd323495d1fffeda05",
+      "mapping": "village-resident",
+      "geometry_version": null,
+      "manifest": "assets/art/r34-factory-v1/portraits/ui-v1/manifest.json",
+      "manifest_sha256": "cb8c6aad1823447e8252ffd2b73221736a2b265f1cb72fed677cc49a6a8f9c92"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/portraits/ui-v1/r1_resident_shopkeeper.png",
+      "destination": "godot/afterglow/themes/portraits/r1_resident_shopkeeper.png",
+      "before_sha256": null,
+      "sha256": "075066f6dea9bb7a89e79b8c0ee0e81d7a84d277bbab15b3ae6fe8c9aa9c9429",
+      "mapping": "repair-resident",
+      "geometry_version": null,
+      "manifest": "assets/art/r34-factory-v1/portraits/ui-v1/manifest.json",
+      "manifest_sha256": "cb8c6aad1823447e8252ffd2b73221736a2b265f1cb72fed677cc49a6a8f9c92"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-v1/fuel_woodshop.png",
+      "destination": "godot/afterglow/themes/modules/fuel_woodshop-front.png",
+      "before_sha256": "44ed839b2566311d44ea33a2f262bef66624e4625e2e1db560f702999682c0f5",
+      "sha256": "f2ff4e4859bdd32f44c882deb0550f85a5623988cf4ddca89c38015e7d4ef1de",
+      "mapping": "r34.module.fuel_woodshop",
+      "geometry_version": "r34.module.fuel_woodshop.geometry-v1",
+      "manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "manifest_sha256": "20ba669aefc8ae52ea965c912ebb03cfc9c0d72162d6e8321b0b68c94a4d5778"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-v1/woodshop_long_v2.png",
+      "destination": "godot/afterglow/themes/modules/woodshop_long_v2-front.png",
+      "before_sha256": "005bd50c47aaf0bced479a0252db58ba5406e093a77fd4623b3c15fc385b22a0",
+      "sha256": "1f44a70030f8b332bfc33dd05f5cec072b0571b905d5eedb93da4beeb5605637",
+      "mapping": "r34.module.woodshop_long_v2",
+      "geometry_version": "r34.module.woodshop_long_v2.geometry-v1",
+      "manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "manifest_sha256": "20ba669aefc8ae52ea965c912ebb03cfc9c0d72162d6e8321b0b68c94a4d5778"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-v1/warehouse_long_v2.png",
+      "destination": "godot/afterglow/themes/modules/warehouse_long_v2-front.png",
+      "before_sha256": "964095775f7f4af9d73f6f0bd665742f04dd7ddc1d74b4bfeeb401056f6c1c2c",
+      "sha256": "5d27da3ba148fc766f4b3220c7222067451dbde90410dd300d2c87be096fed12",
+      "mapping": "r34.module.warehouse_long_v2",
+      "geometry_version": "r34.module.warehouse_long_v2.geometry-v1",
+      "manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "manifest_sha256": "20ba669aefc8ae52ea965c912ebb03cfc9c0d72162d6e8321b0b68c94a4d5778"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-v1/warehouse_court_v2.png",
+      "destination": "godot/afterglow/themes/modules/warehouse_court_v2-front.png",
+      "before_sha256": "546fb4c3baa09bde2e008c2c965734323296552654c2b89a482aba6bde14e4c5",
+      "sha256": "99335af3f32c58bee10ac898c07dbdf47e4fb68b498101b0675b614e35df3a16",
+      "mapping": "r34.module.warehouse_court_v2",
+      "geometry_version": "r34.module.warehouse_court_v2.geometry-v1",
+      "manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "manifest_sha256": "20ba669aefc8ae52ea965c912ebb03cfc9c0d72162d6e8321b0b68c94a4d5778"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-v1/repair_shed_v2.png",
+      "destination": "godot/afterglow/themes/modules/repair_shed_v2-front.png",
+      "before_sha256": "242e070891cd2f8ecc20a25b0315596dbb6576985951c65f4317d37438270080",
+      "sha256": "4997e09824c63a5b9eff364bbd423830dc0fcdf061bc87a782d5cfcf3ea92bcd",
+      "mapping": "r34.module.repair_shed_v2",
+      "geometry_version": "r34.module.repair_shed_v2.geometry-v1",
+      "manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "manifest_sha256": "20ba669aefc8ae52ea965c912ebb03cfc9c0d72162d6e8321b0b68c94a4d5778"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-v1/home_court_v2.png",
+      "destination": "godot/afterglow/themes/modules/home_court_v2-front.png",
+      "before_sha256": "7914c0d6be5b4a20707dfa6b3a937804cc5f1d29046255f1a5061ccbd546eb39",
+      "sha256": "f864f5ea2d86a48c528766269b1fc83043bf9f894091c76897b199112f9ff06e",
+      "mapping": "r34.module.home_court_v2",
+      "geometry_version": "r34.module.home_court_v2.geometry-v1",
+      "manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "manifest_sha256": "20ba669aefc8ae52ea965c912ebb03cfc9c0d72162d6e8321b0b68c94a4d5778"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-v1/home_roadside_v2.png",
+      "destination": "godot/afterglow/themes/modules/home_roadside_v2-front.png",
+      "before_sha256": "9fd3481c08daaa6317b1d410f3990b5d04f84a84b8197c395cd07bd60593bfa3",
+      "sha256": "06dba81465141635d54dd18929c2bbd77f14aee37b4644831ab6999bf8a84a1a",
+      "mapping": "r34.module.home_roadside_v2",
+      "geometry_version": "r34.module.home_roadside_v2.geometry-v1",
+      "manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "manifest_sha256": "20ba669aefc8ae52ea965c912ebb03cfc9c0d72162d6e8321b0b68c94a4d5778"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-v1/supply_roadside_v2.png",
+      "destination": "godot/afterglow/themes/modules/supply_roadside_v2-front.png",
+      "before_sha256": "f93efc5da34439e10201591735619cbd47aa936b2e146200d060c8a334076c35",
+      "sha256": "b8323f8f3512cad11fdc632dacfc54f5e53bb0d7dc3724a795dcbc2c0ff6cd79",
+      "mapping": "r34.module.supply_roadside_v2",
+      "geometry_version": "r34.module.supply_roadside_v2.geometry-v1",
+      "manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "manifest_sha256": "20ba669aefc8ae52ea965c912ebb03cfc9c0d72162d6e8321b0b68c94a4d5778"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-v1/wt01_unknown.png",
+      "destination": "godot/afterglow/themes/water/WT01-unknown-front.png",
+      "before_sha256": "accb8f781b716c9e7bda54b3bd16aaa0f9fe05c16dd480982b703e5200e63092",
+      "sha256": "db76f7589fd3b270c57a4637c42b4ccff248a14c320e8530c8a6e01216737cf8",
+      "mapping": "WT01-unknown",
+      "geometry_version": "factory_water_view-d87147a0",
+      "manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "manifest_sha256": "20ba669aefc8ae52ea965c912ebb03cfc9c0d72162d6e8321b0b68c94a4d5778"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-v1/wt01_repaired.png",
+      "destination": "godot/afterglow/themes/water/WT01-repaired-front.png",
+      "before_sha256": "842b7e4772f7d01ae5da8e84dd177aa5f8bb3048bd7dcd63550b4f679caf4282",
+      "sha256": "72397fa9b0399b2de5be31fc1ddc16a73fb131744d0a35de2ae9ca08f93c8d12",
+      "mapping": "WT01-repaired",
+      "geometry_version": "factory_water_view-d87147a0",
+      "manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "manifest_sha256": "20ba669aefc8ae52ea965c912ebb03cfc9c0d72162d6e8321b0b68c94a4d5778"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-v1/wt01_empty.png",
+      "destination": "godot/afterglow/themes/water/WT01-empty-front.png",
+      "before_sha256": "aab7fc26b53bfb70f15a6720eb75acda61cf2068155d27b312dc7ca32fd06da5",
+      "sha256": "c80c81fcfea789cf5cb27c7a58ae8338cb54e94a9e0be5464ad6512cac4c5396",
+      "mapping": "WT01-empty",
+      "geometry_version": "factory_water_view-d87147a0",
+      "manifest": "assets/art/r34-factory-v1/thumbnails/ui-v1/manifest.json",
+      "manifest_sha256": "20ba669aefc8ae52ea965c912ebb03cfc9c0d72162d6e8321b0b68c94a4d5778"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-post23-v1/warehouse.png",
+      "destination": "godot/afterglow/themes/modules/warehouse-front.png",
+      "sha256": "0abc929bd357770dff862602d48962a0f5a7d280f54350f4a0112a3ea40a97c9",
+      "mapping": "r34.module.warehouse",
+      "geometry_version": "r34.module.warehouse.geometry-v1"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-post23-v1/hand_workshop.png",
+      "destination": "godot/afterglow/themes/modules/hand_workshop-front.png",
+      "sha256": "1137affd4546546b8d8f21ed36a8710c952820ebe65ac0d157be3a68dc06c242",
+      "mapping": "r34.module.hand_workshop",
+      "geometry_version": "r34.module.hand_workshop.geometry-v1"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-post23-v1/home_service.png",
+      "destination": "godot/afterglow/themes/modules/home_service-front.png",
+      "sha256": "a834878b6d728e0ae2f9569170001b0754258696a58b84a324a50c894a89d38b",
+      "mapping": "r34.module.home_service",
+      "geometry_version": "r34.module.home_service.geometry-v1"
+    },
+    {
+      "source": "assets/art/r34-factory-v1/thumbnails/ui-post23-v1/supply_rear_v3.png",
+      "destination": "godot/afterglow/themes/modules/supply_rear_v3-front.png",
+      "sha256": "b8323f8f3512cad11fdc632dacfc54f5e53bb0d7dc3724a795dcbc2c0ff6cd79",
+      "mapping": "r34.module.supply_rear_v3",
+      "geometry_version": "r34.module.supply_rear_v3.geometry-v1"
+    }
+  ]
+}

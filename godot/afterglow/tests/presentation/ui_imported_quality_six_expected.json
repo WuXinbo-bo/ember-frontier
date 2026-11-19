@@ -1,0 +1,153 @@
+{
+  "schema": "afterglow-imported-quality-six-increment-v1",
+  "pixel_contract": "Original imported-image oracle: base RGBA8, opaque RGBA scan-order SHA256 and separate complete alpha plane; transparent RGB ignored because Godot fix_alpha_border may change it.",
+  "provenance": "A-adopted formal ART source03 PNG/manifest only. No expected pixels from UI targets, ResourceLoader, old18 or four-image outputs.",
+  "manifest": {
+    "path": "assets/art/r34-factory-v1/thumbnails/ui-quality-v2-source03/manifest.json",
+    "sha256": "d85eaa6d0257ef90a0cfd11c9aea2234747ac5f64e72912fabf117ad3d4b8033"
+  },
+  "image_handoff": {
+    "path": "work/r3-4-art/catalog-quality-source03-v1/image-handoff.json",
+    "sha256": "08fd3a744ec615112bc0524b81817f348e57098a1cf506a1b11d302f480712f6"
+  },
+  "images": [
+    {
+      "kind": "module",
+      "id": "r34.module.home_court_v3",
+      "geometry_version": "r34.module.home_court_v3.geometry-v2",
+      "design_id": "BC05-courtyard-quality-v2",
+      "parent_definition_id": "r34.module.home_court_v2",
+      "resource_path": "res://themes/modules/home_court_v3-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-quality-v2-source03/home_court_v3.png",
+      "source_png_sha256": "6222737ad6e89eeae8683157b4cf69a550e0d5de875077881d7fb6f66d9ac113",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-quality-v2-source03/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 19555,
+      "opaque_rgba_sha256": "3d7a3e7ec9c945b760f519a76f6de2d0ebb41397f6c45fc814b33b18e6623f09",
+      "alpha_sha256": "7565c1ca40099e0c38c1a4d357b879852725c3b9b77f8465a756c215042736b8",
+      "alpha_bbox_xyxy": [
+        19,
+        33,
+        237,
+        213
+      ]
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.home_roadside_v3",
+      "geometry_version": "r34.module.home_roadside_v3.geometry-v2",
+      "design_id": "BC05-roadside-quality-v2",
+      "parent_definition_id": "r34.module.home_roadside_v2",
+      "resource_path": "res://themes/modules/home_roadside_v3-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-quality-v2-source03/home_roadside_v3.png",
+      "source_png_sha256": "9769e57fab35593ef20625a571cd4afc7f3c42ca3c3f9f0a128215d6e670abd7",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-quality-v2-source03/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 13171,
+      "opaque_rgba_sha256": "2622f480fe544bfb87d7ef6e7465bbbcb6f48f52d0d8183659dd0f12d29d799d",
+      "alpha_sha256": "7a460c620e3ab4771535d418d1a9dcc9c2404c4620b1662793054a8388940833",
+      "alpha_bbox_xyxy": [
+        47,
+        49,
+        197,
+        206
+      ]
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.warehouse_court_v3",
+      "geometry_version": "r34.module.warehouse_court_v3.geometry-v2",
+      "design_id": "BC02-courtyard-quality-v2",
+      "parent_definition_id": "r34.module.warehouse_court_v2",
+      "resource_path": "res://themes/modules/warehouse_court_v3-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-quality-v2-source03/warehouse_court_v3.png",
+      "source_png_sha256": "3a518b4a56fd7a844d5be23f4a81f13d97ad7888ac00f397080faf0523fa5548",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-quality-v2-source03/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 15285,
+      "opaque_rgba_sha256": "28edd2bfebd31fda42dd4d6b959e8a98a8d76c142d98e5b7a1dcfcf9616a7b99",
+      "alpha_sha256": "0b025a1a60fb2978ea18a0026061fedf2bd778cd0a717cc4f5b0bdc6f558917a",
+      "alpha_bbox_xyxy": [
+        19,
+        36,
+        236,
+        198
+      ]
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.warehouse_long_v3",
+      "geometry_version": "r34.module.warehouse_long_v3.geometry-v2",
+      "design_id": "BC02-long-bay-quality-v2",
+      "parent_definition_id": "r34.module.warehouse_long_v2",
+      "resource_path": "res://themes/modules/warehouse_long_v3-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-quality-v2-source03/warehouse_long_v3.png",
+      "source_png_sha256": "47c064b8670dc6f06bd3e522dcd7526fd46913f727e700d5d7f435aad59a5c10",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-quality-v2-source03/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 13426,
+      "opaque_rgba_sha256": "5d57305e7a84d0f1c8cf9c78d1e1b053997116de040f9d4532e39a5ad7b7fbd8",
+      "alpha_sha256": "ec9e439e914f89b9325e51f37fa973500fb1555520b7df5377346feca94562b1",
+      "alpha_bbox_xyxy": [
+        39,
+        60,
+        217,
+        220
+      ]
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.woodshop_long_v3",
+      "geometry_version": "r34.module.woodshop_long_v3.geometry-v2",
+      "design_id": "BC01-long-shed-quality-v2",
+      "parent_definition_id": "r34.module.woodshop_long_v2",
+      "resource_path": "res://themes/modules/woodshop_long_v3-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-quality-v2-source03/woodshop_long_v3.png",
+      "source_png_sha256": "4e5a98e6282faa4f0ef351e04d7fdcf3cd28c706caaa64aefa95df7cae88c79f",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-quality-v2-source03/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 14613,
+      "opaque_rgba_sha256": "e9a48eceb4ca4106cde37414c03e87d282bdf5c4caa73e72270fd58605f16550",
+      "alpha_sha256": "1d3c5d9402ceca22d15561f6a61e1311a072d590d1f283b7e2fec28c27b1754a",
+      "alpha_bbox_xyxy": [
+        35,
+        41,
+        221,
+        223
+      ]
+    },
+    {
+      "kind": "module",
+      "id": "r34.module.woodshop_yard_v3",
+      "geometry_version": "r34.module.woodshop_yard_v3.geometry-v2",
+      "design_id": "BC01-L-yard-quality-v2",
+      "parent_definition_id": "r34.module.woodshop_long_v2",
+      "resource_path": "res://themes/modules/woodshop_yard_v3-front.png",
+      "source_path": "assets/art/r34-factory-v1/thumbnails/ui-quality-v2-source03/woodshop_yard_v3.png",
+      "source_png_sha256": "6e6c55174759e9398b27563f7c62563336106c99c505195b672d217060dc8f73",
+      "source_manifest": "assets/art/r34-factory-v1/thumbnails/ui-quality-v2-source03/manifest.json",
+      "width": 256,
+      "height": 256,
+      "mode": "RGBA",
+      "opaque_count": 12104,
+      "opaque_rgba_sha256": "b75624d81d5fb21611a1140d61b5d541cdbd6dc6948e329c8eb6154b87ea5ada",
+      "alpha_sha256": "94c2e69b38f72d9b7821a78535f0d7dfbb36d838a7208817b30f02649f9cf2b3",
+      "alpha_bbox_xyxy": [
+        35,
+        58,
+        221,
+        200
+      ]
+    }
+  ]
+}

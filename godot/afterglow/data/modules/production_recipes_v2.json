@@ -1,0 +1,623 @@
+{
+  "version": 2,
+  "production_recipes": [
+    {
+      "id": "r34:saw_timber_v2",
+      "name": "锯切木料",
+      "inputs": {
+        "log": 1
+      },
+      "outputs": {
+        "timber": 4
+      },
+      "seconds": 10,
+      "staminaPerSecond": 1.5,
+      "toolWear": 2,
+      "stationTags": [],
+      "qualities": {
+        "sawing": 1
+      },
+      "knowledge": [
+        "basic_woodwork"
+      ],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "sawmill",
+        "min_tier": 1,
+        "operation": "craft"
+      }
+    },
+    {
+      "id": "r34:make_handle_v2",
+      "name": "加工替换工具柄",
+      "inputs": {
+        "timber": 1
+      },
+      "outputs": {
+        "tool_handle": 1
+      },
+      "seconds": 8,
+      "staminaPerSecond": 1,
+      "toolWear": 1,
+      "stationTags": [],
+      "qualities": {
+        "sawing": 1
+      },
+      "knowledge": [
+        "basic_woodwork"
+      ],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "artisan",
+        "min_tier": 1,
+        "operation": "craft"
+      }
+    },
+    {
+      "id": "r34:make_brace_v2",
+      "name": "制作回收支架",
+      "inputs": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "outputs": {
+        "brace": 1
+      },
+      "seconds": 12,
+      "staminaPerSecond": 1.2,
+      "toolWear": 1,
+      "stationTags": [],
+      "qualities": {
+        "hammering": 1
+      },
+      "knowledge": [
+        "basic_woodwork"
+      ],
+      "minCrafting": 2,
+      "mechanism": {
+        "version": 2,
+        "family": "artisan",
+        "min_tier": 1,
+        "operation": "craft"
+      }
+    },
+    {
+      "id": "r34:assemble_axe_v2",
+      "name": "装配斧头",
+      "inputs": {
+        "axe_head": 1,
+        "tool_handle": 1,
+        "scrap": 1
+      },
+      "outputs": {},
+      "seconds": 16,
+      "staminaPerSecond": 1.2,
+      "toolWear": 2,
+      "stationTags": [],
+      "qualities": {
+        "hammering": 1
+      },
+      "knowledge": [
+        "basic_tool_repair"
+      ],
+      "minCrafting": 2,
+      "createTool": {
+        "kind": "salvaged_axe",
+        "durability": 65
+      },
+      "mechanism": {
+        "version": 2,
+        "family": "artisan",
+        "min_tier": 3,
+        "operation": "craft"
+      }
+    },
+    {
+      "id": "r34:repair_axe_v2",
+      "name": "更换斧柄并整备",
+      "inputs": {
+        "tool_handle": 1,
+        "scrap": 1
+      },
+      "outputs": {},
+      "seconds": 12,
+      "staminaPerSecond": 1,
+      "toolWear": 1,
+      "stationTags": [],
+      "qualities": {
+        "hammering": 1
+      },
+      "knowledge": [
+        "basic_tool_repair"
+      ],
+      "minCrafting": 0,
+      "repairTool": {
+        "kind": "salvaged_axe",
+        "restore": 60
+      },
+      "mechanism": {
+        "version": 2,
+        "family": "repair",
+        "min_tier": 1,
+        "operation": "repair"
+      }
+    },
+    {
+      "id": "r34:repair_hand_saw_v2",
+      "name": "整备锯子",
+      "inputs": {
+        "scrap": 1,
+        "cloth": 1
+      },
+      "outputs": {},
+      "seconds": 12,
+      "staminaPerSecond": 1,
+      "toolWear": 1,
+      "stationTags": [],
+      "qualities": {
+        "hammering": 1
+      },
+      "knowledge": [
+        "basic_tool_repair"
+      ],
+      "minCrafting": 0,
+      "repairTool": {
+        "kind": "hand_saw",
+        "restore": 60
+      },
+      "mechanism": {
+        "version": 2,
+        "family": "repair",
+        "min_tier": 1,
+        "operation": "repair"
+      }
+    },
+    {
+      "id": "r34:repair_hammer_v2",
+      "name": "工位整备锤子",
+      "inputs": {
+        "timber": 1,
+        "scrap": 1
+      },
+      "outputs": {},
+      "seconds": 12,
+      "staminaPerSecond": 1,
+      "toolWear": 0,
+      "stationTags": [],
+      "qualities": {},
+      "knowledge": [
+        "basic_tool_repair"
+      ],
+      "minCrafting": 0,
+      "repairTool": {
+        "kind": "hammer",
+        "restore": 60
+      },
+      "mechanism": {
+        "version": 2,
+        "family": "repair",
+        "min_tier": 1,
+        "operation": "repair"
+      }
+    },
+    {
+      "id": "r34:repair_shovel_v2",
+      "name": "更换铲柄并整备",
+      "inputs": {
+        "tool_handle": 1,
+        "scrap": 1
+      },
+      "outputs": {},
+      "seconds": 12,
+      "staminaPerSecond": 1,
+      "toolWear": 1,
+      "stationTags": [],
+      "qualities": {
+        "hammering": 1
+      },
+      "knowledge": [
+        "basic_tool_repair"
+      ],
+      "minCrafting": 0,
+      "repairTool": {
+        "kind": "shovel",
+        "restore": 60
+      },
+      "mechanism": {
+        "version": 2,
+        "family": "repair",
+        "min_tier": 1,
+        "operation": "repair"
+      }
+    },
+    {
+      "id": "r34:repair_pickaxe_v2",
+      "name": "更换镐柄并整备",
+      "inputs": {
+        "tool_handle": 1,
+        "scrap": 1
+      },
+      "outputs": {},
+      "seconds": 12,
+      "staminaPerSecond": 1,
+      "toolWear": 1,
+      "stationTags": [],
+      "qualities": {
+        "hammering": 1
+      },
+      "knowledge": [
+        "basic_tool_repair"
+      ],
+      "minCrafting": 0,
+      "repairTool": {
+        "kind": "pickaxe",
+        "restore": 60
+      },
+      "mechanism": {
+        "version": 2,
+        "family": "repair",
+        "min_tier": 1,
+        "operation": "repair"
+      }
+    },
+    {
+      "id": "r34:filter_water_v2",
+      "name": "布滤原水",
+      "inputs": {
+        "r34:raw_water": 2,
+        "cloth": 1
+      },
+      "outputs": {
+        "r34:filtered_water": 2
+      },
+      "seconds": 12,
+      "staminaPerSecond": 0.8,
+      "toolWear": 0,
+      "stationTags": [],
+      "qualities": {},
+      "knowledge": [],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "water",
+        "min_tier": 1,
+        "operation": "filter_water"
+      }
+    },
+    {
+      "id": "r34:boil_water_v2",
+      "name": "煮沸消毒",
+      "inputs": {
+        "r34:filtered_water": 2,
+        "log": 1
+      },
+      "outputs": {
+        "water": 2
+      },
+      "seconds": 12,
+      "staminaPerSecond": 0.8,
+      "toolWear": 0,
+      "stationTags": [],
+      "qualities": {},
+      "knowledge": [],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "water",
+        "min_tier": 1,
+        "operation": "boil_water"
+      }
+    },
+    {
+      "id": "r34:bulk_disinfect_v2",
+      "name": "批量过滤与煮沸",
+      "inputs": {
+        "r34:raw_water": 6,
+        "cloth": 1,
+        "log": 2
+      },
+      "outputs": {
+        "water": 6
+      },
+      "seconds": 24,
+      "staminaPerSecond": 0.8,
+      "toolWear": 0,
+      "stationTags": [],
+      "qualities": {},
+      "knowledge": [],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "water",
+        "min_tier": 2,
+        "operation": "boil_water"
+      }
+    },
+    {
+      "id": "r34:cook_potato_v2",
+      "name": "炖煮薯餐",
+      "inputs": {
+        "r34:potato": 2,
+        "water": 1,
+        "log": 1
+      },
+      "outputs": {
+        "r34:meal_simple": 2
+      },
+      "seconds": 12,
+      "staminaPerSecond": 0.8,
+      "toolWear": 0,
+      "stationTags": [],
+      "qualities": {},
+      "knowledge": [],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "canteen",
+        "min_tier": 1,
+        "operation": "cook"
+      }
+    },
+    {
+      "id": "r34:cook_beans_v2",
+      "name": "豆蔬炖餐",
+      "inputs": {
+        "r34:beans": 2,
+        "water": 1,
+        "log": 1
+      },
+      "outputs": {
+        "r34:meal_simple": 3
+      },
+      "seconds": 14,
+      "staminaPerSecond": 0.8,
+      "toolWear": 0,
+      "stationTags": [],
+      "qualities": {},
+      "knowledge": [],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "canteen",
+        "min_tier": 2,
+        "operation": "cook"
+      }
+    },
+    {
+      "id": "r34:husk_rice_v2",
+      "name": "碾谷脱壳",
+      "inputs": {
+        "r34:paddy": 3
+      },
+      "outputs": {
+        "r34:rice": 2
+      },
+      "seconds": 12,
+      "staminaPerSecond": 0.8,
+      "toolWear": 0,
+      "stationTags": [],
+      "qualities": {},
+      "knowledge": [],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "canteen",
+        "min_tier": 2,
+        "operation": "husk"
+      }
+    },
+    {
+      "id": "r34:cook_rice_v2",
+      "name": "煮米饭",
+      "inputs": {
+        "r34:rice": 2,
+        "water": 1,
+        "log": 1
+      },
+      "outputs": {
+        "r34:meal_simple": 3
+      },
+      "seconds": 14,
+      "staminaPerSecond": 0.8,
+      "toolWear": 0,
+      "stationTags": [],
+      "qualities": {},
+      "knowledge": [],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "canteen",
+        "min_tier": 2,
+        "operation": "cook"
+      }
+    },
+    {
+      "id": "r34:dry_ration_v2",
+      "name": "烘制储备干粮",
+      "inputs": {
+        "r34:meal_simple": 3,
+        "log": 1
+      },
+      "outputs": {
+        "r34:dry_ration": 2
+      },
+      "seconds": 18,
+      "staminaPerSecond": 0.8,
+      "toolWear": 0,
+      "stationTags": [],
+      "qualities": {},
+      "knowledge": [],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "canteen",
+        "min_tier": 3,
+        "operation": "cook"
+      }
+    },
+    {
+      "id": "r34:joinery_v2",
+      "name": "制作木构件",
+      "inputs": {
+        "timber": 3,
+        "brace": 1
+      },
+      "outputs": {
+        "r34:structural_timber": 2
+      },
+      "seconds": 18,
+      "staminaPerSecond": 0.8,
+      "toolWear": 0.5,
+      "stationTags": [],
+      "qualities": {
+        "sawing": 1,
+        "hammering": 1
+      },
+      "knowledge": [
+        "basic_woodwork"
+      ],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "artisan",
+        "min_tier": 2,
+        "operation": "craft"
+      }
+    },
+    {
+      "id": "r34:metal_fitting_v2",
+      "name": "加工机修零件",
+      "inputs": {
+        "scrap": 3,
+        "brace": 1
+      },
+      "outputs": {
+        "r34:metal_fitting": 1
+      },
+      "seconds": 20,
+      "staminaPerSecond": 0.8,
+      "toolWear": 0.5,
+      "stationTags": [],
+      "qualities": {
+        "hammering": 1
+      },
+      "knowledge": [
+        "basic_tool_repair"
+      ],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "artisan",
+        "min_tier": 3,
+        "operation": "craft"
+      }
+    },
+    {
+      "id": "r34:make_water_bucket_v2",
+      "name": "箍制取水桶",
+      "inputs": {
+        "timber": 2,
+        "scrap": 1
+      },
+      "outputs": {
+        "r34:water_bucket": 1
+      },
+      "seconds": 12,
+      "staminaPerSecond": 1,
+      "toolWear": 1,
+      "stationTags": [],
+      "qualities": {
+        "hammering": 1
+      },
+      "knowledge": [
+        "basic_woodwork"
+      ],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "artisan",
+        "min_tier": 1,
+        "operation": "craft"
+      }
+    },
+    {
+      "id": "r34:compost_v2",
+      "name": "拌制作物堆肥",
+      "inputs": {
+        "r34:crop_residue": 2,
+        "r34:raw_water": 1
+      },
+      "outputs": {
+        "r34:compost": 1
+      },
+      "seconds": 18,
+      "staminaPerSecond": 0.5,
+      "toolWear": 0.5,
+      "stationTags": [],
+      "qualities": {
+        "shovel": 1
+      },
+      "knowledge": [],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "artisan",
+        "min_tier": 1,
+        "operation": "compost"
+      }
+    },
+    {
+      "id": "r34:raw_boil_water_v2",
+      "name": "延时煮沸原水",
+      "inputs": {
+        "r34:raw_water": 2,
+        "log": 2
+      },
+      "outputs": {
+        "water": 2
+      },
+      "seconds": 24,
+      "staminaPerSecond": 0.8,
+      "toolWear": 0,
+      "stationTags": [],
+      "qualities": {},
+      "knowledge": [],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "water",
+        "min_tier": 1,
+        "operation": "boil_water"
+      }
+    },
+    {
+      "id": "r34:hearty_stew_v2",
+      "name": "米豆丰盛炖餐",
+      "inputs": {
+        "r34:rice": 2,
+        "r34:beans": 2,
+        "r34:potato": 1,
+        "water": 2,
+        "log": 2
+      },
+      "outputs": {
+        "r34:meal_hearty": 4
+      },
+      "seconds": 24,
+      "staminaPerSecond": 0.8,
+      "toolWear": 0,
+      "stationTags": [],
+      "qualities": {},
+      "knowledge": [],
+      "minCrafting": 0,
+      "mechanism": {
+        "version": 2,
+        "family": "canteen",
+        "min_tier": 3,
+        "operation": "cook"
+      }
+    }
+  ]
+}

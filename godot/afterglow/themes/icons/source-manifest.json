@@ -1,0 +1,65 @@
+[
+  {
+    "source": "public/art/living-world-v2/icons/64/axe.png",
+    "resource": "res://themes/icons/axe.png",
+    "sha256": "ec6b2cf48d7a70e5d2c5b131f675bfce32c8ad6406d309107c5a2eb24bb61262",
+    "copied_identical": true,
+    "imported": false
+  },
+  {
+    "source": "public/art/living-world-v2/icons/64/hammer.png",
+    "resource": "res://themes/icons/hammer.png",
+    "sha256": "889f38245a8b3e65b1fe6946ed72893a1736480d423103e287961f1fffd29dcc",
+    "copied_identical": true,
+    "imported": false
+  },
+  {
+    "source": "public/art/living-world-v2/icons/64/shovel.png",
+    "resource": "res://themes/icons/shovel.png",
+    "sha256": "9437f481d5b34d503679edc09e2f8b17f93cb2692a50877c0542047131fa825b",
+    "copied_identical": true,
+    "imported": false
+  },
+  {
+    "source": "public/art/suburban-v1/icons/64/bandage.png",
+    "resource": "res://themes/icons/bandage.png",
+    "sha256": "b733b6b6c1d39d6b7176c1e9eb35645f7865b7bc7dbecfbd5224492c917dcdc3",
+    "copied_identical": true,
+    "imported": false
+  },
+  {
+    "source": "public/art/suburban-v1/icons/64/food_tin.png",
+    "resource": "res://themes/icons/food_tin.png",
+    "sha256": "d116f05cea7c23ec3dc910022ebdde2aaf075e7afc399f0069af9a9c77c30266",
+    "copied_identical": true,
+    "imported": false
+  },
+  {
+    "source": "public/art/suburban-v1/icons/64/knowledge_book.png",
+    "resource": "res://themes/icons/knowledge_book.png",
+    "sha256": "dc1ce7628ef241a9d69a4bfae4db18b831a22ef61fa1410fbb71013c356951cd",
+    "copied_identical": true,
+    "imported": false
+  },
+  {
+    "source": "public/art/suburban-v1/icons/64/metal_scrap.png",
+    "resource": "res://themes/icons/metal_scrap.png",
+    "sha256": "4fe982aa62a86ee6e342cf7d12e516c5d77c939b46c04c7559fb8b61c80f7db4",
+    "copied_identical": true,
+    "imported": false
+  },
+  {
+    "source": "public/art/suburban-v1/icons/64/timber.png",
+    "resource": "res://themes/icons/timber.png",
+    "sha256": "1607e3ae50643ddf5e7de226d1714d53877ed8038bf67544b9dc13e6c59eaa8b",
+    "copied_identical": true,
+    "imported": false
+  },
+  {
+    "source": "public/art/suburban-v1/icons/64/water_bottle.png",
+    "resource": "res://themes/icons/water_bottle.png",
+    "sha256": "25a7a7d83b1cf007747fe966746445e2c3032da3a9566815f23c27ac06a031f4",
+    "copied_identical": true,
+    "imported": false
+  }
+]

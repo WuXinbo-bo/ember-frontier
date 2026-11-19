@@ -1,0 +1,23 @@
+[
+  {
+    "id": "r1_resident_commuter",
+    "source": "public/art/city-life-r1-v1/models/residents/r1_resident_commuter.glb",
+    "resource": "res://data/gameplay/actors/r1_resident_commuter.glb",
+    "sha256": "fc6188135ef97e9a0997f2b729f7aaa4f6e6ced213fd27c79f2b22653d04126f",
+    "status": "existing byte-identical model; animation visibility not yet accepted"
+  },
+  {
+    "id": "r1_resident_neighbor",
+    "source": "public/art/city-life-r1-v1/models/residents/r1_resident_neighbor.glb",
+    "resource": "res://data/gameplay/actors/r1_resident_neighbor.glb",
+    "sha256": "cae6be15043cb0d8ef72826f7382cf77ccfee04624b2b47c0add67fef9fc4a66",
+    "status": "existing byte-identical model; animation visibility not yet accepted"
+  },
+  {
+    "id": "r1_resident_shopkeeper",
+    "source": "public/art/city-life-r1-v1/models/residents/r1_resident_shopkeeper.glb",
+    "resource": "res://data/gameplay/actors/r1_resident_shopkeeper.glb",
+    "sha256": "81b9602007b070867e9c64398783e5b4e52c421a29b37a1fd15490f00fd06e15",
+    "status": "existing byte-identical model; animation visibility not yet accepted"
+  }
+]

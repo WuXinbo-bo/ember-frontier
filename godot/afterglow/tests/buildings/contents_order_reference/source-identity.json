@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-16T06:24:58.188775+08:00",
+  "source": "godot/afterglow/scripts/buildings/building_view.gd",
+  "sha256": "38410f675f55c6cdb3051d424d1b546177fee113bab52086ff6a8268e434fe60",
+  "reference": "godot/afterglow/tests/buildings/contents_order_reference/building_view.gd",
+  "preimage": "Candidate20 exact adopted source; no resource path remaps",
+  "scope": "post20 BBB known contents first-codec visual sorting red only; not numeric codec change"
+}
